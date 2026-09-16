@@ -1,0 +1,694 @@
+{
+  "client": "statistic-institute",
+  "company_id": "191864",
+  "started_at": "2026-09-12",
+  "actions": [],
+  "vacation_leave_type": {
+    "id": "2405344",
+    "name": "SIJ Vacation Leave"
+  },
+  "extra_leave_types": [
+    {
+      "id": "2405345",
+      "name": "SIJ Sick Leave",
+      "error": null
+    },
+    {
+      "id": "2405346",
+      "name": "SIJ Maternity Leave",
+      "error": null
+    },
+    {
+      "id": "2405347",
+      "name": "SIJ Study Leave",
+      "error": null
+    },
+    {
+      "id": "2405348",
+      "name": "SIJ Compassionate Leave",
+      "error": null
+    },
+    {
+      "id": "2405349",
+      "name": "SIJ Special Leave",
+      "error": null
+    }
+  ],
+  "tiers": {
+    "15": {
+      "policy_id": "367078",
+      "allowance_id": "617645",
+      "days": 15,
+      "max_days": 45
+    },
+    "20": {
+      "policy_id": "367079",
+      "allowance_id": "617647",
+      "days": 20,
+      "max_days": 60
+    },
+    "21": {
+      "policy_id": "367080",
+      "allowance_id": "617649",
+      "days": 21,
+      "max_days": 63
+    },
+    "25": {
+      "policy_id": "367081",
+      "allowance_id": "617651",
+      "days": 25,
+      "max_days": 75
+    }
+  },
+  "assignments": [
+    {
+      "employee_id": "6375925",
+      "name": "Hellen Howard",
+      "tier": "15",
+      "result": {
+        "id": "6289318",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375931",
+      "name": "Charles Carter",
+      "tier": "20",
+      "result": {
+        "id": "6289319",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375934",
+      "name": "Daisy Dawson",
+      "tier": "21",
+      "result": {
+        "id": "6289320",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375938",
+      "name": "Laura Lewis",
+      "tier": "25",
+      "result": {
+        "id": "6289322",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375942",
+      "name": "Jack Johnson",
+      "tier": "15",
+      "result": {
+        "id": "6289324",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375951",
+      "name": "Clara Cooper",
+      "tier": "20",
+      "result": {
+        "id": "6289325",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375954",
+      "name": "James Jones",
+      "tier": "21",
+      "result": {
+        "id": "6289326",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375958",
+      "name": "Felicity Ford",
+      "tier": "25",
+      "result": {
+        "id": "6289327",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375967",
+      "name": "Cristopher Clarke",
+      "tier": "15",
+      "result": {
+        "id": "6289328",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375969",
+      "name": "Bernarda Baker",
+      "tier": "20",
+      "result": {
+        "id": "6289329",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375972",
+      "name": "Alice Anderson",
+      "tier": "21",
+      "result": {
+        "id": "6289330",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375978",
+      "name": "Amelia Adams",
+      "tier": "25",
+      "result": {
+        "id": "6289331",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375983",
+      "name": "Calvin Collins",
+      "tier": "15",
+      "result": {
+        "id": "6289332",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375987",
+      "name": "Diana Davis",
+      "tier": "20",
+      "result": {
+        "id": "6289333",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375991",
+      "name": "Peter Price",
+      "tier": "21",
+      "result": {
+        "id": "6289334",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6375995",
+      "name": "Megan Moore",
+      "tier": "25",
+      "result": {
+        "id": "6289335",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376003",
+      "name": "Sarah Smith",
+      "tier": "15",
+      "result": {
+        "id": "6289336",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376052",
+      "name": "Steven Scott",
+      "tier": "20",
+      "result": {
+        "id": "6289337",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376058",
+      "name": "Ian Irving",
+      "tier": "21",
+      "result": {
+        "id": "6289338",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376063",
+      "name": "Isabel Ingram",
+      "tier": "25",
+      "result": {
+        "id": "6289339",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376070",
+      "name": "Hannah Harris",
+      "tier": "15",
+      "result": {
+        "id": "6289340",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376075",
+      "name": "Simon Sanders",
+      "tier": "20",
+      "result": {
+        "id": "6289341",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376081",
+      "name": "Charlie Cooper",
+      "tier": "21",
+      "result": {
+        "id": "6289342",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376087",
+      "name": "Samantha Stevens",
+      "tier": "25",
+      "result": {
+        "id": "6289343",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376091",
+      "name": "Nathan Nichols",
+      "tier": "15",
+      "result": {
+        "id": "6289344",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376096",
+      "name": "Sophie Simmons",
+      "tier": "20",
+      "result": {
+        "id": "6289345",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376106",
+      "name": "Nicholas Newton",
+      "tier": "21",
+      "result": {
+        "id": "6289346",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376112",
+      "name": "Natalie Norton",
+      "tier": "25",
+      "result": {
+        "id": "6289347",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376125",
+      "name": "Nora Nelson",
+      "tier": "15",
+      "result": {
+        "id": "6289348",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376133",
+      "name": "Noah Norris",
+      "tier": "20",
+      "result": {
+        "id": "6289349",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376137",
+      "name": "Susan Stanley",
+      "tier": "21",
+      "result": {
+        "id": "6289350",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376200",
+      "name": "Stephanie Sullivan",
+      "tier": "25",
+      "result": {
+        "id": "6289351",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376217",
+      "name": "Samuel Stone",
+      "tier": "15",
+      "result": {
+        "id": "6289352",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376224",
+      "name": "Michael Carter",
+      "tier": "20",
+      "result": {
+        "id": "6289353",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376230",
+      "name": "Ashley Nguyen",
+      "tier": "21",
+      "result": {
+        "id": "6289354",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376234",
+      "name": "David Thompson",
+      "tier": "25",
+      "result": {
+        "id": "6289355",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376239",
+      "name": "Jessica Rivera",
+      "tier": "15",
+      "result": {
+        "id": "6289356",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376261",
+      "name": "Preston Pike",
+      "tier": "20",
+      "result": {
+        "id": "6289357",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376262",
+      "name": "Marla Mercer",
+      "tier": "21",
+      "result": {
+        "id": "6289358",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376602",
+      "name": "Nadia Backfield",
+      "tier": "25",
+      "result": {
+        "id": "6289359",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376909",
+      "name": "Adan Garcia",
+      "tier": "15",
+      "result": {
+        "id": "6289360",
+        "error": null,
+        "status": null
+      }
+    },
+    {
+      "employee_id": "6376910",
+      "name": "Maria Lopez",
+      "tier": "20",
+      "result": {
+        "id": "6289361",
+        "error": null,
+        "status": null
+      }
+    }
+  ],
+  "incidences": [
+    {
+      "status": 201,
+      "employee_id": "6375925",
+      "days": 900
+    },
+    {
+      "status": 201,
+      "employee_id": "6375931",
+      "days": 2000
+    },
+    {
+      "status": 201,
+      "employee_id": "6375934",
+      "days": 4000
+    },
+    {
+      "status": 201,
+      "employee_id": "6375938",
+      "days": 5000
+    }
+  ],
+  "leaves": [
+    {
+      "status": 422,
+      "employee_id": "6375925",
+      "start_on": "2026-09-14",
+      "finish_on": "2026-09-18"
+    },
+    {
+      "status": 422,
+      "employee_id": "6375931",
+      "start_on": "2026-09-28",
+      "finish_on": "2026-09-30"
+    },
+    {
+      "status": 422,
+      "employee_id": "6375934",
+      "start_on": "2026-10-12",
+      "finish_on": "2026-10-21"
+    }
+  ],
+  "api_log_tail": [
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6375925",
+        "timeoff_allowance_id": "617645",
+        "days_in_cents": 900,
+        "effective_on": "2026-09-12",
+        "target_balance": "available",
+        "description": "SIJ demo: prorated first year (doc example ~9 days after rounding)",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "3932",
+        "description": "SIJ demo: prorated first year (doc example ~9 days after rounding)",
+        "employee_id": "6375925",
+        "days_in_cents": 900,
+        "timeoff_allowance_id": "617645",
+        "effective_on": "2026-09-12",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789192556,
+        "updated_at": 1789192556
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6375931",
+        "timeoff_allowance_id": "617647",
+        "days_in_cents": 2000,
+        "effective_on": "2026-09-12",
+        "target_balance": "available",
+        "description": "SIJ demo: full year entitlement 20 days",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "3933",
+        "description": "SIJ demo: full year entitlement 20 days",
+        "employee_id": "6375931",
+        "days_in_cents": 2000,
+        "timeoff_allowance_id": "617647",
+        "effective_on": "2026-09-12",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789192557,
+        "updated_at": 1789192557
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6375934",
+        "timeoff_allowance_id": "617649",
+        "days_in_cents": 4000,
+        "effective_on": "2026-09-12",
+        "target_balance": "available",
+        "description": "SIJ demo: accumulated balance toward 3-year cap (63)",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "3934",
+        "description": "SIJ demo: accumulated balance toward 3-year cap (63)",
+        "employee_id": "6375934",
+        "days_in_cents": 4000,
+        "timeoff_allowance_id": "617649",
+        "effective_on": "2026-09-12",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789192557,
+        "updated_at": 1789192557
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6375938",
+        "timeoff_allowance_id": "617651",
+        "days_in_cents": 5000,
+        "effective_on": "2026-09-12",
+        "target_balance": "available",
+        "description": "SIJ demo: accumulated balance toward 3-year cap (75)",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "3935",
+        "description": "SIJ demo: accumulated balance toward 3-year cap (75)",
+        "employee_id": "6375938",
+        "days_in_cents": 5000,
+        "timeoff_allowance_id": "617651",
+        "effective_on": "2026-09-12",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789192557,
+        "updated_at": 1789192557
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 422,
+      "req": {
+        "employee_id": "6375925",
+        "leave_type_id": "2405344",
+        "start_on": "2026-09-14",
+        "finish_on": "2026-09-18",
+        "description": "SIJ Vacation — family holiday (demo)"
+      },
+      "res": {
+        "errors": {
+          "messages": [
+            "This request cannot be submitted because an absence for the same period already exists"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 422,
+      "req": {
+        "employee_id": "6375931",
+        "leave_type_id": "2405344",
+        "start_on": "2026-09-28",
+        "finish_on": "2026-09-30",
+        "description": "SIJ Vacation — short break (demo)"
+      },
+      "res": {
+        "errors": {
+          "messages": [
+            "This request cannot be submitted because an absence for the same period already exists"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 422,
+      "req": {
+        "employee_id": "6375934",
+        "leave_type_id": "2405344",
+        "start_on": "2026-10-12",
+        "finish_on": "2026-10-21",
+        "description": "SIJ Vacation — extended leave (demo)"
+      },
+      "res": {
+        "errors": {
+          "messages": [
+            "This request cannot be submitted because an absence for the same period already exists"
+          ]
+        }
+      }
+    }
+  ]
+}

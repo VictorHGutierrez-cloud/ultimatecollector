@@ -1,0 +1,163 @@
+{
+  "generated_at": "2026-09-13T10:46:13.962157+00:00",
+  "company_focus": "191947",
+  "counts": {
+    "employees": 56,
+    "teams": 15,
+    "locations": 5,
+    "review_processes": 5,
+    "liat_review_processes": 0,
+    "trainings": 4
+  },
+  "cast_resolution": [
+    {
+      "full_name": "Marcus Williams",
+      "group": "leadership",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381329"
+    },
+    {
+      "full_name": "Denise Antoine",
+      "group": "leadership",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381718"
+    },
+    {
+      "full_name": "Robert Clarke",
+      "group": "leadership",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381788"
+    },
+    {
+      "full_name": "Kamala Singh",
+      "group": "manager",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381818"
+    },
+    {
+      "full_name": "Julian Baptiste",
+      "group": "manager",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381843"
+    },
+    {
+      "full_name": "Alicia Fraser",
+      "group": "manager",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381871"
+    },
+    {
+      "full_name": "Tamara Joseph",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381887"
+    },
+    {
+      "full_name": "Devon Thomas",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6381909"
+    },
+    {
+      "full_name": "Keon Richards",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6382057"
+    },
+    {
+      "full_name": "Simone Peters",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6382164"
+    },
+    {
+      "full_name": "Ryan Mitchell",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6382189"
+    },
+    {
+      "full_name": "Natasha Browne",
+      "group": "staff",
+      "found": false,
+      "rename_from_found": true,
+      "employee_id": "6382231"
+    }
+  ],
+  "probes": {
+    "api_public/credentials": {
+      "path": "api_public/credentials",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "employees/employees": {
+      "path": "employees/employees",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "teams/teams": {
+      "path": "teams/teams",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "locations/locations": {
+      "path": "locations/locations",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "companies/legal_entities": {
+      "path": "companies/legal_entities",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "performance/review_processes": {
+      "path": "performance/review_processes",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "performance/company_employee_score_scales": {
+      "path": "performance/company_employee_score_scales",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "trainings/trainings": {
+      "path": "trainings/trainings",
+      "status": 200,
+      "ok": true,
+      "sample_count": 4,
+      "error": null
+    },
+    "posts/groups": {
+      "path": "posts/groups",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    }
+  }
+}

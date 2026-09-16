@@ -1,0 +1,114 @@
+{
+  "client": "statistic-institute",
+  "collected_at": "20260912_075626",
+  "counts": {
+    "timeoff/leave_types": 23,
+    "timeoff/policies": 8,
+    "timeoff/policy_assignments": 98,
+    "timeoff/allowances": 20,
+    "timeoff/leaves": 170,
+    "timeoff/allowance_incidences": 4,
+    "employees/employees": 56
+  },
+  "sij_highlights": {
+    "timeoff/leave_types": [
+      {
+        "id": "2405349",
+        "name": "SIJ Special Leave"
+      },
+      {
+        "id": "2405348",
+        "name": "SIJ Compassionate Leave"
+      },
+      {
+        "id": "2405347",
+        "name": "SIJ Study Leave"
+      },
+      {
+        "id": "2405346",
+        "name": "SIJ Maternity Leave"
+      },
+      {
+        "id": "2405345",
+        "name": "SIJ Sick Leave"
+      },
+      {
+        "id": "2405344",
+        "name": "SIJ Vacation Leave"
+      }
+    ],
+    "timeoff/policies": [
+      {
+        "id": "367081",
+        "name": "SIJ Vacation 25 days"
+      },
+      {
+        "id": "367080",
+        "name": "SIJ Vacation 21 days (15-25y)"
+      },
+      {
+        "id": "367079",
+        "name": "SIJ Vacation 20 days"
+      },
+      {
+        "id": "367078",
+        "name": "SIJ Vacation 15 days"
+      }
+    ],
+    "timeoff/allowances": [
+      {
+        "id": "617651",
+        "name": "SIJ Vacation Allowance 25d",
+        "holiday_allowance_in_cents": 2500,
+        "maximum_amount_in_cents": 7500
+      },
+      {
+        "id": "617649",
+        "name": "SIJ Vacation Allowance 21d",
+        "holiday_allowance_in_cents": 2100,
+        "maximum_amount_in_cents": 6300
+      },
+      {
+        "id": "617647",
+        "name": "SIJ Vacation Allowance 20d",
+        "holiday_allowance_in_cents": 2000,
+        "maximum_amount_in_cents": 6000
+      },
+      {
+        "id": "617645",
+        "name": "SIJ Vacation Allowance 15d",
+        "holiday_allowance_in_cents": 1500,
+        "maximum_amount_in_cents": 4500
+      }
+    ],
+    "sample_leaves": [
+      {
+        "id": "6012361",
+        "employee_id": "6375934",
+        "leave_type_id": "2405344",
+        "start_on": "2026-10-12",
+        "finish_on": "2026-10-21",
+        "approved": true,
+        "description": "SIJ Vacation — extended leave (demo)"
+      },
+      {
+        "id": "6012360",
+        "employee_id": "6375931",
+        "leave_type_id": "2405344",
+        "start_on": "2026-09-28",
+        "finish_on": "2026-09-30",
+        "approved": true,
+        "description": "SIJ Vacation — short break (demo)"
+      },
+      {
+        "id": "6012359",
+        "employee_id": "6375925",
+        "leave_type_id": "2405344",
+        "start_on": "2026-09-14",
+        "finish_on": "2026-09-18",
+        "approved": true,
+        "description": "SIJ Vacation — family holiday (demo)"
+      }
+    ]
+  }
+}

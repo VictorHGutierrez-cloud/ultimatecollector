@@ -1,0 +1,557 @@
+{
+  "company_id": "191947",
+  "api_version": "2026-07-01",
+  "prefix": "LIAT",
+  "year": 2026,
+  "location": {
+    "name": "LIAT VC Bird International Airport",
+    "country": "ag",
+    "country_fallback": "us",
+    "timezone": "America/Puerto_Rico",
+    "timezone_fallback": "America/Puerto_Rico",
+    "city": "St. John's",
+    "state": "Antigua & Barbuda",
+    "postal_code": "00000",
+    "address_line_one": "VC Bird International Airport, Coolidge",
+    "phone_number": "+12684621400",
+    "main": true,
+    "latitude": 17.1367,
+    "longitude": -61.7927
+  },
+  "legal_entity": {
+    "legal_name": "Liat (2020) Limited",
+    "country": "ag",
+    "country_fallback": "us",
+    "currency": "USD",
+    "city": "St. John's",
+    "state": "Antigua & Barbuda",
+    "postal_code": "00000",
+    "address_line_1": "VC Bird International Airport, Coolidge",
+    "tin": "LIAT-AG-001"
+  },
+  "teams": [
+    {
+      "key": "executive",
+      "name": "LIAT Executive Leadership",
+      "lead": "Marcus Williams"
+    },
+    {
+      "key": "flight_ops",
+      "name": "LIAT Flight Operations",
+      "lead": "Kamala Singh"
+    },
+    {
+      "key": "ground_mro",
+      "name": "LIAT Ground Operations & MRO",
+      "lead": "Julian Baptiste"
+    },
+    {
+      "key": "commercial",
+      "name": "LIAT Commercial & Customer Experience",
+      "lead": "Alicia Fraser"
+    },
+    {
+      "key": "finance",
+      "name": "LIAT Finance & Revenue Accounts",
+      "lead": "Robert Clarke"
+    },
+    {
+      "key": "people",
+      "name": "LIAT People & Culture",
+      "lead": "Denise Antoine"
+    }
+  ],
+  "cast": [
+    {
+      "full_name": "Marcus Williams",
+      "first_name": "Marcus",
+      "last_name": "Williams",
+      "email": "marcus.williams@liat-demo.ag",
+      "gender": "male",
+      "group": "leadership",
+      "team_key": "executive",
+      "role_title": "LIAT Chief Executive Officer",
+      "goal_count": 10,
+      "rename_from": "Hellen Howard"
+    },
+    {
+      "full_name": "Denise Antoine",
+      "first_name": "Denise",
+      "last_name": "Antoine",
+      "email": "denise.antoine@liat-demo.ag",
+      "gender": "female",
+      "group": "leadership",
+      "team_key": "people",
+      "role_title": "LIAT Head of HR",
+      "goal_count": 10,
+      "rename_from": "Charles Carter"
+    },
+    {
+      "full_name": "Robert Clarke",
+      "first_name": "Robert",
+      "last_name": "Clarke",
+      "email": "robert.clarke@liat-demo.ag",
+      "gender": "male",
+      "group": "leadership",
+      "team_key": "finance",
+      "role_title": "LIAT Chief Financial Officer",
+      "goal_count": 10,
+      "rename_from": "Daisy Dawson"
+    },
+    {
+      "full_name": "Kamala Singh",
+      "first_name": "Kamala",
+      "last_name": "Singh",
+      "email": "kamala.singh@liat-demo.ag",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "flight_ops",
+      "role_title": "LIAT Director of Flight Operations",
+      "goal_count": 9,
+      "rename_from": "Laura Lewis"
+    },
+    {
+      "full_name": "Julian Baptiste",
+      "first_name": "Julian",
+      "last_name": "Baptiste",
+      "email": "julian.baptiste@liat-demo.ag",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "ground_mro",
+      "role_title": "LIAT Head of MRO",
+      "goal_count": 9,
+      "rename_from": "Jack Johnson"
+    },
+    {
+      "full_name": "Alicia Fraser",
+      "first_name": "Alicia",
+      "last_name": "Fraser",
+      "email": "alicia.fraser@liat-demo.ag",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "commercial",
+      "role_title": "LIAT Commercial Manager",
+      "goal_count": 9,
+      "rename_from": "Alice Anderson"
+    },
+    {
+      "full_name": "Tamara Joseph",
+      "first_name": "Tamara",
+      "last_name": "Joseph",
+      "email": "tamara.joseph@liat-demo.ag",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "flight_ops",
+      "role_title": "LIAT Senior Pilot",
+      "goal_count": 7,
+      "rename_from": "Clara Cooper"
+    },
+    {
+      "full_name": "Devon Thomas",
+      "first_name": "Devon",
+      "last_name": "Thomas",
+      "email": "devon.thomas@liat-demo.ag",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "flight_ops",
+      "role_title": "LIAT Cabin Crew Supervisor",
+      "goal_count": 7,
+      "rename_from": "James Jones"
+    },
+    {
+      "full_name": "Keon Richards",
+      "first_name": "Keon",
+      "last_name": "Richards",
+      "email": "keon.richards@liat-demo.ag",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "ground_mro",
+      "role_title": "LIAT MRO Technician",
+      "goal_count": 7,
+      "rename_from": "Felicity Ford"
+    },
+    {
+      "full_name": "Simone Peters",
+      "first_name": "Simone",
+      "last_name": "Peters",
+      "email": "simone.peters@liat-demo.ag",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "commercial",
+      "role_title": "LIAT Customer Experience Agent",
+      "goal_count": 7,
+      "rename_from": "Sophie Simmons"
+    },
+    {
+      "full_name": "Ryan Mitchell",
+      "first_name": "Ryan",
+      "last_name": "Mitchell",
+      "email": "ryan.mitchell@liat-demo.ag",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "people",
+      "role_title": "LIAT HR Coordinator",
+      "goal_count": 7,
+      "rename_from": "Cristopher Clarke"
+    },
+    {
+      "full_name": "Natasha Browne",
+      "first_name": "Natasha",
+      "last_name": "Browne",
+      "email": "natasha.browne@liat-demo.ag",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "finance",
+      "role_title": "LIAT Finance Analyst",
+      "goal_count": 7,
+      "rename_from": "Bernarda Baker"
+    }
+  ],
+  "manager_map": {
+    "Marcus Williams": null,
+    "Denise Antoine": "Marcus Williams",
+    "Robert Clarke": "Marcus Williams",
+    "Kamala Singh": "Marcus Williams",
+    "Julian Baptiste": "Marcus Williams",
+    "Alicia Fraser": "Marcus Williams",
+    "Tamara Joseph": "Kamala Singh",
+    "Devon Thomas": "Kamala Singh",
+    "Keon Richards": "Julian Baptiste",
+    "Simone Peters": "Alicia Fraser",
+    "Ryan Mitchell": "Denise Antoine",
+    "Natasha Browne": "Robert Clarke"
+  },
+  "competencies": {
+    "all_employees": [
+      "LIAT Competency: Safety Compliance",
+      "LIAT Competency: Teamwork & Collaboration",
+      "LIAT Competency: Accountability",
+      "LIAT Competency: Regulatory Awareness"
+    ],
+    "flight_ops": [
+      "LIAT Competency: CRM (Crew Resource Management)",
+      "LIAT Competency: Situational Awareness",
+      "LIAT Competency: On-Time Performance Focus"
+    ],
+    "ground_mro": [
+      "LIAT Competency: Technical Precision",
+      "LIAT Competency: Audit Readiness",
+      "LIAT Competency: Turnaround Efficiency"
+    ],
+    "commercial": [
+      "LIAT Competency: Customer Focus",
+      "LIAT Competency: Revenue Generation",
+      "LIAT Competency: Interline Relations"
+    ],
+    "management": [
+      "LIAT Competency: Leadership",
+      "LIAT Competency: Coaching & Development",
+      "LIAT Competency: Planning & Organizing"
+    ],
+    "executive": [
+      "LIAT Competency: Strategic Capacity",
+      "LIAT Competency: Governance & Stewardship",
+      "LIAT Competency: Succession Planning"
+    ]
+  },
+  "weighting": {
+    "staff": {
+      "objectives": 70,
+      "competencies": 30
+    },
+    "manager": {
+      "objectives": 70,
+      "competencies": 30
+    },
+    "leadership": {
+      "objectives": 70,
+      "competencies": 30
+    }
+  },
+  "rating_scale": [
+    {
+      "code": "DNM",
+      "label": "Did Not Meet Expectations",
+      "definition": "50% or less of deliverables achieved"
+    },
+    {
+      "code": "PMS",
+      "label": "Partially Met Some Expectations",
+      "definition": "More than 50% and up to 80% achieved"
+    },
+    {
+      "code": "MET",
+      "label": "Met Expectations",
+      "definition": "80% to 100% achieved on time"
+    },
+    {
+      "code": "EXC",
+      "label": "Exceeded Expectations",
+      "definition": "100% achieved plus proactive contributions (process improvement, coaching, operational enhancement)"
+    },
+    {
+      "code": "SIG",
+      "label": "Significantly Exceeded Expectations",
+      "definition": "100% achieved plus strategic contributions (transformation, organization-wide improvements)"
+    }
+  ],
+  "goal_categories": [
+    "Financial / Stewardship",
+    "Customer / Stakeholder",
+    "Internal Process",
+    "Organisational Capacity / L&D"
+  ],
+  "goal_templates": {
+    "staff": [
+      {
+        "category": "Customer / Stakeholder",
+        "title": "Maintain on-time performance on assigned routes",
+        "measure": "OTP >= 85% on designated flights",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Zero critical findings in safety/compliance audits",
+        "measure": "No open critical audit findings at year-end",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Complete mandatory aviation compliance training",
+        "measure": "100% CPAT/recurrency training completed on schedule",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "Financial / Stewardship",
+        "title": "Support cost-control initiatives in daily operations",
+        "measure": "Document 2 approved cost-saving actions in role area",
+        "due": "2026-10-31"
+      },
+      {
+        "category": "Customer / Stakeholder",
+        "title": "Improve guest/interline experience score",
+        "measure": "Customer satisfaction score >= 4.2/5 in assigned touchpoints",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Reduce operational incident rate",
+        "measure": "Zero preventable safety incidents in role scope",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Complete peer coaching exchanges",
+        "measure": "4 documented coaching sessions with colleagues",
+        "due": "2026-11-30"
+      }
+    ],
+    "manager": [
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Complete Q1 BSC goal agreements for all direct reports",
+        "measure": "100% of team scorecards approved by March",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Run monthly coaching 1:1s with each report",
+        "measure": "At least 10 coaching notes logged per report/year",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Customer / Stakeholder",
+        "title": "Lift team OTP / customer experience outcome",
+        "measure": "Team OTP or CX score +3 points vs baseline",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial / Stewardship",
+        "title": "Manage department budget within approved envelope",
+        "measure": "Variance within +/- 3%",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Close audit actions for the department",
+        "measure": "100% of assigned audit actions closed on time",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Build team IDPs after mid-year review",
+        "measure": "Development plan for every report after Q2 review",
+        "due": "2026-07-31"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Improve departmental process cycle time",
+        "measure": "10% reduction in priority process cycle time",
+        "due": "2026-10-31"
+      },
+      {
+        "category": "Customer / Stakeholder",
+        "title": "Reduce escalations requiring executive intervention",
+        "measure": "Escalations down 15% vs prior year",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial / Stewardship",
+        "title": "Deliver departmental contribution to network profitability",
+        "measure": "Department KPIs at MET or above at year-end",
+        "due": "2026-12-20"
+      }
+    ],
+    "leadership": [
+      {
+        "category": "Financial / Stewardship",
+        "title": "Deliver operating plan within approved budget",
+        "measure": "Budget variance within +/- 2%",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer / Stakeholder",
+        "title": "Achieve enterprise OTP and safety targets",
+        "measure": "Network OTP >= 85%; zero critical safety exposures",
+        "due": "2026-12-20"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Advance regulatory/compliance audit readiness",
+        "measure": "All critical audit actions closed; pass rate >= 95%",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Cascade corporate BSC objectives to department scorecards",
+        "measure": "All departments have linked parent goals by end of Q1",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Complete talent review and 9-box calibration",
+        "measure": "Talent review held with calibrated ratings for leadership cohort",
+        "due": "2026-11-15"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Strengthen leadership bench for succession",
+        "measure": "Ready-now / ready-soon successors identified for critical roles",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Financial / Stewardship",
+        "title": "Improve cost per available seat mile",
+        "measure": "CASM reduction of 3% vs prior year baseline",
+        "due": "2026-12-01"
+      },
+      {
+        "category": "Internal Process",
+        "title": "Deploy BSC performance management cycle",
+        "measure": "Q1–Q4 review cycles completed with >= 95% participation",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Organisational Capacity / L&D",
+        "title": "Raise HRIS self-service adoption",
+        "measure": "Monthly active users >= 80% of headcount",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial / Stewardship",
+        "title": "Lead transformation portfolio milestones",
+        "measure": "Critical milestones on time for Executive Committee review",
+        "due": "2026-09-30"
+      }
+    ]
+  },
+  "review_processes": [
+    {
+      "key": "p1",
+      "name": "LIAT Q1 Goal Setting & BSC Planning 2026",
+      "description": "LIAT Planning phase: agree SMART BSC-aligned goals cascaded from corporate scorecard. Weighting: 70% objectives / 30% competencies.",
+      "ends_at": "2026-10-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": false,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "p2",
+      "name": "LIAT Q2-Q3 Mid-Year Review 2026",
+      "description": "LIAT Mid-year: review BSC objective progress, 360° competency input, coaching actions and IDP updates.",
+      "ends_at": "2026-11-30T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "p3",
+      "name": "LIAT Q4 Year-End & 9-Box Review 2026",
+      "description": "LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.",
+      "ends_at": "2026-12-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": true,
+      "competencies_assessments_enabled": true,
+      "start": false
+    }
+  ],
+  "trainings": [
+    {
+      "name": "LIAT Balanced Scorecard Essentials for Managers",
+      "description": "How LIAT's four BSC perspectives (Financial, Customer, Internal Process, L&D) cascade into department and individual scorecards.",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "LIAT 9-Box Talent Review Workshop",
+      "description": "Calibrating performance vs. potential for succession planning. Restricted to HR and line management.",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "LIAT Performance Coaching & IDP",
+      "description": "Coaching conversations, Individual Development Plans linked to BSC goals and 9-box placement.",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "LIAT Safety & Compliance Awareness",
+      "description": "Aviation safety culture, regulatory awareness and observable behaviors for all LIAT employees.",
+      "audience": ["staff", "manager", "leadership"]
+    }
+  ],
+  "posts_group": {
+    "title": "Company announcements",
+    "description": "Official announcements for LIAT (2020) Limited — Antigua & Barbuda.",
+    "fallback_titles": ["Company announcements", "LIAT Company Announcements"]
+  },
+  "posts": [
+    {
+      "title": "LIAT BSC Performance Cycle 2026 is live",
+      "description": "Colleagues, our Q1 Goal Setting and Q2-Q3 Mid-Year review cycles are open. Align SMART goals to the four BSC perspectives (Financial, Customer, Internal Process, L&D). Final rating weighting is 70% objectives / 30% competencies. Contact People & Culture for support.",
+      "allow_comments_and_reactions": true
+    },
+    {
+      "title": "LIAT 9-Box Talent Review — Year-End Preparation",
+      "description": "Managers and HR: the Q4 Year-End review includes potential assessment for the 9-box talent matrix. Complete mid-year coaching notes and IDPs before October. Access to 9-box views is restricted to HR and direct line management.",
+      "allow_comments_and_reactions": true
+    }
+  ],
+  "ui_checklist": {
+    "weighting": "Apply 70% BSC Objectives / 30% Competencies for all groups (Staff, Managers, Leadership).",
+    "rating_scale_labels": "Confirm DNM/PMS/MET/EXC/SIG labels visible at rating time.",
+    "nine_box": "Enable 9-box view on LIAT Q4 Year-End process; restrict access to HR + line managers.",
+    "goal_cascading": "Link individual goals to parent corporate BSC objectives in Goals module.",
+    "peer_review": "Configure peer evaluator groups in UI for Q2-Q3 and Q4 (360° — not available via public API).",
+    "e_signature": "Enable manager and employee e-sign-off on completed appraisals.",
+    "ai_governance": "If AI goal drafting/summarisation is enabled: require edit-before-submit; retain AI draft + final text in audit trail.",
+    "location": "Confirm LIAT VC Bird International Airport shows St. John's, Antigua.",
+    "agreements": "Initiate Q1/Q2 agreements in the Factorial UI if API key policy blocks bulk_initiate.",
+    "idp": "Link IDP actions to BSC goals and 9-box placement in development plans."
+  }
+}

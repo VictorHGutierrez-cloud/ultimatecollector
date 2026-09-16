@@ -1,0 +1,23 @@
+{
+  "id": "liat-air",
+  "name": "LIAT AIR",
+  "company_id": 191947,
+  "api": {
+    "provider": "factorial",
+    "base_url": "https://api.eu2.demo.factorial.dev",
+    "version": "2026-07-01",
+    "auth_type": "x-api-key"
+  },
+  "secrets": {
+    "token_files": ["secrets/seutoken.txt"],
+    "env_file": "secrets/secrets.env",
+    "fallback_global_config": true
+  },
+  "data_dir": "data/clients/liat-air",
+  "catalog": "catalog.json",
+  "features": {
+    "collect": ["employees", "performance", "trainings"],
+    "send": [],
+    "seed": true
+  }
+}

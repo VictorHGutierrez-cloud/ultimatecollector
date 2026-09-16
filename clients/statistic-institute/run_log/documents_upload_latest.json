@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-15T22:12:40.558518+00:00",
+  "uploads": [
+    {
+      "file": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\statistic-institute\\statistic-instituteasset\\STATIN Factorial Scope Guide.pdf",
+      "status": 201,
+      "body": {
+        "author_id": "6842200",
+        "company_id": "191864",
+        "content_type": "application/pdf",
+        "created_at": "2026-09-15T22:12:41.000Z",
+        "employee_id": null,
+        "extension": ".pdf",
+        "file_size": 74389,
+        "filename": "STATIN Factorial Scope Guide.pdf",
+        "folder_id": null,
+        "id": "13202622",
+        "is_company_document": true,
+        "is_management_document": true,
+        "is_pending_assignment": false,
+        "leave_id": null,
+        "public": false,
+        "signature_status": null,
+        "signees": [],
+        "space": "company_internal",
+        "updated_at": "2026-09-15T22:12:41.000Z",
+        "deleted_at": null
+      }
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-09-15T22:12:41.688648+00:00"
+}

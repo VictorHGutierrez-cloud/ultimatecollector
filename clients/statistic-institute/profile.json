@@ -1,0 +1,30 @@
+{
+  "id": "statistic-institute",
+  "name": "Statistic Institute",
+  "company_id": 191864,
+  "api": {
+    "provider": "factorial",
+    "base_url": "https://api.eu2.demo.factorial.dev",
+    "version": "2026-07-01",
+    "auth_type": "x-api-key"
+  },
+  "secrets": {
+    "token_files": [
+      "secrets/seutoken.txt"
+    ],
+    "env_file": "secrets/secrets.env"
+  },
+  "data_dir": "data/clients/statistic-institute",
+  "features": {
+    "collect": [
+      "employees",
+      "finance",
+      "expenses",
+      "attendance"
+    ],
+    "send": [
+      "attendance"
+    ],
+    "seed": false
+  }
+}

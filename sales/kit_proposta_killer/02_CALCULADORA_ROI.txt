@@ -1,0 +1,231 @@
+# 💰 CALCULADORA DE ROI
+## Use para demonstrar valor financeiro da sua solução
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 MÉTODO 1: ECONOMIA DE TEMPO
+
+### PASSO 1: Identifique processos manuais
+
+Processo 1: _______________________________
+├─ Tempo atual gasto: ________ horas/mês
+├─ Tempo com solução: ________ horas/mês
+└─ ECONOMIA: ________ horas/mês
+
+Processo 2: _______________________________
+├─ Tempo atual gasto: ________ horas/mês
+├─ Tempo com solução: ________ horas/mês
+└─ ECONOMIA: ________ horas/mês
+
+Processo 3: _______________________________
+├─ Tempo atual gasto: ________ horas/mês
+├─ Tempo com solução: ________ horas/mês
+└─ ECONOMIA: ________ horas/mês
+
+Processo 4: _______________________________
+├─ Tempo atual gasto: ________ horas/mês
+├─ Tempo com solução: ________ horas/mês
+└─ ECONOMIA: ________ horas/mês
+
+Processo 5: _______________________________
+├─ Tempo atual gasto: ________ horas/mês
+├─ Tempo com solução: ________ horas/mês
+└─ ECONOMIA: ________ horas/mês
+
+┌────────────────────────────────────────┐
+│ TOTAL ECONOMIA DE TEMPO: ________ h/mês│
+└────────────────────────────────────────┘
+
+### PASSO 2: Converta tempo em dinheiro
+
+Custo médio/hora da equipe: R$ ________
+(Salário mensal ÷ 160 horas = custo/hora)
+
+ECONOMIA MENSAL = ________ horas × R$ ________ = R$ ________
+ECONOMIA ANUAL = R$ ________ × 12 = R$ ________
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 MÉTODO 2: REDUÇÃO DE CUSTOS DIRETOS
+
+### Ferramentas substituídas:
+
+Ferramenta 1: _____________________________ R$ ________ /mês
+Ferramenta 2: _____________________________ R$ ________ /mês
+Ferramenta 3: _____________________________ R$ ________ /mês
+Ferramenta 4: _____________________________ R$ ________ /mês
+
+┌────────────────────────────────────────┐
+│ TOTAL FERRAMENTAS ATUAIS: R$ ________ /mês│
+└────────────────────────────────────────┘
+
+Custo da nova solução: R$ ________ /mês
+
+ECONOMIA/CUSTO ADICIONAL: R$ ________ /mês
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 MÉTODO 3: PREVENÇÃO DE PERDAS
+
+### Riscos evitados:
+
+RISCO 1: ___________________________
+├─ Probabilidade: ________ %
+├─ Custo se ocorrer: R$ ________
+└─ VALOR EM RISCO: R$ ________
+
+RISCO 2: ___________________________
+├─ Probabilidade: ________ %
+├─ Custo se ocorrer: R$ ________
+└─ VALOR EM RISCO: R$ ________
+
+RISCO 3: ___________________________
+├─ Probabilidade: ________ %
+├─ Custo se ocorrer: R$ ________
+└─ VALOR EM RISCO: R$ ________
+
+Exemplo:
+- Processo trabalhista por má gestão: 30% prob × R$ 50.000 = R$ 15.000
+- Multa LGPD por vazamento: 10% prob × R$ 100.000 = R$ 10.000
+- Perda de cliente por atraso: 20% prob × R$ 30.000 = R$ 6.000
+
+┌────────────────────────────────────────┐
+│ TOTAL VALOR EM RISCO EVITADO: R$ ________│
+└────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 MÉTODO 4: GANHOS DE PRODUTIVIDADE
+
+### Melhorias mensuráveis:
+
+Melhoria 1: ___________________________
+├─ Impacto: ________ % de aumento
+├─ Valor base: R$ ________ /mês
+└─ GANHO: R$ ________
+
+Melhoria 2: ___________________________
+├─ Impacto: ________ % de aumento
+├─ Valor base: R$ ________ /mês
+└─ GANHO: R$ ________
+
+Melhoria 3: ___________________________
+├─ Impacto: ________ % de aumento
+├─ Valor base: R$ ________ /mês
+└─ GANHO: R$ ________
+
+┌────────────────────────────────────────┐
+│ TOTAL GANHO DE PRODUTIVIDADE: R$ ________│
+└────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📊 MÉTODO 5: HABILITAÇÃO DE CRESCIMENTO
+
+### Crescimento planejado:
+
+Crescimento esperado: ________ %
+Período: ________ meses
+
+SEM a solução:
+├─ Precisaria contratar: ________ pessoas
+├─ Custo/pessoa: R$ ________ /mês
+└─ CUSTO TOTAL: R$ ________
+
+COM a solução:
+├─ Precisaria contratar: ________ pessoas
+├─ Custo/pessoa: R$ ________ /mês
+└─ CUSTO TOTAL: R$ ________
+
+┌────────────────────────────────────────┐
+│ ECONOMIA EM CONTRATAÇÕES: R$ ________  │
+└────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 💰 CÁLCULO FINAL DO ROI
+
+### CONSOLIDAÇÃO DOS VALORES:
+
+┌─────────────────────────────────────────────────┐
+│  BENEFÍCIOS MENSAL                              │
+├─────────────────────────────────────────────────┤
+│  Economia de tempo:          R$ ________        │
+│  Redução de custos:          R$ ________        │
+│  Prevenção de perdas:        R$ ________        │
+│  Ganho de produtividade:     R$ ________        │
+│  Economia em contratações:   R$ ________        │
+├─────────────────────────────────────────────────┤
+│  TOTAL BENEFÍCIO MENSAL:     R$ ________        │
+│  TOTAL BENEFÍCIO ANUAL:      R$ ________        │
+└─────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────┐
+│  INVESTIMENTO                                   │
+├─────────────────────────────────────────────────┤
+│  Custo mensal da solução:    R$ ________        │
+│  Custo de implementação:     R$ ________        │
+│  Custo anual total:          R$ ________        │
+└─────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────┐
+│  ROI CALCULADO                                  │
+├─────────────────────────────────────────────────┤
+│  Benefício anual:            R$ ________        │
+│  - Investimento anual:       R$ ________        │
+│  = RETORNO LÍQUIDO:          R$ ________        │
+│                                                 │
+│  ROI %:  _________ %                            │
+│  (Retorno ÷ Investimento × 100)                 │
+│                                                 │
+│  PAYBACK (meses):  _________ meses              │
+│  (Investimento ÷ Benefício mensal)              │
+└─────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🎯 APRESENTAÇÃO DO ROI NA PROPOSTA
+
+### OPÇÃO 1: Foco no Retorno Rápido
+┌─────────────────────────────────────────────────┐
+│  "Investimento se paga em apenas _____ meses"  │
+└─────────────────────────────────────────────────┘
+
+### OPÇÃO 2: Foco na Economia
+┌─────────────────────────────────────────────────┐
+│  "Economize R$ ________ por ano"                │
+└─────────────────────────────────────────────────┘
+
+### OPÇÃO 3: Foco no ROI Percentual
+┌─────────────────────────────────────────────────┐
+│  "ROI de ______% no primeiro ano"               │
+└─────────────────────────────────────────────────┘
+
+### OPÇÃO 4: Foco em Tempo Recuperado
+┌─────────────────────────────────────────────────┐
+│  "Recupere _____ horas/mês da sua equipe"       │
+└─────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 💡 EXEMPLO PRÁTICO (baseado na proposta Assisconsult)
+
+Economia de tempo: 68,5h/mês × R$ 50/h = R$ 3.425/mês
+Redução de riscos jurídicos: 10% × R$ 100.000 = R$ 10.000/ano
+Substituição de ferramentas: R$ 700 → R$ 1.571 = -R$ 871/mês
+
+BENEFÍCIO TOTAL: R$ 3.425 - R$ 871 = R$ 2.554/mês
+BENEFÍCIO ANUAL: R$ 30.648/ano
+
+INVESTIMENTO ANUAL: R$ 1.571 × 12 + R$ 1.200 = R$ 20.052
+
+ROI: (R$ 30.648 ÷ R$ 20.052) × 100 = 153% ao ano
+PAYBACK: R$ 20.052 ÷ R$ 2.554 = 7,8 meses
+
+MENSAGEM NA PROPOSTA:
+"Investimento se paga em menos de 8 meses e gera ROI de 153% ao ano"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICA: Seja conservador nos benefícios e realista nos custos.
+   Melhor surpreender positivamente do que decepcionar!

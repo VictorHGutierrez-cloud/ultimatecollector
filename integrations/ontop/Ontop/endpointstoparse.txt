@@ -1,0 +1,1453 @@
+MP TO
+CTRL-/
+ONTOP API
+Auth
+
+Login
+Worker
+
+Client Wallet
+
+Paylist
+
+Webhooks
+
+Powered by 
+
+Login
+get
+https://example.com
+
+New login endpoint to ensure more security 🔒
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+
+curl --location 'https://api.demo.getontop.com/login/login/v2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "email": "admin@yopmail.com",
+    "password": "password",
+    "rememberMe": false,
+    "recaptchaToken": "",
+    "user": "admin@yopmail.com",
+    "ip": "190.236.144.113",
+    "webDeviceInfo": "Backend"
+}'
+Updated 12 months ago
+
+Worker
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://example.com/"
+4
+​
+5
+response = requests.get(url)
+6
+​
+7
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Invite workers
+post
+https://example.com/contract/workers/inviteWorkersBulkLocked
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+The user will send a POST petition with the next body. The client_id will be obtained through the token and will be stored the moment the invitation is sent.
+-workerName: required
+-workerSurname: required
+-typeOfWorker: required (can be either Worker or Business)
+-workerLegalName: required if typeOfWorker is Business
+-workerEmail: required
+-countryIso: required and must be in ISO 3166-1 alpha-2 code, (e.g., MX, AR, US, etc.)
+
+
+curl --location 'https://api.demo.getontop.com/contract/workers/inviteWorkersBulkLocked' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ' \
+--data-raw '[
+    {
+        "workerName": "Jane",
+        "workerSurname": "Doe",
+        "typeOfWorker": "Worker",
+        "jobTitle": "Developer",
+        "workerEmail": "john.doe.demo.test.73@yopmail.com",
+        "workerEmailText": "Hi, we would like to invite you to work with us.",
+        "externalId": "ABC123",
+        "countryIso": "MX"
+    }
+]'
+
+
+[
+    {
+        "workerName": "Jane",
+        "workerSurname": "Doe",
+        "typeOfWorker": "Worker",
+        "jobTitle": "Developer",
+        "workerEmail": "jane.doe@example.com",
+        "workerEmailText": "Hi, we would like to invite you to work with us.",
+        "externalId": "ABC123",
+        "countryIso": "MX"
+    },
+    {
+        "workerName": "John",
+        "workerSurname": "Smith",
+        "workerLegalName": "Business Corp.",
+        "typeOfWorker": "Business",
+        "jobTitle": "Manager",
+        "workerEmail": "john.smith@example.com",
+        "workerEmailText": "Hello, we invite your business to collaborate with us.",
+        "externalId": "XYZ456",
+        "countryIso": "US"
+    }
+]
+Updated about 1 year ago
+
+Login
+Get Workers
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://example.com/contract/workers/inviteWorkersBulkLocked"
+4
+​
+5
+response = requests.post(url)
+6
+​
+7
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the res
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Invite workers
+post
+Get Workers
+get
+Get worker Info
+get
+Client Wallet
+
+Paylist
+
+Webhooks
+
+Powered by 
+
+Get Workers
+get
+https://example.com/contract/workers/list
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Retrieving recent requests…
+
+Receives a list of workers vinculated with the Client. (client_id will be obtained through the authentication token) matching criteria.
+This endpoint can be filtered by worker status. If no query param is sent, it will return all workers by default.
+The query param to filter between status is called “statusId”, and it goes in integers from 0 to 3, being the next relation:
+
+Status ID	Equivalent value
+0	ACTIVE
+1	INVITATION_SENT
+2	VERIFICATION_PENDING
+3	ENDED
+
+curl --location 'https://api.demo.getontop.com/contract/workers/list' \
+--header 'Authorization: Bearer ' \
+--header 'Cookie: JSESSIONID='
+
+{
+    "content": [
+        {
+            "agreementId": 15,
+            "firstName": null,
+            "lastName": null,
+            "legalName": null,
+            "email": "john.doe.ontop@yopmail.com",
+            "jobTitle": "Software Engineer",
+            "country": null,
+            "externalId": null,
+            "workerCreationDate": "2023-09-29T22:33:34.377+00:00",
+            "status": "INVITATION_SENT"
+        },
+        {
+            "agreementId": 16,
+            "firstName": "Juan",
+            "lastName": "Perez",
+            "legalName": null,
+            "email": "juan.perez.ontop@yopmail.com",
+            "jobTitle": "Ingeniero de Software",
+            "country": "Argentina",
+            "externalId": "SFK005",
+            "workerCreationDate": "2023-09-21T14:42:38.793+00:00",
+            "status": "ACTIVE"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 20,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 2,
+    "number": 0,
+    "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+    },
+    "size": 20,
+    "first": true,
+    "numberOfElements": 2,
+    "empty": false
+}
+Example cURL Filtered by ACTIVE status:
+
+curl --location 'https://api.demo.getontop.com/contract/workers/list?statusId=0' \
+--header 'Authorization: Bearer'\
+  --header 'Cookie: JSESSIONID='
+
+{
+    "content": [
+        {
+            "agreementId": 16,
+            "firstName": "Juan",
+            "lastName": "Perez",
+            "legalName": null,
+            "email": "juan.perez.ontop@yopmail.com",
+            "jobTitle": "Ingeniero de Software",
+            "country": "Argentina",
+            "externalId": "SFK005",
+            "workerCreationDate": "2023-09-21T14:42:38.793+00:00",
+            "status": "ACTIVE"
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 20,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": true,
+    "totalPages": 1,
+    "totalElements": 1,
+    "number": 0,
+    "sort": {
+        "empty": true,
+        "sorted": false,
+        "unsorted": true
+    },
+    "size": 20,
+    "first": true,
+    "numberOfElements": 2,
+    "empty": false
+}
+Updated about 1 year ago
+
+Invite workers
+Get worker Info
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://example.com/contract/workers/list"
+4
+​
+5
+response = requests.get(url)
+6
+​
+7
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Invite workers
+post
+Get Workers
+get
+Get worker Info
+get
+Client Wallet
+
+Paylist
+
+Webhooks
+
+Powered by 
+
+Get worker Info
+get
+https://example.com/contract/workers
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+Searches for individual worker information by email.
+This endpoint requires the “email” query param in order to search by email.
+If the worker has finished the onboarding process and created an account successfully, the response will show the same info shown on the Get Worker List endpoint.
+If the worker has not started the onboarding process, the response will be an exception explaining the reason (as seen in the example below).
+
+
+curl --location 'https://api.demo.getontop.com/contract/workers?email=john.doe.ontop%40yopmail.com' \
+--header 'Authorization: Bearer' \
+  --header 'Cookie: JSESSIONID='
+
+{
+    "agreementId": 11,
+    "firstName": "John",
+    "lastName": "Doe",
+    "legalName": null,
+    "email": "john.doe.ontop@yopmail.com",
+    "jobTitle": "Software Engineer",
+    "country": "United States",
+    "externalId": null,
+    "workerCreationDate": "2023-01-31T17:51:20.297+00:00",
+    "status": "ACTIVE"
+}
+Updated about 1 year ago
+
+Get Workers
+Client Wallet
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://example.com/contract/workers"
+4
+​
+5
+response = requests.get(url)
+6
+​
+7
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Wallet info & balance
+get
+Wallet transactions
+get
+Paylist
+
+Webhooks
+
+Powered by 
+
+Wallet info & balance
+get
+https://api.demo.getontop.com/client-wallet/clients/100/wallet
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This endpoint exposes the Client wallet information, like enabled status and balance available to perform transactions.
+
+
+curl 'https://api.demo.getontop.com/client-wallet/clients/100/wallet' \
+--header 'Authorization: Bearer '
+
+{
+  "id": 4,
+  "wallet_version": 112,
+  "client_id": 100,
+  "enabled": true,
+  "balance": 889.00,
+  "over_draft_limit": 0.000000,
+  "created_at": "2023-09-28T19:33:32.862876Z"
+}
+Headers
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Get worker Info
+Wallet transactions
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/client-wallet/clients/100/wallet"
+4
+​
+5
+headers = {"accept": "application/json"}
+6
+​
+7
+response = requests.get(url, headers=headers)
+8
+​
+9
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Wallet info & balance
+get
+Wallet transactions
+get
+Paylist
+
+Webhooks
+
+Powered by 
+
+Wallet transactions
+get
+https://api.demo.getontop.com/client-wallet/clients/transactions
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This endpoint exposes all journal entries made into the Client ledger. It is a paginated list so it can be traversed using page and/or size query parameters.
+
+
+curl 'https://api.demo.getontop.com/client-wallet/clients/transactions?page=1&size=200' \
+--header 'Authorization: Bearer'
+json
+
+{
+"content":[
+        {
+            "journal_id":223,
+            "wallet_id":4,
+            "client_id":305,
+            "idempotence_key":"2234db48f5d4f87118759fb125789ea4",
+            "amount":-1.000000,
+            "reason":"PAYMENT",
+            "operation":"WITHDRAWAL",
+            "transaction_data":{
+                "payment_order_id":"335",
+                "payment_purpose":"Client payment to worker"
+            },
+            "created_at":"2023-09-29T18:11:32.131304Z"
+        }
+]
+}
+Query Params
+page
+integer
+size
+integer
+Headers
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Wallet info & balance
+Paylist
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/client-wallet/clients/transactions"
+4
+​
+5
+headers = {"accept": "application/json"}
+6
+​
+7
+response = requests.get(url, headers=headers)
+8
+​
+9
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Create Paylist
+post
+https://api.demo.getontop.com/payment-agent/paylists
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This endpoint allows clients to create a new paylist, providing a description and simultaneously adding multiple payments. Upon processing the request, the service will validate each payment item. If everything is in order, it will return a response indicating the paylist has been accepted and will be processed asynchronously. The paylist is just a container of payments and only exists as the collection representation, without status.
+IMPORTANT #1: Take into consideration the idempotence_key: this identifies unequivocally the paylist on the system and needs to be unique for each one. The idea behind this is to not allow repeated paylist creation on retries due to network issues of any kind. The field has to be 32 characters long; we recommend to use MD5 hashing algorithm since it produces the required string size.
+IMPORTANT #2: The payment process will generate an idempotency key internally for it. The fields taken into account for this are: amount, email and description. If you have repetitive payments for the same amount and purpose, consider adding an extra text into the description to indicate the motive in a more precise way (i.e. dates, goals, etc).
+
+
+curl -X POST 'https://api.demo.getontop.com/payment-agent/paylists' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx' \
+--data-raw '{
+    "description":"Payments september",
+    "idempotence_key":"anuniquekey123",
+    "payments":[
+        {
+            "description":"Payment 1",
+            "amount":10,
+            "worker_email":"worker_n1@example.com"
+        },
+        {
+            "description":"Payment 2",
+            "amount":30,
+            "worker_email":"worker_n2@example.com"
+        }
+    ],
+    "client_id":100
+}'
+
+{
+    "id":23,
+    "description":"Payments september",
+    "client_id":100,
+    "idempotence_key":"anuniquekey123",
+    "creation_date":"2023-09-29T14:01:37.151862380Z"
+}
+Body Params
+Headers
+Content-Type
+string
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Paylist
+Get paylist by ID
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/payment-agent/paylists"
+4
+​
+5
+headers = {
+6
+    "accept": "application/json",
+7
+    "content-type": "*/*"
+8
+}
+9
+​
+10
+response = requests.post(url, headers=headers)
+11
+​
+12
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Get payment list by paylist ID
+get
+https://api.demo.getontop.com/payment-agent/paylists/23/payments
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This is a paginated endpoint that exposes the list of payments involved in a previously created paylist. It can be traversed using page and/or size query parameters.
+
+
+curl 'https://api.demo.getontop.com/payment-agent/paylists/23/payments?page=1&size=20' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx'
+
+{
+    "content":[
+        {
+            "id":231,
+            "description":"Worker n1",
+            "amount":10.00,
+            "worker_email":"worker_n1@example.com",
+            "paylist_id":23,
+            "idempotence_key":"2ffa2c706ab068dce719b38d1a795544",
+            "creation_date":"2023-09-28T14:48:46.771546Z",
+            "update_date":"2023-09-28T14:48:48.212830Z",
+            "status":"SUCCESS",
+            "cause":null
+        },
+        {
+            "id":232,
+            "description":"Worker n2",
+            "amount":30.00,
+            "worker_email":"worker_n2@example.com",
+            "paylist_id":23,
+            "idempotence_key":"2ffa2c706ab068dce719b38d1a795544",
+            "creation_date":"2023-09-28T14:48:46.771546Z",
+            "update_date":"2023-09-28T14:48:48.212830Z",
+            "status":"SUCCESS",
+            "cause":null
+        }
+    ],
+    "pageable":{
+        "sort":{
+            "unsorted":false,
+            "sorted":true,
+            "empty":false
+        },
+        "pageNumber":0,
+        "pageSize":20,
+        "offset":0,
+        "paged":true,
+        "unpaged":false
+    },
+    "totalPages":1,
+    "totalElements":2,
+    "last":true,
+    "numberOfElements":2,
+    "size":20,
+    "number":0,
+    "sort":{
+        "unsorted":false,
+        "sorted":true,
+        "empty":false
+    },
+    "first":true,
+    "empty":false
+}
+Query Params
+page
+integer
+size
+integer
+Headers
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Get paylist by ID
+Get payment by ID
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/payment-agent/paylists/23/payments"
+4
+​
+5
+headers = {"accept": "application/json"}
+6
+​
+7
+response = requests.get(url, headers=headers)
+8
+​
+9
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Get payment list by paylist ID
+get
+https://api.demo.getontop.com/payment-agent/paylists/23/payments
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This is a paginated endpoint that exposes the list of payments involved in a previously created paylist. It can be traversed using page and/or size query parameters.
+
+
+curl 'https://api.demo.getontop.com/payment-agent/paylists/23/payments?page=1&size=20' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx'
+
+{
+    "content":[
+        {
+            "id":231,
+            "description":"Worker n1",
+            "amount":10.00,
+            "worker_email":"worker_n1@example.com",
+            "paylist_id":23,
+            "idempotence_key":"2ffa2c706ab068dce719b38d1a795544",
+            "creation_date":"2023-09-28T14:48:46.771546Z",
+            "update_date":"2023-09-28T14:48:48.212830Z",
+            "status":"SUCCESS",
+            "cause":null
+        },
+        {
+            "id":232,
+            "description":"Worker n2",
+            "amount":30.00,
+            "worker_email":"worker_n2@example.com",
+            "paylist_id":23,
+            "idempotence_key":"2ffa2c706ab068dce719b38d1a795544",
+            "creation_date":"2023-09-28T14:48:46.771546Z",
+            "update_date":"2023-09-28T14:48:48.212830Z",
+            "status":"SUCCESS",
+            "cause":null
+        }
+    ],
+    "pageable":{
+        "sort":{
+            "unsorted":false,
+            "sorted":true,
+            "empty":false
+        },
+        "pageNumber":0,
+        "pageSize":20,
+        "offset":0,
+        "paged":true,
+        "unpaged":false
+    },
+    "totalPages":1,
+    "totalElements":2,
+    "last":true,
+    "numberOfElements":2,
+    "size":20,
+    "number":0,
+    "sort":{
+        "unsorted":false,
+        "sorted":true,
+        "empty":false
+    },
+    "first":true,
+    "empty":false
+}
+Query Params
+page
+integer
+size
+integer
+Headers
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Get paylist by ID
+Get payment by ID
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/payment-agent/paylists/23/payments"
+4
+​
+5
+headers = {"accept": "application/json"}
+6
+​
+7
+response = requests.get(url, headers=headers)
+8
+​
+9
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Get payment by ID
+get
+https://api.demo.getontop.com/payment-agent/payments/231
+
+
+Recent Requests
+Log in to see full request history
+Time	Status	User Agent	
+Make a request to see history.
+
+This endpoint serves to retrieve the comprehensive details of a specific payment by its unique ID. By fetching these details, users can inspect the status, the creation and update dates, making it a critical tool for monitoring and verifying bulk payment progress.
+
+
+curl 'https://api.demo.getontop.com/payment-agent/payments/231' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx'
+
+{
+  "id": 231,
+  "description": "Worker n1",
+  "amount": 10.00,
+  "worker_email": "worker_n1@example.com",
+  "paylist_id": 23,
+  "idempotence_key": "2ffa2c706ab068dce719b38d1a795544",
+  "creation_date": "2023-09-28T14:48:46.771546Z",
+  "update_date": "2023-09-28T14:48:48.212830Z",
+  "status": "SUCCESS",
+  "cause": null
+}
+Headers
+Authorization
+string
+Response
+
+200
+Successful response
+
+Updated about 1 year ago
+
+Get payment list by paylist ID
+Get paylists
+Did this page help you?
+Language
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+Request
+python -m pip install requests
+1
+import requests
+2
+​
+3
+url = "https://api.demo.getontop.com/payment-agent/payments/231"
+4
+​
+5
+headers = {"accept": "application/json"}
+6
+​
+7
+response = requests.get(url, headers=headers)
+8
+​
+9
+print(response.text)
+
+Try It!
+Response
+Click Try It! to start a request and see the response here!
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Get paylists
+Obtain paginated paylists for the client This endpoint serves to retrieve a paginated list of paylists for a specific client within a date range. Users can specify the start date and end date to filter the paylists. If not provided, default values will be used. This endpoint is a critical tool for monitoring and tracking the progress of paylists over a specific period of time.
+
+
+curl 'https://api.demo.getontop.com/payment-agent/paylists?startDate=2023-09-01T00:00:00Z&endDate=2023-09-30T23:59:59Z&page=0&size=20' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx'
+
+{
+  "content": [
+    {
+      "paylistId": 231,
+      "flowStage": "COMPLETED",
+      "description": "Paylist for September 2023",
+      "total": 10000.00
+    },
+    ...
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": true,
+      "unsorted": false,
+      "empty": false
+    },
+    "offset": 0,
+    "pageNumber": 0,
+    "pageSize": 20,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 100
+}
+Updated about 1 year ago
+
+Get payment by ID
+Get payments
+Did this page help you?
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Create Paylist
+post
+Get paylist by ID
+get
+Get payment list by paylist ID
+get
+Get payment by ID
+get
+Get paylists
+Get payments
+Webhooks
+
+Powered by 
+
+Get payments
+This endpoint is used to retrieve a paginated list of payments for a specific customer within a date range. Users can specify the start date and end date to filter the payments. If not provided, default values will be used. This endpoint is a critical tool for monitoring and verifying the progress of payments over a specific time period.
+
+
+curl 'https://api.demo.getontop.com/payment-agent/payments?startDate=2023-09-01T00:00:00Z&endDate=2023-09-30T23:59:59Z&page=0&size=20' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxx'
+
+HTTP 200
+{
+  "content": [
+    {
+      "id": 231,
+      "description": "Worker n1",
+      "amount": 10.00,
+      "worker_email": "worker_n1@example.com",
+      "paylist_id": 23,
+      "idempotence_key": "2ffa2c706ab068dce719b38d1a795544",
+      "creation_date": "2023-09-28T14:48:46.771546Z",
+      "update_date": "2023-09-28T14:48:48.212830Z",
+      "status": "SUCCESS",
+      "cause": null
+    },
+    ...
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": true,
+      "unsorted": false,
+      "empty": false
+    },
+    "offset": 0,
+    "pageNumber": 0,
+    "pageSize": 20,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalElements": 100
+}
+Updated about 1 year ago
+
+Get paylists
+Webhooks
+Did this page help you?
+
+Jump to Content
+Ontop
+API Reference
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+ONTOP API
+Auth
+
+Worker
+
+Client Wallet
+
+Paylist
+
+Webhooks
+
+Create configuration
+post
+Retrieving configuration
+get
+Test Event Notification
+post
+Powered by 
+
+Webhooks
+Webhooks function as a callback mechanism, where OnTop sends HTTP POST requests to a predefined URL defined by the Client in response to particular events. This approach to communication allows for seamless integration and data sharing between us and Clients, eliminating the need for constant polling or manual data retrieval.
+
+KYC verified and active
+Contains information about the KYC event, including the verification status, worker ID, client ID, external ID, and worker email. This state implies that the worker has successfully verified its identity through the KYC and a wallet has been created.
+
+JSON
+
+{
+  "event_type": "KYC",
+  "data": {
+    "status": "ACTIVE",
+    "worker_id": 888,
+    "client_id": 999,
+    "external_id": "abc123",
+    "worker_email": "john.doe@example.com"
+  }
+}
+Payment Status
+Notifies about the final status of each payment enqueued using the Paylist interface. The event body includes the payment ID, the paylist ID, the amount transferred and worker data.
+
+
+{
+  "event_type": "PAYMENT",
+  "data": {
+    "payment_id": 20,
+    "client_id": 999,
+    "worker_id": 111,
+    "paylist_id": 24,
+    "idempotency_key": "bea3502a2a5a1f776bce4d7c2ce6f267",
+    "email": "john.doe@example.com",
+    "transaction_status": "SUCCESS",
+    "transaction_amount": 100.00,
+    "transaction_date_time": 1698708987.544633693
+  }
+}
+Client Wallet Top-up
+Provides details about a Client's Wallet top-up event, including transaction ID, transaction type, amount, and a reference ID (idempotence key).
+
+
+{
+  "event_type": "CLIENT_WALLET_TOP_UP",
+  "data": {
+    "transaction_id": 7,
+    "transaction_type": "TRANSFER",
+    "amount": 1000,
+    "reference_id": "aabvadasxxxxbxyyyzzz"
+  }
+}
+Updated about 1 year ago
+
+Get payments
+Create configuration
+Did this page help you?
+Table of Contents
+KYC verified and active
+Payment Status
+Client Wallet Top-up
+
+
+
+
+
+
+
+
+
+

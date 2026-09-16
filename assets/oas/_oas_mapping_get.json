@@ -1,0 +1,222 @@
+{
+  "api_public": {
+    "credentials": "api_public/credentials",
+    "webhook_subscriptions": "api_public/webhook_subscriptions"
+  },
+  "ats": {
+    "answers": "ats/answers",
+    "applications": "ats/applications",
+    "application_phases": "ats/application_phases",
+    "candidates": "ats/candidates",
+    "candidate_sources": "ats/candidate_sources",
+    "evaluation_forms": "ats/evaluation_forms",
+    "feedbacks": "ats/feedbacks",
+    "hiring_stages": "ats/hiring_stages",
+    "job_postings": "ats/job_postings",
+    "messages": "ats/messages",
+    "questions": "ats/questions",
+    "rejection_reasons": "ats/rejection_reasons"
+  },
+  "attendance": {
+    "break_configurations": "attendance/break_configurations",
+    "edit_timesheet_requests": "attendance/edit_timesheet_requests",
+    "estimated_times": "attendance/estimated_times",
+    "open_shifts": "attendance/open_shifts",
+    "overtime_requests": "attendance/overtime_requests",
+    "reviews": "attendance/reviews",
+    "shifts": "attendance/shifts",
+    "worked_times": "attendance/worked_times"
+  },
+  "banking": {
+    "bank_accounts": "banking/bank_accounts",
+    "card_payments": "banking/card_payments",
+    "transactions": "banking/transactions"
+  },
+  "bookkeepers_management": {
+    "incidences": "bookkeepers_management/incidences"
+  },
+  "companies": {
+    "legal_entities": "companies/legal_entities"
+  },
+  "compensations": {
+    "concepts": "compensations/concepts"
+  },
+  "contracts": {
+    "compensations": "contracts/compensations",
+    "contract_templates": "contracts/contract_templates",
+    "contract_versions": "contracts/contract_versions",
+    "contract_version_histories": "contracts/contract_version_histories",
+    "contract_version_meta_data": "contracts/contract_version_meta_data",
+    "french_contract_types": "contracts/french_contract_types",
+    "german_contract_types": "contracts/german_contract_types",
+    "materialized_templates": "contracts/materialized_templates",
+    "portuguese_contract_types": "contracts/portuguese_contract_types",
+    "reference_contracts": "contracts/reference_contracts",
+    "spanish_contract_types": "contracts/spanish_contract_types",
+    "spanish_education_levels": "contracts/spanish_education_levels",
+    "spanish_professional_categories": "contracts/spanish_professional_categories",
+    "spanish_working_day_types": "contracts/spanish_working_day_types",
+    "taxonomies": "contracts/taxonomies"
+  },
+  "custom_fields": {
+    "fields": "custom_fields/fields",
+    "options": "custom_fields/options",
+    "resource_fields": "custom_fields/resource_fields",
+    "values": "custom_fields/values"
+  },
+  "custom_resources": {
+    "resources": "custom_resources/resources",
+    "schemas": "custom_resources/schemas",
+    "values": "custom_resources/values"
+  },
+  "documents": {
+    "documents": "documents/documents",
+    "folders": "documents/folders"
+  },
+  "employees": {
+    "employees": "employees/employees"
+  },
+  "employee_updates": {
+    "absences": "employee_updates/absences",
+    "contract_changes": "employee_updates/contract_changes",
+    "new_hires": "employee_updates/new_hires",
+    "personal_changes": "employee_updates/personal_changes",
+    "summaries": "employee_updates/summaries",
+    "terminations": "employee_updates/terminations"
+  },
+  "expenses": {
+    "expensables": "expenses/expensables",
+    "expenses": "expenses/expenses",
+    "mileages": "expenses/mileages",
+    "per_diems": "expenses/per_diems"
+  },
+  "finance": {
+    "accounts": "finance/accounts",
+    "accounting_settings": "finance/accounting_settings",
+    "budget_options": "finance/budget_options",
+    "categories": "finance/categories",
+    "contacts": "finance/contacts",
+    "cost_centers": "finance/cost_centers",
+    "cost_center_memberships": "finance/cost_center_memberships",
+    "financial_documents": "finance/financial_documents",
+    "journal_entries": "finance/journal_entries",
+    "journal_lines": "finance/journal_lines",
+    "ledger_account_resources": "finance/ledger_account_resources",
+    "tax_rates": "finance/tax_rates",
+    "tax_types": "finance/tax_types"
+  },
+  "holidays": {
+    "company_holidays": "holidays/company_holidays"
+  },
+  "integrations": {
+    "syncable_items": "integrations/syncable_items"
+  },
+  "it_management": {
+    "it_assets": "it_management/it_assets",
+    "it_asset_models": "it_management/it_asset_models"
+  },
+  "job_catalog": {
+    "levels": "job_catalog/levels",
+    "node_attributes": "job_catalog/node_attributes",
+    "roles": "job_catalog/roles",
+    "tree_nodes": "job_catalog/tree_nodes"
+  },
+  "locations": {
+    "locations": "locations/locations",
+    "work_areas": "locations/work_areas"
+  },
+  "marketplace": {
+    "installation_settings": "marketplace/installation_settings"
+  },
+  "payroll": {
+    "family_situations": "payroll/family_situations",
+    "supplements": "payroll/supplements"
+  },
+  "payroll_employees": {
+    "identifiers": "payroll_employees/identifiers"
+  },
+  "payroll_integrations_base": {
+    "codes": "payroll_integrations_base/codes"
+  },
+  "performance": {
+    "agreements": "performance/agreements",
+    "company_employee_score_scales": "performance/company_employee_score_scales",
+    "employee_score_scales": "performance/employee_score_scales",
+    "review_evaluations": "performance/review_evaluations",
+    "review_evaluation_answers": "performance/review_evaluation_answers",
+    "review_evaluation_scores": "performance/review_evaluation_scores",
+    "review_owners": "performance/review_owners",
+    "review_processes": "performance/review_processes",
+    "review_process_custom_templates": "performance/review_process_custom_templates",
+    "review_process_estimated_targets": "performance/review_process_estimated_targets",
+    "review_process_targets": "performance/review_process_targets",
+    "review_questionnaire_by_strategies": "performance/review_questionnaire_by_strategies",
+    "review_visibility_settings": "performance/review_visibility_settings",
+    "target_managers": "performance/target_managers"
+  },
+  "posts": {
+    "comments": "posts/comments",
+    "groups": "posts/groups",
+    "posts": "posts/posts"
+  },
+  "procurement": {
+    "purchase_orders": "procurement/purchase_orders",
+    "purchase_requests": "procurement/purchase_requests",
+    "types": "procurement/types"
+  },
+  "project_management": {
+    "budget_strategies": "project_management/budget_strategies",
+    "expense_records": "project_management/expense_records",
+    "exportable_expenses": "project_management/exportable_expenses",
+    "imputable_projects": "project_management/imputable_projects",
+    "planned_records": "project_management/planned_records",
+    "projects": "project_management/projects",
+    "project_tasks": "project_management/project_tasks",
+    "project_workers": "project_management/project_workers",
+    "subprojects": "project_management/subprojects",
+    "time_records": "project_management/time_records"
+  },
+  "shift_management": {
+    "shifts": "shift_management/shifts"
+  },
+  "tasks": {
+    "tasks": "tasks/tasks",
+    "task_files": "tasks/task_files"
+  },
+  "teams": {
+    "memberships": "teams/memberships",
+    "teams": "teams/teams"
+  },
+  "timeoff": {
+    "allowances": "timeoff/allowances",
+    "allowance_incidences": "timeoff/allowance_incidences",
+    "allowance_stats": "timeoff/allowance_stats",
+    "blocked_periods": "timeoff/blocked_periods",
+    "leaves": "timeoff/leaves",
+    "leave_types": "timeoff/leave_types",
+    "policies": "timeoff/policies",
+    "policy_assignments": "timeoff/policy_assignments",
+    "policy_timelines": "timeoff/policy_timelines"
+  },
+  "time_planning": {
+    "planned_breaks": "time_planning/planned_breaks",
+    "planning_versions": "time_planning/planning_versions"
+  },
+  "time_settings": {
+    "break_configurations": "time_settings/break_configurations"
+  },
+  "trainings": {
+    "categories": "trainings/categories",
+    "sessions": "trainings/sessions",
+    "session_access_memberships": "trainings/session_access_memberships",
+    "session_attendances": "trainings/session_attendances",
+    "trainings": "trainings/trainings",
+    "training_classes": "trainings/training_classes",
+    "training_memberships": "trainings/training_memberships"
+  },
+  "work_schedule": {
+    "day_configurations": "work_schedule/day_configurations",
+    "overlap_periods": "work_schedule/overlap_periods",
+    "schedules": "work_schedule/schedules"
+  }
+}

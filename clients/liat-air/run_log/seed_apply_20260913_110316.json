@@ -1,0 +1,763 @@
+{
+  "started_at": "2026-09-13T11:03:09.617165+00:00",
+  "mode": "apply",
+  "company_id": "191947",
+  "actions": [
+    {
+      "action": "location_exists",
+      "detail": {
+        "id": "666660",
+        "name": "LIAT VC Bird International Airport"
+      }
+    },
+    {
+      "action": "legal_entity_exists",
+      "detail": {
+        "id": "422089",
+        "name": "Liat (2020) Limited"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Marcus Williams",
+        "status": 400,
+        "updates": {
+          "id": "6381329",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Denise Antoine",
+        "status": 400,
+        "updates": {
+          "id": "6381718",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Robert Clarke",
+        "status": 400,
+        "updates": {
+          "id": "6381788",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Kamala Singh",
+        "status": 400,
+        "updates": {
+          "id": "6381818",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Julian Baptiste",
+        "status": 400,
+        "updates": {
+          "id": "6381843",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Alicia Fraser",
+        "status": 400,
+        "updates": {
+          "id": "6382249",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Tamara Joseph",
+        "status": 400,
+        "updates": {
+          "id": "6381887",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Devon Thomas",
+        "status": 400,
+        "updates": {
+          "id": "6381909",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Keon Richards",
+        "status": 400,
+        "updates": {
+          "id": "6382057",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Simone Peters",
+        "status": 400,
+        "updates": {
+          "id": "6382749",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Ryan Mitchell",
+        "status": 400,
+        "updates": {
+          "id": "6382189",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Natasha Browne",
+        "status": 400,
+        "updates": {
+          "id": "6382231",
+          "location_id": "666660",
+          "legal_entity_id": "422089"
+        }
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "executive",
+        "id": "1975583",
+        "name": "LIAT Executive Leadership"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "flight_ops",
+        "id": "1975584",
+        "name": "LIAT Flight Operations"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "ground_mro",
+        "id": "1975585",
+        "name": "LIAT Ground Operations & MRO"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "commercial",
+        "id": "1975586",
+        "name": "LIAT Commercial & Customer Experience"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "finance",
+        "id": "1975587",
+        "name": "LIAT Finance & Revenue Accounts"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "people",
+        "id": "1975588",
+        "name": "LIAT People & Culture"
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Marcus Williams",
+        "team_id": "1975583",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Denise Antoine",
+        "team_id": "1975588",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Robert Clarke",
+        "team_id": "1975587",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Kamala Singh",
+        "team_id": "1975584",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Julian Baptiste",
+        "team_id": "1975585",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Alicia Fraser",
+        "team_id": "1975586",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Tamara Joseph",
+        "team_id": "1975584",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Devon Thomas",
+        "team_id": "1975584",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Keon Richards",
+        "team_id": "1975585",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Simone Peters",
+        "team_id": "1975586",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Ryan Mitchell",
+        "team_id": "1975588",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Natasha Browne",
+        "team_id": "1975587",
+        "lead": false
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Marcus Williams",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Denise Antoine",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Robert Clarke",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Kamala Singh",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Julian Baptiste",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Alicia Fraser",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Tamara Joseph",
+        "manager_id": "6381818"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Devon Thomas",
+        "manager_id": "6381818"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Keon Richards",
+        "manager_id": "6381843"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Simone Peters",
+        "manager_id": "6382249"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Ryan Mitchell",
+        "manager_id": "6381718"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Natasha Browne",
+        "manager_id": "6381788"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p1",
+        "id": "299781",
+        "status": "active"
+      }
+    },
+    {
+      "action": "skip_draft_config",
+      "detail": {
+        "process_id": "299781",
+        "status": "active",
+        "reason": "process already started"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "299781",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p2",
+        "id": "299782",
+        "status": "active"
+      }
+    },
+    {
+      "action": "skip_draft_config",
+      "detail": {
+        "process_id": "299782",
+        "status": "active",
+        "reason": "process already started"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "299782",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p3",
+        "id": "299783",
+        "status": "draft"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "{'id': '299783', 'company_id': '191947', 'name': 'LIAT Q4 Year-End & 9-Box Review 2026', 'description': 'LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.', 'status':..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "299783",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "{'id': '299783', 'company_id': '191947', 'name': 'LIAT Q4 Year-End & 9-Box Review 2026', 'description': 'LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.', 'status':..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "{'id': '299783', 'company_id': '191947', 'name': 'LIAT Q4 Year-End & 9-Box Review 2026', 'description': 'LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.', 'status':..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "{'id': '299783', 'company_id': '191947', 'name': 'LIAT Q4 Year-End & 9-Box Review 2026', 'description': 'LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.', 'status':..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "299783",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "299783",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "{'id': '299783', 'performance_review_process_id': '299783', 'default_rating_scale': [{'value': 1, 'text': 'DNM — Did Not Meet Expectations: 50% or less of deliverables achieved'}, {'value': 2, 'text': 'PMS — Partially Met Some Expectations:..."
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "299781",
+        "status": 404,
+        "body": "{'errors': [{'error': 'Resource does not exist'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "299781",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "299782",
+        "status": 404,
+        "body": "{'errors': [{'error': 'Resource does not exist'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "299782",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "299783",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "training_exists",
+      "detail": "LIAT Balanced Scorecard Essentials for Managers"
+    },
+    {
+      "action": "training_exists",
+      "detail": "LIAT 9-Box Talent Review Workshop"
+    },
+    {
+      "action": "training_exists",
+      "detail": "LIAT Performance Coaching & IDP"
+    },
+    {
+      "action": "training_exists",
+      "detail": "LIAT Safety & Compliance Awareness"
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "413966",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "post_exists",
+      "detail": {
+        "title": "LIAT BSC Performance Cycle 2026 is live",
+        "id": "24445909"
+      }
+    },
+    {
+      "action": "post_exists",
+      "detail": {
+        "title": "LIAT 9-Box Talent Review — Year-End Preparation",
+        "id": "24445910"
+      }
+    },
+    {
+      "action": "published_post",
+      "detail": {
+        "id": "24445910",
+        "title": "LIAT 9-Box Talent Review — Year-End Preparation"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\liat-air\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [
+    {
+      "action": "questionnaire_failed",
+      "detail": {
+        "process_id": "299781",
+        "strategy": "self",
+        "status": 409,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid state"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "action": "questionnaire_failed",
+      "detail": {
+        "process_id": "299781",
+        "strategy": "manager",
+        "status": 409,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid state"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "action": "questionnaire_failed",
+      "detail": {
+        "process_id": "299782",
+        "strategy": "self",
+        "status": 409,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid state"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "action": "questionnaire_failed",
+      "detail": {
+        "process_id": "299782",
+        "strategy": "manager",
+        "status": 409,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid state"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "ids": {
+    "location_id": "666660",
+    "legal_entity_id": "422089",
+    "cast": {
+      "Marcus Williams": {
+        "employee_id": "6381329",
+        "access_id": "6848283",
+        "group": "leadership"
+      },
+      "Denise Antoine": {
+        "employee_id": "6381718",
+        "access_id": "6848670",
+        "group": "leadership"
+      },
+      "Robert Clarke": {
+        "employee_id": "6381788",
+        "access_id": "6848751",
+        "group": "leadership"
+      },
+      "Kamala Singh": {
+        "employee_id": "6381818",
+        "access_id": "6848784",
+        "group": "manager"
+      },
+      "Julian Baptiste": {
+        "employee_id": "6381843",
+        "access_id": "6848802",
+        "group": "manager"
+      },
+      "Alicia Fraser": {
+        "employee_id": "6382249",
+        "access_id": "6849212",
+        "group": "manager"
+      },
+      "Tamara Joseph": {
+        "employee_id": "6381887",
+        "access_id": "6848843",
+        "group": "staff"
+      },
+      "Devon Thomas": {
+        "employee_id": "6381909",
+        "access_id": "6848855",
+        "group": "staff"
+      },
+      "Keon Richards": {
+        "employee_id": "6382057",
+        "access_id": "6848892",
+        "group": "staff"
+      },
+      "Simone Peters": {
+        "employee_id": "6382749",
+        "access_id": "6849708",
+        "group": "staff"
+      },
+      "Ryan Mitchell": {
+        "employee_id": "6382189",
+        "access_id": "6849150",
+        "group": "staff"
+      },
+      "Natasha Browne": {
+        "employee_id": "6382231",
+        "access_id": "6849192",
+        "group": "staff"
+      }
+    },
+    "teams": {
+      "executive": "1975583",
+      "flight_ops": "1975584",
+      "ground_mro": "1975585",
+      "commercial": "1975586",
+      "finance": "1975587",
+      "people": "1975588"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "299781",
+        "name": "LIAT Q1 Goal Setting & BSC Planning 2026",
+        "status": "active"
+      },
+      "p2": {
+        "id": "299782",
+        "name": "LIAT Q2-Q3 Mid-Year Review 2026",
+        "status": "active"
+      },
+      "p3": {
+        "id": "299783",
+        "name": "LIAT Q4 Year-End & 9-Box Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [
+      "418119",
+      "418120",
+      "418121",
+      "418122"
+    ],
+    "post_group_id": "413966",
+    "posts": [
+      "24445909",
+      "24445910"
+    ]
+  },
+  "finished_at": "2026-09-13T11:03:16.667865+00:00"
+}

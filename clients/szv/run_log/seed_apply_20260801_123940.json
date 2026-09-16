@@ -1,0 +1,698 @@
+{
+  "started_at": "2026-08-01T12:39:06.976708+00:00",
+  "mode": "apply",
+  "company_id": "167952",
+  "actions": [
+    {
+      "action": "update_location_failed_try_create",
+      "detail": {
+        "status": 422,
+        "body": "{'errors': {'timezone': ['Timezone is invalid']}}"
+      }
+    },
+    {
+      "action": "create_location_attempt_failed",
+      "detail": {
+        "status": 422,
+        "body": "{'errors': {'timezone': ['Timezone is invalid']}}"
+      }
+    },
+    {
+      "action": "created_location",
+      "detail": {
+        "id": "550700",
+        "payload": {
+          "name": "SZV Philipsburg Office",
+          "country": "us",
+          "timezone": "America/Puerto_Rico",
+          "company_id": "167952",
+          "city": "Philipsburg",
+          "state": "Sint Maarten",
+          "postal_code": "0000",
+          "address_line_one": "Harbour View Building, Sparrow Road #4",
+          "phone_number": "+17215466782",
+          "main": true,
+          "latitude": 18.0257,
+          "longitude": -63.0474
+        }
+      }
+    },
+    {
+      "action": "created_legal_entity",
+      "detail": {
+        "id": "362982",
+        "country": "sx"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Keisha Peterson",
+        "status": 200,
+        "updates": {
+          "id": "5302587",
+          "location_id": "550700",
+          "legal_entity_id": "362982"
+        }
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302590",
+        "name": "Marlon Williams"
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302591",
+        "name": "Tanya Carty"
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302592",
+        "name": "Jamal Voges"
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302593",
+        "name": "Ricardo Vlaun"
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "to": "Nadia Lejuez",
+        "id": "5302586"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Nadia Lejuez",
+        "status": 200,
+        "updates": {
+          "id": "5302586",
+          "location_id": "550700",
+          "legal_entity_id": "362982"
+        }
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302594",
+        "name": "Fiona Halley"
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302595",
+        "name": "Carlos Richardson"
+      }
+    },
+    {
+      "action": "created_employee",
+      "detail": {
+        "id": "5302596",
+        "name": "Margarita De Weever"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1587669",
+        "name": "SZV People & Culture"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1587670",
+        "name": "SZV Customer Care"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1587671",
+        "name": "SZV Medical Insurance Ops"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1587672",
+        "name": "SZV Finance & Levy"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1587673",
+        "name": "SZV Leadership"
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Keisha Peterson",
+        "team_id": "1587670",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Marlon Williams",
+        "team_id": "1587669",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Tanya Carty",
+        "team_id": "1587671",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Jamal Voges",
+        "team_id": "1587672",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Ricardo Vlaun",
+        "team_id": "1587670",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Nadia Lejuez",
+        "team_id": "1587669",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Fiona Halley",
+        "team_id": "1587671",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Carlos Richardson",
+        "team_id": "1587673",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Margarita De Weever",
+        "team_id": "1587673",
+        "lead": true
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Keisha Peterson",
+        "manager_id": "5302593"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Marlon Williams",
+        "manager_id": "5302586"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Tanya Carty",
+        "manager_id": "5302594"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Jamal Voges",
+        "manager_id": "5302595"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Ricardo Vlaun",
+        "manager_id": "5302595"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Nadia Lejuez",
+        "manager_id": "5302596"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Fiona Halley",
+        "manager_id": "5302595"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Carlos Richardson",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Margarita De Weever",
+        "manager_id": "5302595"
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "p1",
+        "id": "243671"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "{'id': '243671', 'company_id': '167952', 'name': 'SZV P1 Planning Cycle 2026', 'description': 'SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.', 'status': 'draft', 'target_strategy': {'strate..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "243671",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "{'id': '243671', 'company_id': '167952', 'name': 'SZV P1 Planning Cycle 2026', 'description': 'SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.', 'status': 'draft', 'target_strategy': {'strate..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "{'id': '243671', 'company_id': '167952', 'name': 'SZV P1 Planning Cycle 2026', 'description': 'SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.', 'status': 'draft', 'target_strategy': {'strate..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "{'id': '243671', 'company_id': '167952', 'name': 'SZV P1 Planning Cycle 2026', 'description': 'SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.', 'status': 'draft', 'target_strategy': {'strate..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243671",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243671",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "{'id': '243671', 'performance_review_process_id': '243671', 'default_rating_scale': [{'value': 1, 'text': 'NM — Did Not Meet Expectations: 50% or less of deliverables achieved'}, {'value': 2, 'text': 'MS — Met Some Expectations: More than 5..."
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "p2",
+        "id": "243672"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "{'id': '243672', 'company_id': '167952', 'name': 'SZV P2 Mid-Year Cycle 2026', 'description': 'SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.', 'status': 'draft', 'target_strategy': {'strategy':..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "243672",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "{'id': '243672', 'company_id': '167952', 'name': 'SZV P2 Mid-Year Cycle 2026', 'description': 'SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.', 'status': 'draft', 'target_strategy': {'strategy':..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "{'id': '243672', 'company_id': '167952', 'name': 'SZV P2 Mid-Year Cycle 2026', 'description': 'SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.', 'status': 'draft', 'target_strategy': {'strategy':..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "{'id': '243672', 'company_id': '167952', 'name': 'SZV P2 Mid-Year Cycle 2026', 'description': 'SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.', 'status': 'draft', 'target_strategy': {'strategy':..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243672",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243672",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "{'id': '243672', 'performance_review_process_id': '243672', 'default_rating_scale': [{'value': 1, 'text': 'NM — Did Not Meet Expectations: 50% or less of deliverables achieved'}, {'value': 2, 'text': 'MS — Met Some Expectations: More than 5..."
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "p3",
+        "id": "243673"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "{'id': '243673', 'company_id': '167952', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "243673",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_employee_potential_score_configuration",
+      "detail": {
+        "process_id": "243673",
+        "status": 404,
+        "body": "{'errors': ['Resource #243673 not found']}"
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "{'id': '243673', 'company_id': '167952', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "{'id': '243673', 'company_id': '167952', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "{'id': '243673', 'company_id': '167952', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243673",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243673",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "{'id': '243673', 'performance_review_process_id': '243673', 'default_rating_scale': [{'value': 1, 'text': 'NM — Did Not Meet Expectations: 50% or less of deliverables achieved'}, {'value': 2, 'text': 'MS — Met Some Expectations: More than 5..."
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "243671",
+        "name": "SZV P1 Planning Cycle 2026"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "243671",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243671",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "243672",
+        "name": "SZV P2 Mid-Year Cycle 2026"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "243672",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243672",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243673",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "352484",
+        "name": "SZV Coaching Essentials for Managers"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "352485",
+        "name": "SZV Core Values in Daily Work"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "207768",
+        "title": "SZV Customer Care Officer"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "207769",
+        "title": "SZV Control Doctor / Medical Officer"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "207770",
+        "title": "SZV HR Coordinator"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "207771",
+        "title": "SZV Finance & Levy Analyst"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Desktop\\Projetos Random\\Ultimate_Collector_Limpo\\demo_szv\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "location_id": "550700",
+    "legal_entity_id": "362982",
+    "cast": {
+      "Keisha Peterson": {
+        "employee_id": "5302587",
+        "access_id": "5715908",
+        "group": "staff"
+      },
+      "Marlon Williams": {
+        "employee_id": "5302590",
+        "access_id": "5715911",
+        "group": "staff"
+      },
+      "Tanya Carty": {
+        "employee_id": "5302591",
+        "access_id": "5715912",
+        "group": "staff"
+      },
+      "Jamal Voges": {
+        "employee_id": "5302592",
+        "access_id": "5715913",
+        "group": "manager"
+      },
+      "Ricardo Vlaun": {
+        "employee_id": "5302593",
+        "access_id": "5715914",
+        "group": "manager"
+      },
+      "Nadia Lejuez": {
+        "employee_id": "5302586",
+        "access_id": "5715907",
+        "group": "manager"
+      },
+      "Fiona Halley": {
+        "employee_id": "5302594",
+        "access_id": "5715915",
+        "group": "manager"
+      },
+      "Carlos Richardson": {
+        "employee_id": "5302595",
+        "access_id": "5715916",
+        "group": "leadership"
+      },
+      "Margarita De Weever": {
+        "employee_id": "5302596",
+        "access_id": "5715917",
+        "group": "leadership"
+      }
+    },
+    "teams": {
+      "pc": "1587669",
+      "customer_care": "1587670",
+      "medical": "1587671",
+      "finance": "1587672",
+      "leadership": "1587673"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "243671",
+        "name": "SZV P1 Planning Cycle 2026",
+        "status": "draft"
+      },
+      "p2": {
+        "id": "243672",
+        "name": "SZV P2 Mid-Year Cycle 2026",
+        "status": "draft"
+      },
+      "p3": {
+        "id": "243673",
+        "name": "SZV P3 Year-End Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [
+      "352484",
+      "352485"
+    ],
+    "job_postings": [
+      "207768",
+      "207769",
+      "207770",
+      "207771"
+    ]
+  },
+  "finished_at": "2026-08-01T12:39:40.707423+00:00"
+}

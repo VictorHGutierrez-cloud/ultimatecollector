@@ -1,0 +1,494 @@
+{
+  "company_id": "191864",
+  "api_version": "2026-07-01",
+  "prefix": "STATIN",
+  "year": 2026,
+  "client_id": "statistic-institute",
+  "display_name": "Statistical Institute of Jamaica",
+  "teams": [
+    {
+      "key": "odg",
+      "name": "STATIN Office of the Director General",
+      "lead": "Laura Lewis"
+    },
+    {
+      "key": "corporate",
+      "name": "STATIN Corporate Services",
+      "lead": "Charles Carter"
+    },
+    {
+      "key": "field",
+      "name": "STATIN Field Services",
+      "lead": "Charles Carter"
+    },
+    {
+      "key": "ess",
+      "name": "STATIN Economic and Social Statistics",
+      "lead": "Laura Lewis"
+    },
+    {
+      "key": "hr",
+      "name": "STATIN Human Resources",
+      "lead": "Charles Carter"
+    }
+  ],
+  "cast": [
+    {
+      "full_name": "Laura Lewis",
+      "first_name": "Laura",
+      "last_name": "Lewis",
+      "group": "leadership",
+      "team_key": "odg",
+      "role_title": "Director, Office of the Director General",
+      "demo_band": "Very Good / Superior",
+      "goal_count": 5
+    },
+    {
+      "full_name": "Charles Carter",
+      "first_name": "Charles",
+      "last_name": "Carter",
+      "group": "manager",
+      "team_key": "hr",
+      "role_title": "Human Resources Manager",
+      "demo_band": "Good",
+      "goal_count": 5
+    },
+    {
+      "full_name": "Hellen Howard",
+      "first_name": "Hellen",
+      "last_name": "Howard",
+      "group": "staff",
+      "team_key": "odg",
+      "role_title": "Executive Secretary, ODG",
+      "demo_band": "Good (~86%)",
+      "goal_count": 5
+    },
+    {
+      "full_name": "Daisy Dawson",
+      "first_name": "Daisy",
+      "last_name": "Dawson",
+      "group": "staff",
+      "team_key": "ess",
+      "role_title": "Statistical Officer",
+      "demo_band": "Unsatisfactory (<75%) — PIP",
+      "goal_count": 4
+    }
+  ],
+  "manager_map": {
+    "Laura Lewis": null,
+    "Charles Carter": "Laura Lewis",
+    "Hellen Howard": "Laura Lewis",
+    "Daisy Dawson": "Charles Carter"
+  },
+  "weighting": {
+    "objectives": 60,
+    "competencies": 40
+  },
+  "performance_bands": [
+    {
+      "code": "SUP",
+      "label": "Superior",
+      "range": "100%"
+    },
+    {
+      "code": "VG",
+      "label": "Very Good",
+      "range": "91-99%"
+    },
+    {
+      "code": "GOOD",
+      "label": "Good",
+      "range": "80-90%"
+    },
+    {
+      "code": "SAT",
+      "label": "Satisfactory",
+      "range": "75-79%"
+    },
+    {
+      "code": "UNSAT",
+      "label": "Unsatisfactory",
+      "range": "<75% (PIP / underperformance)"
+    }
+  ],
+  "rating_scale": [
+    {
+      "code": "5",
+      "label": "Exceeded",
+      "definition": "100%+ of target achieved"
+    },
+    {
+      "code": "4",
+      "label": "Met all",
+      "definition": "91-100% of target achieved"
+    },
+    {
+      "code": "3",
+      "label": "Met most",
+      "definition": "71-90% of target achieved"
+    },
+    {
+      "code": "2",
+      "label": "Met some",
+      "definition": "61-70% of target achieved"
+    },
+    {
+      "code": "1",
+      "label": "Met few",
+      "definition": "1-60% of target achieved"
+    },
+    {
+      "code": "0",
+      "label": "Met none",
+      "definition": "0% of target achieved"
+    }
+  ],
+  "competency_scale": [
+    {
+      "code": "5",
+      "label": "Exceeds requirements"
+    },
+    {
+      "code": "4",
+      "label": "Meets all requirements"
+    },
+    {
+      "code": "3",
+      "label": "Meets most requirements"
+    },
+    {
+      "code": "2",
+      "label": "Meets some requirements"
+    },
+    {
+      "code": "1",
+      "label": "Below requirements"
+    }
+  ],
+  "goal_categories": [
+    "Corporate Strategic Objectives",
+    "Divisional / Operational Objectives",
+    "Unit / Operational Objectives",
+    "Individual Key Outputs"
+  ],
+  "core_competencies": [
+    "GoJ Core: Communicating Effectively",
+    "GoJ Core: Working Collaboratively",
+    "GoJ Core: Developing Capability",
+    "GoJ Core: Seeing the Big Picture",
+    "GoJ Core: Driving Continuous Change and Improvements",
+    "GoJ Core: Making Effective Decisions",
+    "GoJ Core: Demonstrating a Commercial and Business Mindset",
+    "GoJ Core: Ensuring Value for Taxpayers Money",
+    "GoJ Core: Providing a Quality Service"
+  ],
+  "technical_competencies": [
+    "STATIN Technical: Information Management",
+    "STATIN Technical: Communication and Service Delivery"
+  ],
+  "goal_templates": {
+    "staff": [
+      {
+        "category": "Individual Key Outputs",
+        "title": "Disseminate embargoed statistical releases within agreed timeframe",
+        "measure": ">= 90% of embargoed releases disseminated within 1 hour of final approval",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Individual Key Outputs",
+        "title": "Maintain zero breaches of dissemination, embargo and confidentiality protocols",
+        "measure": "100% of embargoed releases with zero confidentiality breaches",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Unit / Operational Objectives",
+        "title": "Keep ODG files compliant with records management and data protection policies",
+        "measure": "100% of sampled ODG files compliant on RIM audit",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Divisional / Operational Objectives",
+        "title": "Submit monthly Divisional reports on time and to quality standard",
+        "measure": "12 monthly reports on last working day; 100% quality checklist compliance",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Corporate Strategic Objectives",
+        "title": "Complete assigned processes using established procedures and templates",
+        "measure": "Assigned processes documented and approved per template",
+        "due": "2027-03-31"
+      }
+    ],
+    "manager": [
+      {
+        "category": "Divisional / Operational Objectives",
+        "title": "Cascade Division Plan initiatives into Unit Plans for FY 2026/27",
+        "measure": "100% of supervised units have approved Unit Plans aligned to Division Plan",
+        "due": "2026-06-30"
+      },
+      {
+        "category": "Unit / Operational Objectives",
+        "title": "Agree Individual Work Plans (Sections 1-4) with all direct reports",
+        "measure": "100% of direct reports have signed EPM Form Sections 1-4 before FY start",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "Corporate Strategic Objectives",
+        "title": "Complete at least three performance coaching conversations per direct report",
+        "measure": "Minimum 3 coaching notes logged per employee in the financial year",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Individual Key Outputs",
+        "title": "Close year-end appraisals with validated scores and development plans",
+        "measure": "100% of direct reports assessed; scores validated by HR",
+        "due": "2027-04-30"
+      },
+      {
+        "category": "Unit / Operational Objectives",
+        "title": "Address underperformance below 75% with PIP or targeted training",
+        "measure": "All scores <75% have documented PIP or development interventions",
+        "due": "2027-05-31"
+      }
+    ],
+    "leadership": [
+      {
+        "category": "Corporate Strategic Objectives",
+        "title": "Align Division Plans to STATIN Strategic Plan and Government priorities",
+        "measure": "All Division Plans approved by DG / designate for FY 2026/27",
+        "due": "2026-05-31"
+      },
+      {
+        "category": "Divisional / Operational Objectives",
+        "title": "Deliver ODG operational excellence on embargoed statistical releases",
+        "measure": ">= 90% on-time dissemination; zero confidentiality breaches",
+        "due": "2027-03-31"
+      },
+      {
+        "category": "Corporate Strategic Objectives",
+        "title": "Drive PMS completion across supervised Divisions / Units",
+        "measure": ">= 95% participation in year-end appraisal cycle",
+        "due": "2027-04-30"
+      },
+      {
+        "category": "Unit / Operational Objectives",
+        "title": "Recommend performance incentive payments for Superior / Very Good performers",
+        "measure": "Incentive recommendations submitted for eligible staff by HR deadline",
+        "due": "2027-05-15"
+      },
+      {
+        "category": "Individual Key Outputs",
+        "title": "Strengthen leadership bench through coaching and IDP follow-up",
+        "measure": "IDP actions with owners and due dates for all direct reports",
+        "due": "2027-03-31"
+      }
+    ]
+  },
+  "review_processes": [
+    {
+      "key": "year_end",
+      "name": "STATIN FY 2025-26 Year-End Appraisal",
+      "description": "STATIN year-end Employee Performance Management Form for financial year 2025-26. Weighting: 60% measurable performance targets / 40% GoJ core and technical competencies. Bands: Superior 100%, Very Good 91-99%, Good 80-90%, Satisfactory 75-79%, Unsatisfactory below 75% (PIP).",
+      "ends_at": "2026-12-31T23:59:59Z",
+      "reviewer_strategies": [
+        "self",
+        "manager"
+      ],
+      "agreements_enabled": false,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "coaching",
+      "name": "STATIN FY 2025-26 Coaching Reviews",
+      "description": "STATIN mid-cycle coaching for financial year 2025-26. Policy requires at least three formal performance coaching conversations during the financial year before year-end appraisal.",
+      "ends_at": "2026-11-30T23:59:59Z",
+      "reviewer_strategies": [
+        "self",
+        "manager"
+      ],
+      "agreements_enabled": false,
+      "employee_score_enabled": false,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "iwp",
+      "name": "STATIN FY 2026-27 Goal Setting and Individual Work Plan",
+      "description": "Agree performance targets and key outputs for FY 2026-27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans. Weighting guidance: 60% targets / 40% competencies.",
+      "ends_at": "2027-03-31T23:59:59Z",
+      "reviewer_strategies": [
+        "self",
+        "manager"
+      ],
+      "agreements_enabled": true,
+      "employee_score_enabled": false,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    }
+  ],
+  "trainings": [
+    {
+      "name": "STATIN PMS Guidelines for Managers",
+      "description": "How to cascade Division and Unit Plans into Individual Work Plans, agree targets and key outputs, and apply the STATIN rating scale and performance bands.",
+      "audience": [
+        "manager",
+        "leadership"
+      ]
+    },
+    {
+      "name": "STATIN Performance Coaching",
+      "description": "Running the minimum three coaching conversations, documenting evidence, and opening a Performance Improvement Plan when scores fall below 75%.",
+      "audience": [
+        "manager",
+        "leadership"
+      ]
+    }
+  ],
+  "posts_group": {
+    "title": "Company announcements",
+    "description": "Official announcements for Statistical Institute of Jamaica.",
+    "fallback_titles": [
+      "Company announcements",
+      "STATIN Company Announcements"
+    ]
+  },
+  "posts": [
+    {
+      "title": "STATIN PMS Cycle — Close FY 2025-26 and Open FY 2026-27 IWPs",
+      "description": "Colleagues, year-end appraisals for FY 2025-26 are open alongside coaching reviews. Managers: agree FY 2026-27 Individual Work Plans (Sections 1-4) cascaded from Division and Unit Plans. Final rating guidance is 60% targets / 40% competencies. Scores below 75% require PIP or development interventions. Contact Human Resources for support.",
+      "allow_comments_and_reactions": true
+    }
+  ],
+  "ui_checklist": {
+    "weighting": "State 60% measurable targets / 40% competencies in the demo (Factorial does not lock the arithmetic).",
+    "bands": "Call out Superior / Very Good / Good / Satisfactory / Unsatisfactory (<75% PIP).",
+    "hellen": "Hellen Howard = Good ~86% story (embargoed releases sample from PMS guidelines).",
+    "daisy": "Daisy Dawson = Unsatisfactory <75% → PIP / training path.",
+    "laura": "Laura Lewis = Very Good / Superior → incentive recommendation.",
+    "cascade": "Mention Government priorities → Strategic Plan → Division → Unit → Individual Work Plan.",
+    "coaching": "Policy requires at least three coaching conversations in the financial year.",
+    "appeal": "Employee may accept or wish to appeal; HR grievance process is outside Factorial automation.",
+    "agreements": "Initiate FY 2026/27 IWP agreements in UI if API bulk_initiate is blocked."
+  },
+  "competency_bands": [
+    "Band 1",
+    "Band 2",
+    "Band 3",
+    "Band 4",
+    "Band 5",
+    "Band 6"
+  ],
+  "job_postings": [
+    {
+      "title": "STATIN Statistical Officer",
+      "description": "Support production and dissemination of official statistics within Economic and Social Statistics. Apply GoJ core competencies and STATIN technical competencies (Information Management; Communication and Service Delivery). Shortlist matrix pass mark guidance: 70% (occasionally 60%).",
+      "status": "published",
+      "category": "public_sector",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "ess",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "mandatory",
+      "phone_requirement": "mandatory",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "STATIN Field Interviewer (Special Project)",
+      "description": "Contract field interviewer for survey / census-style special projects (Labour Force, Household Surveys, etc.). Temporary project recruitment aligned to Field Services staffing. Requires TRN, NIS and government ID at onboarding.",
+      "status": "published",
+      "category": "public_sector",
+      "contract_type": "temporary",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "field",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "optional",
+      "phone_requirement": "mandatory",
+      "photo_requirement": "optional",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "STATIN Personnel / Staffing Officer",
+      "description": "Join Human Resources Staffing Unit to coordinate vacancy requests, advertisements, shortlisting, interview packs, IRHC approval routing, and recruitment folders for permanent and project posts.",
+      "status": "published",
+      "category": "hr",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "hr",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "mandatory",
+      "phone_requirement": "mandatory",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "STATIN Executive Secretary, ODG",
+      "description": "Support the Office of the Director General with records, embargoed release logistics, and confidential administration. Competitive recruitment with competency-based interview scoring.",
+      "status": "draft",
+      "category": "administration",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "odg",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "mandatory",
+      "phone_requirement": "optional",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    }
+  ],
+  "candidates": [
+    {
+      "first_name": "Marcia",
+      "last_name": "Bennett",
+      "email": "marcia.bennett.candidate@statin-demo.jm",
+      "phone_number": "+18765550101",
+      "gender": "female",
+      "job_title": "STATIN Statistical Officer",
+      "source": "career_site",
+      "medium": "organic",
+      "cover_letter": "Statistical professional with experience in data production and confidentiality protocols. Eager to contribute to STATIN Economic and Social Statistics."
+    },
+    {
+      "first_name": "Omar",
+      "last_name": "Reid",
+      "email": "omar.reid.candidate@statin-demo.jm",
+      "phone_number": "+18765550102",
+      "gender": "male",
+      "job_title": "STATIN Field Interviewer (Special Project)",
+      "source": "referral",
+      "medium": "employee_referral",
+      "cover_letter": "Experienced field interviewer available for Labour Force and household survey special projects across Jamaica."
+    },
+    {
+      "first_name": "Keisha",
+      "last_name": "Campbell",
+      "email": "keisha.campbell.candidate@statin-demo.jm",
+      "phone_number": "+18765550103",
+      "gender": "female",
+      "job_title": "STATIN Personnel / Staffing Officer",
+      "source": "career_site",
+      "medium": "organic",
+      "cover_letter": "HR staffing specialist familiar with public-sector vacancy control, shortlisting matrices and interview administration."
+    },
+    {
+      "first_name": "Andre",
+      "last_name": "Williams",
+      "email": "andre.williams.candidate@statin-demo.jm",
+      "phone_number": "+18765550104",
+      "gender": "male",
+      "job_title": "STATIN Executive Secretary, ODG",
+      "source": "career_site",
+      "medium": "organic",
+      "cover_letter": "Executive support professional with strong records management and confidentiality practice for directorate-level offices."
+    }
+  ]
+}

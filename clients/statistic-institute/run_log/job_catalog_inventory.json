@@ -1,0 +1,555 @@
+{
+  "jobcatalog_treefamily": [
+    {
+      "uuid": "jobcatalog_treefamily-912466",
+      "name": "General Management",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    },
+    {
+      "uuid": "jobcatalog_treefamily-912462",
+      "name": "Marketing",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    },
+    {
+      "uuid": "jobcatalog_treefamily-912460",
+      "name": "People & Administration",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    },
+    {
+      "uuid": "jobcatalog_treefamily-912464",
+      "name": "Sales",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    },
+    {
+      "uuid": "jobcatalog_treefamily-912456",
+      "name": "Product",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    },
+    {
+      "uuid": "jobcatalog_treefamily-912458",
+      "name": "Technology",
+      "ancestor_uuid": "jobcatalog_treeroot-152942"
+    }
+  ],
+  "jobcatalog_treefunction": [
+    {
+      "uuid": "jobcatalog_treefunction-1369071",
+      "name": "Executive Management",
+      "ancestor_uuid": "jobcatalog_treefamily-912466"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369059",
+      "name": "Finance",
+      "ancestor_uuid": "jobcatalog_treefamily-912460"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369061",
+      "name": "IT & Infrastructure",
+      "ancestor_uuid": "jobcatalog_treefamily-912460"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369065",
+      "name": "Marketing",
+      "ancestor_uuid": "jobcatalog_treefamily-912462"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369069",
+      "name": "Retail",
+      "ancestor_uuid": "jobcatalog_treefamily-912464"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369067",
+      "name": "Sales B2B",
+      "ancestor_uuid": "jobcatalog_treefamily-912464"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369063",
+      "name": "Talent",
+      "ancestor_uuid": "jobcatalog_treefamily-912460"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369055",
+      "name": "Design",
+      "ancestor_uuid": "jobcatalog_treefamily-912456"
+    },
+    {
+      "uuid": "jobcatalog_treefunction-1369057",
+      "name": "Engineering",
+      "ancestor_uuid": "jobcatalog_treefamily-912458"
+    }
+  ],
+  "jobcatalog_treerole": [
+    {
+      "uuid": "jobcatalog_treerole-3672072",
+      "name": "Administrative",
+      "ancestor_uuid": "jobcatalog_treefunction-1369059"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672062",
+      "name": "Design Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369055"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672106",
+      "name": "Digital Store Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369069"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672068",
+      "name": "Engineering Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369057"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672078",
+      "name": "IT Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369061"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672086",
+      "name": "Marketer",
+      "ancestor_uuid": "jobcatalog_treefunction-1369065"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672090",
+      "name": "Marketing Director",
+      "ancestor_uuid": "jobcatalog_treefunction-1369065"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672088",
+      "name": "Marketing Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369065"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672096",
+      "name": "Sales Development Representative",
+      "ancestor_uuid": "jobcatalog_treefunction-1369067"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672100",
+      "name": "Sales Director",
+      "ancestor_uuid": "jobcatalog_treefunction-1369067"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672098",
+      "name": "Sales Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369067"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672094",
+      "name": "Sales Representative",
+      "ancestor_uuid": "jobcatalog_treefunction-1369067"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672102",
+      "name": "Store Assistant",
+      "ancestor_uuid": "jobcatalog_treefunction-1369069"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672104",
+      "name": "Store Manager",
+      "ancestor_uuid": "jobcatalog_treefunction-1369069"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672080",
+      "name": "Talent Developer",
+      "ancestor_uuid": "jobcatalog_treefunction-1369063"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672074",
+      "name": "Bookkeeper",
+      "ancestor_uuid": "jobcatalog_treefunction-1369059"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672108",
+      "name": "CEO",
+      "ancestor_uuid": "jobcatalog_treefunction-1369071"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672076",
+      "name": "CFO",
+      "ancestor_uuid": "jobcatalog_treefunction-1369059"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672092",
+      "name": "CMO",
+      "ancestor_uuid": "jobcatalog_treefunction-1369065"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672070",
+      "name": "CTO",
+      "ancestor_uuid": "jobcatalog_treefunction-1369057"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672064",
+      "name": "Design Director",
+      "ancestor_uuid": "jobcatalog_treefunction-1369055"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672084",
+      "name": "People Director",
+      "ancestor_uuid": "jobcatalog_treefunction-1369063"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672082",
+      "name": "Recruiter",
+      "ancestor_uuid": "jobcatalog_treefunction-1369063"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672060",
+      "name": "Designer",
+      "ancestor_uuid": "jobcatalog_treefunction-1369055"
+    },
+    {
+      "uuid": "jobcatalog_treerole-3672066",
+      "name": "Engineer",
+      "ancestor_uuid": "jobcatalog_treefunction-1369057"
+    }
+  ],
+  "jobcatalog_treelevel": [
+    {
+      "uuid": "jobcatalog_treelevel-10092074",
+      "name": "Staff",
+      "ancestor_uuid": "jobcatalog_treerole-3672066"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092122",
+      "name": "CPO",
+      "ancestor_uuid": "jobcatalog_treerole-3672084"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092052",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672060"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092070",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672066"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092086",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672072"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092092",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672074"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092106",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672080"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092112",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672082"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092126",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672086"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092146",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672094"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092152",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672096"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092170",
+      "name": "Mid",
+      "ancestor_uuid": "jobcatalog_treerole-3672102"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092054",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672060"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092072",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672066"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092088",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672072"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092094",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672074"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092108",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672080"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092114",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672082"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092128",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672086"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092148",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672094"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092154",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672096"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092172",
+      "name": "Senior",
+      "ancestor_uuid": "jobcatalog_treerole-3672102"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092056",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672062"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092062",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672064"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092076",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672068"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092082",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672070"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092096",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672076"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092098",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672078"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092116",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672084"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092130",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672088"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092136",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672090"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092142",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672092"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092156",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672098"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092162",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672100"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092174",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672104"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092180",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672106"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092186",
+      "name": "I",
+      "ancestor_uuid": "jobcatalog_treerole-3672108"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092058",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672062"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092064",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672064"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092078",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672068"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092100",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672078"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092118",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672084"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092132",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672088"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092138",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672090"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092158",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672098"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092164",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672100"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092176",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672104"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092182",
+      "name": "II",
+      "ancestor_uuid": "jobcatalog_treerole-3672106"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092060",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672062"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092066",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672064"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092080",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672068"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092102",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672078"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092120",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672084"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092134",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672088"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092140",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672090"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092160",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672098"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092166",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672100"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092178",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672104"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092184",
+      "name": "III",
+      "ancestor_uuid": "jobcatalog_treerole-3672106"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092050",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672060"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092068",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672066"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092084",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672072"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092090",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672074"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092104",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672080"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092110",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672082"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092124",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672086"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092144",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672094"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092150",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672096"
+    },
+    {
+      "uuid": "jobcatalog_treelevel-10092168",
+      "name": "Junior",
+      "ancestor_uuid": "jobcatalog_treerole-3672102"
+    }
+  ]
+}

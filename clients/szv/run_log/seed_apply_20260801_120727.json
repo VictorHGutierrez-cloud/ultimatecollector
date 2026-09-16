@@ -1,0 +1,375 @@
+{
+  "started_at": "2026-08-01T12:07:23.221863+00:00",
+  "mode": "apply",
+  "actions": [
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "pc",
+        "id": "1587462",
+        "name": "SZV People & Culture"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "operations",
+        "id": "1587463",
+        "name": "SZV Operations"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "leadership",
+        "id": "1587464",
+        "name": "SZV Leadership"
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Emilia Estrada",
+        "team_id": "1587463",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Hellen Howard",
+        "team_id": "1587462",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Mateo Santos",
+        "team_id": "1587463",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Juan Jiménez",
+        "team_id": "1587463",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Clara Castillo",
+        "team_id": "1587462",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Fiona Fernández",
+        "team_id": "1587463",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Carlos Carter",
+        "team_id": "1587464",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Margarita Márquez",
+        "team_id": "1587464",
+        "lead": true
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Emilia Estrada",
+        "manager_id": "5226993"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Hellen Howard",
+        "manager_id": "5227240"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Mateo Santos",
+        "manager_id": "5227011"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Juan Jiménez",
+        "manager_id": "5226952"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Clara Castillo",
+        "manager_id": "5226967"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Fiona Fernández",
+        "manager_id": "5226952"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Carlos Carter",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Margarita Márquez",
+        "manager_id": "5226952"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p1",
+        "id": "243649",
+        "status": "active"
+      }
+    },
+    {
+      "action": "skip_draft_config",
+      "detail": {
+        "process_id": "243649",
+        "status": "active",
+        "reason": "process already started"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p2",
+        "id": "243650",
+        "status": "active"
+      }
+    },
+    {
+      "action": "skip_draft_config",
+      "detail": {
+        "process_id": "243650",
+        "status": "active",
+        "reason": "process already started"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "p3",
+        "id": "243646",
+        "status": "draft"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "{'id': '243646', 'company_id': '165950', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "243646",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "{'id': '243646', 'company_id': '165950', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "{'id': '243646', 'company_id': '165950', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "{'id': '243646', 'company_id': '165950', 'name': 'SZV P3 Year-End Review 2026', 'description': 'SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.', 'status': 'draft', 'target_strategy..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243646",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "243646",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "{'id': '243646', 'performance_review_process_id': '243646', 'default_rating_scale': [{'value': 1, 'text': 'NM — Did Not Meet Expectations: 50% or less of deliverables achieved'}, {'value': 2, 'text': 'MS — Met Some Expectations: More than 5..."
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "243649",
+        "status": 404,
+        "body": "{'errors': [{'error': 'Resource does not exist'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243649",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "243650",
+        "status": 404,
+        "body": "{'errors': [{'error': 'Resource does not exist'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243650",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "243646",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "training_exists",
+      "detail": "SZV Coaching Essentials for Managers"
+    },
+    {
+      "action": "training_exists",
+      "detail": "SZV Core Values in Daily Work"
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Desktop\\Projetos Random\\Ultimate_Collector_Limpo\\demo_szv\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "cast": {
+      "Emilia Estrada": {
+        "employee_id": "5227649",
+        "access_id": "5640960",
+        "group": "staff"
+      },
+      "Hellen Howard": {
+        "employee_id": "5226807",
+        "access_id": "5640114",
+        "group": "staff"
+      },
+      "Mateo Santos": {
+        "employee_id": "5227413",
+        "access_id": "5640602",
+        "group": "staff"
+      },
+      "Juan Jiménez": {
+        "employee_id": "5226993",
+        "access_id": "5640309",
+        "group": "manager"
+      },
+      "Clara Castillo": {
+        "employee_id": "5227240",
+        "access_id": "5640560",
+        "group": "manager"
+      },
+      "Fiona Fernández": {
+        "employee_id": "5227011",
+        "access_id": "5640324",
+        "group": "manager"
+      },
+      "Carlos Carter": {
+        "employee_id": "5226952",
+        "access_id": "5640268",
+        "group": "leadership"
+      },
+      "Margarita Márquez": {
+        "employee_id": "5226967",
+        "access_id": "5640284",
+        "group": "leadership"
+      }
+    },
+    "teams": {
+      "pc": "1587462",
+      "operations": "1587463",
+      "leadership": "1587464"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "243649",
+        "name": "SZV P1 Planning Cycle 2026",
+        "status": "active"
+      },
+      "p2": {
+        "id": "243650",
+        "name": "SZV P2 Mid-Year Cycle 2026",
+        "status": "active"
+      },
+      "p3": {
+        "id": "243646",
+        "name": "SZV P3 Year-End Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [
+      "352482",
+      "352483"
+    ]
+  },
+  "finished_at": "2026-08-01T12:07:27.406539+00:00"
+}

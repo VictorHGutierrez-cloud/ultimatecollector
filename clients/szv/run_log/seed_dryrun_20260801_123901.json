@@ -1,0 +1,586 @@
+{
+  "started_at": "2026-08-01T12:39:00.805772+00:00",
+  "mode": "dry-run",
+  "company_id": "167952",
+  "actions": [
+    {
+      "action": "dry_create_location",
+      "detail": {
+        "name": "SZV Philipsburg Office",
+        "country": "sx",
+        "timezone": "America/Lower_Princes",
+        "company_id": "167952",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "postal_code": "0000",
+        "address_line_one": "Harbour View Building, Sparrow Road #4",
+        "phone_number": "+17215466782",
+        "main": true,
+        "latitude": 18.0257,
+        "longitude": -63.0474
+      }
+    },
+    {
+      "action": "dry_create_legal_entity",
+      "detail": {
+        "company_id": "167952",
+        "country": "sx",
+        "legal_name": "SZV Social & Health Insurances",
+        "currency": "USD",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "postal_code": "0000",
+        "address_line_1": "Harbour View Building, Sparrow Road #4",
+        "tin": "SZV-SXM-001"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Marlon",
+        "last_name": "Williams",
+        "email": "marlon.williams@szv-demo.sx",
+        "gender": "male",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Tanya",
+        "last_name": "Carty",
+        "email": "tanya.carty@szv-demo.sx",
+        "gender": "female",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Jamal",
+        "last_name": "Voges",
+        "email": "jamal.voges@szv-demo.sx",
+        "gender": "male",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Ricardo",
+        "last_name": "Vlaun",
+        "email": "ricardo.vlaun@szv-demo.sx",
+        "gender": "male",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "id": "5302586",
+        "first_name": "Nadia",
+        "last_name": "Lejuez"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Fiona",
+        "last_name": "Halley",
+        "email": "fiona.halley@szv-demo.sx",
+        "gender": "female",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Carlos",
+        "last_name": "Richardson",
+        "email": "carlos.richardson@szv-demo.sx",
+        "gender": "male",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_employee",
+      "detail": {
+        "company_id": "167952",
+        "first_name": "Margarita",
+        "last_name": "De Weever",
+        "email": "margarita.deweever@szv-demo.sx",
+        "gender": "female",
+        "contract_starts_on": "2025-01-15",
+        "contract_effective_on": "2025-01-15",
+        "country": "us",
+        "nationality": "SX",
+        "city": "Philipsburg",
+        "state": "Sint Maarten",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV People & Culture",
+        "description": "SZV demo team for performance narrative (pc)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Customer Care",
+        "description": "SZV demo team for performance narrative (customer_care)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Medical Insurance Ops",
+        "description": "SZV demo team for performance narrative (medical)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Finance & Levy",
+        "description": "SZV demo team for performance narrative (finance)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Leadership",
+        "description": "SZV demo team for performance narrative (leadership)"
+      }
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Keisha Peterson"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Marlon Williams"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Tanya Carty"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Jamal Voges"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Ricardo Vlaun"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Nadia Lejuez"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Fiona Halley"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Carlos Richardson"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Margarita De Weever"
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Keisha Peterson",
+        "id": "5302587",
+        "manager_id": "dry-ricardo"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Marlon Williams",
+        "id": "dry-marlon",
+        "manager_id": "5302586"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Tanya Carty",
+        "id": "dry-tanya",
+        "manager_id": "dry-fiona"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Jamal Voges",
+        "id": "dry-jamal",
+        "manager_id": "dry-carlos"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Ricardo Vlaun",
+        "id": "dry-ricardo",
+        "manager_id": "dry-carlos"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Nadia Lejuez",
+        "id": "5302586",
+        "manager_id": "dry-margarita"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Fiona Halley",
+        "id": "dry-fiona",
+        "manager_id": "dry-carlos"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Carlos Richardson",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Margarita De Weever",
+        "id": "dry-margarita",
+        "manager_id": "dry-carlos"
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "dry-access-margarita",
+        "name": "SZV P1 Planning Cycle 2026",
+        "description": "SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5302587",
+          "dry-marlon",
+          "dry-tanya",
+          "dry-jamal",
+          "dry-ricardo",
+          "5302586",
+          "dry-fiona",
+          "dry-carlos",
+          "dry-margarita"
+        ],
+        "ends_at": "2026-09-30T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": false,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "dry-access-margarita",
+        "name": "SZV P2 Mid-Year Cycle 2026",
+        "description": "SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5302587",
+          "dry-marlon",
+          "dry-tanya",
+          "dry-jamal",
+          "dry-ricardo",
+          "5302586",
+          "dry-fiona",
+          "dry-carlos",
+          "dry-margarita"
+        ],
+        "ends_at": "2026-10-31T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "dry-access-margarita",
+        "name": "SZV P3 Year-End Review 2026",
+        "description": "SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5302587",
+          "dry-marlon",
+          "dry-tanya",
+          "dry-jamal",
+          "dry-ricardo",
+          "5302586",
+          "dry-fiona",
+          "dry-carlos",
+          "dry-margarita"
+        ],
+        "ends_at": "2026-12-31T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": true,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P1 Planning Cycle 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P2 Mid-Year Cycle 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P3 Year-End Review 2026"
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "SZV Coaching Essentials for Managers",
+        "description": "Practical coaching conversations for mid-year and continuous performance support.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "5715907",
+        "company_id": "167952"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "SZV Core Values in Daily Work",
+        "description": "How SZV core values show up as observable behaviors in service and teamwork.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "5715907",
+        "company_id": "167952"
+      }
+    },
+    {
+      "action": "dry_create_job_posting",
+      "detail": {
+        "title": "SZV Customer Care Officer",
+        "description": "Support insured members and employers with ZV/medical insurance inquiries at SZV Customer Care in Philipsburg. Deliver dependable service aligned with SZV values.",
+        "status": "published",
+        "category": "public_sector",
+        "contract_type": "indefinite",
+        "workplace_type": "onsite",
+        "schedule_type": "full_time",
+        "cv_requirement": "mandatory",
+        "cover_letter_requirement": "optional",
+        "phone_requirement": "optional",
+        "photo_requirement": "do_not_ask",
+        "personal_url_requirement": "do_not_ask",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_job_posting",
+      "detail": {
+        "title": "SZV Control Doctor / Medical Officer",
+        "description": "Support SZV medical control and sick-leave processes. Partner with Customer Care and Medical Insurance Ops to ensure fair, timely medical assessments for Sint Maarten insureds.",
+        "status": "published",
+        "category": "physicians",
+        "contract_type": "indefinite",
+        "workplace_type": "hybrid",
+        "schedule_type": "full_time",
+        "cv_requirement": "mandatory",
+        "cover_letter_requirement": "mandatory",
+        "phone_requirement": "mandatory",
+        "photo_requirement": "do_not_ask",
+        "personal_url_requirement": "do_not_ask",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_job_posting",
+      "detail": {
+        "title": "SZV HR Coordinator",
+        "description": "Join People & Culture to coordinate performance cycle support, onboarding documentation, and employee self-service requests for SZV Social & Health Insurances.",
+        "status": "published",
+        "category": "hr",
+        "contract_type": "indefinite",
+        "workplace_type": "onsite",
+        "schedule_type": "full_time",
+        "cv_requirement": "mandatory",
+        "cover_letter_requirement": "optional",
+        "phone_requirement": "optional",
+        "photo_requirement": "do_not_ask",
+        "personal_url_requirement": "do_not_ask",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "dry_create_job_posting",
+      "detail": {
+        "title": "SZV Finance & Levy Analyst",
+        "description": "Support premium levy collection, reporting, and financial controls for SZV social and health insurance programs.",
+        "status": "draft",
+        "category": "finance",
+        "contract_type": "indefinite",
+        "workplace_type": "onsite",
+        "schedule_type": "full_time",
+        "cv_requirement": "mandatory",
+        "cover_letter_requirement": "optional",
+        "phone_requirement": "optional",
+        "photo_requirement": "do_not_ask",
+        "personal_url_requirement": "do_not_ask",
+        "legal_entity_id": "362979"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Desktop\\Projetos Random\\Ultimate_Collector_Limpo\\demo_szv\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "location_id": "dry-location",
+    "legal_entity_id": "362979",
+    "cast": {
+      "Keisha Peterson": {
+        "employee_id": "5302587",
+        "access_id": "5715908",
+        "group": "staff"
+      },
+      "Marlon Williams": {
+        "employee_id": "dry-marlon",
+        "access_id": "dry-access-marlon",
+        "group": "staff"
+      },
+      "Tanya Carty": {
+        "employee_id": "dry-tanya",
+        "access_id": "dry-access-tanya",
+        "group": "staff"
+      },
+      "Jamal Voges": {
+        "employee_id": "dry-jamal",
+        "access_id": "dry-access-jamal",
+        "group": "manager"
+      },
+      "Ricardo Vlaun": {
+        "employee_id": "dry-ricardo",
+        "access_id": "dry-access-ricardo",
+        "group": "manager"
+      },
+      "Nadia Lejuez": {
+        "employee_id": "5302586",
+        "access_id": "5715907",
+        "group": "manager"
+      },
+      "Fiona Halley": {
+        "employee_id": "dry-fiona",
+        "access_id": "dry-access-fiona",
+        "group": "manager"
+      },
+      "Carlos Richardson": {
+        "employee_id": "dry-carlos",
+        "access_id": "dry-access-carlos",
+        "group": "leadership"
+      },
+      "Margarita De Weever": {
+        "employee_id": "dry-margarita",
+        "access_id": "dry-access-margarita",
+        "group": "leadership"
+      }
+    },
+    "teams": {
+      "pc": "dry-pc",
+      "customer_care": "dry-customer_care",
+      "medical": "dry-medical",
+      "finance": "dry-finance",
+      "leadership": "dry-leadership"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "dry-p1",
+        "name": "SZV P1 Planning Cycle 2026",
+        "status": "draft"
+      },
+      "p2": {
+        "id": "dry-p2",
+        "name": "SZV P2 Mid-Year Cycle 2026",
+        "status": "draft"
+      },
+      "p3": {
+        "id": "dry-p3",
+        "name": "SZV P3 Year-End Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [],
+    "job_postings": []
+  },
+  "finished_at": "2026-08-01T12:39:01.983015+00:00"
+}

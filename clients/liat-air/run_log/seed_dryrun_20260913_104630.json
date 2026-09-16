@@ -1,0 +1,614 @@
+{
+  "started_at": "2026-09-13T10:46:28.722506+00:00",
+  "mode": "dry-run",
+  "company_id": "191947",
+  "actions": [
+    {
+      "action": "dry_create_location",
+      "detail": {
+        "name": "LIAT VC Bird International Airport",
+        "country": "ag",
+        "timezone": "America/Antigua",
+        "company_id": "191947",
+        "city": "St. John's",
+        "state": "Antigua & Barbuda",
+        "postal_code": "00000",
+        "address_line_one": "VC Bird International Airport, Coolidge",
+        "phone_number": "+12684621400",
+        "main": true,
+        "latitude": 17.1367,
+        "longitude": -61.7927
+      }
+    },
+    {
+      "action": "dry_create_legal_entity",
+      "detail": {
+        "company_id": "191947",
+        "country": "ag",
+        "legal_name": "Liat (2020) Limited",
+        "currency": "USD",
+        "city": "St. John's",
+        "state": "Antigua & Barbuda",
+        "postal_code": "00000",
+        "address_line_1": "VC Bird International Airport, Coolidge",
+        "tin": "LIAT-AG-001"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "id": "6381329",
+        "first_name": "Marcus",
+        "last_name": "Williams"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Charles Carter",
+        "id": "6381718",
+        "first_name": "Denise",
+        "last_name": "Antoine"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Daisy Dawson",
+        "id": "6381788",
+        "first_name": "Robert",
+        "last_name": "Clarke"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Laura Lewis",
+        "id": "6381818",
+        "first_name": "Kamala",
+        "last_name": "Singh"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Jack Johnson",
+        "id": "6381843",
+        "first_name": "Julian",
+        "last_name": "Baptiste"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Alice Anderson",
+        "id": "6382249",
+        "first_name": "Alicia",
+        "last_name": "Fraser"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Clara Cooper",
+        "id": "6381887",
+        "first_name": "Tamara",
+        "last_name": "Joseph"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "James Jones",
+        "id": "6381909",
+        "first_name": "Devon",
+        "last_name": "Thomas"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Felicity Ford",
+        "id": "6382057",
+        "first_name": "Keon",
+        "last_name": "Richards"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Sophie Simmons",
+        "id": "6382749",
+        "first_name": "Simone",
+        "last_name": "Peters"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Cristopher Clarke",
+        "id": "6382189",
+        "first_name": "Ryan",
+        "last_name": "Mitchell"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Bernarda Baker",
+        "id": "6382231",
+        "first_name": "Natasha",
+        "last_name": "Browne"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT Executive Leadership",
+        "description": "LIAT demo team for BSC performance narrative (executive)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT Flight Operations",
+        "description": "LIAT demo team for BSC performance narrative (flight_ops)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT Ground Operations & MRO",
+        "description": "LIAT demo team for BSC performance narrative (ground_mro)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT Commercial & Customer Experience",
+        "description": "LIAT demo team for BSC performance narrative (commercial)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT Finance & Revenue Accounts",
+        "description": "LIAT demo team for BSC performance narrative (finance)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "LIAT People & Culture",
+        "description": "LIAT demo team for BSC performance narrative (people)"
+      }
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Marcus Williams"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Denise Antoine"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Robert Clarke"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Kamala Singh"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Julian Baptiste"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Alicia Fraser"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Tamara Joseph"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Devon Thomas"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Keon Richards"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Simone Peters"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Ryan Mitchell"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Natasha Browne"
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Marcus Williams",
+        "id": "6381329",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Denise Antoine",
+        "id": "6381718",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Robert Clarke",
+        "id": "6381788",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Kamala Singh",
+        "id": "6381818",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Julian Baptiste",
+        "id": "6381843",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Alicia Fraser",
+        "id": "6382249",
+        "manager_id": "6381329"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Tamara Joseph",
+        "id": "6381887",
+        "manager_id": "6381818"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Devon Thomas",
+        "id": "6381909",
+        "manager_id": "6381818"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Keon Richards",
+        "id": "6382057",
+        "manager_id": "6381843"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Simone Peters",
+        "id": "6382749",
+        "manager_id": "6382249"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Ryan Mitchell",
+        "manager_id": "6381718"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Natasha Browne",
+        "id": "6382231",
+        "manager_id": "6381788"
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6848670",
+        "name": "LIAT Q1 Goal Setting & BSC Planning 2026",
+        "description": "LIAT Planning phase: agree SMART BSC-aligned goals cascaded from corporate scorecard. Weighting: 70% objectives / 30% competencies.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6381329",
+          "6381718",
+          "6381788",
+          "6381818",
+          "6381843",
+          "6382249",
+          "6381887",
+          "6381909",
+          "6382057",
+          "6382749",
+          "6382189",
+          "6382231"
+        ],
+        "ends_at": "2026-03-31T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": false,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6848670",
+        "name": "LIAT Q2-Q3 Mid-Year Review 2026",
+        "description": "LIAT Mid-year: review BSC objective progress, 360° competency input, coaching actions and IDP updates.",
+        "reviewer_strategies": [
+          "self",
+          "manager",
+          "peer"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6381329",
+          "6381718",
+          "6381788",
+          "6381818",
+          "6381843",
+          "6382249",
+          "6381887",
+          "6381909",
+          "6382057",
+          "6382749",
+          "6382189",
+          "6382231"
+        ],
+        "ends_at": "2026-09-30T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6848670",
+        "name": "LIAT Q4 Year-End & 9-Box Review 2026",
+        "description": "LIAT Year-end: final BSC assessment, competency rating (70/30), potential score for 9-box talent matrix, and next-year IDP.",
+        "reviewer_strategies": [
+          "self",
+          "manager",
+          "peer"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6381329",
+          "6381718",
+          "6381788",
+          "6381818",
+          "6381843",
+          "6382249",
+          "6381887",
+          "6381909",
+          "6382057",
+          "6382749",
+          "6382189",
+          "6382231"
+        ],
+        "ends_at": "2026-12-31T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": true,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "LIAT Q1 Goal Setting & BSC Planning 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "LIAT Q2-Q3 Mid-Year Review 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "LIAT Q4 Year-End & 9-Box Review 2026"
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "LIAT Balanced Scorecard Essentials for Managers",
+        "description": "How LIAT's four BSC perspectives (Financial, Customer, Internal Process, L&D) cascade into department and individual scorecards.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6848670",
+        "company_id": "191947"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "LIAT 9-Box Talent Review Workshop",
+        "description": "Calibrating performance vs. potential for succession planning. Restricted to HR and line management.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6848670",
+        "company_id": "191947"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "LIAT Performance Coaching & IDP",
+        "description": "Coaching conversations, Individual Development Plans linked to BSC goals and 9-box placement.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6848670",
+        "company_id": "191947"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "LIAT Safety & Compliance Awareness",
+        "description": "Aviation safety culture, regulatory awareness and observable behaviors for all LIAT employees.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6848670",
+        "company_id": "191947"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "413966",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "LIAT BSC Performance Cycle 2026 is live",
+        "description": "Colleagues, our Q1 Goal Setting and Q2-Q3 Mid-Year review cycles are open. Align SMART goals to the four BSC perspectives (Financial, Customer, Internal Process, L&D). Final rating weighting is 70% objectives / 30% competencies. Contact People & Culture for support.",
+        "post_group_id": "413966",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "LIAT 9-Box Talent Review — Year-End Preparation",
+        "description": "Managers and HR: the Q4 Year-End review includes potential assessment for the 9-box talent matrix. Complete mid-year coaching notes and IDPs before October. Access to 9-box views is restricted to HR and direct line management.",
+        "post_group_id": "413966",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\liat-air\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "location_id": "dry-location",
+    "legal_entity_id": "421017",
+    "cast": {
+      "Marcus Williams": {
+        "employee_id": "6381329",
+        "access_id": "6848283",
+        "group": "leadership"
+      },
+      "Denise Antoine": {
+        "employee_id": "6381718",
+        "access_id": "6848670",
+        "group": "leadership"
+      },
+      "Robert Clarke": {
+        "employee_id": "6381788",
+        "access_id": "6848751",
+        "group": "leadership"
+      },
+      "Kamala Singh": {
+        "employee_id": "6381818",
+        "access_id": "6848784",
+        "group": "manager"
+      },
+      "Julian Baptiste": {
+        "employee_id": "6381843",
+        "access_id": "6848802",
+        "group": "manager"
+      },
+      "Alicia Fraser": {
+        "employee_id": "6382249",
+        "access_id": "6849212",
+        "group": "manager"
+      },
+      "Tamara Joseph": {
+        "employee_id": "6381887",
+        "access_id": "6848843",
+        "group": "staff"
+      },
+      "Devon Thomas": {
+        "employee_id": "6381909",
+        "access_id": "6848855",
+        "group": "staff"
+      },
+      "Keon Richards": {
+        "employee_id": "6382057",
+        "access_id": "6848892",
+        "group": "staff"
+      },
+      "Simone Peters": {
+        "employee_id": "6382749",
+        "access_id": "6849708",
+        "group": "staff"
+      },
+      "Ryan Mitchell": {
+        "employee_id": "6382189",
+        "access_id": "6849150",
+        "group": "staff"
+      },
+      "Natasha Browne": {
+        "employee_id": "6382231",
+        "access_id": "6849192",
+        "group": "staff"
+      }
+    },
+    "teams": {
+      "executive": "dry-executive",
+      "flight_ops": "dry-flight_ops",
+      "ground_mro": "dry-ground_mro",
+      "commercial": "dry-commercial",
+      "finance": "dry-finance",
+      "people": "dry-people"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "dry-p1",
+        "name": "LIAT Q1 Goal Setting & BSC Planning 2026",
+        "status": "draft"
+      },
+      "p2": {
+        "id": "dry-p2",
+        "name": "LIAT Q2-Q3 Mid-Year Review 2026",
+        "status": "draft"
+      },
+      "p3": {
+        "id": "dry-p3",
+        "name": "LIAT Q4 Year-End & 9-Box Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [],
+    "post_group_id": "413966",
+    "posts": []
+  },
+  "finished_at": "2026-09-13T10:46:30.292471+00:00"
+}

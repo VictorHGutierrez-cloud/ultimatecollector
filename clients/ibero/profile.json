@@ -1,0 +1,21 @@
+{
+  "id": "ibero",
+  "name": "Ibero Demo",
+  "company_id": 28692,
+  "api": {
+    "provider": "factorial",
+    "base_url": "https://api.eu2.demo.factorial.dev",
+    "version": "2026-07-01",
+    "auth_type": "bearer"
+  },
+  "secrets": {
+    "token_files": ["secrets/chaveapiibero.txt"],
+    "env_file": "secrets/secrets.env"
+  },
+  "data_dir": "data/clients/ibero",
+  "features": {
+    "collect": ["employees", "tasks"],
+    "send": ["tasks"],
+    "seed": false
+  }
+}

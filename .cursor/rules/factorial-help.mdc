@@ -1,0 +1,29 @@
+---
+description: Use when the user asks about Factorial product features, Help Center topics, how Factorial works, or wants a client guide/demo script/setup summary for Factorial. Do not apply for unrelated coding-only tasks.
+alwaysApply: false
+---
+
+# Factorial Help Pack
+
+When this rule applies, treat `docs/factorial-help/` as the local product knowledge base.
+
+## Required workflow
+
+1. Read `docs/factorial-help/README.md` if you need orientation.
+2. Open the matching file under `docs/factorial-help/modules/` (see table in README).
+3. Use `docs/factorial-help/INDEX.md` or `docs/factorial-help/catalog.json` to find official article titles and URLs.
+4. Use `docs/factorial-help/glossary.md` for EN↔PT terms.
+5. For client guides/demos, also follow `docs/factorial-help/how-to-write-client-guides.md` and read the client folder under `clients/{id}/` (never paste secrets).
+
+## Answer style
+
+- Explain in clear Portuguese, step-by-step, non-IT-friendly.
+- Keep official Factorial UI terms in English (`Settings`, `Time off`, `Permission group`) and explain them.
+- Cite official Help Center links from INDEX/catalog.
+- If a local summary might be outdated, fetch the live article URL and prefer the live content.
+- Do not paste long copyrighted Help Center article bodies into the repo or into replies; summarize and link.
+
+## Out of scope for this pack
+
+- Do not put API tokens or `secrets/` contents in guides.
+- Client-specific seeded IDs stay in `clients/...`, not in `docs/factorial-help/`.

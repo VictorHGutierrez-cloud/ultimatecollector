@@ -1,0 +1,58 @@
+{
+  "company_id": "167952",
+  "location_id": "550700",
+  "legal_entity_id": "362982",
+  "review_processes": {
+    "p1": "243671",
+    "p2": "243672",
+    "p3": "243673"
+  },
+  "teams": {
+    "pc": "1587669",
+    "customer_care": "1587670",
+    "medical": "1587671",
+    "finance": "1587672",
+    "leadership": "1587673"
+  },
+  "job_postings": {
+    "customer_care_officer": "207768",
+    "control_doctor": "207769",
+    "hr_coordinator": "207770",
+    "finance_analyst": "207771"
+  },
+  "trainings": {
+    "coaching": "352484",
+    "core_values": "352485"
+  },
+  "onboarding_new_hire": "Keisha Peterson",
+  "onboarding_tasks": [
+    "52499998",
+    "52499999",
+    "52500000",
+    "52500001",
+    "52500002",
+    "52500003",
+    "52500004",
+    "52500005",
+    "52500006",
+    "52500007",
+    "52500008",
+    "52500009",
+    "52500014"
+  ],
+  "candidates": {
+    "ashley_arrindell": "2126139",
+    "desmond_gumbs": "2126140",
+    "soraya_pantophlet": "2126141"
+  },
+  "applications": {
+    "customer_care": "5032842",
+    "control_doctor": "5032843",
+    "hr_coordinator": "5032844"
+  },
+  "posts_group_id": "350101",
+  "posts": {
+    "performance_cycle": "18356031",
+    "welcome_values": "18356032"
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "started_at": "2026-08-01T12:03:28.777371+00:00",
+  "mode": "dry-run",
+  "actions": [
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV People & Culture",
+        "description": "SZV demo team for performance narrative (pc)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Operations",
+        "description": "SZV demo team for performance narrative (operations)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "SZV Leadership",
+        "description": "SZV demo team for performance narrative (leadership)"
+      }
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Laura López"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Hellen Howard"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Mateo Santos"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Juan Jiménez"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Clara Castillo"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Fiona Fernández"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Carlos Carter"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Margarita Márquez"
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Laura López",
+        "id": "5226983",
+        "manager_id": "5226993"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Hellen Howard",
+        "id": "5226807",
+        "manager_id": "5227240"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Mateo Santos",
+        "id": "5227413",
+        "manager_id": "5227011"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Juan Jiménez",
+        "id": "5226993",
+        "manager_id": "5226952"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Clara Castillo",
+        "id": "5227240",
+        "manager_id": "5226967"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Fiona Fernández",
+        "id": "5227011",
+        "manager_id": "5226952"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Carlos Carter",
+        "id": "5226952",
+        "manager_id": "5226967"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Margarita Márquez",
+        "id": "5226967",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "5640284",
+        "name": "SZV P1 Planning 2026",
+        "description": "SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5226983",
+          "5226807",
+          "5227413",
+          "5226993",
+          "5227240",
+          "5227011",
+          "5226952",
+          "5226967"
+        ],
+        "ends_at": "2026-02-28T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": false,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "5640284",
+        "name": "SZV P2 Mid-Year Review 2026",
+        "description": "SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5226983",
+          "5226807",
+          "5227413",
+          "5226993",
+          "5227240",
+          "5227011",
+          "5226952",
+          "5226967"
+        ],
+        "ends_at": "2026-06-30T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "5640284",
+        "name": "SZV P3 Year-End Review 2026",
+        "description": "SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "5226983",
+          "5226807",
+          "5227413",
+          "5226993",
+          "5227240",
+          "5227011",
+          "5226952",
+          "5226967"
+        ],
+        "ends_at": "2026-12-31T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": true,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P1 Planning 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P2 Mid-Year Review 2026"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "SZV P3 Year-End Review 2026"
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "SZV Coaching Essentials for Managers",
+        "description": "Practical coaching conversations for mid-year and continuous performance support.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "5640560",
+        "company_id": "165950"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "SZV Core Values in Daily Work",
+        "description": "How SZV core values show up as observable behaviors in service and teamwork.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "5640560",
+        "company_id": "165950"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Desktop\\Projetos Random\\Ultimate_Collector_Limpo\\demo_szv\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "cast": {
+      "Laura López": {
+        "employee_id": "5226983",
+        "access_id": "5640299",
+        "group": "staff"
+      },
+      "Hellen Howard": {
+        "employee_id": "5226807",
+        "access_id": "5640114",
+        "group": "staff"
+      },
+      "Mateo Santos": {
+        "employee_id": "5227413",
+        "access_id": "5640602",
+        "group": "staff"
+      },
+      "Juan Jiménez": {
+        "employee_id": "5226993",
+        "access_id": "5640309",
+        "group": "manager"
+      },
+      "Clara Castillo": {
+        "employee_id": "5227240",
+        "access_id": "5640560",
+        "group": "manager"
+      },
+      "Fiona Fernández": {
+        "employee_id": "5227011",
+        "access_id": "5640324",
+        "group": "manager"
+      },
+      "Carlos Carter": {
+        "employee_id": "5226952",
+        "access_id": "5640268",
+        "group": "leadership"
+      },
+      "Margarita Márquez": {
+        "employee_id": "5226967",
+        "access_id": "5640284",
+        "group": "leadership"
+      }
+    },
+    "teams": {
+      "pc": "dry-pc",
+      "operations": "dry-operations",
+      "leadership": "dry-leadership"
+    },
+    "review_processes": {
+      "p1": {
+        "id": "dry-p1",
+        "name": "SZV P1 Planning 2026",
+        "status": "draft"
+      },
+      "p2": {
+        "id": "dry-p2",
+        "name": "SZV P2 Mid-Year Review 2026",
+        "status": "draft"
+      },
+      "p3": {
+        "id": "dry-p3",
+        "name": "SZV P3 Year-End Review 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": []
+  },
+  "finished_at": "2026-08-01T12:03:30.274738+00:00"
+}

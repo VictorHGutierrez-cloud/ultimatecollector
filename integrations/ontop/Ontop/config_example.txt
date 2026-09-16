@@ -1,0 +1,15 @@
+# Exemplo de configuração para o script de teste Factorial
+# Copie estas configurações para o script ou use variáveis de ambiente
+
+# API Key do Factorial
+# Obtenha em: https://factorialhr.com/api-documentation
+FACTORIAL_API_KEY=your_api_key_here
+
+# Base URL da API (geralmente não precisa alterar)
+BASE_URL=https://api.factorialhr.com
+
+# Para usar via variável de ambiente no Windows PowerShell:
+# $env:FACTORIAL_API_KEY = "sua_api_key_aqui"
+
+# Para usar via variável de ambiente no Linux/Mac:
+# export FACTORIAL_API_KEY="sua_api_key_aqui"

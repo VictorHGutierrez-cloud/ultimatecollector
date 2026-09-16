@@ -1,0 +1,722 @@
+{
+  "company_id": "167952",
+  "api_version": "2026-07-01",
+  "prefix": "SZV",
+  "year": 2026,
+  "location": {
+    "name": "SZV Philipsburg Office",
+    "country": "sx",
+    "country_fallback": "us",
+    "timezone": "America/Puerto_Rico",
+    "timezone_fallback": "America/Puerto_Rico",
+    "city": "Philipsburg",
+    "state": "Sint Maarten",
+    "postal_code": "0000",
+    "address_line_one": "Harbour View Building, Sparrow Road #4",
+    "phone_number": "+17215466782",
+    "main": true,
+    "latitude": 18.0257,
+    "longitude": -63.0474
+  },
+  "legal_entity": {
+    "legal_name": "SZV Social & Health Insurances",
+    "country": "sx",
+    "country_fallback": "us",
+    "currency": "USD",
+    "city": "Philipsburg",
+    "state": "Sint Maarten",
+    "postal_code": "0000",
+    "address_line_1": "Harbour View Building, Sparrow Road #4",
+    "tin": "SZV-SXM-001"
+  },
+  "teams": [
+    {
+      "key": "pc",
+      "name": "SZV People & Culture",
+      "lead": "Nadia Lejuez"
+    },
+    {
+      "key": "customer_care",
+      "name": "SZV Customer Care",
+      "lead": "Ricardo Vlaun"
+    },
+    {
+      "key": "medical",
+      "name": "SZV Medical Insurance Ops",
+      "lead": "Fiona Halley"
+    },
+    {
+      "key": "finance",
+      "name": "SZV Finance & Levy",
+      "lead": "Jamal Voges"
+    },
+    {
+      "key": "leadership",
+      "name": "SZV Leadership",
+      "lead": "Margarita De Weever"
+    }
+  ],
+  "cast": [
+    {
+      "full_name": "Keisha Peterson",
+      "first_name": "Keisha",
+      "last_name": "Peterson",
+      "email": "keisha.peterson@szv-demo.sx",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "customer_care",
+      "role_title": "SZV Customer Care Specialist",
+      "goal_count": 7,
+      "rename_from": null
+    },
+    {
+      "full_name": "Marlon Williams",
+      "first_name": "Marlon",
+      "last_name": "Williams",
+      "email": "marlon.williams@szv-demo.sx",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "pc",
+      "role_title": "SZV HR Coordinator",
+      "goal_count": 7,
+      "rename_from": null
+    },
+    {
+      "full_name": "Tanya Carty",
+      "first_name": "Tanya",
+      "last_name": "Carty",
+      "email": "tanya.carty@szv-demo.sx",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "medical",
+      "role_title": "SZV Medical Claims Officer",
+      "goal_count": 8,
+      "rename_from": null
+    },
+    {
+      "full_name": "Jamal Voges",
+      "first_name": "Jamal",
+      "last_name": "Voges",
+      "email": "jamal.voges@szv-demo.sx",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "finance",
+      "role_title": "SZV Finance & Levy Manager",
+      "goal_count": 9,
+      "rename_from": null
+    },
+    {
+      "full_name": "Ricardo Vlaun",
+      "first_name": "Ricardo",
+      "last_name": "Vlaun",
+      "email": "ricardo.vlaun@szv-demo.sx",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "customer_care",
+      "role_title": "SZV Customer Care Manager",
+      "goal_count": 9,
+      "rename_from": null
+    },
+    {
+      "full_name": "Nadia Lejuez",
+      "first_name": "Nadia",
+      "last_name": "Lejuez",
+      "email": "nadia.lejuez@szv-demo.sx",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "pc",
+      "role_title": "SZV People Manager",
+      "goal_count": 9,
+      "rename_from": "Hellen Howard"
+    },
+    {
+      "full_name": "Fiona Halley",
+      "first_name": "Fiona",
+      "last_name": "Halley",
+      "email": "fiona.halley@szv-demo.sx",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "medical",
+      "role_title": "SZV Medical Operations Manager",
+      "goal_count": 10,
+      "rename_from": null
+    },
+    {
+      "full_name": "Carlos Richardson",
+      "first_name": "Carlos",
+      "last_name": "Richardson",
+      "email": "carlos.richardson@szv-demo.sx",
+      "gender": "male",
+      "group": "leadership",
+      "team_key": "leadership",
+      "role_title": "SZV Head of Operations",
+      "goal_count": 10,
+      "rename_from": null
+    },
+    {
+      "full_name": "Margarita De Weever",
+      "first_name": "Margarita",
+      "last_name": "De Weever",
+      "email": "margarita.deweever@szv-demo.sx",
+      "gender": "female",
+      "group": "leadership",
+      "team_key": "leadership",
+      "role_title": "SZV Chief People Officer",
+      "goal_count": 10,
+      "rename_from": null
+    }
+  ],
+  "manager_map": {
+    "Keisha Peterson": "Ricardo Vlaun",
+    "Marlon Williams": "Nadia Lejuez",
+    "Tanya Carty": "Fiona Halley",
+    "Jamal Voges": "Carlos Richardson",
+    "Ricardo Vlaun": "Carlos Richardson",
+    "Nadia Lejuez": "Margarita De Weever",
+    "Fiona Halley": "Carlos Richardson",
+    "Carlos Richardson": null,
+    "Margarita De Weever": "Carlos Richardson"
+  },
+  "core_values": [
+    {
+      "name": "SZV Value: I Lead The Way",
+      "behaviors": "Leads by example, coaches others, shares knowledge, demonstrates accountability, and drives innovation and improvement."
+    },
+    {
+      "name": "SZV Value: I Love To Serve",
+      "behaviors": "Delivers excellent customer service, takes ownership of requests, represents SZV positively, and demonstrates service excellence."
+    },
+    {
+      "name": "SZV Value: I Collaborate and Work Well With Others",
+      "behaviors": "Encourages teamwork, communicates respectfully, provides constructive feedback, and supports psychological safety."
+    },
+    {
+      "name": "SZV Value: I Show Respect",
+      "behaviors": "Behaves professionally, considers other opinions, and follows up on commitments."
+    },
+    {
+      "name": "SZV Value: I Am Dependable",
+      "behaviors": "Takes ownership, delivers accurate information, and meets commitments and timelines."
+    }
+  ],
+  "competencies": {
+    "all_employees": [
+      "SZV Competency: Accountability",
+      "SZV Competency: Commitment",
+      "SZV Competency: Execution",
+      "SZV Competency: Result Driven"
+    ],
+    "management": [
+      "SZV Competency: Leadership",
+      "SZV Competency: Planning & Organizing Capability",
+      "SZV Competency: Quality Focused",
+      "SZV Competency: Collegiality"
+    ],
+    "executive": [
+      "SZV Competency: Leadership",
+      "SZV Competency: Strategic Capacity",
+      "SZV Competency: Diplomacy & Tact",
+      "SZV Competency: Helicopter View"
+    ]
+  },
+  "weighting": {
+    "staff": {
+      "objectives": 50,
+      "competencies": 30,
+      "core_values": 20
+    },
+    "manager": {
+      "objectives": 40,
+      "competencies": 35,
+      "core_values": 25
+    },
+    "leadership": {
+      "objectives": 40,
+      "competencies": 40,
+      "core_values": 20
+    }
+  },
+  "rating_scale": [
+    {
+      "code": "NM",
+      "label": "Did Not Meet Expectations",
+      "definition": "50% or less of deliverables achieved"
+    },
+    {
+      "code": "MS",
+      "label": "Met Some Expectations",
+      "definition": "More than 50% and up to 80% achieved"
+    },
+    {
+      "code": "ME",
+      "label": "Met Expectations",
+      "definition": "80% to 100% achieved"
+    },
+    {
+      "code": "EE",
+      "label": "Exceeded Expectations",
+      "definition": "100% achieved on time plus proactive contributions such as process improvement, coaching, or operational enhancement"
+    },
+    {
+      "code": "SE",
+      "label": "Significantly Exceeded Expectations",
+      "definition": "100% achieved on time plus strategic contributions such as organization-wide improvements or transformation leadership"
+    }
+  ],
+  "goal_categories": [
+    "Customer & Service",
+    "People & Engagement",
+    "Financial & Operational",
+    "Strategy & Projects",
+    "Compliance & Improvement"
+  ],
+  "goal_templates": {
+    "staff": [
+      {
+        "category": "Customer & Service",
+        "title": "Improve insured/member satisfaction for assigned queue",
+        "measure": "Reach CSAT >= 4.5/5 by year-end",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Customer & Service",
+        "title": "Reduce first-response time on SZV service requests",
+        "measure": "Average first response under 4 business hours",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Complete peer coaching sessions",
+        "measure": "4 documented coaching exchanges with teammates",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Improve case/process cycle efficiency",
+        "measure": "Cut average case handling time by 10%",
+        "due": "2026-10-31"
+      },
+      {
+        "category": "Strategy & Projects",
+        "title": "Deliver assigned digital service micro-project",
+        "measure": "Project milestones completed on agreed dates",
+        "due": "2026-08-31"
+      },
+      {
+        "category": "Compliance & Improvement",
+        "title": "Maintain policy and data accuracy compliance",
+        "measure": "Zero critical compliance findings in audits",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Complete mandatory SZV development curriculum",
+        "measure": "100% of assigned trainings completed",
+        "due": "2026-12-01"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Document and automate one recurring process",
+        "measure": "1 approved SOP + automation proposal delivered",
+        "due": "2026-07-31"
+      }
+    ],
+    "manager": [
+      {
+        "category": "People & Engagement",
+        "title": "Complete P1 goal agreements for all direct reports",
+        "measure": "100% of team goals approved by February",
+        "due": "2026-02-28"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Run monthly coaching 1:1s with each report",
+        "measure": "At least 10 coaching notes logged per report/year",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Customer & Service",
+        "title": "Lift team customer/member experience score",
+        "measure": "Team CX score +0.3 vs baseline",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Manage team budget within approved envelope",
+        "measure": "Variance within +/- 3%",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Strategy & Projects",
+        "title": "Deliver departmental OKR contribution for SZV",
+        "measure": "Departmental OKRs at ME or above at year-end",
+        "due": "2026-12-20"
+      },
+      {
+        "category": "Compliance & Improvement",
+        "title": "Close audit actions for the team",
+        "measure": "100% of assigned audit actions closed on time",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Build team development plans after mid-year",
+        "measure": "Development plan for every report after P2",
+        "due": "2026-07-31"
+      },
+      {
+        "category": "Strategy & Projects",
+        "title": "Sponsor one cross-functional improvement initiative",
+        "measure": "Initiative launched with measurable KPI",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "Customer & Service",
+        "title": "Reduce escalations requiring leadership intervention",
+        "measure": "Escalations down 15% vs prior year",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Stabilize team capacity and coverage planning",
+        "measure": "Coverage calendar maintained with <5% gaps",
+        "due": "2026-10-31"
+      }
+    ],
+    "leadership": [
+      {
+        "category": "Strategy & Projects",
+        "title": "Cascade organizational objectives into department KPIs",
+        "measure": "All departments have linked KPIs by end of Q1",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Strengthen leadership bench for succession",
+        "measure": "Ready-now / ready-soon successors identified for critical roles",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Raise engagement through coaching culture",
+        "measure": "Engagement index +5 points in annual survey",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Deliver operating plan within approved budget",
+        "measure": "Budget variance within +/- 2%",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer & Service",
+        "title": "Own enterprise member experience outcome",
+        "measure": "Enterprise CX target achieved",
+        "due": "2026-12-20"
+      },
+      {
+        "category": "Compliance & Improvement",
+        "title": "Advance automation and control framework",
+        "measure": "2 control/automation initiatives live",
+        "due": "2026-10-31"
+      },
+      {
+        "category": "Strategy & Projects",
+        "title": "Lead transformation portfolio milestones",
+        "measure": "Critical milestones on time for board review",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "People & Engagement",
+        "title": "Complete talent review and calibration",
+        "measure": "Talent review held with calibrated ratings for leadership cohort",
+        "due": "2026-11-15"
+      },
+      {
+        "category": "Financial & Operational",
+        "title": "Improve process efficiency across functions",
+        "measure": "Documented 10% efficiency gain in priority process",
+        "due": "2026-12-01"
+      },
+      {
+        "category": "Compliance & Improvement",
+        "title": "Ensure legislative and policy compliance posture",
+        "measure": "No unresolved critical compliance exposures at year-end",
+        "due": "2026-12-31"
+      }
+    ]
+  },
+  "review_processes": [
+    {
+      "key": "p1",
+      "name": "SZV P1 Planning Cycle 2026",
+      "description": "SZV Planning phase: agree SMART goals, expectations, development objectives, and training needs.",
+      "ends_at": "2026-09-30T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": false,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "p2",
+      "name": "SZV P2 Mid-Year Cycle 2026",
+      "description": "SZV Mid-year: review progress, coaching actions, competency behaviors, and goal adjustments.",
+      "ends_at": "2026-10-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "p3",
+      "name": "SZV P3 Year-End Review 2026",
+      "description": "SZV Year-end: final goal assessment, core values, competencies, overall rating, and next-year development.",
+      "ends_at": "2026-12-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": true,
+      "competencies_assessments_enabled": true,
+      "start": false
+    }
+  ],
+  "trainings": [
+    {
+      "name": "SZV Coaching Essentials for Managers",
+      "description": "Practical coaching conversations for mid-year and continuous performance support.",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "SZV Core Values in Daily Work",
+      "description": "How SZV core values show up as observable behaviors in service and teamwork.",
+      "audience": ["staff", "manager", "leadership"]
+    }
+  ],
+  "job_postings": [
+    {
+      "title": "SZV Customer Care Officer",
+      "description": "Support insured members and employers with ZV/medical insurance inquiries at SZV Customer Care in Philipsburg. Deliver dependable service aligned with SZV values.",
+      "status": "published",
+      "category": "public_sector",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "customer_care",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "optional",
+      "phone_requirement": "optional",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "SZV Control Doctor / Medical Officer",
+      "description": "Support SZV medical control and sick-leave processes. Partner with Customer Care and Medical Insurance Ops to ensure fair, timely medical assessments for Sint Maarten insureds.",
+      "status": "published",
+      "category": "physicians",
+      "contract_type": "indefinite",
+      "workplace_type": "hybrid",
+      "schedule_type": "full_time",
+      "team_key": "medical",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "mandatory",
+      "phone_requirement": "mandatory",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "SZV HR Coordinator",
+      "description": "Join People & Culture to coordinate performance cycle support, onboarding documentation, and employee self-service requests for SZV Social & Health Insurances.",
+      "status": "published",
+      "category": "hr",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "pc",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "optional",
+      "phone_requirement": "optional",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    },
+    {
+      "title": "SZV Finance & Levy Analyst",
+      "description": "Support premium levy collection, reporting, and financial controls for SZV social and health insurance programs.",
+      "status": "draft",
+      "category": "finance",
+      "contract_type": "indefinite",
+      "workplace_type": "onsite",
+      "schedule_type": "full_time",
+      "team_key": "finance",
+      "cv_requirement": "mandatory",
+      "cover_letter_requirement": "optional",
+      "phone_requirement": "optional",
+      "photo_requirement": "do_not_ask",
+      "personal_url_requirement": "do_not_ask"
+    }
+  ],
+  "onboarding": {
+    "new_hire": "Keisha Peterson",
+    "hire_date": "2026-08-04",
+    "note": "Simulated onboarding via Tasks API (Factorial has no public onboarding-process endpoint).",
+    "tasks": [
+      {
+        "name": "SZV Onboarding: Offer accepted & start date confirmed",
+        "content": "Confirm offer acceptance and start date for Keisha Peterson (Customer Care). Owners: People & Culture.",
+        "due_on": "2026-07-28",
+        "status": "done",
+        "assignees": ["Nadia Lejuez", "Ricardo Vlaun"]
+      },
+      {
+        "name": "SZV Onboarding: Collect employment documents",
+        "content": "Collect ID/passport, bank details, emergency contact, and signed contract pack for the new hire.",
+        "due_on": "2026-08-01",
+        "status": "in_progress",
+        "assignees": ["Nadia Lejuez", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: Policy acknowledgements",
+        "content": "Obtain acknowledgements for SZV code of conduct, confidentiality, and core values policies.",
+        "due_on": "2026-08-04",
+        "status": "todo",
+        "assignees": ["Nadia Lejuez", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: First-day agenda & orientation sessions",
+        "content": "Schedule first-day agenda: office tour, team intro, Customer Care systems overview, MySZV overview.",
+        "due_on": "2026-08-04",
+        "status": "todo",
+        "assignees": ["Ricardo Vlaun", "Nadia Lejuez"]
+      },
+      {
+        "name": "SZV Onboarding: ICT — email, accounts & system access",
+        "content": "Create user/email accounts and grant access to Customer Care tools, intranet, and required apps.",
+        "due_on": "2026-08-03",
+        "status": "todo",
+        "assignees": ["Carlos Richardson", "Nadia Lejuez"]
+      },
+      {
+        "name": "SZV Onboarding: Facilities — badge, workspace & equipment",
+        "content": "Prepare badge, desk/workspace at Harbour View Building, and allocate laptop/headset.",
+        "due_on": "2026-08-03",
+        "status": "todo",
+        "assignees": ["Margarita De Weever", "Carlos Richardson"]
+      },
+      {
+        "name": "SZV Onboarding: Benefits enrollment (ZV / pension)",
+        "content": "Complete benefits enrollment guidance: medical insurance status, pension registration, and dependent info if applicable.",
+        "due_on": "2026-08-05",
+        "status": "todo",
+        "assignees": ["Nadia Lejuez", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: Payroll & HRIS registration",
+        "content": "Activate payroll profile, bank account, and organization chart placement for the new hire.",
+        "due_on": "2026-08-05",
+        "status": "todo",
+        "assignees": ["Jamal Voges", "Nadia Lejuez"]
+      },
+      {
+        "name": "SZV Onboarding: Assign mandatory trainings",
+        "content": "Assign SZV Core Values in Daily Work and role orientation learning. Track completion evidence.",
+        "due_on": "2026-08-08",
+        "status": "todo",
+        "assignees": ["Nadia Lejuez", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: 1-week check-in",
+        "content": "Confirm access, equipment, orientation completion, and immediate support needs.",
+        "due_on": "2026-08-11",
+        "status": "todo",
+        "assignees": ["Ricardo Vlaun", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: 30-day check-in",
+        "content": "Review integration, role clarity, and early training needs. Capture actions.",
+        "due_on": "2026-09-03",
+        "status": "todo",
+        "assignees": ["Ricardo Vlaun", "Keisha Peterson"]
+      },
+      {
+        "name": "SZV Onboarding: 60-day check-in",
+        "content": "Review progress, capability development, and support gaps. Escalate if needed.",
+        "due_on": "2026-10-03",
+        "status": "todo",
+        "assignees": ["Ricardo Vlaun", "Nadia Lejuez"]
+      },
+      {
+        "name": "SZV Onboarding: 90-day / probation evaluation",
+        "content": "Complete probation evaluation with manager and People & Culture. Document decision and development plan.",
+        "due_on": "2026-11-02",
+        "status": "todo",
+        "assignees": ["Ricardo Vlaun", "Nadia Lejuez", "Keisha Peterson"]
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "first_name": "Ashley",
+      "last_name": "Arrindell",
+      "email": "ashley.arrindell.candidate@szv-demo.sx",
+      "phone_number": "+17215550101",
+      "gender": "female",
+      "job_title": "SZV Customer Care Officer",
+      "source": "career_site",
+      "medium": "organic",
+      "cover_letter": "I am excited to support SZV insured members with dependable Customer Care service in Philipsburg."
+    },
+    {
+      "first_name": "Desmond",
+      "last_name": "Gumbs",
+      "email": "desmond.gumbs.candidate@szv-demo.sx",
+      "phone_number": "+17215550102",
+      "gender": "male",
+      "job_title": "SZV Control Doctor / Medical Officer",
+      "source": "referral",
+      "medium": "employee_referral",
+      "cover_letter": "Medical professional interested in SZV medical control and fair sick-leave assessments for Sint Maarten."
+    },
+    {
+      "first_name": "Soraya",
+      "last_name": "Pantophlet",
+      "email": "soraya.pantophlet.candidate@szv-demo.sx",
+      "phone_number": "+17215550103",
+      "gender": "female",
+      "job_title": "SZV HR Coordinator",
+      "source": "career_site",
+      "medium": "organic",
+      "cover_letter": "People operations specialist eager to support SZV performance cycles, onboarding, and employee self-service."
+    }
+  ],
+  "posts_group": {
+    "title": "Company announcements",
+    "description": "Official announcements for SZV Social & Health Insurances — Philipsburg.",
+    "fallback_titles": ["Company announcements", "SZV Company Announcements"]
+  },
+  "posts": [
+    {
+      "title": "SZV Performance Cycle 2026 is live",
+      "description": "Colleagues, our P1 Planning and P2 Mid-Year cycles are open. Align SMART goals to departmental KPIs, demonstrate our five core values, and use coaching notes throughout the year. Reach out to People & Culture if you need support.",
+      "allow_comments_and_reactions": true
+    },
+    {
+      "title": "Welcome to SZV — Our values in daily work",
+      "description": "At SZV we lead the way, love to serve, collaborate, show respect, and stay dependable. New joiners: complete your onboarding checklist and Core Values training. Managers: support 1-week, 30/60/90 check-ins for every new hire.",
+      "allow_comments_and_reactions": true
+    }
+  ],
+  "ui_checklist": {
+    "rating_scale_labels": "Confirm NM/MS/ME/EE/SE labels and definitions are visible at rating time.",
+    "weighting": "Apply Staff 50/30/20, Managers 40/35/25, Leadership 40/40/20 if not supported fully by API.",
+    "questionnaires": "Ensure core values and competencies appear in self and manager questionnaires.",
+    "dashboards": "Validate manager dashboard, cycle progress, and 9-box for leadership potential.",
+    "location": "Confirm SZV Philipsburg Office shows Harbour View / Sparrow Road #4.",
+    "job_postings": "Open ATS and review SZV job postings + candidate applications.",
+    "onboarding_tasks": "Open Tasks filtered by 'SZV Onboarding' for Keisha Peterson's checklist.",
+    "posts": "Open Company announcements / SZV posts feed.",
+    "agreements": "Initiate P1/P2 agreements in the Factorial UI if API key policy blocks bulk_initiate."
+  }
+}

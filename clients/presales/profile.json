@@ -1,0 +1,21 @@
+{
+  "id": "presales",
+  "name": "Pre-sales / Cursor Tenant",
+  "company_id": 27275,
+  "api": {
+    "provider": "factorial",
+    "base_url": "https://api.eu2.demo.factorial.dev",
+    "version": "2026-07-01",
+    "auth_type": "x-api-key"
+  },
+  "secrets": {
+    "token_files": ["secrets/apitenantpresales.txt"],
+    "env_file": "secrets/secrets.env"
+  },
+  "data_dir": "data/clients/presales",
+  "features": {
+    "collect": ["employees", "attendance"],
+    "send": ["attendance"],
+    "seed": false
+  }
+}

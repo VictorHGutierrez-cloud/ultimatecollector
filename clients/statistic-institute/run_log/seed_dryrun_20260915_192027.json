@@ -1,0 +1,310 @@
+{
+  "started_at": "2026-09-15T19:20:26.550881+00:00",
+  "mode": "dry-run",
+  "company_id": "191864",
+  "actions": [
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Laura Lewis",
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "band": "Very Good / Superior"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Charles Carter",
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "band": "Good"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Hellen Howard",
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "band": "Good (~86%)"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Daisy Dawson",
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "STATIN Office of the Director General",
+        "description": "STATIN Division/Unit for PMS cascade narrative (odg). Aligns Division/Unit Plans to Individual Work Plans."
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "STATIN Corporate Services",
+        "description": "STATIN Division/Unit for PMS cascade narrative (corporate). Aligns Division/Unit Plans to Individual Work Plans."
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "STATIN Field Services",
+        "description": "STATIN Division/Unit for PMS cascade narrative (field). Aligns Division/Unit Plans to Individual Work Plans."
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "STATIN Economic and Social Statistics",
+        "description": "STATIN Division/Unit for PMS cascade narrative (ess). Aligns Division/Unit Plans to Individual Work Plans."
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "STATIN Human Resources",
+        "description": "STATIN Division/Unit for PMS cascade narrative (hr). Aligns Division/Unit Plans to Individual Work Plans."
+      }
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Laura Lewis"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Charles Carter"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Hellen Howard"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Daisy Dawson"
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Laura Lewis",
+        "id": "6375938",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Charles Carter",
+        "id": "6375931",
+        "manager_id": "6375938"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Hellen Howard",
+        "id": "6375925",
+        "manager_id": "6375938"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Daisy Dawson",
+        "manager_id": "6375931"
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6842200",
+        "name": "STATIN FY 2025/26 Year-End Appraisal",
+        "description": "STATIN year-end Employee Performance Management Form. Weighting: 60% measurable performance targets / 40% GoJ core and technical competencies. Bands: Superior 100%, Very Good 91-99%, Good 80-90%, Satisfactory 75-79%, Unsatisfactory <75% (PIP).",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6375938",
+          "6375931",
+          "6375925",
+          "6375934"
+        ],
+        "ends_at": "2026-04-30T23:59:59Z",
+        "agreements_enabled": false,
+        "employee_score_enabled": true,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6842200",
+        "name": "STATIN FY 2025/26 Coaching Reviews",
+        "description": "STATIN mid-cycle coaching. Policy requires at least three formal performance coaching conversations during the financial year before year-end appraisal.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6375938",
+          "6375931",
+          "6375925",
+          "6375934"
+        ],
+        "ends_at": "2026-03-15T23:59:59Z",
+        "agreements_enabled": false,
+        "employee_score_enabled": false,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_create_process",
+      "detail": {
+        "author_access_id": "6842200",
+        "name": "STATIN FY 2026/27 Goal Setting and Individual Work Plan",
+        "description": "Agree performance targets and key outputs for FY 2026/27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans. Weighting guidance: 60% targets / 40% competencies.",
+        "reviewer_strategies": [
+          "self",
+          "manager"
+        ],
+        "target_strategy": "by_employees",
+        "arguments": [
+          "6375938",
+          "6375931",
+          "6375925",
+          "6375934"
+        ],
+        "ends_at": "2026-06-30T23:59:59Z",
+        "agreements_enabled": true,
+        "employee_score_enabled": false,
+        "employee_potential_score_enabled": false,
+        "competencies_assessments_enabled": true
+      }
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "STATIN FY 2025/26 Year-End Appraisal"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "STATIN FY 2025/26 Coaching Reviews"
+    },
+    {
+      "action": "dry_start_skip",
+      "detail": "STATIN FY 2026/27 Goal Setting and Individual Work Plan"
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "STATIN PMS Guidelines for Managers",
+        "description": "How to cascade Division and Unit Plans into Individual Work Plans, agree targets and key outputs, and apply the STATIN rating scale and performance bands.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6842200",
+        "company_id": "191864"
+      }
+    },
+    {
+      "action": "dry_create_training",
+      "detail": {
+        "name": "STATIN Performance Coaching",
+        "description": "Running the minimum three coaching conversations, documenting evidence, and opening a Performance Improvement Plan when scores fall below 75%.",
+        "external": false,
+        "year": 2026,
+        "attachments": [],
+        "author_id": "6842200",
+        "company_id": "191864"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "413754",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "STATIN PMS Cycle — Close FY 2025/26 and Open FY 2026/27 IWPs",
+        "description": "Colleagues, year-end appraisals for FY 2025/26 are open alongside coaching reviews. Managers: agree FY 2026/27 Individual Work Plans (Sections 1-4) cascaded from Division and Unit Plans. Final rating guidance is 60% targets / 40% competencies. Scores below 75% require PIP or development interventions. Contact Human Resources for support.",
+        "post_group_id": "413754",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\statistic-institute\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "cast": {
+      "Laura Lewis": {
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "group": "leadership",
+        "demo_band": "Very Good / Superior"
+      },
+      "Charles Carter": {
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "group": "manager",
+        "demo_band": "Good"
+      },
+      "Hellen Howard": {
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "group": "staff",
+        "demo_band": "Good (~86%)"
+      },
+      "Daisy Dawson": {
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "group": "staff",
+        "demo_band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    "teams": {
+      "odg": "dry-odg",
+      "corporate": "dry-corporate",
+      "field": "dry-field",
+      "ess": "dry-ess",
+      "hr": "dry-hr"
+    },
+    "review_processes": {
+      "year_end": {
+        "id": "dry-year_end",
+        "name": "STATIN FY 2025/26 Year-End Appraisal",
+        "status": "draft"
+      },
+      "coaching": {
+        "id": "dry-coaching",
+        "name": "STATIN FY 2025/26 Coaching Reviews",
+        "status": "draft"
+      },
+      "iwp": {
+        "id": "dry-iwp",
+        "name": "STATIN FY 2026/27 Goal Setting and Individual Work Plan",
+        "status": "draft"
+      }
+    },
+    "trainings": [],
+    "post_group_id": "413754",
+    "posts": []
+  },
+  "finished_at": "2026-09-15T19:20:27.802187+00:00"
+}

@@ -1,0 +1,346 @@
+{
+  "started_at": "2026-09-15T19:39:02.576450+00:00",
+  "mode": "apply",
+  "company_id": "191864",
+  "actions": [
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Laura Lewis",
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "band": "Very Good / Superior"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Charles Carter",
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "band": "Good"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Hellen Howard",
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "band": "Good (~86%)"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Daisy Dawson",
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "year_end",
+        "id": "303500"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "303500",
+        "status": 200,
+        "body": "{'id': '303500', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Year-End Appraisal', 'description': 'STATIN year-end Employee Performance Management Form for financial year 2025-26. Weighting: 60% measurable performance targets / 40% Go..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "303500",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "303500",
+        "status": 200,
+        "body": "{'id': '303500', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Year-End Appraisal', 'description': 'STATIN year-end Employee Performance Management Form for financial year 2025-26. Weighting: 60% measurable performance targets / 40% Go..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "303500",
+        "status": 200,
+        "body": "{'id': '303500', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Year-End Appraisal', 'description': 'STATIN year-end Employee Performance Management Form for financial year 2025-26. Weighting: 60% measurable performance targets / 40% Go..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "303500",
+        "status": 200,
+        "body": "{'id': '303500', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Year-End Appraisal', 'description': 'STATIN year-end Employee Performance Management Form for financial year 2025-26. Weighting: 60% measurable performance targets / 40% Go..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303500",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303500",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "303500",
+        "status": 200,
+        "body": "{'id': '303500', 'performance_review_process_id': '303500', 'default_rating_scale': [{'value': 1, 'text': '5 — Exceeded: 100%+ of target achieved'}, {'value': 2, 'text': '4 — Met all: 91-100% of target achieved'}, {'value': 3, 'text': '3 — ..."
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "coaching",
+        "id": "303501"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "303501",
+        "status": 200,
+        "body": "{'id': '303501', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Coaching Reviews', 'description': 'STATIN mid-cycle coaching for financial year 2025-26. Policy requires at least three formal performance coaching conversations during the..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "303501",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "303501",
+        "status": 200,
+        "body": "{'id': '303501', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Coaching Reviews', 'description': 'STATIN mid-cycle coaching for financial year 2025-26. Policy requires at least three formal performance coaching conversations during the..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "303501",
+        "status": 200,
+        "body": "{'id': '303501', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Coaching Reviews', 'description': 'STATIN mid-cycle coaching for financial year 2025-26. Policy requires at least three formal performance coaching conversations during the..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "303501",
+        "status": 200,
+        "body": "{'id': '303501', 'company_id': '191864', 'name': 'STATIN FY 2025-26 Coaching Reviews', 'description': 'STATIN mid-cycle coaching for financial year 2025-26. Policy requires at least three formal performance coaching conversations during the..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303501",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303501",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "303501",
+        "status": 200,
+        "body": "{'id': '303501', 'performance_review_process_id': '303501', 'default_rating_scale': [{'value': 1, 'text': '5 — Exceeded: 100%+ of target achieved'}, {'value': 2, 'text': '4 — Met all: 91-100% of target achieved'}, {'value': 3, 'text': '3 — ..."
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "iwp",
+        "id": "303502"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "{'id': '303502', 'company_id': '191864', 'name': 'STATIN FY 2026-27 Goal Setting and Individual Work Plan', 'description': 'Agree performance targets and key outputs for FY 2026-27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans...."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "303502",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "{'id': '303502', 'company_id': '191864', 'name': 'STATIN FY 2026-27 Goal Setting and Individual Work Plan', 'description': 'Agree performance targets and key outputs for FY 2026-27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans...."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "{'id': '303502', 'company_id': '191864', 'name': 'STATIN FY 2026-27 Goal Setting and Individual Work Plan', 'description': 'Agree performance targets and key outputs for FY 2026-27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans...."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "{'id': '303502', 'company_id': '191864', 'name': 'STATIN FY 2026-27 Goal Setting and Individual Work Plan', 'description': 'Agree performance targets and key outputs for FY 2026-27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans...."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303502",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "303502",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "{'id': '303502', 'performance_review_process_id': '303502', 'default_rating_scale': [{'value': 1, 'text': '5 — Exceeded: 100%+ of target achieved'}, {'value': 2, 'text': '4 — Met all: 91-100% of target achieved'}, {'value': 3, 'text': '3 — ..."
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "303500",
+        "name": "STATIN FY 2025-26 Year-End Appraisal"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "303500",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "303501",
+        "name": "STATIN FY 2025-26 Coaching Reviews"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "303501",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "303502",
+        "name": "STATIN FY 2026-27 Goal Setting and Individual Work Plan"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "303502",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "303502",
+        "status": 200,
+        "body": "[]"
+      }
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "cast": {
+      "Laura Lewis": {
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "group": "leadership",
+        "demo_band": "Very Good / Superior"
+      },
+      "Charles Carter": {
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "group": "manager",
+        "demo_band": "Good"
+      },
+      "Hellen Howard": {
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "group": "staff",
+        "demo_band": "Good (~86%)"
+      },
+      "Daisy Dawson": {
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "group": "staff",
+        "demo_band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    "review_processes": {
+      "year_end": {
+        "id": "303500",
+        "name": "STATIN FY 2025-26 Year-End Appraisal",
+        "status": "draft"
+      },
+      "coaching": {
+        "id": "303501",
+        "name": "STATIN FY 2025-26 Coaching Reviews",
+        "status": "draft"
+      },
+      "iwp": {
+        "id": "303502",
+        "name": "STATIN FY 2026-27 Goal Setting and Individual Work Plan",
+        "status": "draft"
+      }
+    }
+  }
+}

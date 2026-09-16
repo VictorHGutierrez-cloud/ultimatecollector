@@ -1,0 +1,308 @@
+{
+  "started_at": "2026-09-15T19:20:34.764202+00:00",
+  "mode": "apply",
+  "company_id": "191864",
+  "actions": [
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Laura Lewis",
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "band": "Very Good / Superior"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Charles Carter",
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "band": "Good"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Hellen Howard",
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "band": "Good (~86%)"
+      }
+    },
+    {
+      "action": "cast_resolved",
+      "detail": {
+        "name": "Daisy Dawson",
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1988314",
+        "name": "STATIN Office of the Director General"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1988315",
+        "name": "STATIN Corporate Services"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1988316",
+        "name": "STATIN Field Services"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1988317",
+        "name": "STATIN Economic and Social Statistics"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "1988318",
+        "name": "STATIN Human Resources"
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Laura Lewis",
+        "team_id": "1988314",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Charles Carter",
+        "team_id": "1988318",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Hellen Howard",
+        "team_id": "1988314",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Daisy Dawson",
+        "team_id": "1988317",
+        "lead": false
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Laura Lewis",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Charles Carter",
+        "manager_id": "6375938"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Hellen Howard",
+        "manager_id": "6375938"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Daisy Dawson",
+        "manager_id": "6375931"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "421599",
+        "name": "STATIN PMS Guidelines for Managers"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "421600",
+        "name": "STATIN Performance Coaching"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "413754",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "24960060",
+        "title": "STATIN PMS Cycle — Close FY 2025/26 and Open FY 2026/27 IWPs"
+      }
+    },
+    {
+      "action": "published_post",
+      "detail": {
+        "id": "24960060",
+        "title": "STATIN PMS Cycle — Close FY 2025/26 and Open FY 2026/27 IWPs"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\statistic-institute\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [
+    {
+      "action": "create_process_failed",
+      "detail": {
+        "status": 400,
+        "body": "{'errors': [{'error': 'Invalid parameters'}]}",
+        "payload": {
+          "author_access_id": "6842200",
+          "name": "STATIN FY 2025/26 Year-End Appraisal",
+          "description": "STATIN year-end Employee Performance Management Form. Weighting: 60% measurable performance targets / 40% GoJ core and technical competencies. Bands: Superior 100%, Very Good 91-99%, Good 80-90%, Satisfactory 75-79%, Unsatisfactory <75% (PIP).",
+          "reviewer_strategies": [
+            "self",
+            "manager"
+          ],
+          "target_strategy": "manual_selection",
+          "arguments": [
+            "6842210",
+            "6842200",
+            "6842195",
+            "6842204"
+          ],
+          "ends_at": "2026-04-30T23:59:59Z",
+          "agreements_enabled": false,
+          "employee_score_enabled": true,
+          "employee_potential_score_enabled": false,
+          "competencies_assessments_enabled": true
+        }
+      }
+    },
+    {
+      "action": "create_process_failed",
+      "detail": {
+        "status": 400,
+        "body": "{'errors': [{'error': 'Invalid parameters'}]}",
+        "payload": {
+          "author_access_id": "6842200",
+          "name": "STATIN FY 2025/26 Coaching Reviews",
+          "description": "STATIN mid-cycle coaching. Policy requires at least three formal performance coaching conversations during the financial year before year-end appraisal.",
+          "reviewer_strategies": [
+            "self",
+            "manager"
+          ],
+          "target_strategy": "manual_selection",
+          "arguments": [
+            "6842210",
+            "6842200",
+            "6842195",
+            "6842204"
+          ],
+          "ends_at": "2026-03-15T23:59:59Z",
+          "agreements_enabled": false,
+          "employee_score_enabled": false,
+          "employee_potential_score_enabled": false,
+          "competencies_assessments_enabled": true
+        }
+      }
+    },
+    {
+      "action": "create_process_failed",
+      "detail": {
+        "status": 400,
+        "body": "{'errors': [{'error': 'Invalid parameters'}]}",
+        "payload": {
+          "author_access_id": "6842200",
+          "name": "STATIN FY 2026/27 Goal Setting and Individual Work Plan",
+          "description": "Agree performance targets and key outputs for FY 2026/27 (EPM Form Sections 1-4). Cascaded from Division/Unit Plans. Weighting guidance: 60% targets / 40% competencies.",
+          "reviewer_strategies": [
+            "self",
+            "manager"
+          ],
+          "target_strategy": "manual_selection",
+          "arguments": [
+            "6842210",
+            "6842200",
+            "6842195",
+            "6842204"
+          ],
+          "ends_at": "2026-06-30T23:59:59Z",
+          "agreements_enabled": true,
+          "employee_score_enabled": false,
+          "employee_potential_score_enabled": false,
+          "competencies_assessments_enabled": true
+        }
+      }
+    }
+  ],
+  "ids": {
+    "cast": {
+      "Laura Lewis": {
+        "employee_id": "6375938",
+        "access_id": "6842210",
+        "group": "leadership",
+        "demo_band": "Very Good / Superior"
+      },
+      "Charles Carter": {
+        "employee_id": "6375931",
+        "access_id": "6842200",
+        "group": "manager",
+        "demo_band": "Good"
+      },
+      "Hellen Howard": {
+        "employee_id": "6375925",
+        "access_id": "6842195",
+        "group": "staff",
+        "demo_band": "Good (~86%)"
+      },
+      "Daisy Dawson": {
+        "employee_id": "6375934",
+        "access_id": "6842204",
+        "group": "staff",
+        "demo_band": "Unsatisfactory (<75%) — PIP"
+      }
+    },
+    "teams": {
+      "odg": "1988314",
+      "corporate": "1988315",
+      "field": "1988316",
+      "ess": "1988317",
+      "hr": "1988318"
+    },
+    "review_processes": {},
+    "trainings": [
+      "421599",
+      "421600"
+    ],
+    "post_group_id": "413754",
+    "posts": [
+      "24960060"
+    ]
+  },
+  "finished_at": "2026-09-15T19:20:42.894862+00:00"
+}

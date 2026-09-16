@@ -1,0 +1,452 @@
+{
+  "generated_at": "2026-08-01T12:40:21.105030+00:00",
+  "base_url": "https://api.eu2.demo.factorial.dev",
+  "api_version": "2026-07-01",
+  "auth_type": "x-api-key",
+  "company_focus": "167952",
+  "credentials_company_id": "167952",
+  "probes": {
+    "api_public/credentials": {
+      "path": "api_public/credentials",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "employees/employees": {
+      "path": "employees/employees",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "teams/teams": {
+      "path": "teams/teams",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "teams/memberships": {
+      "path": "teams/memberships",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "locations/locations": {
+      "path": "locations/locations",
+      "status": 200,
+      "ok": true,
+      "sample_count": 2,
+      "error": null
+    },
+    "companies/legal_entities": {
+      "path": "companies/legal_entities",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "ats/job_postings": {
+      "path": "ats/job_postings",
+      "status": 200,
+      "ok": true,
+      "sample_count": 4,
+      "error": null
+    },
+    "job_catalog/roles": {
+      "path": "job_catalog/roles",
+      "status": 200,
+      "ok": true,
+      "sample_count": 0,
+      "error": null
+    },
+    "job_catalog/levels": {
+      "path": "job_catalog/levels",
+      "status": 200,
+      "ok": true,
+      "sample_count": 0,
+      "error": null
+    },
+    "job_catalog/node_attributes": {
+      "path": "job_catalog/node_attributes",
+      "status": 400,
+      "ok": false,
+      "sample_count": null,
+      "error": {
+        "errors": {
+          "errors": [
+            "Missing required prop `node_uuid` for class `JobCatalog::Dtos::Tree::NodeAttributes::Read`"
+          ]
+        }
+      }
+    },
+    "job_catalog/tree_nodes": {
+      "path": "job_catalog/tree_nodes",
+      "status": 400,
+      "ok": false,
+      "sample_count": null,
+      "error": {
+        "errors": {
+          "messages": [
+            "One (and only one) of these combinations must be provided: node_uuids, uuids, (id AND node_type), (node_type AND ancestor_ids), or ancestor_uuids, or (node_type AND search)"
+          ]
+        }
+      }
+    },
+    "performance/review_processes": {
+      "path": "performance/review_processes",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "performance/review_process_targets": {
+      "path": "performance/review_process_targets",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "performance/agreements": {
+      "path": "performance/agreements",
+      "status": 200,
+      "ok": true,
+      "sample_count": 0,
+      "error": null
+    },
+    "performance/review_evaluations": {
+      "path": "performance/review_evaluations",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "performance/company_employee_score_scales": {
+      "path": "performance/company_employee_score_scales",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "performance/employee_score_scales": {
+      "path": "performance/employee_score_scales",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "performance/review_questionnaire_by_strategies": {
+      "path": "performance/review_questionnaire_by_strategies",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "performance/review_process_custom_templates": {
+      "path": "performance/review_process_custom_templates",
+      "status": 200,
+      "ok": true,
+      "sample_count": 0,
+      "error": null
+    },
+    "trainings/trainings": {
+      "path": "trainings/trainings",
+      "status": 200,
+      "ok": true,
+      "sample_count": 2,
+      "error": null
+    },
+    "tasks/tasks": {
+      "path": "tasks/tasks",
+      "status": 200,
+      "ok": true,
+      "sample_count": 0,
+      "error": null
+    }
+  },
+  "counts": {
+    "employees": 9,
+    "teams": 5,
+    "locations": 2,
+    "legal_entities": 3,
+    "job_postings": 4,
+    "szv_job_postings": 4,
+    "roles": 0,
+    "node_attributes": 0,
+    "competencies_guess": 0,
+    "review_processes": 3,
+    "szv_review_processes": 3,
+    "trainings": 2
+  },
+  "employees": [
+    {
+      "id": "5302596",
+      "full_name": "Margarita De Weever",
+      "manager_id": "5302595",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302595",
+      "full_name": "Carlos Richardson",
+      "manager_id": null,
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302594",
+      "full_name": "Fiona Halley",
+      "manager_id": "5302595",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302593",
+      "full_name": "Ricardo Vlaun",
+      "manager_id": "5302595",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302592",
+      "full_name": "Jamal Voges",
+      "manager_id": "5302595",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302591",
+      "full_name": "Tanya Carty",
+      "manager_id": "5302594",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302590",
+      "full_name": "Marlon Williams",
+      "manager_id": "5302586",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302587",
+      "full_name": "Keisha Peterson",
+      "manager_id": "5302593",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    },
+    {
+      "id": "5302586",
+      "full_name": "Nadia Lejuez",
+      "manager_id": "5302596",
+      "active": true,
+      "location_id": "550700",
+      "legal_entity_id": "362982"
+    }
+  ],
+  "cast_resolution": [
+    {
+      "full_name": "Keisha Peterson",
+      "group": "staff",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302587",
+      "access_id": "5715908",
+      "manager_id": "5302593"
+    },
+    {
+      "full_name": "Marlon Williams",
+      "group": "staff",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302590",
+      "access_id": "5715911",
+      "manager_id": "5302586"
+    },
+    {
+      "full_name": "Tanya Carty",
+      "group": "staff",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302591",
+      "access_id": "5715912",
+      "manager_id": "5302594"
+    },
+    {
+      "full_name": "Jamal Voges",
+      "group": "manager",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302592",
+      "access_id": "5715913",
+      "manager_id": "5302595"
+    },
+    {
+      "full_name": "Ricardo Vlaun",
+      "group": "manager",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302593",
+      "access_id": "5715914",
+      "manager_id": "5302595"
+    },
+    {
+      "full_name": "Nadia Lejuez",
+      "group": "manager",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302586",
+      "access_id": "5715907",
+      "manager_id": "5302596"
+    },
+    {
+      "full_name": "Fiona Halley",
+      "group": "manager",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302594",
+      "access_id": "5715915",
+      "manager_id": "5302595"
+    },
+    {
+      "full_name": "Carlos Richardson",
+      "group": "leadership",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302595",
+      "access_id": "5715916",
+      "manager_id": null
+    },
+    {
+      "full_name": "Margarita De Weever",
+      "group": "leadership",
+      "found": true,
+      "rename_from_found": false,
+      "employee_id": "5302596",
+      "access_id": "5715917",
+      "manager_id": "5302595"
+    }
+  ],
+  "locations": [
+    {
+      "id": "550700",
+      "name": "SZV Philipsburg Office",
+      "country": "us",
+      "city": "Philipsburg",
+      "timezone": "America/Puerto_Rico",
+      "main": true
+    },
+    {
+      "id": "550683",
+      "name": "New York - Office",
+      "country": "us",
+      "city": "New York",
+      "timezone": "Etc/UTC",
+      "main": false
+    }
+  ],
+  "legal_entities": [
+    {
+      "id": "362979",
+      "legal_name": "Valencia Legal entity",
+      "country": "es",
+      "currency": "EUR"
+    },
+    {
+      "id": "362978",
+      "legal_name": "Barcelona Legal entity",
+      "country": "us",
+      "currency": "USD"
+    },
+    {
+      "id": "362982",
+      "legal_name": "SZV Social & Health Insurances",
+      "country": "sx",
+      "currency": "USD"
+    }
+  ],
+  "job_postings": [
+    {
+      "id": "207771",
+      "title": "SZV Finance & Levy Analyst",
+      "status": "draft"
+    },
+    {
+      "id": "207770",
+      "title": "SZV HR Coordinator",
+      "status": "published"
+    },
+    {
+      "id": "207769",
+      "title": "SZV Control Doctor / Medical Officer",
+      "status": "published"
+    },
+    {
+      "id": "207768",
+      "title": "SZV Customer Care Officer",
+      "status": "published"
+    }
+  ],
+  "teams": [
+    {
+      "id": "1587673",
+      "name": "SZV Leadership"
+    },
+    {
+      "id": "1587672",
+      "name": "SZV Finance & Levy"
+    },
+    {
+      "id": "1587671",
+      "name": "SZV Medical Insurance Ops"
+    },
+    {
+      "id": "1587670",
+      "name": "SZV Customer Care"
+    },
+    {
+      "id": "1587669",
+      "name": "SZV People & Culture"
+    }
+  ],
+  "szv_processes": [
+    {
+      "id": "243673",
+      "name": "SZV P3 Year-End Review 2026",
+      "status": "draft"
+    },
+    {
+      "id": "243672",
+      "name": "SZV P2 Mid-Year Cycle 2026",
+      "status": "active"
+    },
+    {
+      "id": "243671",
+      "name": "SZV P1 Planning Cycle 2026",
+      "status": "active"
+    }
+  ],
+  "api_can": [
+    "Performance module readable (review_processes)",
+    "Create/start review processes via API",
+    "Locations readable/creatable via API",
+    "Legal entities readable/creatable via API",
+    "ATS job postings readable/creatable via API"
+  ],
+  "api_needs_ui": [
+    "Confirm exact weighting Staff/Manager/Leadership in UI if no dedicated weight API",
+    "Polish questionnaire wording for 5 core values and rating definitions NM–SE in UI",
+    "Validate dashboards, 9-box and mobile UX in the Factorial app (not seedable)",
+    "Do NOT personalize time tracking / attendance for this demo"
+  ]
+}

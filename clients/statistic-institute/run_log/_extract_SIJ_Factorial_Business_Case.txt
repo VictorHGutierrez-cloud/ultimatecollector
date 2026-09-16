@@ -1,0 +1,337 @@
+Statistical Institute of Jamaica
+HR System Business Requirement Document
+Proposal Information
+Prospect
+Statistical Institute of Jamaica
+Product
+Existing Customer
+No
+Version
+Estimate Type
+No of
+Employees
+Permanent 570
+Contract: 2500
+Hosting
+On premise (TBD)
+Modules Customized
+Document History
+Document Version
+Edited By
+Date
+Background
+This document contains the requirements and the proposed required solution for the customizations of Statistical Institute of Jamaica.
+Table of Contents
+Recruitment and Selection Processes4
+1.Recruitment and Selection Process4
+2. Appointment of Staff Process5
+3. Job Verification/Request for Job Letter Process6
+4. Special Project Recruitment Process7
+5. Staff Transfer/Promotion Process8
+Competitive Process8
+Internal Process10
+Leave Requirements11
+Applicable Leave Policies18
+Recruitment and Selection Processes
+1. Recruitment and Selection Process
+Phase 1: Workforce Need Identified
+Vacancy identified by Division/Unit
+The Director of the Division submits request to Staffing Unit to fill vacancy
+Approval obtained from Director, Corporate Service Division and the Human Resources Manager.
+The Personnel Officer prepares and delivers a letter to the Post Operations Committee (POC)/Ministry of Finance and the Public Service for approval to fill the vacant post
+Phase 2: Job Advertisement
+The Staffing Unit prepares vacancy advertisement:
+(1) Create Job Description for the new posts.
+(2) Create a job advertisement that is derived from the Job Description.
+(3) The Director of Corporate Service Division or the Human Resources
+Manager approves the job advertisement.
+(4) The job advertisement details are submitted to the Communication
+and Marketing Unit to produce a social media advertisement.
+The Director of Corporate Service Division or the Human Resources Manager determines whether the vacant post is advertised internally and or externally. For example, Editor Coders are temporary posts that are advertised internally.
+The Staffing Unit receives job applications
+Phase 3: Screening and Shortlisting
+The Staffing Unit reviews job applications.
+The Staffing Unit shortlist qualified candidates with the use of a short list matrix template. The pass mark is 70%, occasionally it is lowered to 60% due to the highest pass mark of all the candidates.
+The Staffing Unit prepares interview schedule
+Phase 4: Interview and Assessment
+The Staffing Unit writes to the Training and Development Unit to administer tests (if required) and make preparation for the supply of lunch to the panellist.
+Request for interview locations are made for vacant posts for the non-head office locations. A request for the use of one of the vehicles owned by STATIN to transport the interview panellist to the out-of-town location. The Staffing Unit writes to the General Services Unit to make preparation for the provision of refreshments for the upcoming interview at the out-of-town location.
+The Staffing Unit writes to the General Services Unit to make preparation for the provision of refreshments for the upcoming interview and the arrangement of parking for external panellist as well as the candidates at Head Office.
+The Staffing Unit, the Supervisor or the Director of the Division along with an external panellist conduct interviews. The job interview tests are administered before or on the day of the interview. The job interview tests score for each candidate are shared with the panellists. The interview package that is provided to the panellists consist of resume, job advertisement, job description and rating sheet. Then the Interview Score Summary form is completed to show the total score of all the competencies for each candidate and to determine the candidate with the highest score.
+The Interview panel submits recommendations to the Staffing Unit by Memo. The completed Interview Summary document is attached to the memo.
+Staffing Unit request from the Communication and Marketing Unit a token as a gift to the external panellist.
+Phase 5: Selection and Approval
+The Staffing Unit conducts background check for the successful candidates by (1) The completion of a Reference Checklist form by the candidate's immediate Supervisor. (2) Recommendation from a notary public (example Justice of the Peace/Police) or a manager.
+The Staffing Unit submit a request to the Institutional Resilience and Human Capital (IRHC) Committee (the Director General is the chair of this committee) for approval of the successful candidate.
+Obtain final approval from the IRHC Committee.
+Phase 6: Recruitment Folder
+There is a recruitment folder for each of the posts in STATIN. The folder contains the panellist interview rating sheet, the qualification of the candidates, photocopied identification, resume, cover letter, the completed short listing document, interview score summary, job advertisement, interview schedule, short list matrix, and approval for the person selected for the posts.
+Phase 7: Job Offer
+Staffing Unit contacts successful candidate
+Staffing Unit issues two offer letters to the successful candidate selected
+for him or her to review the employment terms and conditions.
+The candidate accepts the job offer, he or she keeps a copy of the written offer letter, and the other signed copy is kept in the candidate's folder in the HR cabinet.
+Phase 8: Employment Commencement
+Candidate reports for duty
+Staffing Unit starts to receive and verify educational documents from candidates on the day of the interview, and this process is completed on the orientation day.
+Orientation and onboarding are conducted with the new employee.
+Staffing Unit prepares the Employment of staff form; the Human Resources Manager or the Director of Corporate Services approves it, the immediate Supervisor approves it, and the Finance Unit approves it. This document is submitted to Finance Unit and the details are used to process his or her salary.
+2. Appointment of Staff Process
+Phase 1: Probationary Period
+Employee serves six (6) months' probation period
+Staffing Unit notify the supervisor in the fourth (4th) or fifth (5th) month that the employee's probationary report must be completed.
+Supervisor monitors performance
+Performance reviews conducted
+Phase 2: Probation Assessment
+Supervisor submits probation evaluation report
+Human Resources (HR) Manager reviews recommendation
+Phase 3: Medical Examination
+Employee receives referral request for medical examination
+Employee completes medical assessment
+Medical report submitted to Human Resources Unit.
+Staffing Unit submits a request to the Institutional Resilience and Human Capital
+(IRHC) Committee for approval for appointment
+Phase 4: Decision
+If satisfactory:
+Recommendation for appointment/confirmation by IRHC. If unsatisfactory:
+IRHC extends probation or terminates employment.
+Phase 5: Confirmation of Appointment
+Appointment/Confirmation Letter prepared is prepared by the Staffing Unit.
+Approval obtained from HR Manager.
+Employee receives Appointment/Confirmation Letter
+Refer Employee to the Leave and Benefits Unit for the benefits processes
+3. Job Verification/Request for Job Letter Process
+Phase 1: Request Received
+Employee submits request via email
+Request logged by HR
+Phase 2: Verification
+Confirm employee status
+Verify employment information
+Phase 3: Letter Preparation
+Prepare employment verification/job letter
+Phase 4: Approval
+Director, Corporate Services/HR Manager/Senior Personnel Officer and
+Personnel Officer reviews and approves letter
+Phase 5: Issuance
+The letter should be hand-delivered or emailed to the employee or emailed to the
+institution for which the letter was requested.
+4. Special Project Recruitment Process
+(For Census, Labour Force Survey, Household Surveys, IES etc.)
+Phase 1: Project Approval
+Project prepared by Director of Field Services and it is approved by Director of Corporate Services or HR Manager.
+Staffing requirements identified by Staffing Unit.
+Phase 2: Consultation with Project Team
+HR Manager meets with Project Manager
+Determine number of:
+Interviewers
+Field Supervisors
+HQ Editor Coders
+Other project staff (if needed)
+Memorandum received indicating the required number of field staff to be recruited, along with the necessary approval.
+Phase 3: Advertisement
+Develop advertisements (Same as above)
+Publish recruitment notices by email to Field Services Supervisor to identify persons and the name of the persons is shortlisted.
+Phase 4: Application Collection
+Staffing Unit receives applications/resumes
+Application database created by Staffing Unit Phase 5: Screening
+The Staffing Unit reviews job applications.
+The Staffing Unit shortlist qualified candidates with the use of a rating sheet and questionnaire. The candidates are evaluated using a reading package. The pass mark is 70%, occasionally it is lowered to 60% due to the highest pass mark of all the candidates.
+The Staffing Unit contacts candidates. Then Staffing Unit receive and verify copies of TRN, NIS and identification.
+Phase 6: Engagement
+Write to the Training and Development Unit to arrange lunch and accommodation (if required)
+Write to the General Services Unit to identify and secure suitable interview venues (example Field Offices and other locations such as churches).
+Phase 7: Interview and Selection
+The Staffing Unit, the Supervisor or the Director of the Division along with an external panellist conduct interviews. The job interview tests are administered before or on the day of the interview. The job interview tests score for each candidate are shared with the panellists. The interview package that is provided to the panellists consist of resume, job advertisement, job description and rating sheet. Then the Interview Score Summary form is completed to show the total score of all the competencies for each candidate and to determine the candidate with the highest score.
+The Interview panel submits recommendations to the Staffing Unit by Memo. The completed Interview Summary document is attached to the memo.
+Staffing Unit request from the Communication and Marketing Unit a token as a gift to the external panellist.
+Phase 8: Training
+Submit the final training participant list to the process owners for training
+Phase 9: Onboarding
+Write to the Training and Development Unit to arrange lunch and accommodation (if required)
+Write to the General Services Unit to identify and secure suitable onboarding venues.
+Contact successful candidates regarding their onboarding location and reporting time
+Collect and verify the required information and supporting documents from successful contracted staff, including a birth certificate, Taxpayer Registration Number (TRN), National Insurance Scheme (NIS) number, banking information, government-issued identification, and a passport-sized photograph.
+Facilitate candidates' acceptance of offers through the completion and signing of all required documents, including the employment contract, Oath of Secrecy
+Form, Declaration Form, Attestation Form, Temporary Application Form, Job Description, and Employee Incident Report Form. HR Manager reviews the accepted offer letter.
+Enter contract staff information into the ProJems database system. Phase 10: Payments
+Submit the ProJems Reports to the Finance and Accounting Unit for the payment of training expenses and other emoluments. This Report is approved by HR Manager.
+5. Staff Transfer/Promotion Process (Competitive Process)
+Phase 1: Workforce Need Identified
+Vacancy identified by Division/Unit
+The Director of the Division submits request to Staffing Unit to fill vacancy
+Approval obtained from Director of Corporate Service Division and the Human Resources Manager.
+The Personnel Officer prepares and delivers a letter to the Post Operations Committee (POC)/Ministry of Finance and the Public Service for approval to fill the vacant post
+Phase 2: Job Advertisement
+The Staffing Unit prepares vacancy advertisement:
+(1) Create Job Description for the new posts.
+(2) Create a job advertisement that is derived from the Job Description.
+(3) The Director of Corporate Service Division or the Human Resources
+Manager approves the job advertisement.
+(4) The job advertisement details are submitted to the Communication
+and Marketing Unit to produce a social media advertisement.
+The Human Resources Manager or the Director of Corporate Service Division determines whether the vacant post is advertised internally and or externally. For example, Editor Coders are temporary posts that are advertised internally.
+The Staffing Unit receives job applications
+Phase 3: Screening and Shortlisting
+The Staffing Unit reviews job applications.
+The Staffing Unit shortlist qualified candidates with the use of a short list matrix template. The pass mark is 70%, occasionally it is lowered to 60% due to the highest pass mark of at! the candidates.
+The Staffing Unit prepares interview schedule
+Phase 4: Interview and Assessment
+The Staffing Unit writes to the Training and Development Unit to administer tests (if required) and make preparation for the supply of lunch to the panellist.
+Request for interview location are made for vacant posts for the non-head office locations. A request for the use of one of the vehicles owned by STATIN to
+transport the interview panellist to the out-of-town location. The Staffing Unit
+writes to the General Services Unit to make preparation for the provision of refreshments for the upcoming interview at the out-of-town location.
+The Staffing Unit writes to the General Services Unit to make preparation for the provision of refreshments for the upcoming interview and the arrangement of parking for external panellist as well as the candidates at Head Office.
+The Staffing Unit, the Supervisor or the Director of the Division along with an external panellist conduct interviews. The job interview tests are administered before or on the day of the interview. The job interview tests score for each candidate are shared with the panellists. The interview package that is provided to the panellists consist of resume, job advertisement, job description and rating sheet. Then the Interview Score Summary form is completed to show the total score of all the competencies for each candidate and to determine the candidate with the highest score.
+The Interview panel submits recommendations to the Staffing Unit by Memo. The completed Interview Summary document is attached to the memo.
+Staffing Unit request from the Communication and Marketing Unit a token as a gift to the external panellist.
+Phase 5: Selection and Approval
+The Staffing Unit conducts background check for the successful candidates by (1) The completion of a Reference Checklist form by the candidate's immediate Supervisor. (2) Recommendation from a notary public (example Justice of the Peace/Police) or a manager.
+The Staffing Unit submit a request to the Institutional Resilience and Human Capital (IRHC) Committee (the Director General is the chair of this committee) for approval of the successful candidate
+Obtain final approval from the IRHC Committee.
+Phase 6: Job Offer
+Staffing Unit contacts successful candidate
+Staffing Unit issues two offer letters to the successful candidate selected for him or her to review the employment terms and conditions.
+The candidate accepts the job offer, he or she keeps a copy of the written offer letter, and the other signed copy is kept in the candidate's folder in the HR cabinet.
+Phase 7: Employment Commencement
+Staffing Unit contacts successful candidate
+Staffing Unit issues two offer letters to the successful candidate selected for him or her to review the employment terms and conditions.
+The candidate accepts the job offer, he or she keeps a copy of the written offer letter, and the other signed copy is kept in the candidate's folder in the HR cabinet.
+Internal Process Steps:
+Vacancy identified
+Employee recommended or applies
+Assessment conducted
+Approval received from IRHC.
+New appointment/promotion letter issued by HR Manager to staff.
+HR records updated
+Leave Requirements
+The following section describes all the customizations required for STATIN:
+Daily Leave Accrual for Vacation Leave
+Business Scenario/Problem Definition
+The STATIN team would like to accrue leave on a daily basis for all their employees who are eligible to receive leave entitlements.
+STATIN requires that vacation leave be accrued daily based on whether the employee was actively working/defined as not being on any leave for that day.
+This ensures accruals are earned only for days the employee was effectively available to the organization.
+The system will calculate the daily accrual rate as:
+Daily Accrual = Annual Leave Entitlement (Annual Rate) / Total Days in the Year
+(e.g., 20 days ÷ 365 days = 0.0547 days/day)
+System will display the leave entitlements, accruals and balance up to 4 decimal places.
+On each day, the system will evaluate whether the day is:
+The employee is not suspended
+The employee is not on extended leave (long term sick or extended vacation)
+If both conditions are met, the system will credit the daily accrual value to the employee's vacation leave balance.
+If the employee has an approved leave (suspension and long-term sick leave), no accrual will be credited for that day.
+When an employee is on consecutive vacation leave exceeding 14 days, accrual must pause and resume upon ending the vacation leave.
+Approved leave requests (vacation, sick, unpaid, etc.) will be pulled from the Leave module to determine leave days.
+System should consider future leave accruals up to the day on which the employee is applied for leave when displaying the remaining balance of an employee.
+System should consider the days on which the employee is not supposed to receive accruals when displaying the balance for future leave.
+For example, the current date is Oct 2nd 2025. Employee requested and received approval for extended vacation between Nov 1st to Nov 21st.
+When employees are applying for leave in Dec 2025, system should consider approved extended vacation time when calculating leave balance of the employee as in Dec.
+If an employee applies for extended leave after applying for a future date, employee will go into negative leave balance, and HR admin needs to intervene and adjust the balance in this case. For e.g., If an employee applies for leave in Dec and leave request gets approved based on balance as of Dec.
+However, if an employee applies for extended leave Nov 2025 after submitting the leave request for in Dec, employee may not have enough balance for the already approved leave request. Because accrual will stop during extended leave period in Nov.
+Other Examples
+Example 1: Partial Working Month
+Employee's annual accrual(rate) is 20 days
+Employees work 23 out of 30 days in June.
+For 7 days, the employee was on extended sick leave.
+Accrual for June = 23× 0.0547 days/day = 1.2602 days
+Example 2: Suspension
+Employee's annual accrual(rate) is 20 days
+Employee is suspended from August 10-25 (11 days).
+System skips accrual for these 11 days.
+If remaining 20 days are valid working days,
+Accrual = 20 × 0.0547 days/day = 1.0958 days
+Example 3: Long Vacation
+Employee's annual accrual(rate) is 20 days
+Vacation approved vacation leave for December 1-18 (14 working days + 4 weekend days).
+System pauses accrual from Dec 1 to Dec 18.
+Accrual resumes Dec 19.
+Accrual for December is 13 × 0.0547 days/day 0.7123 Days
+Example 4: Retroactive Leave
+On July 10, employee applies for sick leave dated June 25-26.
+System already credited accruals for June 25-26.
+No change is made automatically.
+HR must manually adjust if reversal is required.
+Extended Sick Leave and Return to Office
+Business Scenario / Problem Definition
+Employee will apply for extended sick leave when they are unable to come to work for a longer period.
+When employees go on extended sick leave, return to work date is not clear at the point in time the leave is applied for.
+Feature Description
+A new leave will need to be added to the system called Extended Sick Leave. employees needing to utilize this will need to upload a medical certificate
+When applying, employees can apply for the 14 days or more straight even though the return-to-work date is not clear at the point in time the leave request created
+Once an employee applies for 14 days or more of extended sick leave, the system will stop vacation accruals and resume when the office submits a resumption letter. Employees will not be allowed to apply for any more leave during the same period.
+If the employee needs to be out of office for more than 14 days, the employee will request an extension to cover the gap between end of the initial extended sick leave request and the return to work date.
+When submitting the return to work request, employee will submit information given below:
+Employee Name
+Extended Sick Leave Start and End (employee can select the request that is already submitted)
+Return to Work Date
+Reason for Extended Sick Leave
+The return to work request will have 2 levels of approvals
+Employee Submits → Supervisor Approves → Admin Approves
+If the return to work date is,
+Ahead of the extended sick leave end date, once the return to work request is approved, system will cancel the remaining extended sick leave days, for example:
+Extended sick leave request start Dec 1st 2025 and end Dec 18th 2025.
+Employee submit returns to work request with return to work date as Dec 15th 2025.
+Leave days between Dec 15th and Dec 18th will be automatically cancelled upon return to work request is approved
+After the extended sick leave end date,
+The system should automatically assign the missing days.
+When assigning missing days, system should follow the order given below
+Exhaust current year's sick leave balance
+Exhaust current year's Departmental leave balance
+Utilize past 2 year's unused sick leave
+Utilize past 2 year's unused departmental leave
+Current year's vacation leave balance
+No Pay
+For e.g., If Employee A had to go on 60 days of extended leave,
+Leave balance of Employee A
+Leave Type
+Balance
+Remaining(Days)
+Notes
+Current Year Extended Sick Leave
+14
+Current Year Departmental Leave
+10
+Past 2 year's unused sick leave(total of 2 year)
+5
+Sick leave of past years does not carry forward. If unused, sick leave entitlement will expire at the end of
+leave period. However the system will look up these unused expired sick days of past 2 year and use the days to offset the extended sick leave
+Past 2 year's unused departmental leave(total of 2 year)
+7
+Departmental leave of past years does not carry forward. If unused, Departmental leave entitlement will expire at the end of leave period. However the system will look up these unused expired Departmental leave days of past 2 year and use the days to offset the extended sick leave
+Current year's vacation leave
+10
+No Pay
+First 14 days of leave will be taken to current year's extended sick leave balance
+Next 10 days will be taken to current year's departmental leave balance
+Next 5 days will be taken from unused sick leave amount of the past 2 years sick leave
+Next 7 days will be taken from unused departmental leave amount of the past 2 years departmental leave
+Next 10 days will be taken from current year's vacation leave
+The total number of days covered using the leave types other than no pay leave is 46 days. The remaining 14 days of leave will be assigned say No pay leave.
+Utilizing previous years unused sick leave and departmental leave is one time activity for each employee during their tenure with the Statistical Institute of Jamaica.
+Rounding of Leave Balances When Applying for Time Off
+Business Scenario / Problem Definition
+The STATIN team requires that leave balances be displayed in a rounded format when employees apply for time off.
+The rounded value should be used to determine whether an employee has enough leave to submit a valid leave request
+Required System Behavior
+The system should displays exact accrued leave balances, with several decimal places.
+It round leave balances at the time of application
+Feature Description
+The system should implement a rounding logic that is applied when employees view or apply for leave.
+This does not affect how leave is accrued, but only how the available balance is interpreted for leave applications.
+The following rounding options will be configurable by HR/Admin:
+Round Down (floor):
+Round Up (ceiling):
+Round to Nearest Whole Number:
+During leave application:
+The system will apply the configured rounding rule to the employee's balance.
+The rounded balance will be shown and used to validate whether the leave duration requested is allowed.
+The actual accrued balance will remain stored with 4 decimal places.
+System will allow users to apply up to the rounded value when applying for leave.
+Other Requirements
+Each employee's vacation accrual is capped based on the year of service. However, HR team can override the maximum accrual and allow employees to accrue beyond the defined maximum accrual.
+We will need you to configure a custom field to track whether employee is allowed to go beyond the max cap and configure the vacation leave rule with and without max accrual cap using the custom field.
+Applicable Leave Policies
+The following have implications for STATIN:
+Staff Orders for the Public Service (Chapter 7)
+Public Service Regulations
+STATIN Staff Handbook (Leave Policy pgs. 11-14)
+GOJ Circulars

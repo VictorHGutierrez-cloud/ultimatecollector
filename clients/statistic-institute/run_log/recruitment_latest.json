@@ -1,0 +1,126 @@
+{
+  "started_at": "2026-09-15T21:15:23.534574+00:00",
+  "apply": true,
+  "actions": [
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "291862",
+        "title": "STATIN Statistical Officer"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "291863",
+        "title": "STATIN Field Interviewer (Special Project)"
+      }
+    },
+    {
+      "action": "created_job_posting",
+      "detail": {
+        "id": "291864",
+        "title": "STATIN Personnel / Staffing Officer"
+      }
+    },
+    {
+      "action": "created_job_posting_draft",
+      "detail": {
+        "id": "291865",
+        "title": "STATIN Executive Secretary, ODG"
+      }
+    },
+    {
+      "action": "created_candidate",
+      "detail": {
+        "id": "5149324",
+        "name": "Marcia Bennett"
+      }
+    },
+    {
+      "action": "created_application",
+      "detail": {
+        "email": "marcia.bennett.candidate@statin-demo.jm",
+        "job": "STATIN Statistical Officer",
+        "status": 201
+      }
+    },
+    {
+      "action": "created_candidate",
+      "detail": {
+        "id": "5149325",
+        "name": "Omar Reid"
+      }
+    },
+    {
+      "action": "created_application",
+      "detail": {
+        "email": "omar.reid.candidate@statin-demo.jm",
+        "job": "STATIN Field Interviewer (Special Project)",
+        "status": 201
+      }
+    },
+    {
+      "action": "created_candidate",
+      "detail": {
+        "id": "5149326",
+        "name": "Keisha Campbell"
+      }
+    },
+    {
+      "action": "created_application",
+      "detail": {
+        "email": "keisha.campbell.candidate@statin-demo.jm",
+        "job": "STATIN Personnel / Staffing Officer",
+        "status": 201
+      }
+    },
+    {
+      "action": "created_candidate",
+      "detail": {
+        "id": "5149327",
+        "name": "Andre Williams"
+      }
+    },
+    {
+      "action": "created_application",
+      "detail": {
+        "email": "andre.williams.candidate@statin-demo.jm",
+        "job": "STATIN Executive Secretary, ODG",
+        "status": 201
+      }
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "job_postings": [
+      "291862",
+      "291863",
+      "291864",
+      "291865"
+    ],
+    "candidates": [
+      {
+        "email": "marcia.bennett.candidate@statin-demo.jm",
+        "job": "STATIN Statistical Officer",
+        "via": "application"
+      },
+      {
+        "email": "omar.reid.candidate@statin-demo.jm",
+        "job": "STATIN Field Interviewer (Special Project)",
+        "via": "application"
+      },
+      {
+        "email": "keisha.campbell.candidate@statin-demo.jm",
+        "job": "STATIN Personnel / Staffing Officer",
+        "via": "application"
+      },
+      {
+        "email": "andre.williams.candidate@statin-demo.jm",
+        "job": "STATIN Executive Secretary, ODG",
+        "via": "application"
+      }
+    ]
+  },
+  "finished_at": "2026-09-15T21:15:30.500020+00:00"
+}

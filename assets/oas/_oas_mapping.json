@@ -1,0 +1,237 @@
+{
+  "api_public": {
+    "webhook_subscriptions": "api_public/webhook_subscriptions"
+  },
+  "approvals": {
+    "materialized_approvals_flows_approve_resource": "approvals/materialized_approvals_flows/approve_resource",
+    "materialized_approvals_flows_reject_resource": "approvals/materialized_approvals_flows/reject_resource"
+  },
+  "ats": {
+    "answers": "ats/answers",
+    "applications": "ats/applications",
+    "applications_apply": "ats/applications/apply",
+    "applications_move_to_phase": "ats/applications/move_to_phase",
+    "candidates": "ats/candidates",
+    "evaluation_forms_save_as_template": "ats/evaluation_forms/save_as_template",
+    "feedbacks": "ats/feedbacks",
+    "job_postings": "ats/job_postings",
+    "job_postings_duplicate": "ats/job_postings/duplicate",
+    "messages": "ats/messages",
+    "questions": "ats/questions"
+  },
+  "attendance": {
+    "break_configurations": "attendance/break_configurations",
+    "edit_timesheet_requests": "attendance/edit_timesheet_requests",
+    "overtime_requests": "attendance/overtime_requests",
+    "overtime_requests_approve": "attendance/overtime_requests/approve",
+    "overtime_requests_reject": "attendance/overtime_requests/reject",
+    "reviews_bulk_create": "attendance/reviews/bulk_create",
+    "reviews_bulk_destroy": "attendance/reviews/bulk_destroy",
+    "shifts": "attendance/shifts",
+    "shifts_autofill": "attendance/shifts/autofill",
+    "shifts_break_end": "attendance/shifts/break_end",
+    "shifts_break_start": "attendance/shifts/break_start",
+    "shifts_clock_in": "attendance/shifts/clock_in",
+    "shifts_clock_out": "attendance/shifts/clock_out",
+    "shifts_toggle_clock": "attendance/shifts/toggle_clock"
+  },
+  "banking": {
+    "bank_accounts_create_manual": "banking/bank_accounts/create_manual"
+  },
+  "companies": {
+    "legal_entities": "companies/legal_entities"
+  },
+  "contracts": {
+    "compensations": "contracts/compensations",
+    "contract_versions": "contracts/contract_versions",
+    "spanish_contract_types": "contracts/spanish_contract_types",
+    "spanish_education_levels": "contracts/spanish_education_levels",
+    "spanish_professional_categories": "contracts/spanish_professional_categories",
+    "spanish_working_day_types": "contracts/spanish_working_day_types"
+  },
+  "custom_fields": {
+    "fields": "custom_fields/fields",
+    "options": "custom_fields/options",
+    "resource_fields": "custom_fields/resource_fields",
+    "values": "custom_fields/values"
+  },
+  "custom_resources": {
+    "schemas": "custom_resources/schemas",
+    "values": "custom_resources/values"
+  },
+  "documents": {
+    "documents": "documents/documents",
+    "documents_move_to_trash_bin": "documents/documents/move_to_trash_bin",
+    "documents_restore_from_trash_bin": "documents/documents/restore_from_trash_bin",
+    "download_urls_bulk_create": "documents/download_urls/bulk_create",
+    "folders": "documents/folders"
+  },
+  "employees": {
+    "employees_create_with_contract": "employees/employees/create_with_contract",
+    "employees_invite": "employees/employees/invite",
+    "employees_set_regular_access_start_date": "employees/employees/set_regular_access_start_date",
+    "employees_terminate": "employees/employees/terminate",
+    "employees_unterminate": "employees/employees/unterminate"
+  },
+  "expenses": {
+    "expensables_bulk_set_to_paid": "expenses/expensables/bulk_set_to_paid",
+    "expensables_update_reimbursable_amount": "expenses/expensables/update_reimbursable_amount"
+  },
+  "finance": {
+    "accounts": "finance/accounts",
+    "accounting_settings_upsert": "finance/accounting_settings/upsert",
+    "contacts": "finance/contacts",
+    "cost_centers": "finance/cost_centers",
+    "cost_centers_edit": "finance/cost_centers/edit",
+    "cost_center_memberships_bulk_create_update": "finance/cost_center_memberships/bulk_create_update",
+    "journal_entries": "finance/journal_entries",
+    "ledger_account_resources_upsert": "finance/ledger_account_resources/upsert",
+    "tax_rates": "finance/tax_rates",
+    "tax_types": "finance/tax_types"
+  },
+  "integrations": {
+    "sync_run_outputs": "integrations/sync_run_outputs"
+  },
+  "it_management": {
+    "it_assets": "it_management/it_assets",
+    "it_asset_models": "it_management/it_asset_models"
+  },
+  "locations": {
+    "locations": "locations/locations",
+    "work_areas": "locations/work_areas",
+    "work_areas_archive": "locations/work_areas/archive",
+    "work_areas_unarchive": "locations/work_areas/unarchive"
+  },
+  "marketplace": {
+    "installations": "marketplace/installations"
+  },
+  "payroll": {
+    "family_situations": "payroll/family_situations",
+    "policy_periods_change_status": "payroll/policy_periods/change_status",
+    "supplements": "payroll/supplements"
+  },
+  "payroll_employees": {
+    "identifiers": "payroll_employees/identifiers"
+  },
+  "payroll_integrations_base": {
+    "codes": "payroll_integrations_base/codes"
+  },
+  "performance": {
+    "agreements_bulk_initiate": "performance/agreements/bulk_initiate",
+    "agreements_initiate": "performance/agreements/initiate",
+    "company_employee_score_scales_set": "performance/company_employee_score_scales/set",
+    "review_evaluations_replace_reviewer": "performance/review_evaluations/replace_reviewer",
+    "review_owners_bulk_create": "performance/review_owners/bulk_create",
+    "review_processes": "performance/review_processes",
+    "review_processes_create_from_template": "performance/review_processes/create_from_template",
+    "review_processes_duplicate": "performance/review_processes/duplicate",
+    "review_processes_remind_in_bulk": "performance/review_processes/remind_in_bulk",
+    "review_processes_remove_schedule": "performance/review_processes/remove_schedule",
+    "review_processes_reopen": "performance/review_processes/reopen",
+    "review_processes_schedule": "performance/review_processes/schedule",
+    "review_processes_start": "performance/review_processes/start",
+    "review_processes_stop": "performance/review_processes/stop",
+    "review_processes_toggle_archive": "performance/review_processes/toggle_archive",
+    "review_processes_update_agreements_configuration": "performance/review_processes/update_agreements_configuration",
+    "review_processes_update_basic_info": "performance/review_processes/update_basic_info",
+    "review_processes_update_competencies_assessments_configuration": "performance/review_processes/update_competencies_assessments_configuration",
+    "review_processes_update_deadline": "performance/review_processes/update_deadline",
+    "review_processes_update_employee_score_configuration": "performance/review_processes/update_employee_score_configuration",
+    "review_processes_update_reviewer_strategies": "performance/review_processes/update_reviewer_strategies",
+    "review_processes_update_schedule": "performance/review_processes/update_schedule",
+    "review_processes_update_target_strategy": "performance/review_processes/update_target_strategy",
+    "review_process_targets_add_peers": "performance/review_process_targets/add_peers",
+    "review_process_targets_bulk_create": "performance/review_process_targets/bulk_create",
+    "review_process_targets_remove_peer_evaluations": "performance/review_process_targets/remove_peer_evaluations",
+    "review_questionnaire_by_strategies_update_default_rating_scale": "performance/review_questionnaire_by_strategies/update_default_rating_scale",
+    "review_questionnaire_by_strategies_update_questionnaire_for_strategy": "performance/review_questionnaire_by_strategies/update_questionnaire_for_strategy"
+  },
+  "posts": {
+    "comments": "posts/comments",
+    "groups": "posts/groups",
+    "groups_archive": "posts/groups/archive",
+    "posts": "posts/posts"
+  },
+  "project_management": {
+    "budget_strategies": "project_management/budget_strategies",
+    "planned_records_bulk_create": "project_management/planned_records/bulk_create",
+    "projects": "project_management/projects",
+    "projects_activate": "project_management/projects/activate",
+    "projects_change_assignment": "project_management/projects/change_assignment",
+    "projects_change_status": "project_management/projects/change_status",
+    "projects_close": "project_management/projects/close",
+    "projects_soft_delete": "project_management/projects/soft_delete",
+    "project_tasks": "project_management/project_tasks",
+    "project_tasks_bulk_destroy": "project_management/project_tasks/bulk_destroy",
+    "project_tasks_bulk_duplicate": "project_management/project_tasks/bulk_duplicate",
+    "project_workers": "project_management/project_workers",
+    "project_workers_bulk_assign": "project_management/project_workers/bulk_assign",
+    "project_workers_bulk_create": "project_management/project_workers/bulk_create",
+    "project_workers_unassign": "project_management/project_workers/unassign",
+    "subprojects": "project_management/subprojects",
+    "subprojects_rename": "project_management/subprojects/rename",
+    "time_records": "project_management/time_records",
+    "time_records_bulk_delete": "project_management/time_records/bulk_delete",
+    "time_records_bulk_process": "project_management/time_records/bulk_process",
+    "time_records_update_project_worker": "project_management/time_records/update_project_worker"
+  },
+  "shift_management": {
+    "shifts": "shift_management/shifts",
+    "shifts_bulk_create": "shift_management/shifts/bulk_create",
+    "shifts_bulk_delete": "shift_management/shifts/bulk_delete"
+  },
+  "tasks": {
+    "tasks": "tasks/tasks",
+    "tasks_bulk_create": "tasks/tasks/bulk_create",
+    "tasks_bulk_delete": "tasks/tasks/bulk_delete",
+    "tasks_bulk_update": "tasks/tasks/bulk_update",
+    "tasks_copy": "tasks/tasks/copy",
+    "tasks_create_comment": "tasks/tasks/create_comment",
+    "task_files": "tasks/task_files"
+  },
+  "teams": {
+    "memberships": "teams/memberships",
+    "teams": "teams/teams"
+  },
+  "timeoff": {
+    "allowances": "timeoff/allowances",
+    "allowances_delete_with_alt_allowance": "timeoff/allowances/delete_with_alt_allowance",
+    "allowance_incidences": "timeoff/allowance_incidences",
+    "blocked_periods": "timeoff/blocked_periods",
+    "leaves": "timeoff/leaves",
+    "leaves_approve": "timeoff/leaves/approve",
+    "leaves_approve_all": "timeoff/leaves/approve_all",
+    "leaves_reject": "timeoff/leaves/reject",
+    "leave_types": "timeoff/leave_types",
+    "policies": "timeoff/policies",
+    "policy_assignments": "timeoff/policy_assignments"
+  },
+  "time_planning": {
+    "planned_breaks_bulk_create": "time_planning/planned_breaks/bulk_create",
+    "planning_versions": "time_planning/planning_versions",
+    "planning_versions_bulk_create": "time_planning/planning_versions/bulk_create"
+  },
+  "time_settings": {
+    "break_configurations": "time_settings/break_configurations"
+  },
+  "trainings": {
+    "categories": "trainings/categories",
+    "sessions": "trainings/sessions",
+    "session_access_memberships_bulk_create": "trainings/session_access_memberships/bulk_create",
+    "session_access_memberships_bulk_destroy": "trainings/session_access_memberships/bulk_destroy",
+    "session_attendances_bulk_update": "trainings/session_attendances/bulk_update",
+    "trainings": "trainings/trainings",
+    "trainings_bulk_delete": "trainings/trainings/bulk_delete",
+    "trainings_bulk_update_catalog": "trainings/trainings/bulk_update_catalog",
+    "trainings_update_status": "trainings/trainings/update_status",
+    "training_classes": "trainings/training_classes",
+    "training_memberships_bulk_create": "trainings/training_memberships/bulk_create",
+    "training_memberships_bulk_destroy": "trainings/training_memberships/bulk_destroy"
+  },
+  "work_schedule": {
+    "day_configurations_bulk_cud": "work_schedule/day_configurations/bulk_cud",
+    "overlap_periods": "work_schedule/overlap_periods",
+    "schedules": "work_schedule/schedules",
+    "schedules_toggle_archive": "work_schedule/schedules/toggle_archive"
+  }
+}

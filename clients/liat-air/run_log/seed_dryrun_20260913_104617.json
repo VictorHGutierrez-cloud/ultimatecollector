@@ -1,0 +1,222 @@
+{
+  "started_at": "2026-09-13T10:46:17.188433+00:00",
+  "mode": "dry-run",
+  "company_id": "191947",
+  "actions": [
+    {
+      "action": "dry_create_location",
+      "detail": {
+        "name": "LIAT VC Bird International Airport",
+        "country": "ag",
+        "timezone": "America/Antigua",
+        "company_id": "191947",
+        "city": "St. John's",
+        "state": "Antigua & Barbuda",
+        "postal_code": "00000",
+        "address_line_one": "VC Bird International Airport, Coolidge",
+        "phone_number": "+12684621400",
+        "main": true,
+        "latitude": 17.1367,
+        "longitude": -61.7927
+      }
+    },
+    {
+      "action": "dry_create_legal_entity",
+      "detail": {
+        "company_id": "191947",
+        "country": "ag",
+        "legal_name": "Liat (2020) Limited",
+        "currency": "USD",
+        "city": "St. John's",
+        "state": "Antigua & Barbuda",
+        "postal_code": "00000",
+        "address_line_1": "VC Bird International Airport, Coolidge",
+        "tin": "LIAT-AG-001"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "id": "6381329",
+        "first_name": "Marcus",
+        "last_name": "Williams"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Charles Carter",
+        "id": "6381718",
+        "first_name": "Denise",
+        "last_name": "Antoine"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Daisy Dawson",
+        "id": "6381788",
+        "first_name": "Robert",
+        "last_name": "Clarke"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Laura Lewis",
+        "id": "6381818",
+        "first_name": "Kamala",
+        "last_name": "Singh"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Jack Johnson",
+        "id": "6381843",
+        "first_name": "Julian",
+        "last_name": "Baptiste"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Fiona Fletcher",
+        "id": "6381871",
+        "first_name": "Alicia",
+        "last_name": "Fraser"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Clara Cooper",
+        "id": "6381887",
+        "first_name": "Tamara",
+        "last_name": "Joseph"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "James Jones",
+        "id": "6381909",
+        "first_name": "Devon",
+        "last_name": "Thomas"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Felicity Ford",
+        "id": "6382057",
+        "first_name": "Keon",
+        "last_name": "Richards"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Matt Spencer",
+        "id": "6382164",
+        "first_name": "Simone",
+        "last_name": "Peters"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Cristopher Clarke",
+        "id": "6382189",
+        "first_name": "Ryan",
+        "last_name": "Mitchell"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Bernarda Baker",
+        "id": "6382231",
+        "first_name": "Natasha",
+        "last_name": "Browne"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "action": "cast_inactive",
+      "detail": {
+        "full_name": "Alicia Fraser",
+        "terminated_on": "2026-07-14"
+      }
+    },
+    {
+      "action": "cast_inactive",
+      "detail": {
+        "full_name": "Simone Peters",
+        "terminated_on": "2026-08-13"
+      }
+    },
+    {
+      "action": "incomplete_cast",
+      "detail": "resolved 10/12"
+    }
+  ],
+  "ids": {
+    "location_id": "dry-location",
+    "legal_entity_id": "421017",
+    "cast": {
+      "Marcus Williams": {
+        "employee_id": "6381329",
+        "access_id": "6848283",
+        "group": "leadership"
+      },
+      "Denise Antoine": {
+        "employee_id": "6381718",
+        "access_id": "6848670",
+        "group": "leadership"
+      },
+      "Robert Clarke": {
+        "employee_id": "6381788",
+        "access_id": "6848751",
+        "group": "leadership"
+      },
+      "Kamala Singh": {
+        "employee_id": "6381818",
+        "access_id": "6848784",
+        "group": "manager"
+      },
+      "Julian Baptiste": {
+        "employee_id": "6381843",
+        "access_id": "6848802",
+        "group": "manager"
+      },
+      "Tamara Joseph": {
+        "employee_id": "6381887",
+        "access_id": "6848843",
+        "group": "staff"
+      },
+      "Devon Thomas": {
+        "employee_id": "6381909",
+        "access_id": "6848855",
+        "group": "staff"
+      },
+      "Keon Richards": {
+        "employee_id": "6382057",
+        "access_id": "6848892",
+        "group": "staff"
+      },
+      "Ryan Mitchell": {
+        "employee_id": "6382189",
+        "access_id": "6849150",
+        "group": "staff"
+      },
+      "Natasha Browne": {
+        "employee_id": "6382231",
+        "access_id": "6849192",
+        "group": "staff"
+      }
+    }
+  }
+}

@@ -1,0 +1,1312 @@
+# SCHEMA DO FACTORIAL RH - TABELAS E COLUNAS ORGANIZADAS
+# Extraído e organizado do arquivo sqlschematable.txt
+
+## ===========================================
+## TABELAS PRINCIPAIS DE CONTRATOS
+## ===========================================
+
+### contracts
+- id (number)
+- job_title (text)
+- job_catalog_role (text)
+- job_catalog_level (text)
+- contract_date (date)
+- hiring_link (text)
+- starts_on (date)
+- ends_on (date)
+- effective_on (date)
+- has_payroll (boolean)
+- current_contract (boolean)
+- salary_amount (number)
+- salary_frequency (text)
+- working_week_days (text)
+- working_hours (number)
+- working_hours_frequency (text)
+- contract_type (text)
+- professional_category (text)
+- antiquity (number)
+- work_schedule_type (text)
+- termination_reason (text)
+- contract_code (text)
+- total_yearly_contract_salary (number)
+- total_monthly_contract_salary (number)
+- yearly_contract_salary (number)
+- monthly_contract_salary (number)
+- variable_monthly_contract_salary (number)
+- variable_yearly_contract_salary (number)
+- weekly_contract_salary (number)
+- hourly_contract_salary (number)
+- weekly_workschedule_hours (number)
+- monthly_workschedule_hours (number)
+- daily_workschedule_hours (number)
+- weekly_workschedule_days (number)
+- trial_period_ends_on (date)
+- trial_period (text)
+- has_teleworking_contract (boolean)
+- cotization_group (number)
+- contract_observations (text)
+- work_description (text)
+- working_day_type (text)
+- education_level (text)
+- employee_id (number)
+
+### contracts_cohort_by_month
+- id (number)
+- job_title (text)
+- job_catalog_role (text)
+- job_catalog_level (text)
+- contract_date (date)
+- hiring_link (text)
+- starts_on (date)
+- ends_on (date)
+- effective_on (date)
+- has_payroll (boolean)
+- current_contract (boolean)
+- salary_amount (number)
+- salary_frequency (text)
+- working_week_days (text)
+- working_hours (number)
+- working_hours_frequency (text)
+- contract_type (text)
+- professional_category (text)
+- antiquity (number)
+- work_schedule_type (text)
+- termination_reason (text)
+- contract_code (text)
+- total_yearly_contract_salary (number)
+- total_monthly_contract_salary (number)
+- yearly_contract_salary (number)
+- monthly_contract_salary (number)
+- variable_monthly_contract_salary (number)
+- variable_yearly_contract_salary (number)
+- weekly_contract_salary (number)
+- hourly_contract_salary (number)
+- weekly_workschedule_hours (number)
+- monthly_workschedule_hours (number)
+- daily_workschedule_hours (number)
+- weekly_workschedule_days (number)
+- trial_period_ends_on (date)
+- trial_period (text)
+- has_teleworking_contract (boolean)
+- cotization_group (number)
+- contract_observations (text)
+- work_description (text)
+- working_day_type (text)
+- education_level (text)
+- cohort_start_date (date)
+- cohort_end_date (date)
+- employee_id (number)
+
+### contracts_cohort_by_day
+- [Mesmas colunas do contracts_cohort_by_month]
+
+### contracts_cohort_by_year
+- [Mesmas colunas do contracts_cohort_by_month]
+
+## ===========================================
+## TABELAS DE FUNCIONÁRIOS
+## ===========================================
+
+### employees
+- id (number)
+- company_identifier (text)
+- status (text)
+- contract_version_starts_on (date)
+- contract_version_effective_on (date)
+- terminated_on (date)
+- termination_reason (text)
+- termination_reason_type (text)
+- termination_type_description (text)
+- link (text)
+- first_name (text)
+- last_name (text)
+- full_name (text)
+- preferred_name (text)
+- personal_email (text)
+- company_email (text)
+- gender (text)
+- nationality (text)
+- office (text)
+- legal_entity (text)
+- manager (text)
+- timeoff_manager (text)
+- tenure_start_date (date)
+- age (number)
+- antiquity (number)
+- birthday_on (date)
+- email (text)
+- phone_number (text)
+- contact_name (text)
+- contact_number (text)
+- identifier (text)
+- identifier_type (text)
+- social_security_number (text)
+- tax_id (text)
+- bank_number (text)
+- swift_bic (text)
+- bank_number_format (text)
+- address_line_1 (text)
+- address_line_2 (text)
+- city (text)
+- postal_code (text)
+- state (text)
+- country (text)
+- legal_entity_country (text)
+- legal_entity_id (number)
+- employee_group_name (text)
+- disability_percentage_cents (number)
+- manager_id (number)
+- timeoff_manager_id (number)
+
+### employees_cohort_by_month
+- [Mesmas colunas do employees + cohort_start_date, cohort_end_date]
+
+### employees_cohort_by_day
+- [Mesmas colunas do employees + cohort_start_date, cohort_end_date]
+
+### employees_cohort_by_year
+- [Mesmas colunas do employees + cohort_start_date, cohort_end_date]
+
+## ===========================================
+## TABELAS DE FOLHA DE PAGAMENTO
+## ===========================================
+
+### contracts__payroll_policies
+- id (number)
+- contract_version_id (number)
+- payroll_policy_id (number)
+
+### payroll__result_concept_item_summaries
+- id (number)
+- payroll_concept_name (text)
+- created_at (text)
+- amount (number)
+- payment_type (text)
+- policy_period_id (number)
+- employee_id (number)
+- payroll_concept_id (number)
+
+## ===========================================
+## TABELAS DE AUSÊNCIAS/FÉRIAS
+## ===========================================
+
+### leaves
+- id (number)
+- leave_type_name (text)
+- leave_type_name_slug (text)
+- status (text)
+- duration (number)
+- duration_type (text)
+- document_justified (boolean)
+- created_at (date)
+- start_on (date)
+- finish_on (date)
+- link (text)
+- description (text)
+- employee_id (number)
+
+### leaves_cohort_by_month
+- [Mesmas colunas do leaves + cohort_start_date, cohort_end_date]
+
+### leaves_cohort_by_day
+- [Mesmas colunas do leaves + cohort_start_date, cohort_end_date]
+
+### leaves_cohort_by_year
+- [Mesmas colunas do leaves + cohort_start_date, cohort_end_date]
+
+## ===========================================
+## TABELAS DE PRESENÇA/PONTO
+## ===========================================
+
+### shifts
+- id (number)
+- balance (number)
+- clock_in (text)
+- clock_out (text)
+- observations (text)
+- date (date)
+- reference_date (date)
+- duration (number)
+- estimated (number)
+- worked (number)
+- in_location_latitude (number)
+- in_location_longitude (number)
+- in_location_accuracy (number)
+- out_location_latitude (number)
+- out_location_longitude (number)
+- out_location_accuracy (number)
+- attendance_shift_state (text)
+- attendance_shift_type (text)
+- attendance_shift_location_type (text)
+- attendance_shift_clock_in_source (text)
+- attendance_shift_clock_out_source (text)
+- created_at (text)
+- employee_id (number)
+
+### daily_time_configs
+- id (number)
+- estimated_hours (number)
+- worked_hours (number)
+- worked_hours_in_schedule (number)
+- worked_hours_out_schedule (number)
+- tracked_hours (number)
+- balance (number)
+- date (date)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE RECRUTAMENTO (ATS)
+## ===========================================
+
+### ats_applications
+- id (number)
+- first_name (text)
+- last_name (text)
+- email (text)
+- talent_pool (boolean)
+- source (text)
+- medium (text)
+- reason (text)
+- qualified (boolean)
+- phase (text)
+- created_at (date)
+- ats_job_posting_id (number)
+- employee_id (number)
+
+### ats_job_postings
+- id (number)
+- title (text)
+- status (text)
+- remote (boolean)
+- created_at (date)
+- office (text)
+
+## ===========================================
+## TABELAS DE PROJETOS
+## ===========================================
+
+### projects
+- id (number)
+- name (text)
+- status (text)
+- inputed_minutes (number)
+- code (text)
+- start_date (date)
+- due_date (date)
+
+### project_workers
+- id (number)
+- assigned (boolean)
+- inputed_minutes (number)
+- project_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE DESPESAS
+## ===========================================
+
+### expenses_expensables
+- id (number)
+- merchant_name (text)
+- merchant_tin (text)
+- category (text)
+- subcategory (text)
+- mileage (number)
+- units (text)
+- round_trip (boolean)
+- rate (number)
+- origin (text)
+- destination (text)
+- effective_on (date)
+- currency (text)
+- amount (number)
+- vat_amount (number)
+- description (text)
+- creation_type (text)
+- reference (text)
+- status (text)
+- review_request_at (date)
+- document_number (text)
+- document_type (text)
+- payment (text)
+- payment_method (text)
+- exchange_rate (number)
+- reimbursable_currency (text)
+- reimbursable_amount (number)
+- start_date (date)
+- end_date (date)
+- spending_alert_types (text)
+- files (text)
+- employee_id (number)
+- group_id (number)
+- project_id (number)
+- subproject_id (number)
+- ledger_account_id (number)
+- card_payment_id (number)
+
+## ===========================================
+## TABELAS DE AVALIAÇÃO DE DESEMPENHO
+## ===========================================
+
+### performance_review_evaluations
+- id (number)
+- evaluation_type (text)
+- status (text)
+- reviewer_full_name (text)
+- target_full_name (text)
+- review_process_id (number)
+- reviewer_employee_id (number)
+- target_employee_id (number)
+
+### performance_review_processes
+- id (number)
+- name (text)
+- description (text)
+- starts_at (date)
+- ends_at (date)
+- archived (boolean)
+- status (text)
+
+## ===========================================
+## TABELAS DE TREINAMENTO
+## ===========================================
+
+### trainings
+- id (number)
+- name (text)
+- cost (number)
+- subsidized_cost (number)
+- total_cost (number)
+- indirect_cost (number)
+- salary_cost (number)
+- subsidized_cost (number)
+- type (text)
+- created_at (date)
+- author_id (number)
+- external_provider (text)
+- external (boolean)
+- status (text)
+- year (number)
+- code (text)
+- tags (text)
+
+### sessions
+- id (number)
+- name (text)
+- starts_at (date)
+- ends_at (date)
+- due_date (date)
+- duration (number)
+- modality (text)
+- link (text)
+- location (text)
+- subsidized (boolean)
+- training_id (number)
+
+## ===========================================
+## TABELAS DE EQUIPES
+## ===========================================
+
+### teams__teams
+- id (number)
+- name (text)
+- description (text)
+- avatar (text)
+- company_id (number)
+
+### teams__memberships
+- id (number)
+- company_id (number)
+- lead (boolean)
+- team_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE DOCUMENTOS
+## ===========================================
+
+### documents
+- id (number)
+- filename (text)
+- download_url (text)
+- type (text)
+- content_type (text)
+- created_at (date)
+- created_by (text)
+- link (text)
+- approval_status (text)
+- signature_status (text)
+- leave_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE LOCALIZAÇÕES
+## ===========================================
+
+### locations
+- id (number)
+- name (text)
+- country (text)
+- state (text)
+- city (text)
+- address (text)
+- full_address (text)
+- postal_code (text)
+- phone_number (text)
+- main (boolean)
+- latitude (number)
+- longitude (number)
+- timezone (text)
+- observations (text)
+
+## ===========================================
+## TABELAS DE ENTIDADES LEGAIS
+## ===========================================
+
+### companies__legal_entities
+- id (number)
+- country (text)
+- legal_name (text)
+- currency (text)
+- tin (text)
+- siret (text)
+- city (text)
+- state (text)
+- postal_code (text)
+- address_line_1 (text)
+- address_line_2 (text)
+- main (boolean)
+- bank_account (text)
+- swift (text)
+- representative_first_surname (text)
+- representative_identifier (text)
+- representative_job_title (text)
+- representative_name (text)
+- representative_second_surname (text)
+- invoicee_first_name (text)
+- invoicee_last_name (text)
+- invoicee_email (text)
+- invoicee_phone_number (text)
+- invoicee_address_line_1 (text)
+- invoicee_city (text)
+- invoicee_state (text)
+- invoicee_country (text)
+- invoicee_postal_code (text)
+- aeat_closing_period_frequency (text)
+- contract_version_type (text)
+- company_id (number)
+
+## ===========================================
+## TABELAS DE COMPENSAÇÕES ADICIONAIS
+## ===========================================
+
+### additional_compensations
+- id (number)
+- title (text)
+- description (text)
+- recurrence (text)
+- first_payment (date)
+- type (text)
+- amount (number)
+- contract_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE SUPLEMENTOS
+## ===========================================
+
+### supplements
+- id (number)
+- name (text)
+- unit (text)
+- amount (number)
+- effective_on (date)
+- employee_observations (text)
+- supplement_observations (text)
+- payroll_policy_period_id (number)
+- period_starts_on (date)
+- period_ends_on (date)
+- policy_name (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE FERIADOS
+## ===========================================
+
+### company_holidays
+- id (number)
+- summary (text)
+- half_day (text)
+- date (date)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE CUSTOS
+## ===========================================
+
+### employee_costs
+- id (number)
+- cost_center_name (text)
+- dedication (number)
+- cost_center_code (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE PRESENÇA
+## ===========================================
+
+### employee_presences
+- id (number)
+- presence_status (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE TAREFAS
+## ===========================================
+
+### tasks
+- id (number)
+- task_name (text)
+- task_content (text)
+- assignee (text)
+- author (text)
+- imported_for (text)
+- due_on (date)
+- completed_by (text)
+- completed_at (date)
+- created_at (date)
+- updated_at (date)
+- assignee_id (number)
+
+## ===========================================
+## TABELAS DE PESQUISAS
+## ===========================================
+
+### surveys
+- id (number)
+- name (text)
+- status (text)
+- anonymous (boolean)
+- start_on (date)
+- end_on (date)
+- schedule (text)
+- created_at (date)
+
+## ===========================================
+## TABELAS DE METAS
+## ===========================================
+
+### goals_metrics
+- id (number)
+- title (text)
+- starts_on (date)
+- ends_on (date)
+- type (text)
+- quantitative_start_value (number)
+- quantitative_target_value (number)
+- quantitative_current_value (number)
+- qualitative_value (boolean)
+- progress (number)
+- progress_status (text)
+- expected_progress (number)
+- assignee_id (number)
+- metric_group_id (number)
+
+## ===========================================
+## TABELAS DE CONFIGURAÇÕES DE TEMPO
+## ===========================================
+
+### time_configs
+- id (number)
+- total_estimated_hours (number)
+- total_worked_hours (number)
+- balance (number)
+- previous_balance (number)
+- projected_hours (number)
+- projected_balance (number)
+- start (date)
+- end (date)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE HORÁRIOS DE TRABALHO
+## ===========================================
+
+### work_schedule_schedules
+- id (number)
+- date (date)
+- start_at (text)
+- end_at (text)
+- duration_in_hours (number)
+- total_hours_per_day (number)
+- schedule_name (text)
+- schedule_type (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE FORÇA DE TRABALHO
+## ===========================================
+
+### workforces
+- id (number)
+- full_time_equivalent (number)
+- date (date)
+- leaves (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE ÁREAS DE TRABALHO
+## ===========================================
+
+### work_areas
+- id (number)
+- name (text)
+- archived (boolean)
+- location_id (number)
+
+## ===========================================
+## TABELAS DE CATÁLOGO DE EMPREGOS
+## ===========================================
+
+### job_catalog__salary_ranges
+- id (number)
+- min_range (number)
+- max_range (number)
+- currency (text)
+- salary_frequency (text)
+- amount_type (text)
+- level_id (number)
+
+## ===========================================
+## TABELAS DE FINANÇAS
+## ===========================================
+
+### finance_bank_accounts
+- id (number)
+- currency (text)
+- country (text)
+- account_number (text)
+- account_balance_cents (number)
+- available_balance_cents (number)
+- pending_balance_cents (number)
+- beneficiary_name (text)
+- bank_name (text)
+- alias (text)
+- last_synchronised_at (date)
+
+### finance_cards
+- id (number)
+- full_name (text)
+- phone_number (text)
+- last4 (text)
+- status (text)
+- type (text)
+- exp_month (number)
+- exp_year (number)
+- created_at (date)
+- alias (text)
+- description (text)
+- creation_source (text)
+- apple_pay_enabled (boolean)
+- google_pay_enabled (boolean)
+- bank_account_id (number)
+- cardhodler_id (number)
+
+### finance_categories
+- id (number)
+- label (text)
+- default_label (text)
+- identifier (text)
+- protected (boolean)
+- visible (boolean)
+- enabled (boolean)
+- parent_category_id (number)
+
+### finance_ledger_accounts
+- id (number)
+- name (text)
+- number (text)
+- legal_entity_id (number)
+- parent_legal_entity_id (number)
+- type (text)
+- currency (text)
+- external_id (text)
+
+## ===========================================
+## TABELAS DE FAMÍLIA
+## ===========================================
+
+### family_situations
+- civil_status (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE TIPOS DE TERMINAÇÃO
+## ===========================================
+
+### contracts__termination_types
+- id (number)
+- slug (text)
+- description (text)
+- is_deprecated (boolean)
+- termination_reason_type (text)
+- country (text)
+
+## ===========================================
+## TABELAS DE TAXONOMIAS
+## ===========================================
+
+### contracts__taxonomies
+- id (number)
+- name (text)
+- archived (boolean)
+- default (boolean)
+- legal_entity_id (number)
+
+## ===========================================
+## TABELAS DE VERSÕES DE CONTRATO
+## ===========================================
+
+### contracts__contract_versions
+- id (number)
+- company_id (number)
+- effective_on (text)
+- country (text)
+- job_title (text)
+- job_catalog_level_name (text)
+- job_catalog_level (text)
+- job_catalog_role_id (number)
+- job_catalog_role (text)
+- job_catalog_tree_node_uuid (text)
+- starts_on (text)
+- ends_on (text)
+- has_payroll (boolean)
+- has_payroll_policies (boolean)
+- has_trial_period (boolean)
+- trial_period_ends_on (text)
+- salary_amount (number)
+- salary_frequency (text)
+- working_week_days (text)
+- working_hours (number)
+- working_hours_frequency (text)
+- max_legal_yearly_hours (number)
+- maximum_weekly_hours (number)
+- bank_holiday_treatment (text)
+- working_time_percentage_in_cents (number)
+- annual_working_time_distribution (text)
+- adjusted_daily_minutes (number)
+- min_rest_minutes_between_days (number)
+- max_work_minutes_per_day (number)
+- max_work_days_in_row (number)
+- min_rest_hours_in_row (number)
+- annual_workdays_count (number)
+- created_at (text)
+- updated_at (text)
+- created_by_name (text)
+- created_by_avatar (text)
+- action_type (text)
+- request_details (text)
+- status (text)
+- approval_author_id (number)
+- approval_request_created_at (text)
+- approval_action_type (text)
+- employee_id (number)
+- contracts_contract_id (number)
+- es_education_level_id (number)
+- job_catalog_level_id (number)
+
+## ===========================================
+## TABELAS DE FUNCIONÁRIOS DETALHADOS
+## ===========================================
+
+### employees__employees
+- id (number)
+- affiliation (text)
+- first_name (text)
+- last_name (text)
+- full_name (text)
+- preferred_name (text)
+- birth_name (text)
+- gender (text)
+- identifier (text)
+- identifier_type (text)
+- email (text)
+- login_email (text)
+- birthday_on (text)
+- nationality (text)
+- address_line_1 (text)
+- address_line_2 (text)
+- postal_code (text)
+- city (text)
+- state (text)
+- country (text)
+- bank_number (text)
+- swift_bic (text)
+- bank_number_format (text)
+- location_id (number)
+- location_name (text)
+- created_at (text)
+- updated_at (text)
+- irpf_cents (number)
+- social_security_number (text)
+- tax_id (text)
+- is_terminating (boolean)
+- terminated_on (text)
+- termination_reason_type (text)
+- termination_reason (text)
+- termination_observations (text)
+- timeoff_supervised_by_current (boolean)
+- supervised_by_current (boolean)
+- phone_number (text)
+- phone_code (text)
+- company_identifier (text)
+- age_number (number)
+- termination_type_description (text)
+- contact_name (text)
+- contact_number (text)
+- personal_email (text)
+- seniority_calculation_date (text)
+- has_regular_access (boolean)
+- pronouns (text)
+- active (boolean)
+- disability_percentage_cents (number)
+- identifier_expiration_date (text)
+- avatar_id (number)
+- attendable (boolean)
+- country_of_birth (text)
+- birthplace (text)
+- attendance_employees_policy_id (number)
+- attendance_employees_setting_id (number)
+- manager_id (number)
+- timeoff_manager_id (number)
+- termination_type_id (number)
+- access_id (number)
+- company_id (number)
+- legal_entity_id (number)
+- timeoff_policy_id (number)
+- employee_group_id (number)
+- access_id (number)
+
+## ===========================================
+## TABELAS DE INTEGRAÇÕES DE FOLHA
+## ===========================================
+
+### payroll_integrations
+- zucchetti_employee_code (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE RESPOSTAS DE AVALIAÇÃO
+## ===========================================
+
+### performance_review_evaluation_answers
+- question_uuid (text)
+- answer (text)
+- answer_comment (text)
+- evaluation_id (number)
+
+## ===========================================
+## TABELAS DE PERGUNTAS DE AVALIAÇÃO
+## ===========================================
+
+### performance_review_questions
+- uuid (text)
+- question_label (text)
+- mandatory (boolean)
+- evaluation_type (text)
+- question_type (text)
+- max_choices (number)
+- scale (text)
+- choice_options (text)
+- review_process_id (number)
+
+## ===========================================
+## TABELAS DE PLANEJAMENTO DE CUSTOS
+## ===========================================
+
+### project_cost_planning
+- id (number)
+- budget_allocation_cents (number)
+- fee_amount_cents (number)
+- project_id (number)
+
+## ===========================================
+## TABELAS DE REGISTROS DE TEMPO FLEXÍVEL
+## ===========================================
+
+### project_flexible_time_records
+- id (number)
+- date (date)
+- imputed_minutes (number)
+- project_worker_id (number)
+- subproject_id (number)
+
+## ===========================================
+## TABELAS DE TRABALHADORES DE PROJETO
+## ===========================================
+
+### project_management__project_workers
+- id (number)
+- assigned (boolean)
+- inputed_minutes (number)
+- labor_cost_cents (number)
+- company_labor_cost_cents (number)
+- spending_cost_cents (number)
+- full_name (text)
+- employee_id (number)
+- project_id (number)
+- project_id (number)
+
+## ===========================================
+## TABELAS DE PROJETOS DE GERENCIAMENTO
+## ===========================================
+
+### project_management__projects
+- id (number)
+- name (text)
+- code (text)
+- description (text)
+- start_date (text)
+- due_date (text)
+- status (text)
+- employees_assignment (text)
+- inputed_minutes (number)
+- is_billable (boolean)
+- fixed_cost_cents (number)
+- labor_cost_cents (number)
+- spending_cost_cents (number)
+- total_cost_cents (number)
+- billable_rate_type (text)
+- legal_entity_id (number)
+- client_id (number)
+
+## ===========================================
+## TABELAS DE PLANEJAMENTO DE TEMPO
+## ===========================================
+
+### project_time_planning
+- id (number)
+- budget_allocation (number)
+- project_id (number)
+
+## ===========================================
+## TABELAS DE REGISTROS DE TEMPO
+## ===========================================
+
+### project_time_records
+- id (number)
+- project_worker_id (number)
+- attendance_shift_id (number)
+- subproject_id (number)
+
+## ===========================================
+## TABELAS DE MEMBROS DE SESSÃO
+## ===========================================
+
+### session_access_memberships
+- id (number)
+- access_id (number)
+- first_name (text)
+- last_name (text)
+- status (text)
+- session_id (number)
+- employee_id (number)
+- training_id (number)
+
+## ===========================================
+## TABELAS DE INCIDÊNCIAS DE TURNO
+## ===========================================
+
+### shift_incidences
+- id (number)
+- shift_action (text)
+- date (date)
+- action_time (text)
+- distance (number)
+- time_difference (number)
+- attendance_shift_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE DIAS DE DESCANSO
+## ===========================================
+
+### shift_management_rest_days
+- id (number)
+- date (date)
+- state (text)
+- creation_mode (text)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE TURNOS DE GERENCIAMENTO
+## ===========================================
+
+### shift_management_shifts
+- id (number)
+- date_of_shift (date)
+- name (text)
+- start_at (text)
+- end_at (text)
+- shift_status (text)
+- creation_mode (text)
+- shift_duration (number)
+- duration_total_shifts_day (number)
+- extra_hours (boolean)
+- saved_shift_title (text)
+- timezone (text)
+- comments (text)
+- employee_id (number)
+- location_id (number)
+- work_area_id (number)
+
+## ===========================================
+## TABELAS DE ASSINATURAS
+## ===========================================
+
+### signatures
+- id (number)
+- signed (text)
+- signer (text)
+- document_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE SUBPROJETOS
+## ===========================================
+
+### subprojects
+- id (number)
+- name (text)
+- inputed_minutes (number)
+- project_id (number)
+
+## ===========================================
+## TABELAS DE CONFIGURAÇÕES DE QUESTIONÁRIO
+## ===========================================
+
+### surveys_question_configs
+- id (number)
+- label (text)
+- type (text)
+- survey_id (number)
+
+## ===========================================
+## TABELAS DE RESPOSTAS DE GRUPO
+## ===========================================
+
+### surveys_question_group_answers
+- id (number)
+- value (text)
+- surveys_question_config_id (number)
+- surveys_question_group_id (number)
+- survey_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE GRUPOS DE PERGUNTAS
+## ===========================================
+
+### surveys_question_groups
+- id (number)
+- respondent_id (number)
+- respondent_first_name (text)
+- respondent_last_name (text)
+- survey_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE EQUIPES
+## ===========================================
+
+### teams
+- id (number)
+- name (text)
+- lead (boolean)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE CONFIGURAÇÕES DE INTERVALO
+## ===========================================
+
+### time_settings_break_configurations
+- [Detalhes não especificados no arquivo original]
+
+## ===========================================
+## TABELAS DE TOLERÂNCIA DE INCIDÊNCIAS
+## ===========================================
+
+### tolerance_incidences
+- [Detalhes não especificados no arquivo original]
+
+## ===========================================
+## TABELAS DE PERÍODOS DE TEMPO
+## ===========================================
+
+### time_period
+- cohort (text)
+- cohort (text)
+
+## ===========================================
+## TABELAS DE QUEBRAS DE HORAS
+## ===========================================
+
+### hour_breakdowns
+- time_tracked (number)
+- regular_time_tracked (number)
+- extra_time_tracked (number)
+- effective_worked_time (number)
+- effective_regular_time (number)
+- effective_extra_time (number)
+- estimated_hours (number)
+- scheduled_overtime (number)
+- requested_overtime (number)
+- time_range_type (text)
+- time_range_name (text)
+- balance (number)
+- default_time_in_range (number)
+- bank_holiday_time_in_range (number)
+- custom_time_in_range (number)
+- date (date)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE GRUPOS DE METAS
+## ===========================================
+
+### goals_metric_groups
+- id (number)
+- title (text)
+- description (text)
+- progress (number)
+- needs_attention (boolean)
+
+## ===========================================
+## TABELAS DE VALORES DE METAS
+## ===========================================
+
+### goals_metric_values
+- id (number)
+- quantitative_start_value (number)
+- quantitative_target_value (number)
+- quantitative_current_value (number)
+- qualitative_value (boolean)
+- created_at (date)
+- metric_id (number)
+
+## ===========================================
+## TABELAS DE SOLICITAÇÕES DE HORAS EXTRAS
+## ===========================================
+
+### overtime_requests
+- id (number)
+- date (date)
+- status (text)
+- description (text)
+- reason (text)
+- hours (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE PAGAMENTOS COM CARTÃO
+## ===========================================
+
+### finance_card_payments
+- id (number)
+- amount_cents (number)
+- currency (text)
+- merchant_name (text)
+- merchant_amount_cents (number)
+- merchant_currency (text)
+- approved (boolean)
+- status (text)
+- type (text)
+- exchange_rate (number)
+- label (text)
+- rejected_reason (text)
+- card_id (number)
+
+## ===========================================
+## TABELAS DE PORTADORES DE CARTÃO
+## ===========================================
+
+### finance_cardholders
+- id (number)
+- email (text)
+- phone_number (text)
+- phone_country_code (text)
+- bank_account_id (number)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE TRANSAÇÕES DE DESPESAS
+## ===========================================
+
+### expenses_transactions
+- id (number)
+- available_on (date)
+- amount (number)
+- currency (text)
+- description (text)
+- status (text)
+- transaction_type (text)
+- bank_account (text)
+- fully_reconciled_at (date)
+- card_payment_id (number)
+- category_id (number)
+
+## ===========================================
+## TABELAS DE GRUPOS DE DESPESAS
+## ===========================================
+
+### expenses_expensable_groups
+- id (number)
+- name (text)
+- description (text)
+- status (text)
+- reimbursable_currency (text)
+- reimbursable_amount (number)
+- review_request_at (date)
+- employee_id (number)
+
+## ===========================================
+## TABELAS DE RECURSOS COMPETÊNCIAS
+## ===========================================
+
+### custom_resources_competencies_v2_nineboxes
+- [Detalhes não especificados no arquivo original]
+
+## ===========================================
+## TABELAS DE EMPREGADOS PERSONALIZADAS
+## ===========================================
+
+### custom_tables_employees
+- [Múltiplas colunas com IDs hash - tabela personalizada com campos dinâmicos]
+
+## ===========================================
+## RESUMO DAS PRINCIPAIS TABELAS PARA RELATÓRIOS DE RH
+## ===========================================
+
+### TABELAS MAIS IMPORTANTES:
+1. **employees** - Dados básicos dos funcionários
+2. **contracts** - Contratos atuais
+3. **contracts_cohort_by_month** - Contratos por mês (para análises temporais)
+4. **leaves** - Ausências e férias
+5. **shifts** - Registro de ponto/presença
+6. **payroll__result_concept_item_summaries** - Dados de folha de pagamento
+7. **ats_applications** - Candidatos/recrutamento
+8. **performance_review_evaluations** - Avaliações de desempenho
+9. **projects** - Projetos e alocação de funcionários
+10. **expenses_expensables** - Despesas dos funcionários
+
+### RELACIONAMENTOS PRINCIPAIS:
+- **employee_id** é a chave que conecta a maioria das tabelas
+- **contract_id** conecta contratos com outras informações
+- **project_id** conecta projetos com funcionários
+- **legal_entity_id** conecta funcionários com entidades legais
+
+### TIPOS DE DADOS MAIS COMUNS:
+- **number** - IDs, valores monetários, quantidades
+- **text** - Nomes, descrições, códigos
+- **date** - Datas de início, fim, nascimento, etc.
+- **boolean** - Flags verdadeiro/falso
