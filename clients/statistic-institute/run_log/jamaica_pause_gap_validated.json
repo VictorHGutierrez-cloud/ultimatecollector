@@ -1,0 +1,32 @@
+{
+  "client": "statistic-institute",
+  "validated_at": "2026-09-21",
+  "ready_to_demonstrate": true,
+  "note": "MCP gap_report may still flag leave_type_name=null; resolve leave_type_id 2405345 -> SIJ Sick Leave locally.",
+  "demo_leave": {
+    "id": "6347272",
+    "employee_id": "6375958",
+    "employee_name": "Felicity Ford",
+    "leave_type_id": "2405345",
+    "leave_type_name": "SIJ Sick Leave",
+    "start_on": "2026-08-03",
+    "finish_on": "2026-08-18",
+    "calendar_days": 16,
+    "approved": true
+  },
+  "sql_filters": {
+    "Data_init": "2026-08-01",
+    "Data_end": "2026-08-31"
+  },
+  "expected_sql_row": {
+    "Employee_Name": "Felicity Ford",
+    "Leave_Family": "sick",
+    "Calendar_Days": 16,
+    "Annual_Entitlement_Days": 25,
+    "Absence_Above_Threshold": "YES (> 14 calendar days, vacation/sick)",
+    "A_Factorial_Accrual_approx": 1.0959,
+    "B_Jamaica_Accrual": 0,
+    "C_Gap_approx": 1.0959
+  },
+  "sql_source": "sqlexemplo.txt (repo root) or Estudo SQL relatorios/ausencias/demonstrar_accrual_jamaica_vs_factorial.sql"
+}

@@ -1,0 +1,57 @@
+{
+  "client": "statistic-institute",
+  "started_at": "2026-09-21T01:02:57",
+  "target": {
+    "employee_name": "Felicity Ford",
+    "employee_id_hint": "6375958",
+    "leave_type_name": "SIJ Sick Leave",
+    "start_on": "2026-08-03",
+    "finish_on": "2026-08-18",
+    "calendar_days": 16,
+    "description": "SIJ resim — accrual pause >14 calendar days"
+  },
+  "action": "skipped_already_exists",
+  "leave": null,
+  "skipped_existing": {
+    "id": "6347272",
+    "start_on": "2026-08-03",
+    "finish_on": "2026-08-18",
+    "approved": true,
+    "status": null,
+    "description": "SIJ resim — accrual pause >14 calendar days"
+  },
+  "error": null,
+  "resolved": {
+    "employee_id": "6375958",
+    "employee_name": "Felicity Ford",
+    "leave_type_id": "2405345",
+    "leave_type_name": "SIJ Sick Leave"
+  },
+  "sick_allowances": [
+    {
+      "policy_id": "367078",
+      "id": "643058",
+      "action": "exists"
+    },
+    {
+      "policy_id": "367079",
+      "id": "643057",
+      "action": "exists"
+    },
+    {
+      "policy_id": "367080",
+      "id": "643056",
+      "action": "exists"
+    },
+    {
+      "policy_id": "367081",
+      "id": "643055",
+      "action": "exists"
+    },
+    {
+      "policy_id": "366459",
+      "id": "643059",
+      "action": "exists"
+    }
+  ]
+}

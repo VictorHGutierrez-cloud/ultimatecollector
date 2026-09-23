@@ -1,0 +1,332 @@
+/*
+================================================================================
+SQL RESUMO — 1 linha por colaborador (totais de gap Jamaica vs Factorial)
+Statistical Institute of Jamaica
+================================================================================
+
+Use this when you want HR totals, not absence-by-absence detail.
+  • POWER  (sqlexemplo_power.txt) = 1 row per absence (proof / demo)
+  • RESUMO (this file)            = 1 row per employee (how much to adjust)
+
+Same fences as POWER:
+  Factorial: tenure_start_date, antiquity, contract_version_*, leaves
+  Jamaica:   365/366, pause >14 calendar days on LOA types, half-up rounding,
+             SIJ tier 15/20/21/25 from sandbox assignments
+
+Filters: {{Data_init}} / {{Data_end}}
+Demo tips:
+  • Example 3 Charles (Dec vacation) → 2026-12-01 .. 2026-12-31
+  • Felicity sick pause → 2026-08-01 .. 2026-08-31
+  • Includes SIJ Extended Sick / Departmental / No Pay in pause families
+================================================================================
+*/
+
+WITH params AS (
+    SELECT
+        14 AS pause_threshold_days,
+        CAST('{{Data_init}}' AS date) AS period_start,
+        CAST('{{Data_end}}'  AS date) AS period_end,
+        CASE
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 400) = 0 THEN 366
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 100) = 0 THEN 365
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 4)   = 0 THEN 366
+            ELSE 365
+        END AS days_in_year,
+        CAST(date_trunc('year', CAST('{{Data_init}}' AS date)) AS date) AS year_start,
+        CAST(
+            date_add(
+                'day',
+                -1,
+                date_add('year', 1, date_trunc('year', CAST('{{Data_init}}' AS date)))
+            ) AS date
+        ) AS year_end
+),
+
+sij_employee_rates AS (
+    SELECT
+        employee_id,
+        annual_vacation_days,
+        annual_vacation_days * 3.0 AS max_accumulation_days
+    FROM (
+        VALUES
+            (CAST(6376909 AS BIGINT), CAST(15 AS DOUBLE)),  -- Adan Garcia
+            (CAST(6375983 AS BIGINT), CAST(15 AS DOUBLE)),  -- Calvin Collins
+            (CAST(6375967 AS BIGINT), CAST(15 AS DOUBLE)),  -- Cristopher Clarke
+            (CAST(6376070 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hannah Harris
+            (CAST(6375925 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hellen Howard
+            (CAST(6375942 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jack Johnson
+            (CAST(6376239 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jessica Rivera
+            (CAST(6376091 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nathan Nichols
+            (CAST(6376125 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nora Nelson
+            (CAST(6376217 AS BIGINT), CAST(15 AS DOUBLE)),  -- Samuel Stone
+            (CAST(6376003 AS BIGINT), CAST(15 AS DOUBLE)),  -- Sarah Smith
+            (CAST(6375969 AS BIGINT), CAST(20 AS DOUBLE)),  -- Bernarda Baker
+            (CAST(6375931 AS BIGINT), CAST(20 AS DOUBLE)),  -- Charles Carter
+            (CAST(6375951 AS BIGINT), CAST(20 AS DOUBLE)),  -- Clara Cooper
+            (CAST(6375987 AS BIGINT), CAST(20 AS DOUBLE)),  -- Diana Davis
+            (CAST(6376910 AS BIGINT), CAST(20 AS DOUBLE)),  -- Maria Lopez
+            (CAST(6376224 AS BIGINT), CAST(20 AS DOUBLE)),  -- Michael Carter
+            (CAST(6376133 AS BIGINT), CAST(20 AS DOUBLE)),  -- Noah Norris
+            (CAST(6376261 AS BIGINT), CAST(20 AS DOUBLE)),  -- Preston Pike
+            (CAST(6376075 AS BIGINT), CAST(20 AS DOUBLE)),  -- Simon Sanders
+            (CAST(6376096 AS BIGINT), CAST(20 AS DOUBLE)),  -- Sophie Simmons
+            (CAST(6376052 AS BIGINT), CAST(20 AS DOUBLE)),  -- Steven Scott
+            (CAST(6375972 AS BIGINT), CAST(21 AS DOUBLE)),  -- Alice Anderson
+            (CAST(6376230 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ashley Nguyen
+            (CAST(6376081 AS BIGINT), CAST(21 AS DOUBLE)),  -- Charlie Cooper
+            (CAST(6375934 AS BIGINT), CAST(21 AS DOUBLE)),  -- Daisy Dawson
+            (CAST(6376058 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ian Irving
+            (CAST(6375954 AS BIGINT), CAST(21 AS DOUBLE)),  -- James Jones
+            (CAST(6376262 AS BIGINT), CAST(21 AS DOUBLE)),  -- Marla Mercer
+            (CAST(6376106 AS BIGINT), CAST(21 AS DOUBLE)),  -- Nicholas Newton
+            (CAST(6375991 AS BIGINT), CAST(21 AS DOUBLE)),  -- Peter Price
+            (CAST(6376137 AS BIGINT), CAST(21 AS DOUBLE)),  -- Susan Stanley
+            (CAST(6375978 AS BIGINT), CAST(25 AS DOUBLE)),  -- Amelia Adams
+            (CAST(6376234 AS BIGINT), CAST(25 AS DOUBLE)),  -- David Thompson
+            (CAST(6375958 AS BIGINT), CAST(25 AS DOUBLE)),  -- Felicity Ford
+            (CAST(6376063 AS BIGINT), CAST(25 AS DOUBLE)),  -- Isabel Ingram
+            (CAST(6375938 AS BIGINT), CAST(25 AS DOUBLE)),  -- Laura Lewis
+            (CAST(6375995 AS BIGINT), CAST(25 AS DOUBLE)),  -- Megan Moore
+            (CAST(6376602 AS BIGINT), CAST(25 AS DOUBLE)),  -- Nadia Backfield
+            (CAST(6376112 AS BIGINT), CAST(25 AS DOUBLE)),  -- Natalie Norton
+            (CAST(6376087 AS BIGINT), CAST(25 AS DOUBLE)),  -- Samantha Stevens
+            (CAST(6376200 AS BIGINT), CAST(25 AS DOUBLE))   -- Stephanie Sullivan
+    ) AS t(employee_id, annual_vacation_days)
+),
+
+employee_base AS (
+    SELECT
+        e.id AS employee_id,
+        e.company_identifier AS employee_code,
+        e.full_name AS employee_name,
+        CAST(e.tenure_start_date AS date) AS tenure_start_date,
+        e.antiquity AS antiquity,
+        CAST(e.contract_version_starts_on AS date) AS contract_version_starts_on,
+        CAST(e.contract_version_effective_on AS date) AS contract_version_effective_on,
+        ser.annual_vacation_days,
+        ser.max_accumulation_days,
+        p.days_in_year,
+        p.year_start,
+        p.year_end,
+        p.period_start,
+        p.period_end,
+        p.pause_threshold_days,
+        CASE
+            WHEN ser.annual_vacation_days IS NOT NULL
+            THEN ser.annual_vacation_days / CAST(p.days_in_year AS DOUBLE)
+            ELSE NULL
+        END AS accrual_per_calendar_day,
+        CASE
+            WHEN CAST(e.tenure_start_date AS date) IS NULL THEN NULL
+            WHEN CAST(e.tenure_start_date AS date) > p.year_end THEN 0
+            ELSE
+                date_diff(
+                    'day',
+                    CASE
+                        WHEN CAST(e.tenure_start_date AS date) > p.year_start
+                        THEN CAST(e.tenure_start_date AS date)
+                        ELSE p.year_start
+                    END,
+                    LEAST(p.year_end, p.period_end)
+                ) + 1
+        END AS eligible_calendar_days_in_year_to_period_end
+    FROM employees e
+    CROSS JOIN params p
+    LEFT JOIN sij_employee_rates ser ON ser.employee_id = e.id
+),
+
+absences AS (
+    SELECT
+        eb.employee_id,
+        eb.employee_code,
+        eb.employee_name,
+        eb.tenure_start_date,
+        eb.antiquity,
+        eb.contract_version_starts_on,
+        eb.contract_version_effective_on,
+        eb.annual_vacation_days,
+        eb.max_accumulation_days,
+        eb.eligible_calendar_days_in_year_to_period_end,
+        eb.days_in_year,
+        eb.accrual_per_calendar_day,
+        eb.pause_threshold_days,
+        l.id AS leave_id,
+        l.leave_type_name AS absence_type,
+        CAST(l.start_on AS date) AS start_date,
+        CAST(l.finish_on AS date) AS end_date,
+        date_diff('day', CAST(l.start_on AS date), CAST(l.finish_on AS date)) + 1
+            AS calendar_days,
+        CASE
+            WHEN LOWER(COALESCE(l.duration_type, 'days')) IN ('days', 'day')
+            THEN COALESCE(l.duration, 0)
+            WHEN LOWER(l.duration_type) IN ('hours', 'hour')
+            THEN COALESCE(l.duration, 0) / 8.0
+            ELSE COALESCE(l.duration, 0)
+        END AS duration_days_factorial,
+        CASE
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+            THEN 'vacation'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+            THEN 'sick'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+            THEN 'maternity'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+            THEN 'study'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+            THEN 'compassionate'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+            THEN 'special'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+            THEN 'departmental'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            THEN 'other_loa'
+            ELSE 'other_absence'
+        END AS leave_family
+    FROM leaves l
+    JOIN employee_base eb ON eb.employee_id = l.employee_id
+    CROSS JOIN params p
+    WHERE LOWER(l.status) IN ('approved', 'accepted')
+      AND l.start_on IS NOT NULL
+      AND l.finish_on IS NOT NULL
+      AND CAST(l.start_on AS date) <= p.period_end
+      AND CAST(l.finish_on AS date) >= p.period_start
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%working from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%work from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%wfh%'
+),
+
+per_absence AS (
+    SELECT
+        a.*,
+        CASE
+            WHEN a.leave_family IN (
+                    'vacation', 'sick', 'maternity', 'study',
+                    'compassionate', 'special', 'departmental', 'other_loa'
+                 )
+             AND a.calendar_days > a.pause_threshold_days
+            THEN TRUE
+            ELSE FALSE
+        END AS jamaica_pause_applies,
+        CASE
+            WHEN a.accrual_per_calendar_day IS NULL THEN NULL
+            ELSE ROUND(a.calendar_days * a.accrual_per_calendar_day, 4)
+        END AS factorial_accrual_during_absence
+    FROM absences a
+),
+
+per_absence_gap AS (
+    SELECT
+        p.*,
+        -- Gap only when Jamaica says pause (Factorial would still accrue)
+        CASE
+            WHEN p.factorial_accrual_during_absence IS NULL THEN NULL
+            WHEN p.jamaica_pause_applies THEN p.factorial_accrual_during_absence
+            ELSE 0.0
+        END AS gap_manual_adjustment
+    FROM per_absence p
+),
+
+employee_summary AS (
+    SELECT
+        employee_id,
+        MAX(employee_code) AS employee_code,
+        MAX(employee_name) AS employee_name,
+        MAX(tenure_start_date) AS tenure_start_date,
+        MAX(antiquity) AS antiquity,
+        MAX(contract_version_starts_on) AS contract_version_starts_on,
+        MAX(annual_vacation_days) AS annual_vacation_days,
+        MAX(max_accumulation_days) AS max_accumulation_days,
+        MAX(days_in_year) AS days_in_year,
+        MAX(eligible_calendar_days_in_year_to_period_end) AS eligible_calendar_days_ytd,
+        MAX(accrual_per_calendar_day) AS accrual_per_calendar_day,
+
+        COUNT(*) AS absences_in_period,
+        SUM(CASE WHEN jamaica_pause_applies THEN 1 ELSE 0 END) AS pause_absences_count,
+        SUM(CASE WHEN jamaica_pause_applies THEN calendar_days ELSE 0 END)
+            AS total_calendar_days_on_pause_absences,
+        SUM(CASE WHEN jamaica_pause_applies THEN duration_days_factorial ELSE 0 END)
+            AS total_factorial_working_days_on_pause_absences,
+
+        ROUND(SUM(COALESCE(factorial_accrual_during_absence, 0)), 4)
+            AS sum_factorial_accrual_all_absences,
+        ROUND(SUM(
+            CASE WHEN jamaica_pause_applies
+                 THEN COALESCE(factorial_accrual_during_absence, 0)
+                 ELSE 0 END
+        ), 4) AS sum_factorial_accrual_on_pause_absences,
+        ROUND(SUM(COALESCE(gap_manual_adjustment, 0)), 4)
+            AS sum_gap_requires_manual_adjustment,
+        FLOOR(SUM(COALESCE(gap_manual_adjustment, 0)) + 0.5)
+            AS sum_gap_rounded_jamaica_half_up,
+
+        MIN(start_date) AS first_absence_start,
+        MAX(end_date) AS last_absence_end
+    FROM per_absence_gap
+    GROUP BY employee_id
+)
+
+SELECT
+    employee_code                                       AS "Employee_Code",
+    employee_name                                       AS "Employee_Name",
+    tenure_start_date                                   AS "Tenure_Start_Date",
+    antiquity                                           AS "Antiquity_Factorial",
+    annual_vacation_days                                AS "Annual_Entitlement_Days",
+    max_accumulation_days                               AS "Max_Accumulation_3y",
+    days_in_year                                        AS "Days_In_Year_365_or_366",
+    eligible_calendar_days_ytd                          AS "Eligible_Calendar_Days_YTD",
+    ROUND(accrual_per_calendar_day, 6)                  AS "Accrual_Per_Calendar_Day",
+
+    absences_in_period                                  AS "Absences_In_Period",
+    pause_absences_count                                AS "Pause_Absences_Count",
+    total_calendar_days_on_pause_absences               AS "Total_Calendar_Days_On_Pause",
+    total_factorial_working_days_on_pause_absences      AS "Total_Working_Days_On_Pause",
+    first_absence_start                                 AS "First_Absence_Start",
+    last_absence_end                                    AS "Last_Absence_End",
+
+    sum_factorial_accrual_all_absences                  AS "Sum_A_Factorial_Accrual_All_Absences",
+    sum_factorial_accrual_on_pause_absences             AS "Sum_A_Factorial_Accrual_On_Pause_Only",
+    CAST(0.0 AS DOUBLE)                                 AS "Sum_B_Jamaica_Accrual_On_Pause_Absences",
+    sum_gap_requires_manual_adjustment                  AS "Sum_C_Total_Manual_Adjustment",
+    sum_gap_rounded_jamaica_half_up                     AS "Sum_C_Rounded_Jamaica_Half_Up",
+
+    CASE
+        WHEN annual_vacation_days IS NULL THEN
+            'Employee has absences but no SIJ tier mapped — cannot size the gap.'
+        WHEN pause_absences_count = 0 THEN
+            CONCAT(
+                'No Jamaica pause cases in period (', CAST(absences_in_period AS varchar),
+                ' absence(s)). Manual pause adjustment = 0.'
+            )
+        ELSE
+            CONCAT(
+                'RESUMO: ', CAST(pause_absences_count AS varchar),
+                ' pause absence(s) / ', CAST(absences_in_period AS varchar),
+                ' total. Tier ', CAST(CAST(annual_vacation_days AS integer) AS varchar),
+                ' days/yr. Factorial would still accrue ~',
+                CAST(sum_gap_requires_manual_adjustment AS varchar),
+                ' days during pause windows; Jamaica requires 0. Adjust ~',
+                CAST(sum_gap_requires_manual_adjustment AS varchar),
+                ' days (rounded ', CAST(sum_gap_rounded_jamaica_half_up AS varchar),
+                '). No native Factorial pause.'
+            )
+    END                                                 AS "Conclusion_Employee_Total"
+
+FROM employee_summary
+ORDER BY
+    sum_gap_requires_manual_adjustment DESC,
+    employee_name;

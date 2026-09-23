@@ -1,0 +1,39 @@
+{
+  "client": "statistic-institute",
+  "started_at": "2026-09-21T01:00:52",
+  "target": {
+    "employee_name": "Felicity Ford",
+    "employee_id_hint": "6375958",
+    "leave_type_name": "SIJ Sick Leave",
+    "start_on": "2026-08-03",
+    "finish_on": "2026-08-18",
+    "calendar_days": 16,
+    "description": "SIJ resim — accrual pause >14 calendar days"
+  },
+  "action": "create_failed",
+  "leave": {
+    "status": 422,
+    "body": {
+      "errors": {
+        "messages": [
+          "Your request cannot be submitted because this absence type is not available in the employee's effective policy for the leave date"
+        ]
+      }
+    },
+    "req": {
+      "employee_id": "6375958",
+      "leave_type_id": "2405345",
+      "start_on": "2026-08-03",
+      "finish_on": "2026-08-18",
+      "description": "SIJ resim — accrual pause >14 calendar days"
+    }
+  },
+  "skipped_existing": null,
+  "error": "create leave failed status=422 body={'errors': {'messages': [\"Your request cannot be submitted because this absence type is not available in the employee's effective policy for the leave date\"]}}",
+  "resolved": {
+    "employee_id": "6375958",
+    "employee_name": "Felicity Ford",
+    "leave_type_id": "2405345",
+    "leave_type_name": "SIJ Sick Leave"
+  }
+}

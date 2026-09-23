@@ -116,7 +116,76 @@
 
 ---
 
-## Passo 6 — Fechamento (30 segundos)
+## Passo 6 — Pausa de accrual >14 dias + SQL (2 min) — prova Jamaica
+
+**Termos rápidos:**  
+- **Calendar days** = dias corridos (inclui sáb/dom) — é o que a Jamaica usa na regra dos 14 dias  
+- **Working days / Duration** = dias úteis — o que a Factorial costuma mostrar no pedido  
+- **Accrual** = acúmulo de férias
+
+### 6a. Mostrar a ausência longa
+
+**O que clicar:**
+1. **Employees** → **Felicity Ford**
+2. Aba **Time Off** / **Ausências**
+3. Abra a leave **SIJ Sick Leave** · **3–18 Ago 2026** (16 dias de calendário)
+
+**O que dizer:**
+> “Felicity ficou 16 dias de calendário de sick leave.  
+> Na Jamaica, acima de 14 dias corridos o accrual de férias deveria pausar.  
+> Na Factorial o motor continua acumulando — não existe pause automático. O gap vira ajuste manual de HR.”
+
+### 6b. Rodar o SQL (dois arquivos)
+
+| Arquivo | Quando usar | Formato |
+|---------|-------------|---------|
+| `sqlexemplo_power.txt` | Provar **cada** ausência (demo detalhada) | 1 linha = 1 ausência |
+| `sqlexemplo_resumo.txt` | Ver **quanto ajustar no total** por pessoa | 1 linha = 1 colaborador |
+
+**Filtros (os dois):** `Data_init = 2026-08-01` · `Data_end = 2026-08-31`
+
+**Resumo — colunas que importam para HR:**
+
+| Coluna | Significado |
+|--------|-------------|
+| Absences_In_Period | Quantas ausências no filtro |
+| Pause_Absences_Count | Quantas disparam pausa Jamaica (>14 + LOA) |
+| Sum_C_Total_Manual_Adjustment | **Total a ajustar** (o que a Factorial acumularia a mais) |
+| Sum_C_Rounded_Jamaica_Half_Up | Mesmo total com arredondamento ≥0,50 |
+
+**Felicity no RESUMO:** 1 linha com o total do gap (mesmo que o POWER mostre várias leaves).
+
+**POWER — colunas da prova por ausência:** ver tabela abaixo.
+
+| Coluna | O que mostra |
+|--------|----------------|
+| Tenure_Start_Date / Antiquity_Factorial | Campos **nativos** da Factorial (não inventados) |
+| Contract_Version_* | Datas de contrato da Factorial (só exibição) |
+| Days_In_Year_365_or_366 | Ano da fórmula Jamaica |
+| Annual_Entitlement_Days | Faixa SIJ da pessoa (**25** na Felicity) |
+| Max_Accumulation_3y | Teto 3 anos da policy SIJ |
+| Eligible_Calendar_Days_YTD + Jamaica_YTD_* | Prorata **Jamaica** usando `tenure_start_date` |
+| Absence_Above_Threshold | YES se pausa Jamaica |
+| A / B / C | Factorial vs Jamaica vs gap |
+| A_Rounded / C_Gap_Rounded | Arredondamento Jamaica ≥0,50 |
+
+| Coluna | Esperado Felicity |
+|--------|-------------------|
+| Leave_Family | sick |
+| Calendar_Days | 16 |
+| Annual_Entitlement_Days | **25** |
+| Days_In_Year | **365** (2026 não é bissexto) |
+| A_Factorial… | ≈ **1,10** (25÷365×16) |
+| B_Jamaica… | **0** |
+| C_Gap… | ≈ **1,10** |
+
+**O que dizer:**
+> “Este SQL cerca hire date, faixa por pessoa, 365/366, teto 3 anos e arredondamento.  
+> A pausa >14 dias continua sem campo nativo na Factorial — o gap é ajuste manual.”
+
+---
+
+## Passo 7 — Fechamento (30 segundos)
 
 **O que dizer:**
 > “Resumo: o PDF virou configuração real — 4 faixas, tetos de 3 anos, dias úteis, prorata e exemplos vivos nos colaboradores.  
@@ -132,7 +201,7 @@
 | E o teto de 3 anos? | 15→45, 20→60, 21→63, 25→75 no allowance |
 | Feriado no meio das férias? | Não desconta — `working days` + holiday not workable |
 | Recall? | Devolve os dias não usados (ajuste manual / incidence) |
-| Pausa após 14 dias off? | Regra de negócio; leave types SIJ existem para a conversa |
+| Pausa após 14 dias off? | Mostrar Felicity 3–18 Ago + SQL (`sqlexemplo.txt`) |
 
 ---
 
@@ -145,4 +214,6 @@
 - [ ] Abrir Charles (20 / ~20)  
 - [ ] Abrir Daisy ou Laura (acúmulo)  
 - [ ] Mostrar 1 leave aprovado  
+- [ ] Abrir Felicity Ford · Sick 3–18 Ago 2026  
+- [ ] (Opcional) Rodar SQL com Data_init/Data_end = Ago 2026  
 - [ ] Fechar com 2 limitações honestas (14 dias + recall)

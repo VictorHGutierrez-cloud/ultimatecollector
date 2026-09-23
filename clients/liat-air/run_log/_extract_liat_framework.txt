@@ -1,0 +1,1099 @@
+
+
+===== PAGE 1 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 1 of 22   |   Not for vendor distribution 
+Sensitivity General 
+ 
+HRIS BUSINESS REQUIREMENTS & 
+VENDOR-NEUTRAL EVALUATION FRAMEWORK 
+Core HR, Leave, Performance, Staff Travel and Integration Requirements 
+Client Liat (2020) Limited 
+Document Title HRIS Business Requirements & Vendor-Neutral Evaluation Framework 
+Document Type Internal — Business Requirements & Evaluation Instrument (Not a vendor-
+facing document) 
+Document Owner HR Business Partner 
+Date Issued 3 September 2026 
+Governing Framework Antigua & Barbuda Labour Code (Cap. 27); Liat HR Policy & Procedures 
+Manual; Liat Staff Travel Policy (v3, May-26) 
+Applies To 
+All HRIS vendors under evaluation during the current commercial 
+assessment window, including the incumbent and any comparator 
+platforms 
+Related Instruments 
+Annex A — Performance Management Requirements; Annex B — Leave 
+Module Administrative Controls; Annex C — Staff Travel Functional 
+Specification; Annex D — Vendor Due Diligence Documentation Checklist 
+Review Frequency At close of each evaluation phase, and upon material change to scope, 
+security posture, or vendor shortlist 
+  
+
+
+===== PAGE 2 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 2 of 22   |   Not for vendor distribution 
+Sensitivity General 
+1. Executive Summary & Purpose 
+This document is the governing internal instrument for Liat's HRIS evaluation and eventual 
+implementation. It consolidates the module-level requirements already developed — Performance 
+Management (Balanced Scorecard and 9-Box), Leave Module administrative-access controls, and 
+the Staff Travel functional specification — into a single, prioritised set of business requirements, 
+one governance structure, one risk register and one evaluation framework, expressed 
+independently of any vendor's platform or terminology. 
+Two workstreams are grounded in named source material rather than general description. Section 
+6 (Performance Management) maps Liat's design directly to the Balanced Scorecard Institute's 
+framework and methodology, expressed as system capabilities any qualifying platform must 
+deliver. Section 7 (Staff Travel Automation) sets out a platform-agnostic design for employees to 
+register and apply for travel, an entitlement ledger that draws down against each employee's 
+policy-defined travel benefit as tickets are issued, visibility and an advisory role for Commercial on 
+requests that touch seat inventory, and a duty-travel approval chain that puts final authorisation 
+with HR (policy compliance) and Finance (budget), consistent with the Staff Travel Policy's own 
+approving-officer structure. 
+This document is issued within the agreed three-month commercial evaluation window, during 
+which platform capability — of the incumbent and any comparator — is being assessed against 
+Liat's operational requirements before a Retain / Extend / Replace decision is taken to the Head of 
+HR, CFO and CEO. It reflects HR best practice: requirements are sequenced by compliance 
+criticality and operational risk rather than vendor convenience, administrative access is controlled 
+by segregation-of-duties principles, and every requirement carries a named accountable owner and 
+a measurable acceptance test. 
+Programme Objectives 
+• Establish a single HRIS as the system of record for employee data, leave, performance and 
+staff travel, with clearly bounded interfaces to Finance/Xandapay, HITIT and CPAT — 
+regardless of which vendor is ultimately selected. 
+• Close the two CFO-approved leave policy changes (vacation tiering, sick leave cycle 
+migration), consolidate to one policy governing leave, and complete the Xandapay payroll 
+integration. 
+• Deploy a defensible, audit-ready Performance Management capability built on the Balanced 
+Scorecard four-perspective model, weighted competencies, and a 9-box talent matrix (Section 
+6). 
+• Deploy a staff travel platform covering registration, application, entitlement drawdown, 
+Commercial visibility and a duty-travel approval chain authorised by HR and Finance, in line 
+with the approved Staff Travel Policy (Section 7). 
+• Implement named-user, least-privilege administrative access with logging and periodic review 
+— not open-ended “master admin” access, on whichever platform is selected. 
+• Obtain and evaluate documented technical, security, hosting, service-level and data-
+processing evidence from every vendor under consideration before any Retain / Extend / 
+Replace decision is finalised (Section 5). 
+ 
+ 
+
+===== PAGE 3 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 3 of 22   |   Not for vendor distribution 
+Sensitivity General 
+2. Business Requirements — Module Prioritisation 
+Requirements are classified Must-Have (compliance-critical, executive-mandated, or blocking active 
+operations) or Nice-to-Have (efficiency/engagement gains not tied to a current obligation). This 
+classification is a Liat methodology, independent of any vendor, and applies programme-wide to 
+whichever platform is evaluated or selected. 
+Requirement / Module Priority Status Reference 
+Core Employee Records & Org 
+Hierarchy Must-Have Foundational — live — 
+Leave Management incl. admin 
+access controls Must-Have Policy approved; controls pending 
+sign-off Annex B 
+Time & Attendance / Payroll 
+Integration Must-Have ~80% complete; blocked pending 
+tax country codes 
+Integration 
+workstream 
+Performance Management 
+(Balanced Scorecard + 
+Competencies + 9-Box) 
+Must-Have 
+Framework and required 
+capabilities detailed, awaiting 
+internal review & training date 
+Section 6; Annex 
+A 
+Staff Travel — Registration, 
+Application, Entitlement 
+Drawdown & Approval 
+Must-Have Platform-agnostic design and 
+approval workflow detailed 
+Section 7; Annex 
+C 
+Reservations Management 
+Integration (HITIT) Must-Have Feasibility assessment required To be scoped 
+LMS Integration (CPAT) Must-Have Feasibility assessment required To be scoped 
+Safety & Compliance Audit 
+Tracking Must-Have Feasibility assessment required To be scoped 
+Leave & Self-Service Reporting Must-Have Workaround under review To be confirmed 
+Recruitment & Onboarding 
+Module Must-Have — — 
+Career Development, Surveys 
+& Employee Voice Must-Have — — 
+Standalone L&D / Training 
+Administration 
+Nice-to-
+Have 
+Not scoped (CPAT covers 
+compliance training) — 
+3. Governance & Stakeholder Responsibilities 
+Stakeholder Role Key Accountability 
+Head of HR (Liat) 
+Executive 
+Sponsor / Sign-
+off Authority 
+Approves scope changes, module go-live, and this 
+framework prior to Executive submission; approves final 
+vendor selection recommendation 
+HR Business 
+Partner 
+Requirements 
+Owner / Business 
+Analyst 
+Requirements definition, vendor evaluation coordination, 
+User Acceptance Testing coordination, policy-to-system 
+translation, day-to-day vendor liaison 
+
+===== PAGE 4 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 4 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Stakeholder Role Key Accountability 
+HR 
+Generalist/HRBP 
+Process Owner — 
+Staff Travel 
+Staff Travel & HRIS Administration; verifies benefit 
+registration and authorises dependent eligibility directly 
+within the HRIS 
+CFO Finance Sponsor 
+Budget approval, payroll integration sign-off, administrative 
+access authorisation for Finance systems, commercial due-
+diligence sign-off on vendor pricing and contract terms 
+Head of IT 
+Technical 
+Sponsor / Vendor 
+Due-Diligence 
+Authority 
+Infrastructure and security review of every vendor under 
+evaluation (Section 5), administrative access provisioning, 
+SSO/MFA configuration, sign-off on hosting, security and 
+DPA documentation prior to shortlisting 
+Chief Commercial 
+Officer / 
+Commercial Team 
+Duty-Travel 
+Approving Officer 
+(Commercial 
+dept.) & Seat-
+Inventory 
+Visibility (Section 
+7) 
+Approves duty travel for Commercial, Sales, Marketing and 
+Customer Experience staff per Staff Travel Policy §5.3.1(e); 
+views and may flag leisure (space-available) requests for 
+commercial or seat-inventory conflict. This is an 
+advisory/approval flag, not a veto over HR or Finance 
+authorisation — see Section 7.6 
+Payroll (Finance) Process Owner — 
+Payroll 
+Payroll data validation, pay-cycle testing, reconciliation sign-
+off 
+Revenue Accounts 
+(Finance) 
+Process Owner — 
+Travel Expense 
+Authorisation 
+(Section 7) 
+Confirms budget code, authorises duty-travel spend per 
+Staff Travel Policy §5.3.1 & §5.9, processes per diem/HOTAC 
+and expense reimbursement claims 
+Vendor 
+Implementation 
+Lead 
+Vendor Delivery 
+Lead 
+Configuration, UAT support, training delivery, defect 
+resolution against SLA — role held by whichever vendor is 
+selected following evaluation 
+Travel / Groups 
+Desk 
+Process Owner — 
+Staff Travel 
+Fulfilment 
+Booking fulfilment, ticket-reference recording, entitlement 
+drawdown execution at point of ticketing (Section 7) 
+Internal Audit / 
+Head of HR 
+(jointly) 
+Control Owner Segregation-of-duties testing, administrative activity log 
+review, entitlement-ledger reconciliation review 
+ 
+4. Security, Data Governance & Administrative Access Controls 
+(Internal Controls) 
+Master/administrative system access shall be provisioned on a controlled, auditable basis on 
+whichever platform is selected. Broad administrative rights are not, by themselves, a governance 
+control — the controls below are mandatory conditions of any elevated access grant, and apply 
+equally to the incumbent and to any replacement platform. 
+• Named-user accounts only; no shared or generic administrative credentials. 
+• Multi-factor authentication on all administrative accounts, where the platform supports it — 
+platform MFA support is itself a mandatory evaluation criterion (Section 5). 
+
+===== PAGE 5 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 5 of 22   |   Not for vendor distribution 
+Sensitivity General 
+• Least-privilege and segregation-of-duties design — no single administrator combines 
+configuration, approval and record-purge rights without independent review. 
+• Full administrative activity logging (system audit trail), with periodic (at minimum quarterly) 
+access reviews. 
+• Immediate access revocation on role change or separation, tracked via a documented 
+offboarding checklist. 
+• Documented approval prior to any sensitive configuration change (rate tables, entitlement 
+rules, approval workflows, leave-policy parameters, staff travel entitlement tiers). 
+• Data deletion, record purging, or other irreversible database operations require documented 
+authorisation, confirmed retention compliance, a verified backup/recovery method and an 
+auditable change record. No production database change may be performed through shared 
+credentials. 
+• Secure credential transfer and account-activation protocol agreed between the vendor and Liat 
+IT before any administrative access is provisioned; authentication secrets are never 
+transmitted via email, chat, or meeting minutes. 
+Administrative Training & Acceptance Testing 
+Designated administrators complete formal training and pass acceptance testing before go -live, 
+covering: leave-rule maintenance, accrual-engine and entitlement-ledger updates, role/permission 
+management, audit-log review, data-correction procedures, and backup/recovery/controlled-
+deletion procedures. Training completion and test results are retained as governance evidence.  
+  
+
+===== PAGE 6 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 6 of 22   |   Not for vendor distribution 
+Sensitivity General 
+5. Vendor Technical, Security, Hosting, SLA & Data-Processing 
+Due Diligence 
+The controls in Section 4 govern how Liat administers whichever platform is chosen. This section 
+governs what Liat must obtain and independently assess from each vendor, any comparator — 
+before that platform is trusted with employee, dependant, payroll-adjacent and travel-entitlement 
+data. No vendor proceeds to contract or renewal sign-off without satisfying every documentation 
+item below, or an explicit, time-bound compensating-control exception approved jointly by the 
+Head of IT and Head of HR. 
+5.1 Required Vendor Documentation, by Domain 
+Domain Documentation Required 
+A. Technical 
+Architecture 
+System architecture diagram and technology stack; database engine and data 
+model overview; API/integration documentation (REST/SOAP, webhooks, rate 
+limits); customisation and configuration boundaries; multi-tenant vs. single-
+tenant architecture; supported browsers/mobile OS versions; release, patch 
+and upgrade cadence, and how Liat is notified of breaking changes. 
+B. Security 
+Independent security certification — SOC 2 Type II report or ISO/IEC 27001 
+certificate (or equivalent); most recent third-party penetration test summary 
+(within 12 months) and remediation status; vulnerability management and 
+patch-management policy; encryption standards at rest and in transit 
+(minimum AES-256 / TLS 1.2+); authentication and access control capability, 
+including SSO/SAML and MFA support; incident response plan and breach-
+notification commitment (timeframe and method); vendor personnel security 
+policy (background checks, access logging) for any staff with access to Liat 
+data. 
+C. Hosting & 
+Infrastructure 
+Hosting provider and physical data-centre location(s), including whether any 
+Liat data is hosted, replicated or backed up outside the vendor's stated primary 
+region; cloud vs. on-premise architecture; redundancy and failover design; 
+disaster recovery plan with stated Recovery Time Objective (RTO) and 
+Recovery Point Objective (RPO); backup frequency, retention period and 
+restore-testing evidence; documented uptime history for the preceding 12 
+months; business continuity plan. 
+D. Service Level 
+Agreement (SLA) 
+Uptime commitment and measurement methodology; support tiers with 
+response- and resolution-time commitments by severity level; escalation 
+matrix and named account/support contacts; planned-maintenance window 
+policy and advance-notice commitment; service credits or other remedies for 
+SLA breach; defect-resolution SLA tied to Liat's UAT severity classification 
+(Section 10). 
+E. Data Processing & 
+Privacy 
+Data Processing Agreement (DPA) defining Liat as data controller and the 
+vendor as data processor, with data-ownership and data-portability terms; full 
+sub-processor list and a change-notification process for any new sub-processor; 
+data retention and deletion policy, including post-termination data 
+return/destruction timeline and format; cross-border data-transfer mechanism 
+where applicable (standard contractual clauses or equivalent); confirmation of 
+applicable privacy-framework compliance (e.g., GDPR where any EU touchpoint 
+exists) and Liat/regulator audit rights over the vendor's security controls. 
+F. Commercial & 
+Financial Standing 
+Evidence of financial viability/going-concern status appropriate to a multi-year 
+HR system-of-record dependency; cyber-liability and errors-&-omissions 
+insurance confirmation; at least two references from comparable-scale clients, 
+
+===== PAGE 7 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 7 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Domain Documentation Required 
+with an aviation or Caribbean-region reference preferred; exit-assistance terms 
+(data export format, transition support period, and associated cost) in the 
+event Liat terminates or does not renew. 
+This due-diligence set applies in addition to — not instead of — the functional and governance 
+requirements in Sections 4, 6 and 7. A vendor that meets every functional requirement but cannot 
+evidence Domain B (Security) or Domain E (Data Processing) should not be shortlisted without an 
+explicit, documented risk acceptance at Head of HR / Head of IT / CFO level. 
+5.2 Evaluation & Risk-Rating Methodology 
+Each domain is assessed on a three-point scale — Documented & Verified, Documented but 
+Unverified (evidence supplied but not independently checked), and Not Provided — and rolled up 
+into an overall vendor risk rating for the Head of HR, CFO and CEO decision paper: 
+Rating Definition & Required Action 
+🔴 Critical 
+No independent security certification (SOC 2 / ISO 27001 or equivalent) or no DPA 
+offered. Vendor is not shortlisted pending remediation, regardless of functional fit or 
+price. 
+🟠 High 
+Certification/DPA exist but are outdated (>18 months), scoped narrowly, or 
+hosting/data-residency terms are undisclosed. Proceed only with a named 
+compensating control and a fixed remediation date. 
+🟡 Moderate 
+All documentation supplied and current, but SLA remedies are weak (no service 
+credits) or RTO/RPO figures are not stated numerically. Acceptable with contractual 
+strengthening at negotiation. 
+🟢 Low 
+Current, third-party-verified certification; documented RTO/RPO and uptime history; 
+DPA with clear sub-processor and exit terms; SLA with measurable remedies. No 
+further action required. 
+5.3 Vendor Due-Diligence Response Matrix (Annex D) 
+Each vendor under evaluation, completes the matrix below (issued as Annex D) with a Yes / Partial 
+/ No response and a reference to the supporting document supplied. Incomplete matrices are 
+treated as “Not Provided” for the corresponding domain under Section 5.2, not chased indefinite ly. 
+Due-Diligence Item Response Evidence 
+Ref. Risk Rating 
+SOC 2 Type II or ISO 27001 certificate provided, dated 
+within 12 months    
+Penetration test summary provided, dated within 12 
+months, with remediation status    
+Data-centre location(s) and any secondary/backup 
+regions disclosed    
+Documented RTO and RPO provided    
+Encryption at rest and in transit confirmed (standard 
+stated)    
+
+===== PAGE 8 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 8 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Due-Diligence Item Response Evidence 
+Ref. Risk Rating 
+SSO/SAML and MFA support confirmed    
+Signed DPA available, naming Liat as controller and 
+vendor as processor    
+Full sub-processor list and change-notification process 
+provided    
+Data export format and exit/termination assistance 
+terms confirmed    
+SLA includes measurable uptime commitment and 
+service credits    
+Support response/resolution times stated by severity 
+level    
+Insurance (cyber liability, E&O) and financial standing 
+evidence provided    
+  
+
+===== PAGE 9 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 9 of 22   |   Not for vendor distribution 
+Sensitivity General 
+6. Performance Management — Balanced Scorecard Requirements 
+6.1 Framework Basis 
+Liat's performance model is built on the Balanced Scorecard Institute's methodology — the same 
+framework referenced in the Balanced Scorecard Essentials programme materials — rather than an 
+ad hoc rating form. The framework anchors all objectives to a Mission/Vision centre and evaluates 
+performance across four perspectives: Financial/Stewardship, Customer/Stakeholder, Internal 
+Process, and Organisational Capacity/Learning & Development. This framework is independent of 
+any HRIS vendor; it is a Liat design requirement that any evaluated platform must be capable of 
+supporting, not a feature of a particular product. 
+6.2 The Four Perspectives Applied to Liat 
+BSC Perspective Liat Strategic Theme 
+(illustrative) 
+Example Measures / Objective Owner 
+Focus 
+Financial / 
+Stewardship 
+Cost control, route and network 
+profitability, budget discipline 
+Cost per available seat mile, budget 
+variance, revenue per route 
+Customer / 
+Stakeholder 
+On-time performance, safety, 
+guest and interline experience 
+OTP, safety incident rate, customer 
+satisfaction score 
+Internal Process 
+MRO turnaround, 
+regulatory/compliance audit 
+readiness, HR case-cycle discipline 
+Audit pass rate, disciplinary/grievance 
+cycle time, turnaround time metrics 
+Organisational 
+Capacity / Learning 
+& Development 
+Training completion, succession 
+bench strength, HRIS adoption 
+Training completion rate, 9-box bench 
+coverage, self-service adoption 
+6.3 Nine Steps to Success™ — Mapped to Liat Deliverables 
+This mapping is the working reference for the design review referenced in Section 2 and Annex A; 
+it replaces informal description of “BSC and 9-box” with a stage-by-stage deliverable, expressed as 
+a requirement any platform must be able to support. 
+Nine Steps to Success™ 
+Stage Liat Deliverable 
+1–2. Assessment & 
+Strategy 
+Corporate strategic themes confirmed by Executive Committee; forms 
+the top of the cascade 
+3. Objectives & 4. Strategy 
+Map 
+Corporate-level Strategy Map built across the four perspectives 
+above; department-level objectives derived from it 
+5. Performance Measures & 
+6. Initiatives 
+Measures and owners assigned per objective in the HRIS goals 
+module; initiatives linked as sub-goals 
+7. Alignment (Cascading) 
+Department and individual scorecards cascaded from the corporate 
+scorecard using goal-tracking, parent-goal and evaluator-group 
+functionality, so individual objectives trace to a corporate theme 
+8. Rollout & Performance 
+Analysis 
+Quarterly appraisal cycle in the HRIS performance module; 360° 
+multi-evaluator review (self, supervisor, peer) 
+
+===== PAGE 10 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 10 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Nine Steps to Success™ 
+Stage Liat Deliverable 
+9. Evaluation Final rating rolled up 70% objectives / 30% competencies; 9-Box 
+Matrix populated from appraisal outcomes for talent review 
+6.4 Cascading & Weighting 
+Individual scorecards cascade from the corporate scorecard through department-level objective 
+owners, consistent with Nine Steps stage 7 (Alignment). Final individual ratings are calculated at 
+70% weighted objectives / 30% weighted competencies — this is the figure carried into the 
+acceptance test at Section 11. 
+6.5 Required System Capabilities & Governance Controls 
+The table below sets out the performance-management capabilities any HRIS vendor must 
+demonstrate, together with the governance control each capability requires. This is a deliberate 
+response to AI-assisted goal-drafting and appraisal-summarisation features that a number of 
+vendors, now offer: both are genuinely useful for consistency and speed, but neither can be 
+permitted to substitute for evaluator judgement in a process that feeds disciplinary, promotion and 
+compensation decisions. 
+Required Capability How It Is Used in the Liat BSC 
+Design Governance Control Required 
+Goal cascading (parent–
+child goal linkage, 
+evaluator groups) 
+Houses the cascaded corporate → 
+department → individual 
+scorecard; each individual goal 
+links to a parent corporate 
+objective 
+Parent-goal linkage mandatory 
+before a goal can be published — 
+no orphan individual goals 
+AI-assisted goal drafting 
+(if offered) 
+Suggests candidate SMART goals 
+from an employee's appraisal 
+history, goal history and job role, 
+to speed up objective-setting 
+AI output is a drafting suggestion 
+only; manager and employee must 
+review, amend and approve every 
+AI-suggested goal — no goal is 
+auto-published 
+360° multi-rater review 
+(self / supervisor / peer) 
+Delivers the multi-rater input 
+required for a defensible 
+competency rating 
+Evaluator groups configured per 
+role; anonymised peer input where 
+policy requires it 
+Custom review 
+questions by role 
+Competency questions tailored to 
+flight operations, ground 
+operations, commercial and 
+corporate roles 
+Question sets approved by Head of 
+HR before each cycle; changes mid-
+cycle require sign-off 
+AI-assisted appraisal 
+summarisation (if 
+offered) 
+Generates a first-draft consolidated 
+summary from all evaluator 
+comments for the final evaluator 
+Explicitly labelled as an AI-
+generated draft; final evaluator 
+must read underlying comments 
+and may not submit the AI 
+summary unedited — audit trail 
+retains both the AI draft and the 
+evaluator's final text 
+Electronic sign-off / e-
+signature 
+Manager and employee e-sign the 
+completed appraisal, closing the 
+record 
+Sign-off is the final control point; a 
+record cannot close without both 
+signatures 
+
+===== PAGE 11 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 11 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Required Capability How It Is Used in the Liat BSC 
+Design Governance Control Required 
+9-box talent matrix 
+Plots performance against potential 
+for succession and career-path 
+planning, populated from closed 
+appraisal cycles 
+Access restricted to HR and the 
+employee's direct line of 
+management — not general 
+employee-visible 
+Individual Development 
+Plan (IDP) linkage 
+Links each employee's 
+development actions back to their 
+goals and 9-box placement, with a 
+named coach 
+IDP creation logged; review 
+cadence set by manager, minimum 
+semi-annual 
+Governance notes: AI-generated goal suggestions and appraisal summaries are drafting aids. They must 
+not be treated as the evaluator's own assessment, must remain edit-before-submit, and both the AI-
+generated text and the evaluator's final text are retained in the audit trail. This control should be written 
+into the Performance Management module's user acceptance test script (Annex A) as a named test case, 
+not left as an assumed practice — and applies to whichever vendor's AI feature is in use. 
+  
+
+===== PAGE 12 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 12 of 22   |   Not for vendor distribution 
+Sensitivity General 
+7. Staff Travel Automation — Business Requirements 
+7.1 Policy Basis 
+This section configures the required workflow against the current Staff Travel Policy (Version 3, 
+May-26): Section 5 (Business Travel) and Section 6 (Leisure Travel) are treated as two distinct 
+request types with two distinct approval chains, because the policy itself treats them as legally and 
+operationally different — duty travel is company business with a cost to authorise; leisure travel is 
+a discretionary benefit drawn from a fixed annual entitlement. Collapsing the two into one workflow 
+would misstate that distinction and is deliberately avoided, on any platform. 
+7.2 Registration 
+Registration is the platform equivalent of the paper Declaration of Eligible Relatives Form. On hire 
+(post-probation, or after three months for contractual staff), HR creates the employee's staff travel 
+record; the employee then registers or updates eligible dependants through self-service, subject to 
+HR verification against supporting documentation. Registration renews annually on 1 January, with 
+an automated reminder rather than a manual tracking exercise. 
+7.3 Entitlement Ledger & Drawdown 
+Each employee's annual leisure-travel entitlement is configured by grade tier, reproducing the table 
+in Policy §6.3 exactly: 
+Grade 100% Free Base 
+Fare (annual) 
+50% Base Fare 
+(annual) 
+15% Base Fare 
+(annual) 
+1 — C-Suite / Board Members 12 4 10 
+2 — Directors / HoD 10 4 10 
+3 — Managers 8 4 10 
+4 — Officers, Supervisors, 
+Other Employees 6 4 10 
+The ledger behaves on the same logic as a standard leave entitlement/accrual engine, repurposed 
+for travel: a running balance per tier is held on the employee record, decremented by one at the 
+point a ticket is issued (Section 7.5, Leisure workflow), and reset to the grade-tier allocation on 1 
+January. Balance is visible to the employee on their dashboard and to HR and Accounts on the 
+employee's travel record, so entitlement status is never discovered only at the point of a declined 
+ticket. 
+7.4 Duty (Business) Travel — Application & Approval Workflow 
+Duty travel has no entitlement drawdown; it is a cost to be authorised, not a benefit to be 
+consumed. The workflow below digitises the Travel Authorisation Form and its approval block 
+exactly as set out in Policy §5.3, §5.3.1, §8 and §9. 
+Stage Actor Required System Action 
+1. Apply Employee 
+Submits Duty Travel Request (digitised Travel Authorisation 
+Form): destination, dates, purpose, routing, booking-
+arranged-by. Auto-populated from employee profile. 
+
+===== PAGE 13 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 13 of 22   |   Not for vendor distribution 
+Sensitivity General 
+Stage Actor Required System Action 
+2. Recommend Line Manager / HOD Recommends or returns the request; confirms operational 
+necessity. 
+3. Approve 
+(Officer) 
+Approving Officer 
+per Policy §5.3.1 
+(CEO / COO / CFO / 
+CCO by 
+department; Board 
+Chair for CEO 
+travel) 
+Approves or declines. Routing rule enforced by department 
+field — a Commercial-department request routes to the CCO; 
+a Finance/HR/IT request routes to the CFO; and so on, 
+matching §5.3.1 exactly. 
+4. Policy 
+Compliance HR Department 
+Confirms the request complies with the Staff Travel Policy 
+(eligibility, per diem tier, HOTAC entitlement by grade). This 
+is a compliance check, not a budget check. 
+5. Authorise 
+(Budget) Finance 
+Confirms budget code and cost centre, authorises the spend, 
+releases the request for booking. No booking may proceed 
+before this step per Policy §5.3 and §5.7. 
+6. Book & 
+Ticket 
+Manager, CEO Office 
+(C-Suite) or 
+Corporate/Travel 
+Groups Desk (all 
+other staff) 
+Books and issues the ticket; records ticket reference and PNR 
+against the request. 
+7. 
+Reimbursement 
+Employee → 
+Finance 
+Post-travel expense claim submitted within 2 business days, 
+matched to the approved request via the Travel Authorisation 
+Form reference number, paid within the policy timeline. 
+7.5 Leisure Travel — Application, Commercial Visibility & Entitlement 
+Drawdown 
+Stage Actor Required System Action 
+1. Register Employee Completes/updates the Declaration of Eligible Relatives via self-
+service; annual renewal auto-triggered 1 January. 
+2. Apply Employee 
+Submits Leisure Travel Request specifying benefit tier (100% / 
+50% / 15%), traveller(s) from the registered dependant list, and 
+Firm or Standby (Space-Available) fare type. 
+3. Eligibility & 
+Balance Check 
+System 
+(automated) 
+Validates post-probation status and current entitlement balance for 
+the selected tier. A request against a zero balance is blocked at 
+submission, not discovered at ticketing. 
+4. Commercial 
+Visibility 
+Commercial 
+Team 
+Views Standby (Space-Available) requests on high-demand 
+routes/dates and may flag a commercial or seat-inventory concern. 
+This is advisory input attached to the request record — see Section 
+7.6. 
+5. HR 
+Confirmation HR Department Confirms eligibility documentation is current (ID card, dependant 
+records) and resolves any Commercial flag before release. 
+6. Ticket & 
+Draw Down 
+Travel / Groups 
+Desk 
+Issues the ticket and decrements the employee's entitlement 
+ledger for that tier by one, effective at booking (at application), so 
+a cancelled or unticketed request does not consume entitlement. 
+
+===== PAGE 14 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 14 of 22   |   Not for vendor distribution 
+Sensitivity General 
+7.6 Commercial's Role — Visibility and Advisory Flag, Not a Veto 
+The Staff Travel Policy gives the Chief Commercial Officer approving-officer authority only over 
+duty travel originating in Commercial, Sales, Marketing and Customer Experience (§5.3.1(e)). It 
+does not give Commercial an approval role over other departments' leisure travel. To avoid the 
+platform quietly creating an approval right the policy does not grant, Commercial's role on 
+Standby/Space-Available leisure requests is scoped deliberately as visibility plus an advisory flag — 
+for example, where a route or date is under commercial pressure for revenue seat inventory — 
+attached to the request for HR to weigh, not a hold that blocks the request outright. If Liat intends 
+Commercial to hold an actual approval right over space-available leisure travel (as distinct from 
+advisory visibility), that is a policy decision for Head of HR and the CCO to make explicitly and 
+reflect in a Staff Travel Policy amendment before it is built into the workflow as a hard approval 
+gate, on any platform. 
+7.7 Required System Capabilities 
+Required Capability How It Is Used in the Liat Staff Travel Design 
+Configurable request types 
+with named primary owner 
+and “approver(s) required” 
+toggle 
+Two custom request types are configured: “Duty Travel Request” and 
+“Leisure Travel Request,” each with its own form fields and its own 
+approval chain as set out in 7.4 and 7.5 
+Workflow automation & 
+rules-based routing 
+Routes the Duty Travel Request to the correct Approving Officer 
+automatically by department, matching Policy §5.3.1 without manual 
+reassignment 
+Configurable notifications 
+(action-based, date-based, 
+scheduled) 
+Triggers approval reminders, annual registration renewal, and 
+entitlement-balance-low alerts 
+Custom fields on the 
+employee record 
+Holds the entitlement ledger (running balance per tier, per employee, 
+resetting 1 January) as an extension of the same custom-field 
+mechanism used elsewhere in Employee Management 
+Document management / 
+e-signature 
+Stores the signed Travel Authorisation Form and Expense 
+Reimbursement Form as the permanent record against each request 
+Reporting & analytics 
+(custom, scheduled, 
+graphical, exportable) 
+Produces entitlement-utilisation reports by grade and tier, duty-travel 
+spend by cost centre, and an exception report of any ledger variance 
+for the reconciliation in Section 7.8 
+Mobile app support for the 
+request workflow 
+Allows employees to submit and track both Duty and Leisure Travel 
+Requests from a mobile device, consistent with existing mobile self-
+service use 
+7.8 Reconciliation & Reporting Controls 
+• Monthly reconciliation of the entitlement ledger against tickets issued, owned jointly by HR and 
+Revenue Accounts. 
+• Quarterly exception report of any employee whose ledger shows a negative or unexplained 
+balance, escalated to HR for correction. 
+• Year-end zero-out and reset to grade-tier allocation on 1 January, with the prior year's closing 
+balances archived, not deleted, for audit purposes. 
+
+===== PAGE 15 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 15 of 22   |   Not for vendor distribution 
+Sensitivity General 
+• Duty-travel spend reporting by cost centre made available to CFO and department heads 
+monthly, distinct from the leisure-entitlement ledger. 
+  
+
+===== PAGE 16 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 16 of 22   |   Not for vendor distribution 
+Sensitivity General 
+8. Integration Requirements & Phasing 
+System Data Exchanged Phase 
+Xandapay (Payroll) Employee master data (out); 
+attendance logs (in) 
+Phase 1 — mandatory; UAT 
+completion blocked pending tax 
+country codes 
+HITIT (Crew/Flight 
+Ops) 
+Crew attendance, leave logs, training 
+compliance status 
+Phase 1 — mandatory; feasibility 
+assessment required first 
+CPAT (Aviation LMS) Training records and 
+compliance/currency status 
+Phase 1 — mandatory; feasibility 
+assessment required first 
+SharePoint / 
+Document Repository 
+Supporting documents, 
+dependant/travel records, signed TAF 
+and Expense forms 
+Phase 1 — mandatory for Staff 
+Travel and HR file evidence 
+Email / Microsoft 
+Teams 
+Notifications and approval alerts (no 
+sensitive medical, banking or 
+dependant data in message body) 
+Phase 1 — mandatory 
+Recruitment/ATS, 
+Survey Tools 
+Candidate and engagement-survey 
+data Future — optional, Nice-to-Have 
+Known risk: the Time & Attendance/Roster functions proposed within the Performance/BSC and Staff 
+Travel requirements must be scoped against Xandapay's existing attendance-capture role to avoid 
+duplicate licensing of the same function under two workstreams (“double-billing risk”), whichever HRIS 
+is selected. This is to be resolved as a Decision Register item before Phase 1 sign-off. 
+9. Vendor Evaluation Methodology 
+The Retain / Extend / Replace decision is made against this framework as a whole, not against any 
+single domain in isolation. The recommended weighting for the decision paper to the Head of HR, 
+CFO and CEO is set out below; weightings may be adjusted by the Head of HR and CFO jointly 
+before scoring begins, but must be fixed before any vendor is scored to avoid post-hoc 
+rationalisation of a preferred outcome. 
+Evaluation Domain Weighting Scoring Basis 
+Functional fit against Must-Have 
+requirements (Sections 2, 6, 7) 35% Scored per requirement: Fully Met / Partially 
+Met / Not Met 
+Technical, security, hosting, SLA & 
+data-processing due diligence 
+(Section 5) 
+30% 
+Any Critical-rated gap under Section 5.2 caps 
+the vendor's overall score regardless of 
+functional fit 
+Integration feasibility with Xandapay, 
+HITIT, CPAT, SharePoint (Section 8) 15% Confirmed / Feasible-Unconfirmed / Not 
+Feasible per interface 
+Total cost of ownership over the 
+contract term, including 
+implementation, licensing and exit 
+costs 
+10% Normalised per active user per annum 
+Implementation track record and 
+references (Section 5.1(F)) 10% Weighted by reference-checked evidence, not 
+vendor-supplied case studies alone 
+
+===== PAGE 17 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 17 of 22   |   Not for vendor distribution 
+Sensitivity General 
+10. Indicative Implementation Phases & Timeline 
+The phasing below applies once a vendor is selected; it is indicative and subject to the outcome of 
+the feasibility assessments referenced in Section 8. 
+Phase Workstream Key Milestone Indicative Timing 
+0 — Governance & Foundation 
+Evaluation sign-off; vendor due-
+diligence completion (Section 5); 
+access controls; decision register 
+Framework and 
+vendor selection 
+approved by Head 
+of HR 
+  
+1 — Core & Compliance-Critical Leave (vacation/sick migration); 
+payroll integration completion 
+Payroll UAT 
+closed; leave rules 
+live 
+  
+2 — Performance Management 
+BSC strategy map & cascade, 
+competencies, 9-box configuration 
+& training (Section 6) 
+Internal review 
+complete; pilot 
+cycle run 
+  
+3 — Staff Travel 
+Registration, entitlement ledger, 
+Duty and Leisure request types, 
+approval matrix (Section 7) 
+UAT pass on both 
+workflows; go-live 
+for duty & leisure 
+travel 
+  
+4 — Operational Integrations HITIT, CPAT, Safety/Compliance 
+tracking 
+Feasibility 
+confirmed; 
+interfaces built & 
+tested 
+  
+5 — Optimisation 
+Nice-to-Have items; adoption 
+review; evaluation-window close-
+out 
+Adoption KPI 
+reviewed; 
+evaluation decision 
+made 
+  
+  
+
+===== PAGE 18 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 18 of 22   |   Not for vendor distribution 
+Sensitivity General 
+11. Acceptance Criteria 
+• Each module passes documented UAT with zero open Severity-1 or Severity-2 defects prior to 
+go-live. 
+• Leave, payroll and travel calculations reconcile to manual/legacy figures at ≥99% accuracy 
+across a full test cycle. 
+• Performance scores recalculate correctly across quarterly and YTD roll-ups per the approved 
+weighting (70% objectives / 30% competencies), with every individual goal traceable to a 
+parent corporate objective (Section 6.3–6.4). 
+• Every AI-assisted performance record (goal drafting, appraisal summarisation) shows evidence 
+of evaluator review and edit prior to sign-off — a wholly unedited AI output is treated as a 
+failed acceptance test (Section 6.5). 
+• The staff travel entitlement ledger reconciles to policy-defined grade-tier allocations with zero 
+unexplained variance at each monthly reconciliation and at year-end reset (Section 7.3, 7.8). 
+• Employee benefit registrations and dependant profile creations route directly to the HR 
+Management Team dashboard for verification, blocking automated benefit activation until 
+explicit HR Management approval is logged. 
+• No duty travel booking is shown to have proceeded in the system without both HR policy-
+compliance confirmation and Revenue Accounts budget authorisation recorded against the 
+request (Section 7.4). 
+• Administrative access review evidences named-user accounts, MFA (where supported), and a 
+completed segregation-of-duties test with no unresolved conflicts. 
+• Selected vendor's Section 5 due-diligence documentation is current, complete and signed off 
+by Head of IT prior to Phase 0 close — treated as a gating acceptance criterion, not a post-go-
+live formality. 
+• Self-service adoption is measurable post go-live against a defined KPI (e.g., monthly active 
+users, transaction volume) — the current baseline of ~60–70 monthly logins across ~165 
+employees is the pre-implementation reference point. 
+• All Phase 1 integrations (payroll, HITIT, CPAT, SharePoint) are confirmed operating end -to-end 
+in production, not UAT, before that phase is closed. 
+12. Assumptions & Exclusions 
+Assumptions 
+• Liat will provide timely policy sign-off (vacation, sick leave, staff travel, performance) as the 
+authoritative source for configuration, regardless of vendor. 
+• The Staff Travel Policy is the authoritative and current version for configuration; any future 
+policy amendment (e.g., to Commercial's role on leisure travel — Section 7.6) requires a 
+corresponding change request against this framework. 
+• Commercial's visibility and flag on leisure travel requests is advisory only, as currently drafted; 
+it does not substitute for or override the HR and Finance authorisation required for duty travel.  
+• Required data (org hierarchy, approver assignments, entitlement balances, rate tables) will be 
+supplied in the format the selected vendor specifies for migration. 
+• Feasibility assessments for HITIT and CPAT integration are commissioned and funded as a 
+discrete pre-Phase-4 activity. 
+
+===== PAGE 19 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 19 of 22   |   Not for vendor distribution 
+Sensitivity General 
+• Named administrators (IT and Finance) complete required training before elevated access is 
+granted, on whichever platform is selected. 
+Exclusions (this framework) 
+• Recruitment/ATS, standalone L&D, and employee survey modules — Nice-to-Have, not 
+committed in this phase. 
+• Detailed field-level form specifications, approval-matrix line items and UAT scripts for Staff 
+Travel beyond the workflow set out in Section 7 — governed by Annex C. 
+• Detailed BSC objective library, scoring formulae and 9-box mechanics beyond the framework 
+set out in Section 6 — governed by Annex A. 
+• Legal review of the Staff Travel Policy or HR Manual against the Labour Code — outside HRIS 
+scope; addressed separately by HR/Legal. 
+• Vendor pricing, contract negotiation and legal terms — addressed separately by CFO and Legal 
+once a vendor is shortlisted; not contained in this document. 
+  
+
+===== PAGE 20 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 20 of 22   |   Not for vendor distribution 
+Sensitivity General 
+13. Risk Register 
+Risk Rating Mitigation 
+Double-billing / scope overlap 
+between payroll attendance and HRIS 
+Time & Attendance modules 
+🟠 High 
+Confirm system-of-record boundary before 
+Phase 1 sign-off; document in Decision 
+Register 
+Low adoption persists post-
+implementation, jeopardising 
+evaluation outcome and continued 
+vendor spend 
+🟠 High Baseline adoption KPI tracked monthly; Phase 
+5 review gates continuation decision 
+Uncontrolled administrative access 
+(CFO/IT master admin) creates 
+segregation-of-duties exposure 
+🟠 High Controls in Section 4 mandatory precondition 
+to access grant; quarterly access review 
+Vendor cannot evidence independent 
+security certification, DPA, or 
+documented RTO/RPO (Section 5) 
+🔴 Critical 
+No vendor proceeds to contract or renewal 
+without satisfying Section 5 documentation, or 
+an explicit, time-bound compensating-control 
+exception approved by Head of IT and Head of 
+HR 
+Staff travel entitlement ledger 
+miscalculates; over-issuing 
+free/reduced-fare tickets beyond the 
+grade-tier allocation 
+🟡 
+Moderate 
+Automated balance check blocks submission at 
+zero balance (Section 7.3); monthly 
+HR/Finance reconciliation (Section 7.8) 
+AI-generated appraisal summaries or 
+goal drafts are submitted without 
+evaluator review, undermining 
+defensibility of a performance record 
+used in disciplinary or promotion 
+decisions 
+🟡 
+Moderate 
+Mandatory evaluator edit-before-submit 
+control; both AI draft and evaluator's final text 
+retained in audit trail; named UAT test case 
+(Section 6.5, 11) 
+Commercial's advisory flag on leisure 
+travel is informally treated as a hard 
+approval gate it does not currently 
+hold under policy, creating an 
+unauthorised approval layer 
+🟡 
+Moderate 
+Role scoped explicitly as advisory in Section 
+7.6; any change to a hard gate requires an 
+explicit Staff Travel Policy amendment, not a 
+workflow default 
+Payroll UAT remains blocked pending 
+tax country codes, delaying 
+downstream payroll and attendance 
+dependencies 
+🟡 
+Moderate 
+Escalate to named Liat lead with a fixed 
+completion date; track as Phase 1 gating item 
+Feasibility of HITIT/CPAT integration 
+unconfirmed — timeline and cost 
+currently indicative only 
+🟡 
+Moderate 
+Commission feasibility assessment before 
+Phase 4 commitment 
+Data migration errors in leave 
+balances, dependant/entitlement 
+records or staff travel history 
+🟡 
+Moderate 
+Mandatory reconciliation and validation step 
+before any module go-live 
+ 
+ 
+
+===== PAGE 21 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 21 of 22   |   Not for vendor distribution 
+Sensitivity General 
+14. Annexes 
+• Annex A — Performance Management Requirements (Balanced Scorecard, Competencies, 9-
+Box Talent Matrix) — detailed objective library and scoring formulae; Section 6 of this 
+document is its executive-level framework and capability requirement. 
+• Annex B — Leave Module Administrative Access, Security & Data-Correction Controls. 
+• Annex C — Staff Travel Automation Functional Specification (field-level forms, business rules, 
+UAT scenarios) — Section 7 of this document is its executive-level workflow and entitlement-
+drawdown design. 
+• Annex D — Vendor Due Diligence Documentation Checklist & Response Matrix (Section 5.3) — 
+completed independently by each vendor under evaluation. 
+• Annex E — Decision & Policy Clarification Register (to be populated jointly by HR and IT as 
+ambiguities are identified), including the Commercial advisory-vs-approval question raised in 
+Section 7.6. 
+  
+
+===== PAGE 22 =====
+Liat (2020) Limited — Internal & Confidential HRIS Evaluation Framework 
+Page 22 of 22   |   Not for vendor distribution 
+Sensitivity General 
+15. Internal Approval & Sign-off 
+By signing below, the parties approve this framework as the governing internal requirements, 
+evaluation methodology and control basis for the HRIS evaluation and subsequent implementation. 
+This is an internal governance record; it is not a vendor contract and creates no obligation on, or 
+agreement with, any vendor. 
+Role Name Signature Date 
+Head of HR (Liat) Name: 
+_______________________ 
+Signature: 
+_______________________ 
+Date: 
+__________ 
+ 

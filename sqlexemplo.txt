@@ -1,0 +1,442 @@
+/*
+================================================================================
+SQL POWER — Jamaica Vacation Accrual vs Factorial (fenced variables)
+Statistical Institute of Jamaica
+================================================================================
+
+Uses Factorial fields as-is (do NOT reinvent product rules):
+  • tenure_start_date     — Factorial tenure start
+  • antiquity             — Factorial tenure/antiquity value
+  • contract_version_*    — Factorial contract dates (shown only; not recomputed)
+  • leaves.status / dates / duration — Factorial absence data
+
+Jamaica-only comparison logic (client policy vs Factorial gap — NOT Factorial rules):
+  • days_in_year 365/366 for Jamaica daily formula
+  • pause if LOA >14 consecutive calendar days
+  • rounding >= 0.50 up (Jamaica doc)
+  • SIJ tier 15/20/21/25 + 3y cap from sandbox policy assignments
+    (Factorial SQL has no allowances table to read live)
+
+Honest limit:
+  Factorial has NO native pause_accrual on leaves. Column C = manual HR gap.
+
+Filters: {{Data_init}} / {{Data_end}}
+Demo tips (sandbox STATIN):
+  • Example 3 Charles Carter long vacation → Data_init=2026-12-01 Data_end=2026-12-31
+  • Felicity Ford sick pause demo     → Data_init=2026-08-01 Data_end=2026-08-31
+  • Clara Cooper Example 4 (2-day retro sick) → shows NO pause (<14); narrative only
+  • SIJ Extended Sick / Departmental / No Pay are classified for Jamaica LOA pause
+================================================================================
+*/
+
+WITH params AS (
+    SELECT
+        14 AS pause_threshold_days,
+        CAST('{{Data_init}}' AS date) AS period_start,
+        CAST('{{Data_end}}'  AS date) AS period_end,
+        CASE
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 400) = 0 THEN 366
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 100) = 0 THEN 365
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 4)   = 0 THEN 366
+            ELSE 365
+        END AS days_in_year,
+        CAST(date_trunc('year', CAST('{{Data_init}}' AS date)) AS date) AS year_start,
+        CAST(
+            date_add(
+                'day',
+                -1,
+                date_add('year', 1, date_trunc('year', CAST('{{Data_init}}' AS date)))
+            ) AS date
+        ) AS year_end
+),
+
+sij_employee_rates AS (
+    SELECT
+        employee_id,
+        annual_vacation_days,
+        annual_vacation_days * 3.0 AS max_accumulation_days
+    FROM (
+        VALUES
+            (CAST(6376909 AS BIGINT), CAST(15 AS DOUBLE)),  -- Adan Garcia
+            (CAST(6375983 AS BIGINT), CAST(15 AS DOUBLE)),  -- Calvin Collins
+            (CAST(6375967 AS BIGINT), CAST(15 AS DOUBLE)),  -- Cristopher Clarke
+            (CAST(6376070 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hannah Harris
+            (CAST(6375925 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hellen Howard
+            (CAST(6375942 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jack Johnson
+            (CAST(6376239 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jessica Rivera
+            (CAST(6376091 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nathan Nichols
+            (CAST(6376125 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nora Nelson
+            (CAST(6376217 AS BIGINT), CAST(15 AS DOUBLE)),  -- Samuel Stone
+            (CAST(6376003 AS BIGINT), CAST(15 AS DOUBLE)),  -- Sarah Smith
+            (CAST(6375969 AS BIGINT), CAST(20 AS DOUBLE)),  -- Bernarda Baker
+            (CAST(6375931 AS BIGINT), CAST(20 AS DOUBLE)),  -- Charles Carter
+            (CAST(6375951 AS BIGINT), CAST(20 AS DOUBLE)),  -- Clara Cooper
+            (CAST(6375987 AS BIGINT), CAST(20 AS DOUBLE)),  -- Diana Davis
+            (CAST(6376910 AS BIGINT), CAST(20 AS DOUBLE)),  -- Maria Lopez
+            (CAST(6376224 AS BIGINT), CAST(20 AS DOUBLE)),  -- Michael Carter
+            (CAST(6376133 AS BIGINT), CAST(20 AS DOUBLE)),  -- Noah Norris
+            (CAST(6376261 AS BIGINT), CAST(20 AS DOUBLE)),  -- Preston Pike
+            (CAST(6376075 AS BIGINT), CAST(20 AS DOUBLE)),  -- Simon Sanders
+            (CAST(6376096 AS BIGINT), CAST(20 AS DOUBLE)),  -- Sophie Simmons
+            (CAST(6376052 AS BIGINT), CAST(20 AS DOUBLE)),  -- Steven Scott
+            (CAST(6375972 AS BIGINT), CAST(21 AS DOUBLE)),  -- Alice Anderson
+            (CAST(6376230 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ashley Nguyen
+            (CAST(6376081 AS BIGINT), CAST(21 AS DOUBLE)),  -- Charlie Cooper
+            (CAST(6375934 AS BIGINT), CAST(21 AS DOUBLE)),  -- Daisy Dawson
+            (CAST(6376058 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ian Irving
+            (CAST(6375954 AS BIGINT), CAST(21 AS DOUBLE)),  -- James Jones
+            (CAST(6376262 AS BIGINT), CAST(21 AS DOUBLE)),  -- Marla Mercer
+            (CAST(6376106 AS BIGINT), CAST(21 AS DOUBLE)),  -- Nicholas Newton
+            (CAST(6375991 AS BIGINT), CAST(21 AS DOUBLE)),  -- Peter Price
+            (CAST(6376137 AS BIGINT), CAST(21 AS DOUBLE)),  -- Susan Stanley
+            (CAST(6375978 AS BIGINT), CAST(25 AS DOUBLE)),  -- Amelia Adams
+            (CAST(6376234 AS BIGINT), CAST(25 AS DOUBLE)),  -- David Thompson
+            (CAST(6375958 AS BIGINT), CAST(25 AS DOUBLE)),  -- Felicity Ford
+            (CAST(6376063 AS BIGINT), CAST(25 AS DOUBLE)),  -- Isabel Ingram
+            (CAST(6375938 AS BIGINT), CAST(25 AS DOUBLE)),  -- Laura Lewis
+            (CAST(6375995 AS BIGINT), CAST(25 AS DOUBLE)),  -- Megan Moore
+            (CAST(6376602 AS BIGINT), CAST(25 AS DOUBLE)),  -- Nadia Backfield
+            (CAST(6376112 AS BIGINT), CAST(25 AS DOUBLE)),  -- Natalie Norton
+            (CAST(6376087 AS BIGINT), CAST(25 AS DOUBLE)),  -- Samantha Stevens
+            (CAST(6376200 AS BIGINT), CAST(25 AS DOUBLE))   -- Stephanie Sullivan
+    ) AS t(employee_id, annual_vacation_days)
+),
+
+employee_base AS (
+    SELECT
+        e.id AS employee_id,
+        e.company_identifier AS employee_code,
+        e.full_name AS employee_name,
+        -- Factorial native tenure fields (do not recompute "years of service")
+        CAST(e.tenure_start_date AS date) AS tenure_start_date,
+        e.antiquity AS antiquity,
+        CAST(e.contract_version_starts_on AS date) AS contract_version_starts_on,
+        CAST(e.contract_version_effective_on AS date) AS contract_version_effective_on,
+        ser.annual_vacation_days,
+        ser.max_accumulation_days,
+        p.days_in_year,
+        p.year_start,
+        p.year_end,
+        p.period_start,
+        p.period_end,
+        p.pause_threshold_days,
+        CASE
+            WHEN ser.annual_vacation_days IS NOT NULL
+            THEN ser.annual_vacation_days / CAST(p.days_in_year AS DOUBLE)
+            ELSE NULL
+        END AS accrual_per_calendar_day,
+        -- Jamaica prorata input: eligible calendar days from Factorial tenure_start
+        CASE
+            WHEN CAST(e.tenure_start_date AS date) IS NULL THEN NULL
+            WHEN CAST(e.tenure_start_date AS date) > p.year_end THEN 0
+            ELSE
+                date_diff(
+                    'day',
+                    CASE
+                        WHEN CAST(e.tenure_start_date AS date) > p.year_start
+                        THEN CAST(e.tenure_start_date AS date)
+                        ELSE p.year_start
+                    END,
+                    LEAST(p.year_end, p.period_end)
+                ) + 1
+        END AS eligible_calendar_days_in_year_to_period_end
+    FROM employees e
+    CROSS JOIN params p
+    LEFT JOIN sij_employee_rates ser ON ser.employee_id = e.id
+),
+
+absences AS (
+    SELECT
+        eb.employee_id,
+        eb.employee_code,
+        eb.employee_name,
+        eb.tenure_start_date,
+        eb.antiquity,
+        eb.contract_version_starts_on,
+        eb.contract_version_effective_on,
+        eb.annual_vacation_days,
+        eb.max_accumulation_days,
+        eb.eligible_calendar_days_in_year_to_period_end,
+        eb.days_in_year,
+        eb.accrual_per_calendar_day,
+        eb.pause_threshold_days,
+        l.id AS leave_id,
+        l.leave_type_name AS absence_type,
+        l.status AS status,
+        CAST(l.start_on AS date) AS start_date,
+        CAST(l.finish_on AS date) AS end_date,
+        date_diff('day', CAST(l.start_on AS date), CAST(l.finish_on AS date)) + 1
+            AS calendar_days,
+        CASE
+            WHEN LOWER(COALESCE(l.duration_type, 'days')) IN ('days', 'day')
+            THEN COALESCE(l.duration, 0)
+            WHEN LOWER(l.duration_type) IN ('hours', 'hour')
+            THEN COALESCE(l.duration, 0) / 8.0
+            ELSE COALESCE(l.duration, 0)
+        END AS duration_days_factorial,
+        date_add('day', 1, CAST(l.finish_on AS date)) AS return_date,
+        l.description AS description,
+        CASE
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+            THEN 'vacation'
+            -- SIJ Extended Sick Leave + SIJ Sick Leave (both contain 'sick')
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+            THEN 'sick'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+            THEN 'maternity'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+            THEN 'study'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+            THEN 'compassionate'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+            THEN 'special'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+            THEN 'departmental'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            THEN 'other_loa'
+            ELSE 'other_absence'
+        END AS leave_family
+    FROM leaves l
+    JOIN employee_base eb ON eb.employee_id = l.employee_id
+    CROSS JOIN params p
+    WHERE LOWER(l.status) IN ('approved', 'accepted')
+      AND l.start_on IS NOT NULL
+      AND l.finish_on IS NOT NULL
+      AND CAST(l.start_on AS date) <= p.period_end
+      AND CAST(l.finish_on AS date) >= p.period_start
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%working from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%work from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%wfh%'
+),
+
+counts AS (
+    SELECT
+        employee_id,
+        COUNT(*) AS absences_in_period
+    FROM absences
+    GROUP BY employee_id
+),
+
+with_previous AS (
+    SELECT
+        a.*,
+        c.absences_in_period,
+        LAG(a.return_date) OVER (
+            PARTITION BY a.employee_id
+            ORDER BY a.start_date, a.leave_id
+        ) AS previous_return_date
+    FROM absences a
+    JOIN counts c ON c.employee_id = a.employee_id
+),
+
+calc AS (
+    SELECT
+        wp.*,
+
+        CASE
+            WHEN wp.leave_family IN (
+                    'vacation', 'sick', 'maternity', 'study',
+                    'compassionate', 'special', 'departmental', 'other_loa'
+                 )
+             AND wp.calendar_days > wp.pause_threshold_days
+            THEN TRUE
+            ELSE FALSE
+        END AS jamaica_pause_applies,
+
+        CASE
+            WHEN wp.accrual_per_calendar_day IS NULL THEN NULL
+            ELSE ROUND(wp.calendar_days * wp.accrual_per_calendar_day, 4)
+        END AS factorial_accrual_during_absence_raw,
+
+        CASE
+            WHEN wp.accrual_per_calendar_day IS NULL THEN NULL
+            WHEN wp.leave_family IN (
+                    'vacation', 'sick', 'maternity', 'study',
+                    'compassionate', 'special', 'departmental', 'other_loa'
+                 )
+             AND wp.calendar_days > wp.pause_threshold_days
+            THEN 0.0
+            ELSE ROUND(wp.calendar_days * wp.accrual_per_calendar_day, 4)
+        END AS jamaica_accrual_during_absence_raw,
+
+        -- Jamaica rounding: >= 0.50 up (floor(x + 0.5))
+        CASE
+            WHEN wp.accrual_per_calendar_day IS NULL THEN NULL
+            ELSE FLOOR(ROUND(wp.calendar_days * wp.accrual_per_calendar_day, 6) + 0.5)
+        END AS factorial_accrual_rounded_jamaica_rule,
+
+        CASE
+            WHEN wp.eligible_calendar_days_in_year_to_period_end IS NULL
+              OR wp.annual_vacation_days IS NULL THEN NULL
+            ELSE ROUND(
+                (CAST(wp.eligible_calendar_days_in_year_to_period_end AS DOUBLE)
+                    / CAST(wp.days_in_year AS DOUBLE))
+                * wp.annual_vacation_days
+            , 4)
+        END AS jamaica_ytd_accrual_if_no_pause_raw,
+
+        CASE
+            WHEN wp.eligible_calendar_days_in_year_to_period_end IS NULL
+              OR wp.annual_vacation_days IS NULL THEN NULL
+            ELSE FLOOR(
+                ROUND(
+                    (CAST(wp.eligible_calendar_days_in_year_to_period_end AS DOUBLE)
+                        / CAST(wp.days_in_year AS DOUBLE))
+                    * wp.annual_vacation_days
+                , 6) + 0.5
+            )
+        END AS jamaica_ytd_accrual_rounded,
+
+        CASE
+            WHEN wp.previous_return_date IS NOT NULL
+             AND wp.start_date > wp.previous_return_date
+            THEN date_diff('day', wp.previous_return_date, wp.start_date)
+            ELSE NULL
+        END AS calendar_days_between_return_and_new_start,
+
+        CASE
+            WHEN wp.accrual_per_calendar_day IS NULL THEN NULL
+            WHEN wp.previous_return_date IS NOT NULL
+             AND wp.start_date > wp.previous_return_date
+            THEN ROUND(
+                date_diff('day', wp.previous_return_date, wp.start_date)
+                * wp.accrual_per_calendar_day
+            , 4)
+            ELSE NULL
+        END AS accrual_between_return_and_new_start,
+
+        'No pause_accrual / stop_accrual field exists on leaves'
+            AS schema_evidence_no_pause
+
+    FROM with_previous wp
+),
+
+final AS (
+    SELECT
+        c.*,
+        CASE
+            WHEN c.factorial_accrual_during_absence_raw IS NULL THEN NULL
+            WHEN c.jamaica_pause_applies
+            THEN c.factorial_accrual_during_absence_raw
+            ELSE 0.0
+        END AS gap_requires_manual_adjustment_raw,
+        CASE
+            WHEN c.factorial_accrual_during_absence_raw IS NULL THEN NULL
+            WHEN c.jamaica_pause_applies
+            THEN FLOOR(c.factorial_accrual_during_absence_raw + 0.5)
+            ELSE 0
+        END AS gap_rounded_jamaica_rule
+    FROM calc c
+)
+
+SELECT
+    employee_code                                       AS "Employee_Code",
+    employee_name                                       AS "Employee_Name",
+    tenure_start_date                                   AS "Tenure_Start_Date",
+    antiquity                                           AS "Antiquity_Factorial",
+    contract_version_starts_on                          AS "Contract_Version_Starts_On",
+    contract_version_effective_on                       AS "Contract_Version_Effective_On",
+    annual_vacation_days                                AS "Annual_Entitlement_Days",
+    max_accumulation_days                               AS "Max_Accumulation_3y",
+    days_in_year                                        AS "Days_In_Year_365_or_366",
+    eligible_calendar_days_in_year_to_period_end        AS "Eligible_Calendar_Days_YTD",
+    jamaica_ytd_accrual_if_no_pause_raw                 AS "Jamaica_YTD_Accrual_If_No_Pause",
+    jamaica_ytd_accrual_rounded                         AS "Jamaica_YTD_Accrual_Rounded",
+
+    leave_id                                            AS "Leave_ID",
+    absence_type                                        AS "Absence_Type",
+    leave_family                                        AS "Leave_Family",
+    status                                              AS "Status",
+    start_date                                          AS "Start_Date",
+    end_date                                            AS "End_Date",
+    return_date                                         AS "Return_Date",
+    duration_days_factorial                             AS "Duration_Days_Factorial_Working",
+    calendar_days                                       AS "Calendar_Days",
+    pause_threshold_days                                AS "Pause_Threshold_Days",
+
+    CASE
+        WHEN jamaica_pause_applies THEN 'YES (Jamaica pause: >14 calendar days + LOA type)'
+        WHEN calendar_days > pause_threshold_days
+        THEN 'CALENDAR >14 but type outside Jamaica LOA pause list'
+        ELSE 'NO'
+    END                                                 AS "Absence_Above_Threshold",
+
+    ROUND(accrual_per_calendar_day, 6)                  AS "Accrual_Per_Calendar_Day",
+
+    factorial_accrual_during_absence_raw                AS "A_Factorial_Accrual_DURING_Absence",
+    jamaica_accrual_during_absence_raw                  AS "B_Jamaica_Accrual_DURING_Absence",
+    gap_requires_manual_adjustment_raw                  AS "C_Gap_Requires_Manual_Adjustment",
+    factorial_accrual_rounded_jamaica_rule              AS "A_Rounded_Jamaica_Half_Up",
+    gap_rounded_jamaica_rule                            AS "C_Gap_Rounded_Jamaica_Half_Up",
+
+    absences_in_period                                  AS "Absences_In_Period",
+    previous_return_date                                AS "Previous_Absence_Return_Date",
+    calendar_days_between_return_and_new_start          AS "Days_Between_Return_And_New_Start",
+    accrual_between_return_and_new_start                AS "D_Accrual_Between_Return_And_New_Start",
+
+    schema_evidence_no_pause                            AS "Schema_Evidence",
+
+    CASE
+        WHEN annual_vacation_days IS NULL THEN
+            'No SIJ vacation tier mapped for this employee.'
+        WHEN jamaica_pause_applies THEN
+            CONCAT(
+                'POWER DEMO: ', absence_type, ' / ', leave_family,
+                ' — ', CAST(calendar_days AS varchar), ' calendar days',
+                ' (Factorial working ~', CAST(duration_days_factorial AS varchar), ')',
+                '. Tenure_start=', CAST(tenure_start_date AS varchar),
+                ', antiquity=', CAST(antiquity AS varchar),
+                ', tier=', CAST(CAST(annual_vacation_days AS integer) AS varchar),
+                '/yr, year_days=', CAST(days_in_year AS varchar),
+                '. Factorial would accrue ~', CAST(factorial_accrual_during_absence_raw AS varchar),
+                '; Jamaica pause => 0; gap ~', CAST(gap_requires_manual_adjustment_raw AS varchar),
+                ' (rounded gap ', CAST(gap_rounded_jamaica_rule AS varchar), '). No native pause.'
+            )
+        WHEN calendar_days > pause_threshold_days THEN
+            CONCAT(
+                'Long absence (', CAST(calendar_days AS varchar),
+                ' calendar days) but type "', absence_type,
+                '" is outside Jamaica LOA pause list in this SQL.'
+            )
+        ELSE
+            CONCAT(
+                'No pause. Accrual during absence ~',
+                CAST(factorial_accrual_during_absence_raw AS varchar),
+                ' (tier ', CAST(CAST(annual_vacation_days AS integer) AS varchar),
+                ', ', CAST(days_in_year AS varchar), '-day year).'
+            )
+    END                                                 AS "Conclusion_Pause_Demonstration",
+
+    CASE
+        WHEN accrual_between_return_and_new_start IS NOT NULL THEN
+            CONCAT(
+                'Multiple cycles: ', CAST(calendar_days_between_return_and_new_start AS varchar),
+                ' calendar days between return and next start; accrual ~',
+                CAST(accrual_between_return_and_new_start AS varchar), '.'
+            )
+        WHEN absences_in_period > 1 THEN
+            'Employee has multiple absences in the period; this is the first in ordered list.'
+        ELSE
+            'Only 1 absence in the period for this employee.'
+    END                                                 AS "Conclusion_Multiple_Cycles_Demonstration"
+
+FROM final
+ORDER BY
+    calendar_days DESC,
+    employee_name,
+    start_date;

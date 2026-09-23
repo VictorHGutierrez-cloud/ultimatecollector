@@ -1,12 +1,12 @@
 {
   "client": "statistic-institute",
-  "collected_at": "20260921_010350",
+  "collected_at": "20260921_010015",
   "counts": {
     "timeoff/leave_types": 23,
     "timeoff/policies": 8,
     "timeoff/policy_assignments": 98,
-    "timeoff/allowances": 25,
-    "timeoff/leaves": 172,
+    "timeoff/allowances": 20,
+    "timeoff/leaves": 171,
     "timeoff/allowance_incidences": 4,
     "employees/employees": 56
   },
@@ -57,36 +57,6 @@
     ],
     "timeoff/allowances": [
       {
-        "id": "643059",
-        "name": "SIJ Sick Allowance",
-        "holiday_allowance_in_cents": 1400,
-        "maximum_amount_in_cents": 1400
-      },
-      {
-        "id": "643058",
-        "name": "SIJ Sick Allowance",
-        "holiday_allowance_in_cents": 1400,
-        "maximum_amount_in_cents": 1400
-      },
-      {
-        "id": "643057",
-        "name": "SIJ Sick Allowance",
-        "holiday_allowance_in_cents": 1400,
-        "maximum_amount_in_cents": 1400
-      },
-      {
-        "id": "643056",
-        "name": "SIJ Sick Allowance",
-        "holiday_allowance_in_cents": 1400,
-        "maximum_amount_in_cents": 1400
-      },
-      {
-        "id": "643055",
-        "name": "SIJ Sick Allowance",
-        "holiday_allowance_in_cents": 1400,
-        "maximum_amount_in_cents": 1400
-      },
-      {
         "id": "617651",
         "name": "SIJ Vacation Allowance 25d",
         "holiday_allowance_in_cents": 2500,
@@ -112,15 +82,6 @@
       }
     ],
     "sample_leaves": [
-      {
-        "id": "6347272",
-        "employee_id": "6375958",
-        "leave_type_id": "2405345",
-        "start_on": "2026-08-03",
-        "finish_on": "2026-08-18",
-        "approved": true,
-        "description": "SIJ resim — accrual pause >14 calendar days"
-      },
       {
         "id": "6012361",
         "employee_id": "6375934",

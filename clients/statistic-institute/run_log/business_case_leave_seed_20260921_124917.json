@@ -1,0 +1,613 @@
+{
+  "client": "statistic-institute",
+  "company_id": "191864",
+  "started_at": "2026-09-21T12:49:09",
+  "scenarios": {
+    "example_3_long_vacation": {
+      "employee": {
+        "name": "Charles Carter",
+        "id": "6375931"
+      },
+      "annual_rate_days": 20,
+      "start_on": "2026-12-01",
+      "finish_on": "2026-12-18",
+      "calendar_days": 18,
+      "expected_working_days_approx": 14,
+      "expected_weekend_days": 4,
+      "jamaica_pause": "Dec 1–18",
+      "jamaica_resume": "Dec 19",
+      "december_accrual_if_pause": "13 × (20/365) ≈ 0.7123",
+      "leave": {
+        "action": "skipped_exists",
+        "id": "6382420",
+        "start_on": "2026-12-01",
+        "finish_on": "2026-12-18",
+        "approved": true,
+        "description": "Business Case Example 3 — Long Vacation. Tier 20 days/year. Dec 1–18 (14 working + 4 weekend). Jamaica: pause accrual Dec 1–18; resume Dec 19. Dec accrual if pause: 13 × (20/365) ≈ 0.7123 days."
+      },
+      "sql_filters": {
+        "Data_init": "2026-12-01",
+        "Data_end": "2026-12-31"
+      }
+    },
+    "example_4_retroactive_sick": {
+      "employee": {
+        "name": "Clara Cooper",
+        "id": "6375951"
+      },
+      "leave_dates": "2026-06-25 .. 2026-06-26",
+      "applied_on": "2026-07-10",
+      "calendar_days": 2,
+      "leave": {
+        "action": "skipped_exists",
+        "id": "6382433",
+        "start_on": "2026-06-25",
+        "finish_on": "2026-06-26",
+        "approved": true,
+        "description": "Business Case Example 4 — Retroactive Leave. Applied on 2026-07-10 for dates Jun 25–26. Factorial already credited accrual for those days; no automatic reversal — HR manual adjustment if required."
+      },
+      "demo_note": "Show leave + explain HR incidence if reversing accrued days."
+    },
+    "extended_sick_early_rtw": {
+      "employee": {
+        "name": "Steven Scott",
+        "id": "6376052"
+      },
+      "original_request": "2025-12-01 .. 2025-12-18",
+      "return_to_work_date": "2025-12-15",
+      "stored_leave_after_cancel": "2025-12-01 .. 2025-12-14",
+      "approvals": "Employee → Supervisor → Admin (demo narrative)",
+      "leave": {
+        "action": "created",
+        "id": "6382947",
+        "status": 201,
+        "approve_status": null,
+        "approved": true,
+        "start_on": "2025-12-01",
+        "finish_on": "2025-12-14",
+        "days_taken": 14.0,
+        "req": {
+          "employee_id": "6376052",
+          "leave_type_id": "2453284",
+          "start_on": "2025-12-01",
+          "finish_on": "2025-12-14",
+          "description": "BC ESL early RTW: requested Dec1-18 2025; RTW Dec15 approved; Dec15-18 cancelled. Stored Dec1-14. Cert required. Pause=process/SQL."
+        }
+      }
+    },
+    "extended_sick_60_day_cascade": {
+      "employee": {
+        "name": "Steven Scott",
+        "id": "6376052"
+      },
+      "total_days": 60,
+      "covered_before_no_pay": 46,
+      "no_pay_days": 14,
+      "segments": [
+        {
+          "leave_type": "SIJ Extended Sick Leave",
+          "days": 14,
+          "start_on": "2026-01-05",
+          "finish_on": "2026-01-18",
+          "note": "ESL current year 14",
+          "leave": {
+            "action": "skipped_exists",
+            "id": "6382457",
+            "start_on": "2026-01-05",
+            "finish_on": "2026-01-18",
+            "approved": true,
+            "description": "Business Case Extended Sick 60-day cascade — Current year Extended Sick Leave (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+          }
+        },
+        {
+          "leave_type": "SIJ Departmental Leave",
+          "days": 10,
+          "start_on": "2026-01-19",
+          "finish_on": "2026-01-28",
+          "note": "Dept current year 10",
+          "leave": {
+            "action": "skipped_exists",
+            "id": "6382468",
+            "start_on": "2026-01-19",
+            "finish_on": "2026-01-28",
+            "approved": true,
+            "description": "Business Case Extended Sick 60-day cascade — Current year Departmental Leave (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+          }
+        },
+        {
+          "leave_type": "SIJ Sick Leave",
+          "days": 5,
+          "start_on": "2026-01-29",
+          "finish_on": "2026-02-02",
+          "note": "Past-2y sick offset 5",
+          "leave": {
+            "action": "skipped_exists",
+            "id": "6382490",
+            "start_on": "2026-01-29",
+            "finish_on": "2026-02-02",
+            "approved": true,
+            "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused sick offset (5) — demo as SIJ Sick. Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+          }
+        },
+        {
+          "leave_type": "SIJ Departmental Leave",
+          "days": 7,
+          "start_on": "2026-02-03",
+          "finish_on": "2026-02-09",
+          "note": "Past-2y departmental 7",
+          "leave": {
+            "action": "created",
+            "id": "6382956",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-02-03",
+            "finish_on": "2026-02-09",
+            "days_taken": 7.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2453285",
+              "start_on": "2026-02-03",
+              "finish_on": "2026-02-09",
+              "description": "BC 60-day cascade — Past-2y departmental 7. Steven Scott (Employee A). Order ESL→Dept→sick→dept→Vac→NoPay."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ Vacation Leave",
+          "days": 10,
+          "start_on": "2026-02-10",
+          "finish_on": "2026-02-19",
+          "note": "Vacation current year 10",
+          "leave": {
+            "action": "skipped_exists",
+            "id": "6382562",
+            "start_on": "2026-02-10",
+            "finish_on": "2026-02-19",
+            "approved": true,
+            "description": "Business Case Extended Sick 60-day cascade — Current year vacation (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+          }
+        },
+        {
+          "leave_type": "SIJ No Pay Leave",
+          "days": 14,
+          "start_on": "2026-02-20",
+          "finish_on": "2026-03-05",
+          "note": "No Pay remainder 14",
+          "leave": {
+            "action": "skipped_exists",
+            "id": "6382597",
+            "start_on": "2026-02-20",
+            "finish_on": "2026-03-05",
+            "approved": true,
+            "description": "Business Case Extended Sick 60-day cascade — No Pay remainder (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+          }
+        }
+      ],
+      "incidences": [
+        {
+          "status": 201,
+          "body": {
+            "id": "4033",
+            "description": "BC: ESL balance 14",
+            "employee_id": "6376052",
+            "days_in_cents": 1400,
+            "timeoff_allowance_id": "645835",
+            "effective_on": "2026-09-21",
+            "start_at": "2026-01-01",
+            "end_at": "2026-12-31",
+            "target_balance": "available",
+            "created_at": 1789987753,
+            "updated_at": 1789987753
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645835",
+            "days_in_cents": 1400,
+            "effective_on": "2026-09-21",
+            "target_balance": "available",
+            "description": "BC: ESL balance 14",
+            "_skip_notifications": true
+          }
+        },
+        {
+          "status": 201,
+          "body": {
+            "id": "4034",
+            "description": "BC: Dept 10 + past-2y 7",
+            "employee_id": "6376052",
+            "days_in_cents": 1700,
+            "timeoff_allowance_id": "645840",
+            "effective_on": "2026-09-21",
+            "start_at": "2026-01-01",
+            "end_at": "2026-12-31",
+            "target_balance": "available",
+            "created_at": 1789987753,
+            "updated_at": 1789987753
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645840",
+            "days_in_cents": 1700,
+            "effective_on": "2026-09-21",
+            "target_balance": "available",
+            "description": "BC: Dept 10 + past-2y 7",
+            "_skip_notifications": true
+          }
+        },
+        {
+          "status": 201,
+          "body": {
+            "id": "4035",
+            "description": "BC: past-2y sick offset +5",
+            "employee_id": "6376052",
+            "days_in_cents": 500,
+            "timeoff_allowance_id": "643057",
+            "effective_on": "2026-09-21",
+            "start_at": "2026-01-01",
+            "end_at": "2026-12-31",
+            "target_balance": "available",
+            "created_at": 1789987754,
+            "updated_at": 1789987754
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "643057",
+            "days_in_cents": 500,
+            "effective_on": "2026-09-21",
+            "target_balance": "available",
+            "description": "BC: past-2y sick offset +5",
+            "_skip_notifications": true
+          }
+        },
+        {
+          "status": 201,
+          "body": {
+            "id": "4036",
+            "description": "BC: No Pay pool 14",
+            "employee_id": "6376052",
+            "days_in_cents": 1400,
+            "timeoff_allowance_id": "645845",
+            "effective_on": "2026-09-21",
+            "start_at": "2026-01-01",
+            "end_at": "2026-12-31",
+            "target_balance": "available",
+            "created_at": 1789987754,
+            "updated_at": 1789987754
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645845",
+            "days_in_cents": 1400,
+            "effective_on": "2026-09-21",
+            "target_balance": "available",
+            "description": "BC: No Pay pool 14",
+            "_skip_notifications": true
+          }
+        }
+      ],
+      "order": [
+        "Current year Extended Sick 14",
+        "Current year Departmental 10",
+        "Past 2y sick 5",
+        "Past 2y departmental 7",
+        "Current year vacation 10",
+        "No Pay 14"
+      ]
+    }
+  },
+  "honest_gaps": [
+    "Factorial does NOT auto-pause vacation accrual during LOA >14 calendar days.",
+    "Factorial does NOT auto-run Return-to-Work cancel of remaining ESL days.",
+    "Factorial does NOT auto-cascade Extended Sick across Sick/Departmental/past years/Vacation/No Pay.",
+    "Demo reproduces the Business Case with leave types + dated approved leaves + incidences + SQL/demo script."
+  ],
+  "leave_types": {
+    "vacation": {
+      "id": "2405344",
+      "name": "SIJ Vacation Leave"
+    },
+    "sick": {
+      "id": "2405345",
+      "name": "SIJ Sick Leave"
+    },
+    "extended_sick": {
+      "id": "2453284",
+      "name": "SIJ Extended Sick Leave"
+    },
+    "departmental": {
+      "id": "2453285",
+      "name": "SIJ Departmental Leave"
+    },
+    "no_pay": {
+      "id": "2453286",
+      "name": "SIJ No Pay Leave"
+    }
+  },
+  "allowances": {
+    "extended_sick": [
+      {
+        "policy_id": "367078",
+        "id": "645834",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367079",
+        "id": "645835",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367080",
+        "id": "645836",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367081",
+        "id": "645837",
+        "action": "exists"
+      },
+      {
+        "policy_id": "366459",
+        "id": "645838",
+        "action": "exists"
+      }
+    ],
+    "departmental": [
+      {
+        "policy_id": "367078",
+        "id": "645839",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367079",
+        "id": "645840",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367080",
+        "id": "645841",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367081",
+        "id": "645842",
+        "action": "exists"
+      },
+      {
+        "policy_id": "366459",
+        "id": "645843",
+        "action": "exists"
+      }
+    ],
+    "no_pay": [
+      {
+        "policy_id": "367078",
+        "id": "645844",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367079",
+        "id": "645845",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367080",
+        "id": "645846",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367081",
+        "id": "645847",
+        "action": "exists"
+      },
+      {
+        "policy_id": "366459",
+        "id": "645848",
+        "action": "exists"
+      }
+    ],
+    "sick": [
+      {
+        "policy_id": "367078",
+        "id": "643058",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367079",
+        "id": "643057",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367080",
+        "id": "643056",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367081",
+        "id": "643055",
+        "action": "exists"
+      },
+      {
+        "policy_id": "366459",
+        "id": "643059",
+        "action": "exists"
+      }
+    ]
+  },
+  "api_log_tail": [
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453284",
+        "start_on": "2025-12-01",
+        "finish_on": "2025-12-14",
+        "description": "BC ESL early RTW: requested Dec1-18 2025; RTW Dec15 approved; Dec15-18 cancelled. Stored Dec1-14. Cert required. Pause=process/SQL."
+      },
+      "res": {
+        "id": "6382947",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2025-12-01",
+        "finish_on": "2025-12-14",
+        "half_day": null,
+        "description": "BC ESL early RTW: requested Dec1-18 2025; RTW Dec15 approved; Dec15-18 cancelled. Stored Dec1-14. Cert required. Pause=process/SQL.",
+        "reason": null,
+        "leave_type_id": "2453284",
+        "leave_type_name": "SIJ Extended Sick Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:49:12.000Z",
+        "created_at": "2026-09-21T10:49:12.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 14.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645835",
+        "days_in_cents": 1400,
+        "effective_on": "2026-09-21",
+        "target_balance": "available",
+        "description": "BC: ESL balance 14",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "4033",
+        "description": "BC: ESL balance 14",
+        "employee_id": "6376052",
+        "days_in_cents": 1400,
+        "timeoff_allowance_id": "645835",
+        "effective_on": "2026-09-21",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789987753,
+        "updated_at": 1789987753
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645840",
+        "days_in_cents": 1700,
+        "effective_on": "2026-09-21",
+        "target_balance": "available",
+        "description": "BC: Dept 10 + past-2y 7",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "4034",
+        "description": "BC: Dept 10 + past-2y 7",
+        "employee_id": "6376052",
+        "days_in_cents": 1700,
+        "timeoff_allowance_id": "645840",
+        "effective_on": "2026-09-21",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789987753,
+        "updated_at": 1789987753
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "643057",
+        "days_in_cents": 500,
+        "effective_on": "2026-09-21",
+        "target_balance": "available",
+        "description": "BC: past-2y sick offset +5",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "4035",
+        "description": "BC: past-2y sick offset +5",
+        "employee_id": "6376052",
+        "days_in_cents": 500,
+        "timeoff_allowance_id": "643057",
+        "effective_on": "2026-09-21",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789987754,
+        "updated_at": 1789987754
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645845",
+        "days_in_cents": 1400,
+        "effective_on": "2026-09-21",
+        "target_balance": "available",
+        "description": "BC: No Pay pool 14",
+        "_skip_notifications": true
+      },
+      "res": {
+        "id": "4036",
+        "description": "BC: No Pay pool 14",
+        "employee_id": "6376052",
+        "days_in_cents": 1400,
+        "timeoff_allowance_id": "645845",
+        "effective_on": "2026-09-21",
+        "start_at": "2026-01-01",
+        "end_at": "2026-12-31",
+        "target_balance": "available",
+        "created_at": 1789987754,
+        "updated_at": 1789987754
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453285",
+        "start_on": "2026-02-03",
+        "finish_on": "2026-02-09",
+        "description": "BC 60-day cascade — Past-2y departmental 7. Steven Scott (Employee A). Order ESL→Dept→sick→dept→Vac→NoPay."
+      },
+      "res": {
+        "id": "6382956",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-02-03",
+        "finish_on": "2026-02-09",
+        "half_day": null,
+        "description": "BC 60-day cascade — Past-2y departmental 7. Steven Scott (Employee A). Order ESL→Dept→sick→dept→Vac→NoPay.",
+        "reason": null,
+        "leave_type_id": "2453285",
+        "leave_type_name": "SIJ Departmental Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:49:16.000Z",
+        "created_at": "2026-09-21T10:49:16.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 7.0
+      }
+    }
+  ]
+}

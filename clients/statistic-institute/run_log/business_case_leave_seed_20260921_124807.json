@@ -1,0 +1,2138 @@
+{
+  "client": "statistic-institute",
+  "company_id": "191864",
+  "started_at": "2026-09-21T12:47:41",
+  "scenarios": {
+    "example_3_long_vacation": {
+      "employee": {
+        "name": "Charles Carter",
+        "id": "6375931"
+      },
+      "annual_rate_days": 20,
+      "start_on": "2026-12-01",
+      "finish_on": "2026-12-18",
+      "calendar_days": 18,
+      "expected_working_days_approx": 14,
+      "expected_weekend_days": 4,
+      "jamaica_pause": "Dec 1–18",
+      "jamaica_resume": "Dec 19",
+      "december_accrual_if_pause": "13 × (20/365) ≈ 0.7123",
+      "leave": {
+        "action": "created",
+        "id": "6382420",
+        "status": 201,
+        "approve_status": null,
+        "approved": true,
+        "start_on": "2026-12-01",
+        "finish_on": "2026-12-18",
+        "days_taken": 18.0,
+        "req": {
+          "employee_id": "6375931",
+          "leave_type_id": "2405344",
+          "start_on": "2026-12-01",
+          "finish_on": "2026-12-18",
+          "description": "Business Case Example 3 — Long Vacation. Tier 20 days/year. Dec 1–18 (14 working + 4 weekend). Jamaica: pause accrual Dec 1–18; resume Dec 19. Dec accrual if pause: 13 × (20/365) ≈ 0.7123 days."
+        }
+      },
+      "sql_filters": {
+        "Data_init": "2026-12-01",
+        "Data_end": "2026-12-31"
+      }
+    },
+    "example_4_retroactive_sick": {
+      "employee": {
+        "name": "Clara Cooper",
+        "id": "6375951"
+      },
+      "leave_dates": "2026-06-25 .. 2026-06-26",
+      "applied_on": "2026-07-10",
+      "calendar_days": 2,
+      "leave": {
+        "action": "created",
+        "id": "6382433",
+        "status": 201,
+        "approve_status": null,
+        "approved": true,
+        "start_on": "2026-06-25",
+        "finish_on": "2026-06-26",
+        "days_taken": 2.0,
+        "req": {
+          "employee_id": "6375951",
+          "leave_type_id": "2405345",
+          "start_on": "2026-06-25",
+          "finish_on": "2026-06-26",
+          "description": "Business Case Example 4 — Retroactive Leave. Applied on 2026-07-10 for dates Jun 25–26. Factorial already credited accrual for those days; no automatic reversal — HR manual adjustment if required."
+        }
+      },
+      "demo_note": "Show leave + explain HR incidence if reversing accrued days."
+    },
+    "extended_sick_early_rtw": {
+      "employee": {
+        "name": "Steven Scott",
+        "id": "6376052"
+      },
+      "original_request": "2025-12-01 .. 2025-12-18",
+      "return_to_work_date": "2025-12-15",
+      "stored_leave_after_cancel": "2025-12-01 .. 2025-12-14",
+      "approvals": "Employee → Supervisor → Admin (demo narrative)",
+      "leave": {
+        "action": "create_failed",
+        "status": 422,
+        "body": {
+          "errors": {
+            "messages": [
+              "Description is too long (maximum is 255 characters)"
+            ]
+          }
+        },
+        "req": {
+          "employee_id": "6376052",
+          "leave_type_id": "2453284",
+          "start_on": "2025-12-01",
+          "finish_on": "2025-12-14",
+          "description": "Business Case Extended Sick — Return to Work early. Original request Dec 1–18 2025. RTW date Dec 15 approved (Supervisor → Admin). Remaining Dec 15–18 cancelled. Leave stored as Dec 1–14 to reflect approved early return. Medical certificate required (process). Accrual pause is Jamaica process / SQL."
+        }
+      }
+    },
+    "extended_sick_60_day_cascade": {
+      "employee": {
+        "name": "Steven Scott",
+        "id": "6376052"
+      },
+      "total_days": 60,
+      "covered_before_no_pay": 46,
+      "no_pay_days": 14,
+      "segments": [
+        {
+          "leave_type": "SIJ Extended Sick Leave",
+          "days": 14,
+          "start_on": "2026-01-05",
+          "finish_on": "2026-01-18",
+          "note": "Current year Extended Sick Leave (14)",
+          "leave": {
+            "action": "created",
+            "id": "6382457",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-01-05",
+            "finish_on": "2026-01-18",
+            "days_taken": 14.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2453284",
+              "start_on": "2026-01-05",
+              "finish_on": "2026-01-18",
+              "description": "Business Case Extended Sick 60-day cascade — Current year Extended Sick Leave (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ Departmental Leave",
+          "days": 10,
+          "start_on": "2026-01-19",
+          "finish_on": "2026-01-28",
+          "note": "Current year Departmental Leave (10)",
+          "leave": {
+            "action": "created",
+            "id": "6382468",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-01-19",
+            "finish_on": "2026-01-28",
+            "days_taken": 10.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2453285",
+              "start_on": "2026-01-19",
+              "finish_on": "2026-01-28",
+              "description": "Business Case Extended Sick 60-day cascade — Current year Departmental Leave (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ Sick Leave",
+          "days": 5,
+          "start_on": "2026-01-29",
+          "finish_on": "2026-02-02",
+          "note": "Past 2 years unused sick offset (5) — demo as SIJ Sick",
+          "leave": {
+            "action": "created",
+            "id": "6382490",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-01-29",
+            "finish_on": "2026-02-02",
+            "days_taken": 5.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2405345",
+              "start_on": "2026-01-29",
+              "finish_on": "2026-02-02",
+              "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused sick offset (5) — demo as SIJ Sick. Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ Departmental Leave",
+          "days": 7,
+          "start_on": "2026-02-03",
+          "finish_on": "2026-02-09",
+          "note": "Past 2 years unused departmental offset (7)",
+          "leave": {
+            "action": "create_failed",
+            "status": 422,
+            "body": {
+              "errors": {
+                "errors": [
+                  "This absence cannot be submitted because the time requested exceeds the time available."
+                ]
+              }
+            },
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2453285",
+              "start_on": "2026-02-03",
+              "finish_on": "2026-02-09",
+              "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused departmental offset (7). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ Vacation Leave",
+          "days": 10,
+          "start_on": "2026-02-10",
+          "finish_on": "2026-02-19",
+          "note": "Current year vacation (10)",
+          "leave": {
+            "action": "created",
+            "id": "6382562",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-02-10",
+            "finish_on": "2026-02-19",
+            "days_taken": 10.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2405344",
+              "start_on": "2026-02-10",
+              "finish_on": "2026-02-19",
+              "description": "Business Case Extended Sick 60-day cascade — Current year vacation (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        },
+        {
+          "leave_type": "SIJ No Pay Leave",
+          "days": 14,
+          "start_on": "2026-02-20",
+          "finish_on": "2026-03-05",
+          "note": "No Pay remainder (14)",
+          "leave": {
+            "action": "created",
+            "id": "6382597",
+            "status": 201,
+            "approve_status": null,
+            "approved": true,
+            "start_on": "2026-02-20",
+            "finish_on": "2026-03-05",
+            "days_taken": 14.0,
+            "req": {
+              "employee_id": "6376052",
+              "leave_type_id": "2453286",
+              "start_on": "2026-02-20",
+              "finish_on": "2026-03-05",
+              "description": "Business Case Extended Sick 60-day cascade — No Pay remainder (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+            }
+          }
+        }
+      ],
+      "incidences": [
+        {
+          "status": 400,
+          "body": {
+            "errors": {
+              "errors": [
+                "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+              ]
+            }
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645835",
+            "days_in_cents": 1400,
+            "description": "BC demo: current year Extended Sick balance 14"
+          }
+        },
+        {
+          "status": 400,
+          "body": {
+            "errors": {
+              "errors": [
+                "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+              ]
+            }
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645840",
+            "days_in_cents": 1000,
+            "description": "BC demo: current year Departmental balance 10"
+          }
+        },
+        {
+          "status": 400,
+          "body": {
+            "errors": {
+              "errors": [
+                "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+              ]
+            }
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "643057",
+            "days_in_cents": 500,
+            "description": "BC demo: past-2y sick offset pool shown as +5 (illustrative)"
+          }
+        },
+        {
+          "status": 400,
+          "body": {
+            "errors": {
+              "errors": [
+                "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+              ]
+            }
+          },
+          "req": {
+            "employee_id": "6376052",
+            "timeoff_allowance_id": "645845",
+            "days_in_cents": 1400,
+            "description": "BC demo: No Pay pool for cascade remainder"
+          }
+        }
+      ],
+      "order": [
+        "Current year Extended Sick 14",
+        "Current year Departmental 10",
+        "Past 2y sick 5",
+        "Past 2y departmental 7",
+        "Current year vacation 10",
+        "No Pay 14"
+      ]
+    }
+  },
+  "honest_gaps": [
+    "Factorial does NOT auto-pause vacation accrual during LOA >14 calendar days.",
+    "Factorial does NOT auto-run Return-to-Work cancel of remaining ESL days.",
+    "Factorial does NOT auto-cascade Extended Sick across Sick/Departmental/past years/Vacation/No Pay.",
+    "Demo reproduces the Business Case with leave types + dated approved leaves + incidences + SQL/demo script."
+  ],
+  "leave_types": {
+    "vacation": {
+      "id": "2405344",
+      "name": "SIJ Vacation Leave"
+    },
+    "sick": {
+      "id": "2405345",
+      "name": "SIJ Sick Leave"
+    },
+    "extended_sick": {
+      "id": "2453284",
+      "name": "SIJ Extended Sick Leave"
+    },
+    "departmental": {
+      "id": "2453285",
+      "name": "SIJ Departmental Leave"
+    },
+    "no_pay": {
+      "id": "2453286",
+      "name": "SIJ No Pay Leave"
+    }
+  },
+  "allowances": {
+    "extended_sick": [
+      {
+        "policy_id": "367078",
+        "id": "645834",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367079",
+        "id": "645835",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367080",
+        "id": "645836",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367081",
+        "id": "645837",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "366459",
+        "id": "645838",
+        "action": "created",
+        "status": 201,
+        "body": null
+      }
+    ],
+    "departmental": [
+      {
+        "policy_id": "367078",
+        "id": "645839",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367079",
+        "id": "645840",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367080",
+        "id": "645841",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367081",
+        "id": "645842",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "366459",
+        "id": "645843",
+        "action": "created",
+        "status": 201,
+        "body": null
+      }
+    ],
+    "no_pay": [
+      {
+        "policy_id": "367078",
+        "id": "645844",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367079",
+        "id": "645845",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367080",
+        "id": "645846",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "367081",
+        "id": "645847",
+        "action": "created",
+        "status": 201,
+        "body": null
+      },
+      {
+        "policy_id": "366459",
+        "id": "645848",
+        "action": "created",
+        "status": 201,
+        "body": null
+      }
+    ],
+    "sick": [
+      {
+        "policy_id": "367078",
+        "id": "643058",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367079",
+        "id": "643057",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367080",
+        "id": "643056",
+        "action": "exists"
+      },
+      {
+        "policy_id": "367081",
+        "id": "643055",
+        "action": "exists"
+      },
+      {
+        "policy_id": "366459",
+        "id": "643059",
+        "action": "exists"
+      }
+    ]
+  },
+  "api_log_tail": [
+    {
+      "method": "POST",
+      "path": "timeoff/leave_types",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Leave",
+        "identifier": "custom",
+        "color": "B91C1C",
+        "company_id": "191864",
+        "accrues": true,
+        "approval_required": true,
+        "workable": false,
+        "payable": true,
+        "visibility": true,
+        "editable": true,
+        "details_required": false,
+        "attachment": true,
+        "is_attachment_mandatory": true,
+        "allow_endless": false,
+        "half_days_units_enabled": true
+      },
+      "res": {
+        "id": "2453284",
+        "name": "SIJ Extended Sick Leave",
+        "identifier": "custom",
+        "color": "B91C1C",
+        "company_id": "191864",
+        "approval_required": true,
+        "accrues": true,
+        "attachment": true,
+        "allow_endless": false,
+        "restricted": false,
+        "is_attachment_mandatory": true,
+        "visibility": true,
+        "editable": true,
+        "active": true,
+        "workable": false,
+        "payable": true,
+        "allowance_ids": [],
+        "translated_name": "SIJ Extended Sick Leave",
+        "half_days_units_enabled": true,
+        "max_days_in_cents": null,
+        "min_days_in_cents": null,
+        "description": null,
+        "details_required": false,
+        "eau_eligible": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leave_types",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Leave",
+        "identifier": "custom",
+        "color": "F97316",
+        "company_id": "191864",
+        "accrues": true,
+        "approval_required": true,
+        "workable": false,
+        "payable": true,
+        "visibility": true,
+        "editable": true,
+        "details_required": false,
+        "attachment": false,
+        "is_attachment_mandatory": false,
+        "allow_endless": false,
+        "half_days_units_enabled": true
+      },
+      "res": {
+        "id": "2453285",
+        "name": "SIJ Departmental Leave",
+        "identifier": "custom",
+        "color": "F97316",
+        "company_id": "191864",
+        "approval_required": true,
+        "accrues": true,
+        "attachment": false,
+        "allow_endless": false,
+        "restricted": false,
+        "is_attachment_mandatory": false,
+        "visibility": true,
+        "editable": true,
+        "active": true,
+        "workable": false,
+        "payable": true,
+        "allowance_ids": [],
+        "translated_name": "SIJ Departmental Leave",
+        "half_days_units_enabled": true,
+        "max_days_in_cents": null,
+        "min_days_in_cents": null,
+        "description": null,
+        "details_required": false,
+        "eau_eligible": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leave_types",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Leave",
+        "identifier": "custom",
+        "color": "6B7280",
+        "company_id": "191864",
+        "accrues": true,
+        "approval_required": true,
+        "workable": false,
+        "payable": false,
+        "visibility": true,
+        "editable": true,
+        "details_required": false,
+        "attachment": false,
+        "is_attachment_mandatory": false,
+        "allow_endless": false,
+        "half_days_units_enabled": true
+      },
+      "res": {
+        "id": "2453286",
+        "name": "SIJ No Pay Leave",
+        "identifier": "custom",
+        "color": "6B7280",
+        "company_id": "191864",
+        "approval_required": true,
+        "accrues": true,
+        "attachment": false,
+        "allow_endless": false,
+        "restricted": false,
+        "is_attachment_mandatory": false,
+        "visibility": true,
+        "editable": true,
+        "active": true,
+        "workable": false,
+        "payable": false,
+        "allowance_ids": [],
+        "translated_name": "SIJ No Pay Leave",
+        "half_days_units_enabled": true,
+        "max_days_in_cents": null,
+        "min_days_in_cents": null,
+        "description": null,
+        "details_required": false,
+        "eau_eligible": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Allowance",
+        "timeoff_policy_id": "367078",
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "maximum_amount_in_cents": 1400,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645834",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "maximum_amount_in_cents": 1400,
+        "name": "SIJ Extended Sick Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367078",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Allowance",
+        "timeoff_policy_id": "367079",
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "maximum_amount_in_cents": 1400,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645835",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "maximum_amount_in_cents": 1400,
+        "name": "SIJ Extended Sick Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367079",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Allowance",
+        "timeoff_policy_id": "367080",
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "maximum_amount_in_cents": 1400,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645836",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "maximum_amount_in_cents": 1400,
+        "name": "SIJ Extended Sick Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367080",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Allowance",
+        "timeoff_policy_id": "367081",
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "maximum_amount_in_cents": 1400,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645837",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "maximum_amount_in_cents": 1400,
+        "name": "SIJ Extended Sick Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367081",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Extended Sick Allowance",
+        "timeoff_policy_id": "366459",
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "maximum_amount_in_cents": 1400,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645838",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1400,
+        "leave_type_ids": [
+          "2453284"
+        ],
+        "maximum_amount_in_cents": 1400,
+        "name": "SIJ Extended Sick Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "366459",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Allowance",
+        "timeoff_policy_id": "367078",
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "maximum_amount_in_cents": 1000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645839",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "maximum_amount_in_cents": 1000,
+        "name": "SIJ Departmental Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367078",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Allowance",
+        "timeoff_policy_id": "367079",
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "maximum_amount_in_cents": 1000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645840",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "maximum_amount_in_cents": 1000,
+        "name": "SIJ Departmental Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367079",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Allowance",
+        "timeoff_policy_id": "367080",
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "maximum_amount_in_cents": 1000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645841",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "maximum_amount_in_cents": 1000,
+        "name": "SIJ Departmental Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367080",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Allowance",
+        "timeoff_policy_id": "367081",
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "maximum_amount_in_cents": 1000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645842",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "maximum_amount_in_cents": 1000,
+        "name": "SIJ Departmental Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367081",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ Departmental Allowance",
+        "timeoff_policy_id": "366459",
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "maximum_amount_in_cents": 1000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645843",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 1000,
+        "leave_type_ids": [
+          "2453285"
+        ],
+        "maximum_amount_in_cents": 1000,
+        "name": "SIJ Departmental Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "366459",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Allowance",
+        "timeoff_policy_id": "367078",
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "maximum_amount_in_cents": 6000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645844",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "maximum_amount_in_cents": 6000,
+        "name": "SIJ No Pay Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367078",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Allowance",
+        "timeoff_policy_id": "367079",
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "maximum_amount_in_cents": 6000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645845",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "maximum_amount_in_cents": 6000,
+        "name": "SIJ No Pay Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367079",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Allowance",
+        "timeoff_policy_id": "367080",
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "maximum_amount_in_cents": 6000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645846",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "maximum_amount_in_cents": 6000,
+        "name": "SIJ No Pay Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367080",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Allowance",
+        "timeoff_policy_id": "367081",
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "maximum_amount_in_cents": 6000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645847",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "maximum_amount_in_cents": 6000,
+        "name": "SIJ No Pay Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "367081",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowances",
+      "status": 201,
+      "req": {
+        "name": "SIJ No Pay Allowance",
+        "timeoff_policy_id": "366459",
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "allowance_type": "days",
+        "days_type": "working_days",
+        "available_days": "all_days",
+        "accrued_units_availability": "current_cycle",
+        "count_holiday_as_workable": false,
+        "cycle_start": "jan",
+        "cycle_length": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "maximum_amount_in_cents": 6000,
+        "carry_over_units_in_cents": 0,
+        "expire_in_months": 12,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false,
+        "unlimited_accrued_hours": false,
+        "negative_counter_type": "negative_counter_disabled",
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "rounding": "decimals",
+        "source_units": "base_units",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "tenure_period_transition": "beginning_of_cycle",
+        "send_notification": false
+      },
+      "res": {
+        "id": "645848",
+        "accrued_denominator_in_cents": null,
+        "accrued_factor_in_cents": null,
+        "accrued_units_availability": "current_cycle",
+        "allowance_type": "days",
+        "available_days": "all_days",
+        "carry_over_days": 0,
+        "carry_over_units_in_cents": 0,
+        "count_holiday_as_workable": false,
+        "cycle_length": 12,
+        "cycle_start": "jan",
+        "days_type": "working_days",
+        "employee_carry_over_starting_year": null,
+        "expire_in_months": 12,
+        "frequency": "yearly",
+        "holiday_allowance_in_cents": 6000,
+        "leave_type_ids": [
+          "2453286"
+        ],
+        "maximum_amount_in_cents": 6000,
+        "name": "SIJ No Pay Allowance",
+        "negative_counter_type": "negative_counter_disabled",
+        "position": null,
+        "proration_type": "proration_disabled",
+        "pto_proratio_enabled": false,
+        "range_type": null,
+        "rounding": "decimals",
+        "send_notification": false,
+        "source_units": "base_units",
+        "tenure_period_transition": "beginning_of_cycle",
+        "tenure_periods": [],
+        "tenure_periods_enabled": false,
+        "timeoff_cycle": "jan_dec",
+        "timeoff_policy_id": "366459",
+        "unlimited_accrued_hours": false,
+        "unlimited_carry_over": false,
+        "unlimited_carry_over_expiration": false,
+        "unlimited_holidays": false
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6375931",
+        "leave_type_id": "2405344",
+        "start_on": "2026-12-01",
+        "finish_on": "2026-12-18",
+        "description": "Business Case Example 3 — Long Vacation. Tier 20 days/year. Dec 1–18 (14 working + 4 weekend). Jamaica: pause accrual Dec 1–18; resume Dec 19. Dec accrual if pause: 13 × (20/365) ≈ 0.7123 days."
+      },
+      "res": {
+        "id": "6382420",
+        "company_id": "191864",
+        "employee_id": "6375931",
+        "start_on": "2026-12-01",
+        "finish_on": "2026-12-18",
+        "half_day": null,
+        "description": "Business Case Example 3 — Long Vacation. Tier 20 days/year. Dec 1–18 (14 working + 4 weekend). Jamaica: pause accrual Dec 1–18; resume Dec 19. Dec accrual if pause: 13 × (20/365) ≈ 0.7123 days.",
+        "reason": null,
+        "leave_type_id": "2405344",
+        "leave_type_name": "SIJ Vacation Leave",
+        "approved": true,
+        "employee_full_name": "Charles Carter",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:47:53.000Z",
+        "created_at": "2026-09-21T10:47:53.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 18.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6375951",
+        "leave_type_id": "2405345",
+        "start_on": "2026-06-25",
+        "finish_on": "2026-06-26",
+        "description": "Business Case Example 4 — Retroactive Leave. Applied on 2026-07-10 for dates Jun 25–26. Factorial already credited accrual for those days; no automatic reversal — HR manual adjustment if required."
+      },
+      "res": {
+        "id": "6382433",
+        "company_id": "191864",
+        "employee_id": "6375951",
+        "start_on": "2026-06-25",
+        "finish_on": "2026-06-26",
+        "half_day": null,
+        "description": "Business Case Example 4 — Retroactive Leave. Applied on 2026-07-10 for dates Jun 25–26. Factorial already credited accrual for those days; no automatic reversal — HR manual adjustment if required.",
+        "reason": null,
+        "leave_type_id": "2405345",
+        "leave_type_name": "SIJ Sick Leave",
+        "approved": true,
+        "employee_full_name": "Clara Cooper",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:47:55.000Z",
+        "created_at": "2026-09-21T10:47:55.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 2.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 422,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453284",
+        "start_on": "2025-12-01",
+        "finish_on": "2025-12-14",
+        "description": "Business Case Extended Sick — Return to Work early. Original request Dec 1–18 2025. RTW date Dec 15 approved (Supervisor → Admin). Remaining Dec 15–18 cancelled. Leave stored as Dec 1–14 to reflect approved early return. Medical certificate required (process). Accrual pause is Jamaica process / SQL."
+      },
+      "res": {
+        "errors": {
+          "messages": [
+            "Description is too long (maximum is 255 characters)"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453284",
+        "start_on": "2026-01-05",
+        "finish_on": "2026-01-18",
+        "description": "Business Case Extended Sick 60-day cascade — Current year Extended Sick Leave (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "id": "6382457",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-01-05",
+        "finish_on": "2026-01-18",
+        "half_day": null,
+        "description": "Business Case Extended Sick 60-day cascade — Current year Extended Sick Leave (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo.",
+        "reason": null,
+        "leave_type_id": "2453284",
+        "leave_type_name": "SIJ Extended Sick Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:47:57.000Z",
+        "created_at": "2026-09-21T10:47:57.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 14.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453285",
+        "start_on": "2026-01-19",
+        "finish_on": "2026-01-28",
+        "description": "Business Case Extended Sick 60-day cascade — Current year Departmental Leave (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "id": "6382468",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-01-19",
+        "finish_on": "2026-01-28",
+        "half_day": null,
+        "description": "Business Case Extended Sick 60-day cascade — Current year Departmental Leave (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo.",
+        "reason": null,
+        "leave_type_id": "2453285",
+        "leave_type_name": "SIJ Departmental Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:47:59.000Z",
+        "created_at": "2026-09-21T10:47:59.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 10.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2405345",
+        "start_on": "2026-01-29",
+        "finish_on": "2026-02-02",
+        "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused sick offset (5) — demo as SIJ Sick. Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "id": "6382490",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-01-29",
+        "finish_on": "2026-02-02",
+        "half_day": null,
+        "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused sick offset (5) — demo as SIJ Sick. Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo.",
+        "reason": null,
+        "leave_type_id": "2405345",
+        "leave_type_name": "SIJ Sick Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:48:01.000Z",
+        "created_at": "2026-09-21T10:48:01.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 5.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 422,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453285",
+        "start_on": "2026-02-03",
+        "finish_on": "2026-02-09",
+        "description": "Business Case Extended Sick 60-day cascade — Past 2 years unused departmental offset (7). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "errors": {
+          "errors": [
+            "This absence cannot be submitted because the time requested exceeds the time available."
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2405344",
+        "start_on": "2026-02-10",
+        "finish_on": "2026-02-19",
+        "description": "Business Case Extended Sick 60-day cascade — Current year vacation (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "id": "6382562",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-02-10",
+        "finish_on": "2026-02-19",
+        "half_day": null,
+        "description": "Business Case Extended Sick 60-day cascade — Current year vacation (10). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo.",
+        "reason": null,
+        "leave_type_id": "2405344",
+        "leave_type_name": "SIJ Vacation Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:48:04.000Z",
+        "created_at": "2026-09-21T10:48:04.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 10.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/leaves",
+      "status": 201,
+      "req": {
+        "employee_id": "6376052",
+        "leave_type_id": "2453286",
+        "start_on": "2026-02-20",
+        "finish_on": "2026-03-05",
+        "description": "Business Case Extended Sick 60-day cascade — No Pay remainder (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo."
+      },
+      "res": {
+        "id": "6382597",
+        "company_id": "191864",
+        "employee_id": "6376052",
+        "start_on": "2026-02-20",
+        "finish_on": "2026-03-05",
+        "half_day": null,
+        "description": "Business Case Extended Sick 60-day cascade — No Pay remainder (14). Employee A demo (Steven Scott). Order: ESL→Dept→past sick→past dept→Vacation→No Pay. Native auto-cascade not available; leaves seeded in order for demo.",
+        "reason": null,
+        "leave_type_id": "2453286",
+        "leave_type_name": "SIJ No Pay Leave",
+        "approved": true,
+        "employee_full_name": "Steven Scott",
+        "start_time": null,
+        "hours_amount_in_cents": null,
+        "updated_at": "2026-09-21T10:48:06.000Z",
+        "created_at": "2026-09-21T10:48:06.000Z",
+        "deleted_at": null,
+        "duration_attributes": null,
+        "days_taken": 14.0
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 400,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645835",
+        "days_in_cents": 1400,
+        "description": "BC demo: current year Extended Sick balance 14"
+      },
+      "res": {
+        "errors": {
+          "errors": [
+            "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 400,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645840",
+        "days_in_cents": 1000,
+        "description": "BC demo: current year Departmental balance 10"
+      },
+      "res": {
+        "errors": {
+          "errors": [
+            "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 400,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "643057",
+        "days_in_cents": 500,
+        "description": "BC demo: past-2y sick offset pool shown as +5 (illustrative)"
+      },
+      "res": {
+        "errors": {
+          "errors": [
+            "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "timeoff/allowance_incidences",
+      "status": 400,
+      "req": {
+        "employee_id": "6376052",
+        "timeoff_allowance_id": "645845",
+        "days_in_cents": 1400,
+        "description": "BC demo: No Pay pool for cascade remainder"
+      },
+      "res": {
+        "errors": {
+          "errors": [
+            "Missing required prop `effective_on` for class `Timeoff::Dtos::AllowanceIncidence::Create`"
+          ]
+        }
+      }
+    }
+  ]
+}
