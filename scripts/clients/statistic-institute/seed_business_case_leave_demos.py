@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Seed Business Case Leave demos (Examples 3–4 + Extended Sick Leave cascade).
+Seed Business Case Leave demos (Examples 1–4 + Extended Sick Leave cascade).
 
 Faithful sandbox reproduction of STATIN Factorial Business Case — Leave Requirements
-from Example 3 through Extended Sick Leave / Return to Office.
+from Example 1 through Extended Sick Leave / Return to Office.
 
 Usage (repo root):
   python scripts/clients/statistic-institute/seed_business_case_leave_demos.py
@@ -34,10 +34,12 @@ RUN_LOG = ROOT / "clients" / CLIENT_ID / "run_log"
 SIJ_POLICY_IDS = ("367078", "367079", "367080", "367081", "366459")
 POLICY_20 = "367079"  # Charles Carter tier
 
-# Demo cast
-CHARLES = {"name": "Charles Carter", "id": "6375931"}  # Example 3 — 20 days/year
-CLARA = {"name": "Clara Cooper", "id": "6375951"}  # Example 4 — retro sick (also tier 20)
-EMPLOYEE_A = {"name": "Steven Scott", "id": "6376052"}  # Extended Sick cascade (tier 20)
+# Demo cast (all SIJ Vacation 20 days / policy 367079)
+BERNARDA = {"name": "Bernarda Baker", "id": "6375969"}  # Example 1 — partial June
+DIANA = {"name": "Diana Davis", "id": "6375987"}  # Example 2 — suspension
+CHARLES = {"name": "Charles Carter", "id": "6375931"}  # Example 3 — long vacation
+CLARA = {"name": "Clara Cooper", "id": "6375951"}  # Example 4 — retro sick
+EMPLOYEE_A = {"name": "Steven Scott", "id": "6376052"}  # Extended Sick cascade
 
 
 class Api:
@@ -203,7 +205,18 @@ def ensure_allowance_on_policies(
             "tenure_period_transition": "beginning_of_cycle",
             "send_notification": False,
         }
-        status, body = api.post("timeoff/allowances", payload)
+        try:
+            status, body = api.post("timeoff/allowances", payload)
+        except Exception as exc:  # noqa: BLE001 — demo seed must survive API 500 storms
+            out.append(
+                {
+                    "policy_id": policy_id,
+                    "id": None,
+                    "action": "failed_exception",
+                    "error": str(exc)[:500],
+                }
+            )
+            continue
         aid = None
         if isinstance(body, dict):
             data = body.get("data") or body
@@ -369,6 +382,7 @@ def main() -> int:
         "scenarios": {},
         "honest_gaps": [
             "Factorial does NOT auto-pause vacation accrual during LOA >14 calendar days.",
+            "Factorial does NOT auto-skip vacation accrual on suspension / short sick days (Jamaica daily formula).",
             "Factorial does NOT auto-run Return-to-Work cancel of remaining ESL days.",
             "Factorial does NOT auto-cascade Extended Sick across Sick/Departmental/past years/Vacation/No Pay.",
             "Demo reproduces the Business Case with leave types + dated approved leaves + incidences + SQL/demo script.",
@@ -376,11 +390,15 @@ def main() -> int:
     }
 
     emps = api.list_all("employees/employees")
+    bernarda = find_employee(emps, BERNARDA)
+    diana = find_employee(emps, DIANA)
     charles = find_employee(emps, CHARLES)
     clara = find_employee(emps, CLARA)
     employee_a = find_employee(emps, EMPLOYEE_A)
-    if not charles or not clara or not employee_a:
+    if not bernarda or not diana or not charles or not clara or not employee_a:
         result["error"] = {
+            "bernarda": bool(bernarda),
+            "diana": bool(diana),
             "charles": bool(charles),
             "clara": bool(clara),
             "employee_a": bool(employee_a),
@@ -392,6 +410,7 @@ def main() -> int:
     # --- Leave types ---
     vacation = ensure_leave_type(api, "SIJ Vacation Leave", "07A2AD")
     sick = ensure_leave_type(api, "SIJ Sick Leave", "EF4444")
+    suspension = ensure_leave_type(api, "SIJ Suspension", "7C3AED")
     esl = ensure_leave_type(
         api,
         "SIJ Extended Sick Leave",
@@ -405,6 +424,7 @@ def main() -> int:
     result["leave_types"] = {
         "vacation": {"id": vacation.get("id"), "name": vacation.get("name")},
         "sick": {"id": sick.get("id"), "name": sick.get("name")},
+        "suspension": {"id": suspension.get("id"), "name": suspension.get("name")},
         "extended_sick": {"id": esl.get("id"), "name": esl.get("name")},
         "departmental": {"id": departmental.get("id"), "name": departmental.get("name")},
         "no_pay": {"id": no_pay.get("id"), "name": no_pay.get("name")},
@@ -425,6 +445,71 @@ def main() -> int:
         "sick": ensure_allowance_on_policies(
             api, name="SIJ Sick Allowance", leave_type_id=str(sick["id"]), days=14
         ),
+        "suspension": ensure_allowance_on_policies(
+            api,
+            name="SIJ Suspension Allowance",
+            leave_type_id=str(suspension["id"]),
+            days=14,
+            policy_ids=(POLICY_20,),  # Diana (Ex. 2) is on the 20-day policy
+        ),
+    }
+
+    # ========== Example 1: Partial Working Month (Bernarda, June sick 7 days) ==========
+    ex1 = create_leave(
+        api,
+        employee_id=str(bernarda["id"]),
+        leave_type_id=str(sick["id"]),
+        start_on="2026-06-01",
+        finish_on="2026-06-07",
+        description=(
+            "Business Case Example 1 — Partial Working Month. "
+            "Tier 20 days/year. Sick Jun 1–7 (7 calendar days). "
+            "June eligible 23 of 30. Jamaica accrual: 23 × (20/365) ≈ 1.2602 days."
+        ),
+    )
+    result["scenarios"]["example_1_partial_working_month"] = {
+        "employee": BERNARDA,
+        "annual_rate_days": 20,
+        "start_on": "2026-06-01",
+        "finish_on": "2026-06-07",
+        "calendar_days": daterange_days("2026-06-01", "2026-06-07"),
+        "june_days": 30,
+        "eligible_days": 23,
+        "jamaica_june_accrual": "23 × (20/365) ≈ 1.2602",
+        "leave": ex1,
+        "sql_filters": {"Data_init": "2026-06-01", "Data_end": "2026-06-30"},
+        "demo_note": (
+            "BC text says extended sick for 7 days; seed uses SIJ Sick Leave "
+            "(ESL type reserved for ≥14-day Extended Sick scenarios)."
+        ),
+    }
+
+    # ========== Example 2: Suspension (Diana, Aug 10–20 = 11 days) ==========
+    ex2 = create_leave(
+        api,
+        employee_id=str(diana["id"]),
+        leave_type_id=str(suspension["id"]),
+        start_on="2026-08-10",
+        finish_on="2026-08-20",
+        description=(
+            "Business Case Example 2 — Suspension. Tier 20 days/year. "
+            "BC wrote Aug 10–25 (11 days) — inconsistent; demo uses Aug 10–20 "
+            "(11 calendar days). Aug eligible 20 of 31. "
+            "Jamaica accrual: 20 × (20/365) ≈ 1.0958 days."
+        ),
+    )
+    result["scenarios"]["example_2_suspension"] = {
+        "employee": DIANA,
+        "annual_rate_days": 20,
+        "start_on": "2026-08-10",
+        "finish_on": "2026-08-20",
+        "calendar_days": daterange_days("2026-08-10", "2026-08-20"),
+        "august_days": 31,
+        "eligible_days": 20,
+        "bc_wrote_dates": "Aug 10–25 (11 days) — typo; 10–25 = 16 calendar days",
+        "jamaica_august_accrual": "20 × (20/365) ≈ 1.0958",
+        "leave": ex2,
+        "sql_filters": {"Data_init": "2026-08-01", "Data_end": "2026-08-31"},
     }
 
     # ========== Example 3: Long Vacation Dec 1–18 (Charles, 20 days/year) ==========
@@ -579,6 +664,8 @@ def main() -> int:
     _write(result)
 
     print("=== Business Case Leave demos seeded ===")
+    print("Example 1 (Bernarda Jun 1-7):", ex1.get("action"), ex1.get("id"))
+    print("Example 2 (Diana Aug 10-20):", ex2.get("action"), ex2.get("id"))
     print("Example 3 (Charles Dec 1-18):", ex3.get("action"), ex3.get("id"))
     print("Example 4 (Clara Jun 25-26):", ex4.get("action"), ex4.get("id"))
     print("ESL early RTW:", rtw.get("action"), rtw.get("id"))

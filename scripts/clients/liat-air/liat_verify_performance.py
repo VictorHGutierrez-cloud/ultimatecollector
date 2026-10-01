@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Verifica se o seed LIAT AIR está pronto para demo (company 191947)."""
+"""Verifica se o seed LIAT AIR está pronto para demo (company 195679)."""
 
 from __future__ import annotations
 

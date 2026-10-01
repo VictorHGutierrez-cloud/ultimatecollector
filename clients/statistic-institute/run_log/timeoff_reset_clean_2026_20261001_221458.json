@@ -1,0 +1,533 @@
+{
+  "client": "statistic-institute",
+  "started_at": "2026-10-01T22:14:22",
+  "tenure_updates": [
+    {
+      "id": "6376910",
+      "name": "Maria Lopez",
+      "status": 200
+    },
+    {
+      "id": "6376909",
+      "name": "Adan Garcia",
+      "status": 200
+    },
+    {
+      "id": "6376602",
+      "name": "Nadia Backfield",
+      "status": 200
+    },
+    {
+      "id": "6376282",
+      "name": "Tessa Todd",
+      "status": 200
+    },
+    {
+      "id": "6376279",
+      "name": "Owen Oakley",
+      "status": 200
+    },
+    {
+      "id": "6376275",
+      "name": "Ivan Ingram",
+      "status": 200
+    },
+    {
+      "id": "6376271",
+      "name": "Edward Ellis",
+      "status": 200
+    },
+    {
+      "id": "6376266",
+      "name": "Elena Egan",
+      "status": 200
+    },
+    {
+      "id": "6376262",
+      "name": "Marla Mercer",
+      "status": 200
+    },
+    {
+      "id": "6376261",
+      "name": "Preston Pike",
+      "status": 200
+    },
+    {
+      "id": "6376256",
+      "name": "Sonia Sharpe",
+      "status": 200
+    },
+    {
+      "id": "6376252",
+      "name": "Silas Sutton",
+      "status": 200
+    },
+    {
+      "id": "6376247",
+      "name": "Sabrina Sawyer",
+      "status": 200
+    },
+    {
+      "id": "6376243",
+      "name": "Nina Nash",
+      "status": 200
+    },
+    {
+      "id": "6376241",
+      "name": "Nolan Norris",
+      "status": 200
+    },
+    {
+      "id": "6376239",
+      "name": "Jessica Rivera",
+      "status": 200
+    },
+    {
+      "id": "6376234",
+      "name": "David Thompson",
+      "status": 200
+    },
+    {
+      "id": "6376230",
+      "name": "Ashley Nguyen",
+      "status": 200
+    },
+    {
+      "id": "6376224",
+      "name": "Michael Carter",
+      "status": 200
+    },
+    {
+      "id": "6376221",
+      "name": "Scott Spencer",
+      "status": 200
+    },
+    {
+      "id": "6376217",
+      "name": "Samuel Stone",
+      "status": 200
+    },
+    {
+      "id": "6376200",
+      "name": "Stephanie Sullivan",
+      "status": 200
+    },
+    {
+      "id": "6376137",
+      "name": "Susan Stanley",
+      "status": 200
+    },
+    {
+      "id": "6376133",
+      "name": "Noah Norris",
+      "status": 200
+    },
+    {
+      "id": "6376125",
+      "name": "Nora Nelson",
+      "status": 200
+    },
+    {
+      "id": "6376112",
+      "name": "Natalie Norton",
+      "status": 200
+    },
+    {
+      "id": "6376106",
+      "name": "Nicholas Newton",
+      "status": 200
+    },
+    {
+      "id": "6376102",
+      "name": "Emily Edwards",
+      "status": 200
+    },
+    {
+      "id": "6376096",
+      "name": "Sophie Simmons",
+      "status": 200
+    },
+    {
+      "id": "6376091",
+      "name": "Nathan Nichols",
+      "status": 200
+    },
+    {
+      "id": "6376087",
+      "name": "Samantha Stevens",
+      "status": 200
+    },
+    {
+      "id": "6376081",
+      "name": "Charlie Cooper",
+      "status": 200
+    },
+    {
+      "id": "6376075",
+      "name": "Simon Sanders",
+      "status": 200
+    },
+    {
+      "id": "6376070",
+      "name": "Hannah Harris",
+      "status": 200
+    },
+    {
+      "id": "6376063",
+      "name": "Isabel Ingram",
+      "status": 200
+    },
+    {
+      "id": "6376058",
+      "name": "Ian Irving",
+      "status": 200
+    },
+    {
+      "id": "6376052",
+      "name": "Steven Scott",
+      "status": 200
+    },
+    {
+      "id": "6376003",
+      "name": "Sarah Smith",
+      "status": 200
+    },
+    {
+      "id": "6375995",
+      "name": "Megan Moore",
+      "status": 200
+    },
+    {
+      "id": "6375991",
+      "name": "Peter Price",
+      "status": 200
+    },
+    {
+      "id": "6375987",
+      "name": "Diana Davis",
+      "status": 200
+    },
+    {
+      "id": "6375983",
+      "name": "Calvin Collins",
+      "status": 200
+    },
+    {
+      "id": "6375978",
+      "name": "Amelia Adams",
+      "status": 200
+    },
+    {
+      "id": "6375972",
+      "name": "Alice Anderson",
+      "status": 200
+    },
+    {
+      "id": "6375969",
+      "name": "Bernarda Baker",
+      "status": 200
+    },
+    {
+      "id": "6375967",
+      "name": "Cristopher Clarke",
+      "status": 200
+    },
+    {
+      "id": "6375962",
+      "name": "Matt Spencer",
+      "status": 200
+    },
+    {
+      "id": "6375958",
+      "name": "Felicity Ford",
+      "status": 200
+    },
+    {
+      "id": "6375954",
+      "name": "James Jones",
+      "status": 200
+    },
+    {
+      "id": "6375951",
+      "name": "Clara Cooper",
+      "status": 200
+    },
+    {
+      "id": "6375946",
+      "name": "Fiona Fletcher",
+      "status": 200
+    },
+    {
+      "id": "6375942",
+      "name": "Jack Johnson",
+      "status": 200
+    },
+    {
+      "id": "6375938",
+      "name": "Laura Lewis",
+      "status": 200
+    },
+    {
+      "id": "6375934",
+      "name": "Daisy Dawson",
+      "status": 200
+    },
+    {
+      "id": "6375931",
+      "name": "Charles Carter",
+      "status": 200
+    },
+    {
+      "id": "6375925",
+      "name": "Hellen Howard",
+      "status": 200
+    }
+  ],
+  "allowance_carry_zero": [
+    {
+      "allowance_id": "617645",
+      "policy_id": "367078",
+      "status": 422
+    },
+    {
+      "allowance_id": "617647",
+      "policy_id": "367079",
+      "status": 422
+    },
+    {
+      "allowance_id": "617649",
+      "policy_id": "367080",
+      "status": 422
+    },
+    {
+      "allowance_id": "617651",
+      "policy_id": "367081",
+      "status": 422
+    }
+  ],
+  "balance_wipes": [
+    {
+      "employee_id": "6375925",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6375931",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6375934",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6375938",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6375942",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6375951",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6375954",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6375958",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6375967",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6375969",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6375972",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6375978",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6375983",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6375987",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6375991",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6375995",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376003",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376052",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376058",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376063",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376070",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376075",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376081",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376087",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376091",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376096",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376106",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376112",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376125",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376133",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376137",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376200",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376217",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376224",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376230",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376234",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376239",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376261",
+      "allowance_id": "617647",
+      "status": 201
+    },
+    {
+      "employee_id": "6376262",
+      "allowance_id": "617649",
+      "status": 201
+    },
+    {
+      "employee_id": "6376602",
+      "allowance_id": "617651",
+      "status": 201
+    },
+    {
+      "employee_id": "6376909",
+      "allowance_id": "617645",
+      "status": 201
+    },
+    {
+      "employee_id": "6376910",
+      "allowance_id": "617647",
+      "status": 201
+    }
+  ],
+  "bernarda": {
+    "allowance_create": {
+      "status": 400,
+      "id": null,
+      "body": {
+        "errors": {
+          "errors": [
+            "Missing required prop `days_type` for class `Timeoff::Dtos::Allowance::Create`"
+          ]
+        }
+      }
+    }
+  }
+}

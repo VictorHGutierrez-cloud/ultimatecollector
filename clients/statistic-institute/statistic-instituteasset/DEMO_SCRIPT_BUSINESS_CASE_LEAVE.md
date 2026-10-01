@@ -1,7 +1,8 @@
-# STATIN Business Case — Leave Demo Script (Examples 3–4 + Extended Sick)
+# STATIN Business Case — Leave Demo Script (Examples 1–4 + Extended Sick)
 
 **Client:** Statistical Institute of Jamaica (sandbox Factorial)  
 **Source:** *Statistical Institute of Jamaica Factorial Business Case* — Leave Requirements  
+**Phase A plan:** `PHASE_A_BUSINESS_CASE_EXAMPLES_PLAN.md`  
 **Seed:** `python scripts/clients/statistic-institute/seed_business_case_leave_demos.py`  
 **Log:** `clients/statistic-institute/run_log/business_case_leave_seed_latest.json`
 
@@ -13,9 +14,10 @@
 |-------|---------|
 | **LIVE in Factorial** | You can open the screen and show the exact data |
 | **DEMO NARRATIVE** | Say it aloud — Factorial does not automate this step |
-| **SQL / PROCESS** | Use `sqlexemplo_power.txt` / `sqlexemplo_resumo.txt` or the monthly close manual |
+| **SQL elegibilidade** | `sqlexemplo_elegibilidade_*.txt` — any day off blocks accrual (Ex. 1–2) |
+| **SQL pause >14** | `sqlexemplo_power.txt` / `_resumo.txt` — extended pause pack (Ex. 3 / Felicity) |
 
-**Goal:** Every case from Example 3 through Extended Sick Leave can be **shown faithfully** in the demo environment — either as live data or as an honest process gap with seeded evidence.
+**Goal:** Every case from Example 1 through Extended Sick Leave can be **shown faithfully** in the demo environment — either as live data or as an honest process gap with seeded evidence.
 
 ---
 
@@ -23,9 +25,95 @@
 
 | Role in Business Case | Employee in sandbox | Why |
 |-----------------------|---------------------|-----|
+| Example 1 (partial June) | **Bernarda Baker** | SIJ Vacation 20 days; sick Jun 1–7 |
+| Example 2 (suspension) | **Diana Davis** | SIJ Vacation 20 days; SIJ Suspension Aug 10–20 |
 | Example 3 (20 days/year) | **Charles Carter** | SIJ Vacation 20 days policy |
 | Example 4 (retroactive sick) | **Clara Cooper** | Short sick Jun 25–26 with retro story |
 | Employee A (Extended Sick) | **Steven Scott** | ESL early RTW + 60-day cascade |
+
+---
+
+## Example 1 — Partial Working Month (LIVE + narrative)
+
+**Business Case text**
+
+- Annual rate: **20 days** (`20/365 ≈ 0.0547` per day)  
+- Employee works **23 of 30** days in June  
+- **7 days** on extended sick leave  
+- Accrual for June = **23 × 0.0547 ≈ 1.2602** days  
+
+### What to click
+
+1. **Employees** → **Bernarda Baker** → **Time Off**
+2. Open leave: **SIJ Sick Leave** · **2026-06-01 → 2026-06-07**  
+   - Leave id (seed): `7446086`  
+   - Description mentions Example 1 and the math (`23 × (20/365) ≈ 1.2602`)  
+3. Run **Eligibility** SQL (this is the right report for Example 1):
+   - File: `sqlexemplo_elegibilidade_resumo.txt` (totals) or `sqlexemplo_elegibilidade_detalhe.txt` (proof)
+   - `Data_init = 2026-06-01`
+   - `Data_end = 2026-06-30`
+4. Find Bernarda → expect approximately:
+   - `Days_On_Blocking_Leave = 7`
+   - `Eligible_Days_Jamaica = 23`
+   - `B_Jamaica_Accrual_Period ≈ 1.2603` (= 23 × 20/365)
+   - `C_Gap_Manual_Adjustment ≈ 0.3836` (= 7 × 20/365) ← vacation Factorial may still have accrued while she was off
+   - `Has_Extended_Pause_Flag = NO` (7 ≤ 14 — still a gap; short leave also blocks daily accrual)
+
+**Do not use** `sqlexemplo_power.txt` alone for Example 1: Power sets `C=0` when ≤14 (pause-only logic). Eligibility SQL is the one that matches “didn’t work → shouldn’t accrue”.
+
+**What to say**
+
+> “Bernarda is on the 20-day tier. She was sick the first seven calendar days of June — she was not at work.  
+> Jamaica only accrues on the other 23 days → about **1.2602** vacation days for June.  
+> Factorial does **not** stop vacation accrual on those sick days by itself.  
+> The Eligibility SQL shows the gap ≈ **0.38** days to adjust if we align to Jamaica.  
+> Extended pause >14 is a separate process flag — here it is NO, but the daily rule still applies.”
+
+| Item | Status |
+|------|--------|
+| Dates Jun 1–7 | **LIVE** |
+| Tier 20 | **LIVE** |
+| Formula 1.2602 in description | **LIVE** |
+| Auto June accrual = 1.2602 | **Not native** |
+| Gap ≈ 0.38 while off | **SQL elegibilidade** |
+
+---
+
+## Example 2 — Suspension (LIVE + narrative)
+
+**Business Case text**
+
+- Annual rate: **20 days**  
+- Suspended **August 10–25** with note **(11 days)** — date range and day count disagree (10–25 = 16 calendar days)  
+- Math: skip 11 days in August (31 days) → **20** eligible → **20 × 0.0547 ≈ 1.0958** days  
+
+### What to click
+
+1. **Time Off** → **Leave types** → show **SIJ Suspension** (seeded for this example)
+2. **Employees** → **Diana Davis** → **Time Off**
+3. Open leave: **SIJ Suspension** · **2026-08-10 → 2026-08-20** (**11** calendar days)  
+   - Leave id (seed): `7446087`  
+   - Description explains the BC typo (wrote 10–25 / 11 days) and the math 1.0958  
+4. Run **Eligibility** SQL:
+   - `sqlexemplo_elegibilidade_resumo.txt` or `_detalhe.txt`
+   - `Data_init = 2026-08-01`
+   - `Data_end = 2026-08-31`
+5. Expect Diana: Days_Off≈11 · Eligible≈20 · Jamaica≈1.0959 · Gap≈0.6027 · Extended_Pause=NO
+
+**What to say**
+
+> “Diana’s suspension is the Business Case Example 2.  
+> The document said Aug 10–25 but also 11 days — we seeded **Aug 10–20** so the calendar matches the **1.0958** accrual figure.  
+> Jamaica skips accrual on suspension days (any blocking leave day). Factorial does not auto-skip.  
+> Eligibility SQL shows the month math and the gap to adjust.”
+
+| Item | Status |
+|------|--------|
+| SIJ Suspension leave type | **LIVE** |
+| Dates Aug 10–20 (11 days) | **LIVE** |
+| Formula 1.0958 in description | **LIVE** |
+| Auto skip accrual | **Not native** |
+| Gap / month math | **SQL elegibilidade** |
 
 ---
 
@@ -115,6 +203,7 @@ Both are correct for different questions — use C_Gap for the month-end adjustm
 3. Also show supporting types created for the cascade:  
    - **SIJ Departmental Leave**  
    - **SIJ No Pay Leave**  
+   - **SIJ Suspension** (Example 2)  
    - (existing) **SIJ Sick Leave**, **SIJ Vacation Leave**
 
 **What to say**
@@ -212,21 +301,23 @@ Both are correct for different questions — use C_Gap for the month-end adjustm
 
 ---
 
-## Quick demo path (≈ 10 minutes)
+## Quick demo path (≈ 12 minutes)
 
-1. **Charles** — Example 3 Dec vacation + optional SQL Dec filters  
-2. **Clara** — Example 4 retro sick  
-3. **Leave types** — Extended Sick (+ Departmental, No Pay)  
-4. **Steven** — ESL early RTW Dec 1–14 2025  
-5. **Steven** — walk 60-day cascade Jan–Mar 2026  
-6. Close: “Native gaps = auto pause, auto RTW cancel, auto cascade → covered by process + SQL monthly close”
+1. **Bernarda** — Example 1 partial June + math 1.2602  
+2. **Diana** — Example 2 suspension Aug 10–20 + math 1.0958  
+3. **Charles** — Example 3 Dec vacation + optional SQL Dec filters  
+4. **Clara** — Example 4 retro sick  
+5. **Leave types** — Extended Sick (+ Departmental, No Pay, Suspension)  
+6. **Steven** — ESL early RTW Dec 1–14 2025  
+7. **Steven** — walk 60-day cascade Jan–Mar 2026  
+8. Close: “Native gaps = daily accrual formula, auto pause, auto RTW cancel, auto cascade → covered by process + SQL monthly close”
 
 ---
 
 ## Honest gaps (say this if challenged)
 
 1. **Daily accrual only on “active” days** — Factorial policy engine ≠ pure Jamaica daily formula; SQL approximates the gap.  
-2. **Auto pause >14 calendar days** — not native; monthly close manual.  
+2. **Auto pause >14 calendar days / suspension skip** — not native; monthly close manual / narrative.  
 3. **Return-to-Work workflow with dual approval + auto cancel** — outcome seeded; workflow is narrative.  
 4. **Single ESL request auto-cascading across 6 balances** — reproduced as ordered leaves, not one magic request.  
 5. **Past 2 years expired leave lookup** — illustrated with Sick/Departmental segments, not a historical archive engine.
@@ -242,6 +333,13 @@ python scripts/clients/statistic-institute/verify_timeoff_sij.py
 
 SQL companions:
 
-- Detail: `sqlexemplo_power.txt`  
-- Totals: `sqlexemplo_resumo.txt`  
-- Month-end ops: `MONTHLY_CLOSE_VACATION_PAUSE_MANUAL.md` (+ PDF in Documents)
+- **Eligibility (any day off → no vacation accrual):**  
+  - Totals: `sqlexemplo_elegibilidade_resumo.txt`  
+  - Detail: `sqlexemplo_elegibilidade_detalhe.txt`  
+  - Use for Examples **1–2** (Bernarda / Diana) and monthly “didn’t work” gap  
+- **Pause >14 only (extended block):**  
+  - Detail: `sqlexemplo_power.txt`  
+  - Totals: `sqlexemplo_resumo.txt`  
+  - Use for Example **3** / Felicity / month-end pause pack  
+- Month-end ops: `MONTHLY_CLOSE_VACATION_PAUSE_MANUAL.md` (+ PDF in Documents)  
+- Phase A plan: `PHASE_A_BUSINESS_CASE_EXAMPLES_PLAN.md`

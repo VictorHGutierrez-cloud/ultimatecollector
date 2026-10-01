@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-09-29T23:05:01.482353+00:00",
+  "company_focus": "188450",
+  "display_name": "CDH Investment Bank Ltd",
+  "scope": "full_bsc",
+  "year": 2026,
+  "counts": {
+    "employees": 44,
+    "teams": 21,
+    "cdh_teams": 6,
+    "locations": 6,
+    "cdh_locations": 1,
+    "legal_entities": 4,
+    "review_processes": 9,
+    "cdh_review_processes": 4,
+    "trainings": 8
+  },
+  "cast_resolution": [
+    {
+      "full_name": "Thandiwe Phiri",
+      "group": "leadership",
+      "role_title": "CDH Managing Director",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Hellen Howard",
+      "rename_from_found": false,
+      "employee_id": "6195559"
+    },
+    {
+      "full_name": "Chisomo Banda",
+      "group": "leadership",
+      "role_title": "CDH Chief Human Capital Development Officer",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Charles Carter",
+      "rename_from_found": false,
+      "employee_id": "6195624"
+    },
+    {
+      "full_name": "Kondwani Chirwa",
+      "group": "leadership",
+      "role_title": "CDH Chief Finance Officer",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Daisy Dawson",
+      "rename_from_found": false,
+      "employee_id": "6195639"
+    },
+    {
+      "full_name": "Nqabile Medi",
+      "group": "manager",
+      "role_title": "CDH Administration Manager",
+      "star_scorecard": true,
+      "found": true,
+      "rename_from": "Laura Lewis",
+      "rename_from_found": false,
+      "employee_id": "6195655"
+    },
+    {
+      "full_name": "Grace Mvula",
+      "group": "manager",
+      "role_title": "CDH Head of Retail Banking",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Jack Johnson",
+      "rename_from_found": false,
+      "employee_id": "6195662"
+    },
+    {
+      "full_name": "Blessings Tembo",
+      "group": "manager",
+      "role_title": "CDH Operations Manager",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Alice Anderson",
+      "rename_from_found": false,
+      "employee_id": "6195800"
+    },
+    {
+      "full_name": "Tadala Mbewe",
+      "group": "staff",
+      "role_title": "CDH Finance Analyst",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Clara Cooper",
+      "rename_from_found": false,
+      "employee_id": "6195685"
+    },
+    {
+      "full_name": "Yamikani Phiri",
+      "group": "staff",
+      "role_title": "CDH HR Officer",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "James Jones",
+      "rename_from_found": false,
+      "employee_id": "6195693"
+    },
+    {
+      "full_name": "Chimwemwe Kaunda",
+      "group": "staff",
+      "role_title": "CDH Customer Experience Officer",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Felicity Ford",
+      "rename_from_found": false,
+      "employee_id": "6195702"
+    },
+    {
+      "full_name": "Patrick Nyirenda",
+      "group": "staff",
+      "role_title": "CDH Compliance Officer",
+      "star_scorecard": false,
+      "found": true,
+      "rename_from": "Sophie Simmons",
+      "rename_from_found": false,
+      "employee_id": "6196051"
+    }
+  ],
+  "cast_summary": {
+    "already_named": 10,
+    "ready_to_rename": 0,
+    "missing": 0
+  },
+  "probes": {
+    "api_public/credentials": {
+      "path": "api_public/credentials",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "employees/employees": {
+      "path": "employees/employees",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "teams/teams": {
+      "path": "teams/teams",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "locations/locations": {
+      "path": "locations/locations",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "companies/legal_entities": {
+      "path": "companies/legal_entities",
+      "status": 200,
+      "ok": true,
+      "sample_count": 4,
+      "error": null
+    },
+    "performance/review_processes": {
+      "path": "performance/review_processes",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "performance/company_employee_score_scales": {
+      "path": "performance/company_employee_score_scales",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "trainings/trainings": {
+      "path": "trainings/trainings",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "posts/groups": {
+      "path": "posts/groups",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    }
+  }
+}

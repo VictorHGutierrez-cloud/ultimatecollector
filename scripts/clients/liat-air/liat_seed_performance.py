@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Seed demo LIAT AIR na Factorial (company 191947).
+Seed demo LIAT AIR na Factorial (company 195679).
 
 Inclui: location, legal entity, cast (rename), teams, managers,
 performance BSC P1/P2/P3, trainings, announcements. Foco: avaliação de desempenho.

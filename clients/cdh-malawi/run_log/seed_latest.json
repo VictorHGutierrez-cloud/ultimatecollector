@@ -1,0 +1,675 @@
+{
+  "started_at": "2026-09-29T19:26:48.982149+00:00",
+  "mode": "apply",
+  "company_id": "188450",
+  "scope": "full_bsc",
+  "year": 2026,
+  "actions": [
+    {
+      "action": "location_exists",
+      "detail": {
+        "id": "719576",
+        "name": "CDH House — Lilongwe Head Office"
+      }
+    },
+    {
+      "action": "legal_entity_exists",
+      "detail": {
+        "id": "449272",
+        "name": "CDH Investment Bank Ltd"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "executive",
+        "id": "2113834",
+        "name": "CDH Executive Leadership"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "hcd",
+        "id": "2113835",
+        "name": "CDH Human Capital Development"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "finance",
+        "id": "2113836",
+        "name": "CDH Finance & Treasury"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "operations",
+        "id": "2113837",
+        "name": "CDH Operations & Administration"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "commercial",
+        "id": "2113838",
+        "name": "CDH Commercial & Retail Banking"
+      }
+    },
+    {
+      "action": "team_exists",
+      "detail": {
+        "key": "compliance",
+        "id": "2113839",
+        "name": "CDH Risk & Compliance"
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Thandiwe Phiri",
+        "team_id": "2113834",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Chisomo Banda",
+        "team_id": "2113835",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Kondwani Chirwa",
+        "team_id": "2113836",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Nqabile Medi",
+        "team_id": "2113835",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Grace Mvula",
+        "team_id": "2113838",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Blessings Tembo",
+        "team_id": "2113837",
+        "lead": true
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Tadala Mbewe",
+        "team_id": "2113836",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Yamikani Phiri",
+        "team_id": "2113835",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Chimwemwe Kaunda",
+        "team_id": "2113838",
+        "lead": false
+      }
+    },
+    {
+      "action": "membership_exists",
+      "detail": {
+        "employee": "Patrick Nyirenda",
+        "team_id": "2113839",
+        "lead": true
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Thandiwe Phiri",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Chisomo Banda",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Kondwani Chirwa",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Nqabile Medi",
+        "manager_id": "6195624"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Grace Mvula",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Blessings Tembo",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Tadala Mbewe",
+        "manager_id": "6195639"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Yamikani Phiri",
+        "manager_id": "6195655"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Chimwemwe Kaunda",
+        "manager_id": "6195662"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Patrick Nyirenda",
+        "manager_id": "6195800"
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "q1",
+        "id": "338251"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338251",
+        "status": 200,
+        "body": "{'id': '338251', 'company_id': '188450', 'name': 'CDH Q1 BSC Goal Setting 2026', 'description': 'CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weig..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338251",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338251",
+        "status": 200,
+        "body": "{'id': '338251', 'company_id': '188450', 'name': 'CDH Q1 BSC Goal Setting 2026', 'description': 'CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weig..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338251",
+        "status": 200,
+        "body": "{'id': '338251', 'company_id': '188450', 'name': 'CDH Q1 BSC Goal Setting 2026', 'description': 'CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weig..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338251",
+        "status": 200,
+        "body": "{'id': '338251', 'company_id': '188450', 'name': 'CDH Q1 BSC Goal Setting 2026', 'description': 'CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weig..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338251",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338251",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "q2",
+        "id": "338252"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338252",
+        "status": 200,
+        "body": "{'id': '338252', 'company_id': '188450', 'name': 'CDH Q2 BSC Progress Review 2026', 'description': 'CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions. (Demo window open th..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338252",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338252",
+        "status": 200,
+        "body": "{'id': '338252', 'company_id': '188450', 'name': 'CDH Q2 BSC Progress Review 2026', 'description': 'CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions. (Demo window open th..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338252",
+        "status": 200,
+        "body": "{'id': '338252', 'company_id': '188450', 'name': 'CDH Q2 BSC Progress Review 2026', 'description': 'CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions. (Demo window open th..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338252",
+        "status": 200,
+        "body": "{'id': '338252', 'company_id': '188450', 'name': 'CDH Q2 BSC Progress Review 2026', 'description': 'CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions. (Demo window open th..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338252",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338252",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "q3",
+        "id": "338248",
+        "status": "draft"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338248",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "process_exists",
+      "detail": {
+        "key": "q4",
+        "id": "338249",
+        "status": "draft"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338249",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "338251",
+        "name": "CDH Q1 BSC Goal Setting 2026"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "338251",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338251",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "started_process",
+      "detail": {
+        "id": "338252",
+        "name": "CDH Q2 BSC Progress Review 2026"
+      }
+    },
+    {
+      "action": "bulk_create_targets",
+      "detail": {
+        "process_id": "338252",
+        "status": 409,
+        "body": "{'errors': [{'error': 'Invalid state'}]}"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338252",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "training_exists",
+      "detail": "CDH Balanced Scorecard Essentials for Managers"
+    },
+    {
+      "action": "training_exists",
+      "detail": "CDH Core Values in Action"
+    },
+    {
+      "action": "training_exists",
+      "detail": "CDH Quarterly Appraisal & Coaching"
+    },
+    {
+      "action": "training_exists",
+      "detail": "CDH Regulatory Awareness (RBM & Licences)"
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "403956",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "post_exists",
+      "detail": {
+        "title": "CDH Full BSC Performance Cycle 2026 is live",
+        "id": "29804800"
+      }
+    },
+    {
+      "action": "post_exists",
+      "detail": {
+        "title": "CDH Core Values — part of every scorecard",
+        "id": "29804801"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\cdh-malawi\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "location_id": "719576",
+    "legal_entity_id": "449272",
+    "cast": {
+      "Thandiwe Phiri": {
+        "employee_id": "6195559",
+        "access_id": "6657358",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Chisomo Banda": {
+        "employee_id": "6195624",
+        "access_id": "6657432",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Kondwani Chirwa": {
+        "employee_id": "6195639",
+        "access_id": "6657442",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Nqabile Medi": {
+        "employee_id": "6195655",
+        "access_id": "6657454",
+        "group": "manager",
+        "star_scorecard": true
+      },
+      "Grace Mvula": {
+        "employee_id": "6195662",
+        "access_id": "6657465",
+        "group": "manager",
+        "star_scorecard": false
+      },
+      "Blessings Tembo": {
+        "employee_id": "6195800",
+        "access_id": "6657600",
+        "group": "manager",
+        "star_scorecard": false
+      },
+      "Tadala Mbewe": {
+        "employee_id": "6195685",
+        "access_id": "6657486",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Yamikani Phiri": {
+        "employee_id": "6195693",
+        "access_id": "6657495",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Chimwemwe Kaunda": {
+        "employee_id": "6195702",
+        "access_id": "6657501",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Patrick Nyirenda": {
+        "employee_id": "6196051",
+        "access_id": "6657854",
+        "group": "staff",
+        "star_scorecard": false
+      }
+    },
+    "teams": {
+      "executive": "2113834",
+      "hcd": "2113835",
+      "finance": "2113836",
+      "operations": "2113837",
+      "commercial": "2113838",
+      "compliance": "2113839"
+    },
+    "review_processes": {
+      "q1": {
+        "id": "338251",
+        "name": "CDH Q1 BSC Goal Setting 2026",
+        "status": "draft"
+      },
+      "q2": {
+        "id": "338252",
+        "name": "CDH Q2 BSC Progress Review 2026",
+        "status": "draft"
+      },
+      "q3": {
+        "id": "338248",
+        "name": "CDH Q3 BSC Progress Review 2026",
+        "status": "draft"
+      },
+      "q4": {
+        "id": "338249",
+        "name": "CDH Q4 Year-End BSC Appraisal 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [
+      "470986",
+      "470987",
+      "470988",
+      "470989"
+    ],
+    "post_group_id": "403956",
+    "posts": [
+      "29804800",
+      "29804801"
+    ]
+  },
+  "finished_at": "2026-09-29T19:26:58.091872+00:00"
+}

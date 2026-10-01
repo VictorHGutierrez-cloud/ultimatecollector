@@ -1,0 +1,762 @@
+{
+  "company_id": "188450",
+  "api_version": "2026-07-01",
+  "prefix": "CDH",
+  "year": 2026,
+  "display_name": "CDH Investment Bank Ltd",
+  "scope": "full_bsc",
+  "source_scorecard": "cdh-malawiasset/N MEDI  - SCORECARD - HCD Q1 FINAL 1.xlsx",
+  "location": {
+    "name": "CDH House — Lilongwe Head Office",
+    "country": "mw",
+    "country_fallback": "us",
+    "timezone": "Africa/Johannesburg",
+    "timezone_fallback": "Africa/Johannesburg",
+    "city": "Lilongwe",
+    "state": "Central Region",
+    "postal_code": "00000",
+    "address_line_one": "CDH House, Lilongwe",
+    "phone_number": "+2651770000",
+    "main": true
+  },
+  "legal_entity": {
+    "legal_name": "CDH Investment Bank Ltd",
+    "country": "mw",
+    "country_fallback": "us",
+    "currency": "MWK",
+    "currency_fallback": "USD",
+    "city": "Lilongwe",
+    "state": "Central Region",
+    "postal_code": "00000",
+    "address_line_1": "CDH House, Lilongwe",
+    "tin": "CDH-MW-001"
+  },
+  "teams": [
+    {
+      "key": "executive",
+      "name": "CDH Executive Leadership",
+      "lead": "Thandiwe Phiri"
+    },
+    {
+      "key": "hcd",
+      "name": "CDH Human Capital Development",
+      "lead": "Chisomo Banda"
+    },
+    {
+      "key": "finance",
+      "name": "CDH Finance & Treasury",
+      "lead": "Kondwani Chirwa"
+    },
+    {
+      "key": "operations",
+      "name": "CDH Operations & Administration",
+      "lead": "Blessings Tembo"
+    },
+    {
+      "key": "commercial",
+      "name": "CDH Commercial & Retail Banking",
+      "lead": "Grace Mvula"
+    },
+    {
+      "key": "compliance",
+      "name": "CDH Risk & Compliance",
+      "lead": "Patrick Nyirenda"
+    }
+  ],
+  "cast": [
+    {
+      "full_name": "Thandiwe Phiri",
+      "first_name": "Thandiwe",
+      "last_name": "Phiri",
+      "email": "thandiwe.phiri@cdh-demo.mw",
+      "gender": "female",
+      "group": "leadership",
+      "team_key": "executive",
+      "role_title": "CDH Managing Director",
+      "goal_count": 10,
+      "rename_from": "Hellen Howard"
+    },
+    {
+      "full_name": "Chisomo Banda",
+      "first_name": "Chisomo",
+      "last_name": "Banda",
+      "email": "chisomo.banda@cdh-demo.mw",
+      "gender": "female",
+      "group": "leadership",
+      "team_key": "hcd",
+      "role_title": "CDH Chief Human Capital Development Officer",
+      "goal_count": 10,
+      "rename_from": "Charles Carter",
+      "notes": "Appraiser on Nqabile Medi scorecard"
+    },
+    {
+      "full_name": "Kondwani Chirwa",
+      "first_name": "Kondwani",
+      "last_name": "Chirwa",
+      "email": "kondwani.chirwa@cdh-demo.mw",
+      "gender": "male",
+      "group": "leadership",
+      "team_key": "finance",
+      "role_title": "CDH Chief Finance Officer",
+      "goal_count": 10,
+      "rename_from": "Daisy Dawson"
+    },
+    {
+      "full_name": "Nqabile Medi",
+      "first_name": "Nqabile",
+      "last_name": "Medi",
+      "email": "nqabile.medi@cdh-demo.mw",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "hcd",
+      "role_title": "CDH Administration Manager",
+      "employee_no": "CDHIB048",
+      "goal_count": 12,
+      "rename_from": "Laura Lewis",
+      "star_scorecard": true,
+      "notes": "Primary demo persona — Full BSC from client Excel"
+    },
+    {
+      "full_name": "Grace Mvula",
+      "first_name": "Grace",
+      "last_name": "Mvula",
+      "email": "grace.mvula@cdh-demo.mw",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "commercial",
+      "role_title": "CDH Head of Retail Banking",
+      "goal_count": 9,
+      "rename_from": "Jack Johnson"
+    },
+    {
+      "full_name": "Blessings Tembo",
+      "first_name": "Blessings",
+      "last_name": "Tembo",
+      "email": "blessings.tembo@cdh-demo.mw",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "operations",
+      "role_title": "CDH Operations Manager",
+      "goal_count": 9,
+      "rename_from": "Alice Anderson"
+    },
+    {
+      "full_name": "Tadala Mbewe",
+      "first_name": "Tadala",
+      "last_name": "Mbewe",
+      "email": "tadala.mbewe@cdh-demo.mw",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "finance",
+      "role_title": "CDH Finance Analyst",
+      "goal_count": 7,
+      "rename_from": "Clara Cooper"
+    },
+    {
+      "full_name": "Yamikani Phiri",
+      "first_name": "Yamikani",
+      "last_name": "Phiri",
+      "email": "yamikani.phiri@cdh-demo.mw",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "hcd",
+      "role_title": "CDH HR Officer",
+      "goal_count": 7,
+      "rename_from": "James Jones"
+    },
+    {
+      "full_name": "Chimwemwe Kaunda",
+      "first_name": "Chimwemwe",
+      "last_name": "Kaunda",
+      "email": "chimwemwe.kaunda@cdh-demo.mw",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "commercial",
+      "role_title": "CDH Customer Experience Officer",
+      "goal_count": 7,
+      "rename_from": "Felicity Ford"
+    },
+    {
+      "full_name": "Patrick Nyirenda",
+      "first_name": "Patrick",
+      "last_name": "Nyirenda",
+      "email": "patrick.nyirenda@cdh-demo.mw",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "compliance",
+      "role_title": "CDH Compliance Officer",
+      "goal_count": 7,
+      "rename_from": "Sophie Simmons"
+    }
+  ],
+  "manager_map": {
+    "Thandiwe Phiri": null,
+    "Chisomo Banda": "Thandiwe Phiri",
+    "Kondwani Chirwa": "Thandiwe Phiri",
+    "Nqabile Medi": "Chisomo Banda",
+    "Grace Mvula": "Thandiwe Phiri",
+    "Blessings Tembo": "Thandiwe Phiri",
+    "Tadala Mbewe": "Kondwani Chirwa",
+    "Yamikani Phiri": "Nqabile Medi",
+    "Chimwemwe Kaunda": "Grace Mvula",
+    "Patrick Nyirenda": "Blessings Tembo"
+  },
+  "bsc_perspectives": [
+    {
+      "key": "financial",
+      "name": "Financial",
+      "weight_pct": 30
+    },
+    {
+      "key": "customer",
+      "name": "Customer",
+      "weight_pct": 15
+    },
+    {
+      "key": "internal",
+      "name": "Internal business processes",
+      "weight_pct": 25
+    },
+    {
+      "key": "learning",
+      "name": "Learning & Growth",
+      "weight_pct": 30
+    }
+  ],
+  "core_values": [
+    {
+      "name": "Integrity",
+      "weight_pct": 2
+    },
+    {
+      "name": "Respect & Trust",
+      "weight_pct": 2
+    },
+    {
+      "name": "Teamwork",
+      "weight_pct": 2
+    },
+    {
+      "name": "Equity",
+      "weight_pct": 2
+    },
+    {
+      "name": "Innovation",
+      "weight_pct": 2
+    }
+  ],
+  "competencies": {
+    "all_employees": [
+      "CDH Value: Integrity",
+      "CDH Value: Respect & Trust",
+      "CDH Value: Teamwork",
+      "CDH Value: Equity",
+      "CDH Value: Innovation"
+    ],
+    "hcd": [
+      "CDH Competency: Stakeholder Partnership",
+      "CDH Competency: People Process Discipline",
+      "CDH Competency: Welfare & Engagement"
+    ],
+    "finance": [
+      "CDH Competency: Financial Stewardship",
+      "CDH Competency: Cost Discipline",
+      "CDH Competency: Reporting Accuracy"
+    ],
+    "commercial": [
+      "CDH Competency: Customer Focus",
+      "CDH Competency: Deposit Mobilisation",
+      "CDH Competency: Service Recovery"
+    ],
+    "operations": [
+      "CDH Competency: Operational Efficiency",
+      "CDH Competency: Vendor & Facilities Governance",
+      "CDH Competency: Audit Readiness"
+    ],
+    "compliance": [
+      "CDH Competency: Regulatory Compliance (RBM)",
+      "CDH Competency: Risk Mitigation",
+      "CDH Competency: Policy Adherence"
+    ],
+    "management": [
+      "CDH Competency: Leadership",
+      "CDH Competency: Coaching & Appraisals",
+      "CDH Competency: Planning & Organizing"
+    ],
+    "executive": [
+      "CDH Competency: Strategic Capacity",
+      "CDH Competency: Governance & Stewardship",
+      "CDH Competency: Bank Performance Ownership"
+    ]
+  },
+  "weighting": {
+    "staff": {
+      "objectives": 90,
+      "competencies": 10,
+      "note": "Matches Excel: KPI lines ~90% + five core values at 2% each = 10%"
+    },
+    "manager": {
+      "objectives": 90,
+      "competencies": 10
+    },
+    "leadership": {
+      "objectives": 90,
+      "competencies": 10
+    }
+  },
+  "rating_scale": [
+    {
+      "code": "NH",
+      "label": "Needs Help",
+      "definition": "Materially below target; recovery plan required",
+      "excel_status": "Needs Help"
+    },
+    {
+      "code": "CAU",
+      "label": "Caution",
+      "definition": "Below target or at risk; monitor closely",
+      "excel_status": "Caution"
+    },
+    {
+      "code": "OT",
+      "label": "On Target",
+      "definition": "Meeting approved quarterly / annual target",
+      "excel_status": "On Target"
+    },
+    {
+      "code": "EXC",
+      "label": "Exceeded",
+      "definition": "Above target with sustained delivery",
+      "excel_status": null
+    },
+    {
+      "code": "SIG",
+      "label": "Significantly Exceeded",
+      "definition": "Materially above target with bank-wide impact",
+      "excel_status": null
+    }
+  ],
+  "kpi_status_options": [
+    "On Target",
+    "Caution",
+    "Needs Help",
+    "No Data"
+  ],
+  "goal_categories": [
+    "Financial",
+    "Customer",
+    "Internal business processes",
+    "Learning & Growth"
+  ],
+  "star_scorecard_nqabile": {
+    "employee": "Nqabile Medi",
+    "appraiser": "Chisomo Banda",
+    "business_unit": "Human Capital Development",
+    "financial_year": "1 Jan 2026 to 31 Dec 2026",
+    "objectives": [
+      {
+        "perspective": "Financial",
+        "objective": "To sustain effective financial performance (grow revenue)",
+        "measures": [
+          {
+            "title": "NPL at 2% quarterly",
+            "weight_pct": 3.5,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Cost to income ratio of 33.5% quarterly",
+            "weight_pct": 3.5,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "ROA at 6% quarterly",
+            "weight_pct": 3.5,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "ROE at 60.6% quarterly",
+            "weight_pct": 3.5,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Reduce cost by 10% — quarterly",
+            "weight_pct": 6.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Q4: NPAT of K35.7 billion",
+            "weight_pct": 5.0,
+            "cadence": "Q4"
+          }
+        ]
+      },
+      {
+        "perspective": "Financial",
+        "objective": "To grow deposits",
+        "measures": [
+          {
+            "title": "Mobilise K100m worth of deposits — Q4",
+            "weight_pct": 5.0,
+            "cadence": "Q4"
+          }
+        ]
+      },
+      {
+        "perspective": "Customer",
+        "objective": "To enhance internal and external stakeholders' satisfaction",
+        "measures": [
+          {
+            "title": "Q3: Customer satisfaction index (CSI) at 90%",
+            "weight_pct": 2.5,
+            "cadence": "Q3"
+          },
+          {
+            "title": "Q3: Customer net promoter index (NPI) at 90%",
+            "weight_pct": 2.5,
+            "cadence": "Q3"
+          },
+          {
+            "title": "Q2: Human Capital stakeholder satisfaction index at 90%",
+            "weight_pct": 2.5,
+            "cadence": "Q2"
+          },
+          {
+            "title": "Q4: Move LBC to a new location — City Assembly approval",
+            "weight_pct": 2.5,
+            "cadence": "Q4"
+          },
+          {
+            "title": "Completion CCBC minor renovation works — Q4",
+            "weight_pct": 2.5,
+            "cadence": "Q4"
+          },
+          {
+            "title": "Completion CDH House refurbishments and external repairs — Q4",
+            "weight_pct": 2.5,
+            "cadence": "Q4"
+          }
+        ]
+      },
+      {
+        "perspective": "Internal business processes",
+        "objective": "To enhance operational efficiencies, ensure regulatory compliance and mitigate risks",
+        "measures": [
+          {
+            "title": "100% compliance with directives / regulatory requirements (RBM, COSOMA, City licences, Fire certificate) — quarterly",
+            "weight_pct": 4.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Renewal of approved prequalification of suppliers list — Q4",
+            "weight_pct": 6.0,
+            "cadence": "Q4"
+          },
+          {
+            "title": "100% Satisfactory audit ratings — quarterly",
+            "weight_pct": 5.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "100% insurance cover on bank assets — quarterly",
+            "weight_pct": 5.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Staff retention at 90% — quarterly",
+            "weight_pct": 3.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Q3: Assist in developing a digital strategy blueprint",
+            "weight_pct": 2.0,
+            "cadence": "Q3"
+          }
+        ]
+      },
+      {
+        "perspective": "Learning & Growth",
+        "objective": "Cultivate a high performance culture, live the Bank's values and exhibit behaviour expected of the position",
+        "measures": [
+          {
+            "title": "Self and direct reportees performance targets developed and appraisals submitted by due date — quarterly",
+            "weight_pct": 5.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Enhance staff welfare — survey + wellness activities as per programme — quarterly",
+            "weight_pct": 7.0,
+            "cadence": "quarterly"
+          },
+          {
+            "title": "Attend leadership training (Advanced Leadership & Management Development Program) — Q3",
+            "weight_pct": 3.0,
+            "cadence": "Q3"
+          },
+          {
+            "title": "Q2: Assist in job evaluation exercise to align structure with bank model",
+            "weight_pct": 5.0,
+            "cadence": "Q2"
+          }
+        ]
+      }
+    ]
+  },
+  "goal_templates": {
+    "staff": [
+      {
+        "category": "Financial",
+        "title": "Support cost-control actions in my role area",
+        "measure": "Document 2 approved cost-saving or efficiency actions",
+        "due": "2026-10-31"
+      },
+      {
+        "category": "Customer",
+        "title": "Deliver stakeholder / customer service standards",
+        "measure": "Satisfaction or service score >= 90% on assigned touchpoints",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Maintain compliance and audit readiness in role scope",
+        "measure": "Zero overdue critical compliance/audit actions",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Complete mandatory and role training on time",
+        "measure": "100% assigned trainings completed by due date",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Live CDH core values in daily work",
+        "measure": "Manager confirms consistent Integrity, Respect, Teamwork, Equity, Innovation",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Meet personal productivity / SLA targets",
+        "measure": "Role SLAs On Target for at least 3 of 4 quarters",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer",
+        "title": "Resolve escalations within agreed turnaround",
+        "measure": "Escalations closed within SLA >= 95%",
+        "due": "2026-12-15"
+      }
+    ],
+    "manager": [
+      {
+        "category": "Learning & Growth",
+        "title": "Complete Q1 BSC goal agreements for all direct reports",
+        "measure": "100% of team scorecards approved by end of Q1",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Submit team appraisals by due date each quarter",
+        "measure": "100% appraisals submitted on time (Q1–Q4)",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial",
+        "title": "Contribute to bank financial KPIs in department scope",
+        "measure": "Department actions support NPL / cost / ROA targets On Target",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer",
+        "title": "Achieve stakeholder satisfaction for the business unit",
+        "measure": "BU stakeholder satisfaction index >= 90%",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Hold 100% satisfactory audit / compliance posture",
+        "measure": "No open critical findings attributable to the unit",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Keep staff retention at or above 90%",
+        "measure": "Team retention >= 90% each quarter",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Run staff welfare / engagement actions as programmed",
+        "measure": "Quarterly welfare activity + survey actions completed",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Financial",
+        "title": "Manage unit cost within approved envelope",
+        "measure": "Cost variance within agreed tolerance",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer",
+        "title": "Deliver agreed facilities / service projects on time",
+        "measure": "Priority unit projects On Target for assigned quarters",
+        "due": "2026-12-15"
+      }
+    ],
+    "leadership": [
+      {
+        "category": "Financial",
+        "title": "Deliver bank financial scorecard (NPL, cost/income, ROA, ROE, NPAT)",
+        "measure": "Core financial KPIs On Target for the year",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Financial",
+        "title": "Grow deposits and revenue per board plan",
+        "measure": "Deposit / revenue targets met by Q4",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Customer",
+        "title": "Lift CSI and NPI to 90%",
+        "measure": "CSI and NPI at 90% by Q3",
+        "due": "2026-09-30"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Ensure regulatory compliance (RBM and licences)",
+        "measure": "100% compliance on quarterly checks",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Maintain satisfactory audit ratings and asset insurance cover",
+        "measure": "100% satisfactory audits; 100% insurance cover",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Cascade Full BSC scorecards across all business units",
+        "measure": "All BUs have linked Q1 scorecards by 31 Mar 2026",
+        "due": "2026-03-31"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Run CDH performance cycle Q1–Q4 with high participation",
+        "measure": ">= 95% participation across quarterly appraisals",
+        "due": "2026-12-31"
+      },
+      {
+        "category": "Learning & Growth",
+        "title": "Advance culture transformation and core values living",
+        "measure": "Values assessments completed for leadership cohort",
+        "due": "2026-11-30"
+      },
+      {
+        "category": "Customer",
+        "title": "Complete priority premises / relocation milestones",
+        "measure": "LBC / CCBC / CDH House milestones On Target in Q4",
+        "due": "2026-12-15"
+      },
+      {
+        "category": "Internal business processes",
+        "title": "Progress digital strategy blueprint",
+        "measure": "Blueprint assisted / approved by Q3",
+        "due": "2026-09-30"
+      }
+    ]
+  },
+  "review_processes": [
+    {
+      "key": "q1",
+      "name": "CDH Q1 BSC Goal Setting 2026",
+      "description": "CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weighting: 90% objectives / 10% core values. (Demo window open through Oct 2026.)",
+      "ends_at": "2026-10-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": false,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "q2",
+      "name": "CDH Q2 BSC Progress Review 2026",
+      "description": "CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions. (Demo window open through Nov 2026.)",
+      "ends_at": "2026-11-30T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": true
+    },
+    {
+      "key": "q3",
+      "name": "CDH Q3 BSC Progress Review 2026",
+      "description": "CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.",
+      "ends_at": "2026-09-30T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": false
+    },
+    {
+      "key": "q4",
+      "name": "CDH Q4 Year-End BSC Appraisal 2026",
+      "description": "CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.",
+      "ends_at": "2026-12-31T23:59:59Z",
+      "reviewer_strategies": ["self", "manager"],
+      "agreements_enabled": true,
+      "employee_score_enabled": true,
+      "employee_potential_score_enabled": false,
+      "competencies_assessments_enabled": true,
+      "start": false
+    }
+  ],
+  "trainings": [
+    {
+      "name": "CDH Balanced Scorecard Essentials for Managers",
+      "description": "How CDH's four BSC perspectives and weighted measures cascade from bank scorecard to individual scorecards (Excel model → Factorial).",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "CDH Core Values in Action",
+      "description": "Integrity, Respect & Trust, Teamwork, Equity, Innovation — observable behaviours used in the 10% values weight.",
+      "audience": ["staff", "manager", "leadership"]
+    },
+    {
+      "name": "CDH Quarterly Appraisal & Coaching",
+      "description": "Running Q1–Q4 appraisals on time, status ratings (On Target / Caution / Needs Help), and coaching notes.",
+      "audience": ["manager", "leadership"]
+    },
+    {
+      "name": "CDH Regulatory Awareness (RBM & Licences)",
+      "description": "Awareness of RBM directives, COSOMA, city licences and fire certificate obligations that appear on scorecards.",
+      "audience": ["staff", "manager", "leadership"]
+    }
+  ],
+  "posts_group": {
+    "title": "Company announcements",
+    "description": "Official announcements for CDH Investment Bank Ltd — Malawi.",
+    "fallback_titles": ["Company announcements", "CDH Company Announcements"]
+  },
+  "posts": [
+    {
+      "title": "CDH Full BSC Performance Cycle 2026 is live",
+      "description": "Colleagues, our Q1 BSC Goal Setting cycle is open. Align SMART goals to the four perspectives — Financial (30%), Customer (15%), Internal Process (25%), Learning & Growth (30%). Final weighting is 90% objectives / 10% core values. Contact Human Capital Development for support.",
+      "allow_comments_and_reactions": true
+    },
+    {
+      "title": "CDH Core Values — part of every scorecard",
+      "description": "Integrity, Respect & Trust, Teamwork, Equity and Innovation are assessed every quarter (2% each). Live the Bank's values — they are 10% of your indexed score.",
+      "allow_comments_and_reactions": true
+    }
+  ],
+  "demo_focus": {
+    "star_employee": "Nqabile Medi",
+    "star_appraiser": "Chisomo Banda",
+    "story": "Show Full BSC for Administration Manager (HCD) using the client Excel model, cascaded from bank KPIs to personal HCD measures and core values."
+  }
+}

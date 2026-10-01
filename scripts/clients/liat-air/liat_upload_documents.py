@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Upload de documentos para a demo LIAT AIR (company 191947).
+Upload de documentos para a demo LIAT AIR (company 195679).
 
 Uso:
   python scripts/clients/liat-air/liat_upload_documents.py --list
@@ -29,13 +29,13 @@ from api_helpers import LiatApi, normalize_name, save_json  # noqa: E402
 
 ASSET_DIR = LIAT_CLIENT_DIR / "liat-airasset"
 RUN_LOG_DIR = LIAT_CLIENT_DIR / "run_log"
-COMPANY_ID = "191947"
+COMPANY_ID = "195679"
 FOLDER_NAME = "LIAT Staff Travel"
 
 DEFAULT_UPLOADS = [
     {
-        "path": ASSET_DIR / "LIAT HRIS Vendor Framework.pdf",
-        "filename": "LIAT HRIS Vendor Framework.pdf",
+        "path": ASSET_DIR / "LIAT Factorial AVD Operating Guide.pdf",
+        "filename": "LIAT Factorial AVD Operating Guide.pdf",
         "space": "company_internal",
     },
 ]

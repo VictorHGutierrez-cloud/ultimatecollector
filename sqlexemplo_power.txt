@@ -18,7 +18,12 @@ Jamaica-only comparison logic (client policy vs Factorial gap — NOT Factorial 
     (Factorial SQL has no allowances table to read live)
 
 Honest limit:
-  Factorial has NO native pause_accrual on leaves. Column C = manual HR gap.
+  Factorial has NO native pause_accrual on leaves. Column C = manual HR gap
+  ONLY when LOA >14 calendar days.
+
+For Examples 1–2 (any day off should stop accrual, even if ≤14), use instead:
+  • sqlexemplo_elegibilidade_resumo.txt
+  • sqlexemplo_elegibilidade_detalhe.txt
 
 Filters: {{Data_init}} / {{Data_end}}
 Demo tips (sandbox STATIN):

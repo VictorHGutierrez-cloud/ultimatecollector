@@ -1,0 +1,28 @@
+{
+  "id": "cdh-malawi",
+  "name": "CDH Malawi",
+  "company_id": 188450,
+  "api": {
+    "provider": "factorial",
+    "base_url": "https://api.eu2.demo.factorial.dev",
+    "version": "2026-07-01",
+    "auth_type": "x-api-key"
+  },
+  "secrets": {
+    "token_files": [
+      "secrets/seutoken.txt"
+    ],
+    "env_file": "secrets/secrets.env"
+  },
+  "data_dir": "data/clients/cdh-malawi",
+  "catalog": "catalog.json",
+  "features": {
+    "collect": [
+      "employees",
+      "performance",
+      "trainings"
+    ],
+    "send": [],
+    "seed": true
+  }
+}

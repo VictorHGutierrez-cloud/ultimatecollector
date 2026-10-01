@@ -1,0 +1,470 @@
+{
+  "client": "statistic-institute",
+  "started_at": "2026-10-01T21:58:44",
+  "leaves_deleted": [
+    "7446087",
+    "7446086",
+    "6401710",
+    "6382956",
+    "6382947",
+    "6382597",
+    "6382562",
+    "6382490",
+    "6382468",
+    "6382457",
+    "6382433",
+    "6382420",
+    "6347272",
+    "6115429",
+    "6012361",
+    "6012360",
+    "6012359",
+    "5993263",
+    "5993262",
+    "5993261",
+    "5993259",
+    "5993258",
+    "5993257",
+    "5993256",
+    "5993255",
+    "5993254",
+    "5993253",
+    "5993252",
+    "5993251",
+    "5993250",
+    "5993249",
+    "5993248",
+    "5993247",
+    "5993108",
+    "5993107",
+    "5993106",
+    "5993105",
+    "5993104",
+    "5993103",
+    "5993102",
+    "5993101",
+    "5993100",
+    "5993099",
+    "5993098",
+    "5993097",
+    "5993096",
+    "5993095",
+    "5993093",
+    "5993092",
+    "5993091",
+    "5993090",
+    "5993088",
+    "5993087",
+    "5993086",
+    "5993084",
+    "5993083",
+    "5993082",
+    "5993081",
+    "5993080",
+    "5993079",
+    "5993078",
+    "5993077",
+    "5993075",
+    "5993073",
+    "5993071",
+    "5993069",
+    "5993068",
+    "5993067",
+    "5993066",
+    "5993065",
+    "5993064",
+    "5993063",
+    "5993062",
+    "5993061",
+    "5993060",
+    "5993059",
+    "5993058",
+    "5993057",
+    "5993056",
+    "5993055",
+    "5993054",
+    "5993053",
+    "5993052",
+    "5993051",
+    "5993050",
+    "5993049",
+    "5993048",
+    "5993047",
+    "5993046",
+    "5993045",
+    "5993044",
+    "5993043",
+    "5993042",
+    "5993041",
+    "5993040",
+    "5993039",
+    "5993038",
+    "5993037",
+    "5993036",
+    "5993035",
+    "5993034",
+    "5993033",
+    "5993032",
+    "5993031",
+    "5993030",
+    "5993029",
+    "5993028",
+    "5993027",
+    "5993018",
+    "5993017",
+    "5993016",
+    "5993015",
+    "5993014",
+    "5993013",
+    "5993012",
+    "5993003",
+    "5993002",
+    "5993001",
+    "5993000",
+    "5992999",
+    "5992998",
+    "5992997",
+    "5992996",
+    "5992995",
+    "5992994",
+    "5992993",
+    "5992992",
+    "5992991",
+    "5992990",
+    "5992989",
+    "5992988",
+    "5992987",
+    "5992986",
+    "5992985",
+    "5992984",
+    "5992983",
+    "5992982",
+    "5992981",
+    "5992980",
+    "5992979",
+    "5992978",
+    "5992977",
+    "5992976",
+    "5992975",
+    "5992974",
+    "5992919",
+    "5992778",
+    "5992777",
+    "5992772",
+    "5992687",
+    "5992686",
+    "5992685",
+    "5992684",
+    "5992683",
+    "5992682",
+    "5992681",
+    "5992680",
+    "5992679",
+    "5992678",
+    "5992677",
+    "5992676",
+    "5992675",
+    "5992674",
+    "5992673",
+    "5992672",
+    "5992671",
+    "5992670",
+    "5992669",
+    "5992668",
+    "5992667",
+    "5992666",
+    "5992665",
+    "5992664",
+    "5992663",
+    "5992662",
+    "5992661",
+    "5992660",
+    "5992659",
+    "5992658",
+    "5992657",
+    "5992656",
+    "5992655",
+    "5992654",
+    "5992653"
+  ],
+  "leaves_failed": [],
+  "allowances_deleted": [
+    {
+      "id": "617650",
+      "policy_id": "367081",
+      "alt": "617651",
+      "name": "Time off allowance",
+      "method": "delete_with_alt",
+      "status": 200
+    },
+    {
+      "id": "617648",
+      "policy_id": "367080",
+      "alt": "617649",
+      "name": "Time off allowance",
+      "method": "delete_with_alt",
+      "status": 200
+    },
+    {
+      "id": "617646",
+      "policy_id": "367079",
+      "alt": "617647",
+      "name": "Time off allowance",
+      "method": "delete_with_alt",
+      "status": 200
+    },
+    {
+      "id": "617644",
+      "policy_id": "367078",
+      "alt": "617645",
+      "name": "Time off allowance",
+      "method": "delete_with_alt",
+      "status": 200
+    }
+  ],
+  "allowances_failed": [],
+  "leaves_remaining_after": 0,
+  "allowances_after": [
+    {
+      "id": "728806",
+      "name": "SIJ Suspension Allowance",
+      "policy_id": "367081",
+      "days_cents": 3100
+    },
+    {
+      "id": "728802",
+      "name": "SIJ Suspension Allowance",
+      "policy_id": "367080",
+      "days_cents": 3100
+    },
+    {
+      "id": "728801",
+      "name": "SIJ Suspension Allowance",
+      "policy_id": "367079",
+      "days_cents": 3100
+    },
+    {
+      "id": "728800",
+      "name": "SIJ Suspension Allowance",
+      "policy_id": "367078",
+      "days_cents": 3100
+    },
+    {
+      "id": "645848",
+      "name": "SIJ No Pay Allowance",
+      "policy_id": "366459",
+      "days_cents": 6000
+    },
+    {
+      "id": "645847",
+      "name": "SIJ No Pay Allowance",
+      "policy_id": "367081",
+      "days_cents": 6000
+    },
+    {
+      "id": "645846",
+      "name": "SIJ No Pay Allowance",
+      "policy_id": "367080",
+      "days_cents": 6000
+    },
+    {
+      "id": "645845",
+      "name": "SIJ No Pay Allowance",
+      "policy_id": "367079",
+      "days_cents": 6000
+    },
+    {
+      "id": "645844",
+      "name": "SIJ No Pay Allowance",
+      "policy_id": "367078",
+      "days_cents": 6000
+    },
+    {
+      "id": "645843",
+      "name": "SIJ Departmental Allowance",
+      "policy_id": "366459",
+      "days_cents": 1000
+    },
+    {
+      "id": "645842",
+      "name": "SIJ Departmental Allowance",
+      "policy_id": "367081",
+      "days_cents": 1000
+    },
+    {
+      "id": "645841",
+      "name": "SIJ Departmental Allowance",
+      "policy_id": "367080",
+      "days_cents": 1000
+    },
+    {
+      "id": "645840",
+      "name": "SIJ Departmental Allowance",
+      "policy_id": "367079",
+      "days_cents": 1000
+    },
+    {
+      "id": "645839",
+      "name": "SIJ Departmental Allowance",
+      "policy_id": "367078",
+      "days_cents": 1000
+    },
+    {
+      "id": "645838",
+      "name": "SIJ Extended Sick Allowance",
+      "policy_id": "366459",
+      "days_cents": 1400
+    },
+    {
+      "id": "645837",
+      "name": "SIJ Extended Sick Allowance",
+      "policy_id": "367081",
+      "days_cents": 1400
+    },
+    {
+      "id": "645836",
+      "name": "SIJ Extended Sick Allowance",
+      "policy_id": "367080",
+      "days_cents": 1400
+    },
+    {
+      "id": "645835",
+      "name": "SIJ Extended Sick Allowance",
+      "policy_id": "367079",
+      "days_cents": 1400
+    },
+    {
+      "id": "645834",
+      "name": "SIJ Extended Sick Allowance",
+      "policy_id": "367078",
+      "days_cents": 1400
+    },
+    {
+      "id": "643059",
+      "name": "SIJ Sick Allowance",
+      "policy_id": "366459",
+      "days_cents": 1400
+    },
+    {
+      "id": "643058",
+      "name": "SIJ Sick Allowance",
+      "policy_id": "367078",
+      "days_cents": 1400
+    },
+    {
+      "id": "643057",
+      "name": "SIJ Sick Allowance",
+      "policy_id": "367079",
+      "days_cents": 1400
+    },
+    {
+      "id": "643056",
+      "name": "SIJ Sick Allowance",
+      "policy_id": "367080",
+      "days_cents": 1400
+    },
+    {
+      "id": "643055",
+      "name": "SIJ Sick Allowance",
+      "policy_id": "367081",
+      "days_cents": 1400
+    },
+    {
+      "id": "617651",
+      "name": "SIJ Vacation Allowance 25d",
+      "policy_id": "367081",
+      "days_cents": 2500
+    },
+    {
+      "id": "617649",
+      "name": "SIJ Vacation Allowance 21d",
+      "policy_id": "367080",
+      "days_cents": 2100
+    },
+    {
+      "id": "617647",
+      "name": "SIJ Vacation Allowance 20d",
+      "policy_id": "367079",
+      "days_cents": 2000
+    },
+    {
+      "id": "617645",
+      "name": "SIJ Vacation Allowance 15d",
+      "policy_id": "367078",
+      "days_cents": 1500
+    },
+    {
+      "id": "616026",
+      "name": "Holiday allowance",
+      "policy_id": "366459",
+      "days_cents": 23000
+    },
+    {
+      "id": "616025",
+      "name": "Holiday allowance",
+      "policy_id": "366459",
+      "days_cents": 23000
+    },
+    {
+      "id": "616006",
+      "name": "Allowance in hour",
+      "policy_id": "366459",
+      "days_cents": 10000
+    },
+    {
+      "id": "615948",
+      "name": "Overtime Compensation",
+      "policy_id": "366457",
+      "days_cents": 0
+    },
+    {
+      "id": "615947",
+      "name": "Overtime Compensation",
+      "policy_id": "366447",
+      "days_cents": 0
+    },
+    {
+      "id": "615946",
+      "name": "Training hours",
+      "policy_id": "366447",
+      "days_cents": 1600
+    },
+    {
+      "id": "615945",
+      "name": "Personal days",
+      "policy_id": "366447",
+      "days_cents": 300
+    },
+    {
+      "id": "615944",
+      "name": "Time off allowance",
+      "policy_id": "366459",
+      "days_cents": 2300
+    },
+    {
+      "id": "615943",
+      "name": "Time off allowance",
+      "policy_id": "366458",
+      "days_cents": 2500
+    },
+    {
+      "id": "615942",
+      "name": "Business travel hours",
+      "policy_id": "366457",
+      "days_cents": 2000
+    },
+    {
+      "id": "615941",
+      "name": "Vacation days",
+      "policy_id": "366457",
+      "days_cents": 2600
+    },
+    {
+      "id": "615918",
+      "name": "Vacation days",
+      "policy_id": "366447",
+      "days_cents": 2300
+    }
+  ],
+  "finished_at": "2026-10-01T21:59:32"
+}

@@ -1,0 +1,31 @@
+{
+  "uploads": [
+    {
+      "file": "Kibanda_Employee_Handbook_Demo.pdf",
+      "status": 201,
+      "ok": true,
+      "id": "16001392",
+      "body": {
+        "id": "16001392"
+      }
+    },
+    {
+      "file": "Kibanda_Onboarding_Checklist_Tom_Sang.pdf",
+      "status": 201,
+      "ok": true,
+      "id": "16001399",
+      "body": {
+        "id": "16001399"
+      }
+    },
+    {
+      "file": "Kibanda_Employment_Contract_Sample_Brian_Wafula.pdf",
+      "status": 201,
+      "ok": true,
+      "id": "16001404",
+      "body": {
+        "id": "16001404"
+      }
+    }
+  ]
+}

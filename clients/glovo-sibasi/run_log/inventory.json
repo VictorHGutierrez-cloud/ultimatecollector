@@ -1,0 +1,613 @@
+{
+  "generated_at": "2026-09-30T17:36:43.393421+00:00",
+  "company_id": "191232",
+  "probes": {
+    "api_public/credentials": {
+      "path": "api_public/credentials",
+      "status": 200,
+      "ok": true,
+      "sample_count": 1,
+      "error": null
+    },
+    "employees/employees": {
+      "path": "employees/employees",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "teams/teams": {
+      "path": "teams/teams",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "locations/locations": {
+      "path": "locations/locations",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "companies/legal_entities": {
+      "path": "companies/legal_entities",
+      "status": 200,
+      "ok": true,
+      "sample_count": 4,
+      "error": null
+    },
+    "posts/groups": {
+      "path": "posts/groups",
+      "status": 200,
+      "ok": true,
+      "sample_count": 3,
+      "error": null
+    },
+    "documents/documents": {
+      "path": "documents/documents",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    },
+    "documents/folders": {
+      "path": "documents/folders",
+      "status": 200,
+      "ok": true,
+      "sample_count": 5,
+      "error": null
+    }
+  },
+  "counts": {
+    "employees": 56,
+    "active_employees": 42,
+    "teams": 20,
+    "locations": 5,
+    "legal_entities": 4,
+    "post_groups": 3,
+    "documents": 351,
+    "kibanda_locations": 5,
+    "kibanda_teams": 5
+  },
+  "active_employees": [
+    {
+      "id": "6338897",
+      "name": "Esther Nyambura",
+      "email": "maria.lopez@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338895",
+      "name": "Adan Garcia",
+      "email": "adan.garcia@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338874",
+      "name": "Faith Rotich",
+      "email": "nadia.backfield.ae482ed7@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338848",
+      "name": "Marla Mercer",
+      "email": "marla.mercer@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338847",
+      "name": "Preston Pike",
+      "email": "preston.pike@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338840",
+      "name": "Grace Kamau",
+      "email": "jessica.rivera@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338839",
+      "name": "Daniel Ochieng",
+      "email": "david.thompson@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338838",
+      "name": "Mary Odhiambo",
+      "email": "ashley.nguyen@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338837",
+      "name": "Peter Musyoka",
+      "email": "michael.carter@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338835",
+      "name": "Samuel Kariuki",
+      "email": "samuel.stone@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338834",
+      "name": "Stephanie Sullivan",
+      "email": "stephanie.sullivan@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338833",
+      "name": "Susan Stanley",
+      "email": "susan.stanley@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338832",
+      "name": "Tom Sang",
+      "email": "noah.norris@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338831",
+      "name": "Nora Nelson",
+      "email": "nora.nelson@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338830",
+      "name": "Natalie Norton",
+      "email": "natalie.norton@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338829",
+      "name": "Nicholas Newton",
+      "email": "nicholas.newton@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338827",
+      "name": "Sophie Simmons",
+      "email": "sophie.simmons@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338826",
+      "name": "Eric Kyalo",
+      "email": "nathan.nichols@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338825",
+      "name": "Samantha Stevens",
+      "email": "samantha.stevens@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338824",
+      "name": "Charlie Cooper",
+      "email": "charlie.cooper@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338823",
+      "name": "Simon Sanders",
+      "email": "simon.sanders@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338822",
+      "name": "Hannah Harris",
+      "email": "hannah.harris@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338821",
+      "name": "Isabel Ingram",
+      "email": "isabel.ingram@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338820",
+      "name": "Ian Irving",
+      "email": "ian.irving@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338819",
+      "name": "Steven Scott",
+      "email": "steven.scott@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338818",
+      "name": "Lucy Wairimu",
+      "email": "sarah.smith@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338817",
+      "name": "Megan Moore",
+      "email": "megan.moore@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338816",
+      "name": "Samson Karisa",
+      "email": "peter.price@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338815",
+      "name": "Diana Davis",
+      "email": "diana.davis@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338814",
+      "name": "Calvin Collins",
+      "email": "calvin.collins@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338813",
+      "name": "Amelia Adams",
+      "email": "amelia.adams@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338812",
+      "name": "Alice Anderson",
+      "email": "alice.anderson@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338811",
+      "name": "Bernarda Baker",
+      "email": "bernarda.baker@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338810",
+      "name": "Cristopher Clarke",
+      "email": "cristopher.clarke@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338808",
+      "name": "Felicity Ford",
+      "email": "felicity.ford@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338807",
+      "name": "Paul Kipchumba",
+      "email": "james.jones@democb3ef434.com",
+      "location_id": "660435"
+    },
+    {
+      "id": "6338806",
+      "name": "Clara Cooper",
+      "email": "clara.cooper@democb3ef434.com",
+      "location_id": "660433"
+    },
+    {
+      "id": "6338804",
+      "name": "Brian Wekesa",
+      "email": "jack.johnson@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338803",
+      "name": "Cynthia Wanjiru",
+      "email": "laura.lewis@democb3ef434.com",
+      "location_id": "660432"
+    },
+    {
+      "id": "6338802",
+      "name": "Daisy Dawson",
+      "email": "daisy.dawson@democb3ef434.com",
+      "location_id": "660434"
+    },
+    {
+      "id": "6338801",
+      "name": "Hassan Abdi",
+      "email": "charles.carter@democb3ef434.com",
+      "location_id": "660438"
+    },
+    {
+      "id": "6338800",
+      "name": "Brenda Wanjiru",
+      "email": "hellen@democb3ef434.com",
+      "location_id": "660438"
+    }
+  ],
+  "locations": [
+    {
+      "id": "660438",
+      "name": "Kibanda Kilimani — Head Office"
+    },
+    {
+      "id": "660435",
+      "name": "Kibanda CBD"
+    },
+    {
+      "id": "660434",
+      "name": "Kibanda Westlands"
+    },
+    {
+      "id": "660433",
+      "name": "Kibanda Kilimani Branch"
+    },
+    {
+      "id": "660432",
+      "name": "Kibanda Karen"
+    }
+  ],
+  "teams": [
+    {
+      "id": "2129898",
+      "name": "Kibanda Karen Team"
+    },
+    {
+      "id": "2129897",
+      "name": "Kibanda Kilimani Team"
+    },
+    {
+      "id": "2129896",
+      "name": "Kibanda Westlands Team"
+    },
+    {
+      "id": "2129895",
+      "name": "Kibanda CBD Team"
+    },
+    {
+      "id": "2129894",
+      "name": "Kibanda Head Office"
+    },
+    {
+      "id": "1959557",
+      "name": "Trainees"
+    },
+    {
+      "id": "1959556",
+      "name": "Sales Valencia"
+    },
+    {
+      "id": "1959555",
+      "name": "Sales Representatives"
+    },
+    {
+      "id": "1959554",
+      "name": "Sales Online"
+    },
+    {
+      "id": "1959553",
+      "name": "Sales Barcelona"
+    },
+    {
+      "id": "1959552",
+      "name": "People"
+    },
+    {
+      "id": "1959551",
+      "name": "Marketing"
+    },
+    {
+      "id": "1959550",
+      "name": "Managers"
+    },
+    {
+      "id": "1959549",
+      "name": "Finance"
+    },
+    {
+      "id": "1959548",
+      "name": "Development"
+    },
+    {
+      "id": "1959547",
+      "name": "Design"
+    },
+    {
+      "id": "1959546",
+      "name": "Corporate"
+    },
+    {
+      "id": "1959545",
+      "name": "Technology"
+    },
+    {
+      "id": "1959544",
+      "name": "Marketing & Design"
+    },
+    {
+      "id": "1959543",
+      "name": "Retail & Sales"
+    }
+  ],
+  "legal_entities": [
+    {
+      "id": "418897",
+      "legal_name": "France Entity",
+      "currency": "EUR"
+    },
+    {
+      "id": "452216",
+      "legal_name": "Kibanda Limited",
+      "currency": "KES"
+    },
+    {
+      "id": "418891",
+      "legal_name": "Barcelona Legal entity",
+      "currency": "USD"
+    },
+    {
+      "id": "418892",
+      "legal_name": "Valencia Legal entity",
+      "currency": "USD"
+    }
+  ],
+  "post_groups": [
+    {
+      "id": "411972",
+      "title": "Compliance & Legal Updates"
+    },
+    {
+      "id": "411970",
+      "title": "Celebrations"
+    },
+    {
+      "id": "411969",
+      "title": "Company announcements"
+    }
+  ],
+  "cast_resolution": [
+    {
+      "full_name": "Brenda Wanjiru",
+      "group": "leadership",
+      "role_title": "Founder & Managing Director",
+      "found": true,
+      "rename_from": "Hellen Howard",
+      "rename_from_found": false,
+      "employee_id": "6338800"
+    },
+    {
+      "full_name": "Esther Nyambura",
+      "group": "staff",
+      "role_title": "HR & Admin Officer",
+      "found": true,
+      "rename_from": "Maria Lopez",
+      "rename_from_found": false,
+      "employee_id": "6338897"
+    },
+    {
+      "full_name": "Hassan Abdi",
+      "group": "staff",
+      "role_title": "Procurement Officer",
+      "found": true,
+      "rename_from": "Charles Carter",
+      "rename_from_found": false,
+      "employee_id": "6338801"
+    },
+    {
+      "full_name": "Samuel Kariuki",
+      "group": "staff",
+      "role_title": "Accountant",
+      "found": true,
+      "rename_from": "Samuel Stone",
+      "rename_from_found": false,
+      "employee_id": "6338835"
+    },
+    {
+      "full_name": "Faith Rotich",
+      "group": "manager",
+      "role_title": "Branch Manager — CBD",
+      "found": true,
+      "rename_from": "Nadia Backfield",
+      "rename_from_found": false,
+      "employee_id": "6338874"
+    },
+    {
+      "full_name": "Grace Kamau",
+      "group": "manager",
+      "role_title": "Branch Manager — Westlands",
+      "found": true,
+      "rename_from": "Jessica Rivera",
+      "rename_from_found": false,
+      "employee_id": "6338840"
+    },
+    {
+      "full_name": "Daniel Ochieng",
+      "group": "manager",
+      "role_title": "Branch Manager — Kilimani",
+      "found": true,
+      "rename_from": "David Thompson",
+      "rename_from_found": false,
+      "employee_id": "6338839"
+    },
+    {
+      "full_name": "Peter Musyoka",
+      "group": "manager",
+      "role_title": "Branch Manager — Karen",
+      "found": true,
+      "rename_from": "Michael Carter",
+      "rename_from_found": false,
+      "employee_id": "6338837"
+    },
+    {
+      "full_name": "Paul Kipchumba",
+      "group": "staff",
+      "role_title": "Head Cook — CBD",
+      "found": true,
+      "rename_from": "James Jones",
+      "rename_from_found": false,
+      "employee_id": "6338807"
+    },
+    {
+      "full_name": "Mary Odhiambo",
+      "group": "staff",
+      "role_title": "Waiter — CBD",
+      "found": true,
+      "rename_from": "Ashley Nguyen",
+      "rename_from_found": false,
+      "employee_id": "6338838"
+    },
+    {
+      "full_name": "Brian Wekesa",
+      "group": "staff",
+      "role_title": "Waiter — Westlands",
+      "found": true,
+      "rename_from": "Jack Johnson",
+      "rename_from_found": false,
+      "employee_id": "6338804"
+    },
+    {
+      "full_name": "Lucy Wairimu",
+      "group": "staff",
+      "role_title": "Cashier — Westlands",
+      "found": true,
+      "rename_from": "Sarah Smith",
+      "rename_from_found": false,
+      "employee_id": "6338818"
+    },
+    {
+      "full_name": "Tom Sang",
+      "group": "staff",
+      "role_title": "Casual Waiter — Westlands (new hire)",
+      "found": true,
+      "rename_from": "Noah Norris",
+      "rename_from_found": false,
+      "employee_id": "6338832"
+    },
+    {
+      "full_name": "Eric Kyalo",
+      "group": "staff",
+      "role_title": "Staff — Kilimani (on probation)",
+      "found": true,
+      "rename_from": "Nathan Nichols",
+      "rename_from_found": false,
+      "employee_id": "6338826"
+    },
+    {
+      "full_name": "Cynthia Wanjiru",
+      "group": "staff",
+      "role_title": "Staff — Karen",
+      "found": true,
+      "rename_from": "Laura Lewis",
+      "rename_from_found": false,
+      "employee_id": "6338803"
+    },
+    {
+      "full_name": "Samson Karisa",
+      "group": "staff",
+      "role_title": "Waiter (fixed-term) — Westlands",
+      "found": true,
+      "rename_from": "Peter Price",
+      "rename_from_found": false,
+      "employee_id": "6338816"
+    }
+  ]
+}

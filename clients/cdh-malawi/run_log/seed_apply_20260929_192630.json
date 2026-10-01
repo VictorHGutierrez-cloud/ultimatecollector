@@ -1,0 +1,855 @@
+{
+  "started_at": "2026-09-29T19:25:55.236795+00:00",
+  "mode": "apply",
+  "company_id": "188450",
+  "scope": "full_bsc",
+  "year": 2026,
+  "actions": [
+    {
+      "action": "update_location_failed_try_create",
+      "detail": {
+        "status": 422,
+        "body": "{'errors': {'timezone': ['Timezone is invalid']}}"
+      }
+    },
+    {
+      "action": "create_location_attempt_failed",
+      "detail": {
+        "status": 422,
+        "body": "{'errors': {'timezone': ['Timezone is invalid']}}"
+      }
+    },
+    {
+      "action": "created_location",
+      "detail": {
+        "id": "719576",
+        "payload": {
+          "name": "CDH House — Lilongwe Head Office",
+          "country": "us",
+          "timezone": "Africa/Johannesburg",
+          "company_id": "188450",
+          "city": "Lilongwe",
+          "state": "Central Region",
+          "postal_code": "00000",
+          "address_line_one": "CDH House, Lilongwe",
+          "phone_number": "+2651770000",
+          "main": true
+        }
+      }
+    },
+    {
+      "action": "created_legal_entity",
+      "detail": {
+        "id": "449272",
+        "country": "mw"
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "to": "Thandiwe Phiri",
+        "id": "6195559"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Thandiwe Phiri",
+        "status": 200,
+        "updates": {
+          "id": "6195559",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Charles Carter",
+        "to": "Chisomo Banda",
+        "id": "6195624"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Chisomo Banda",
+        "status": 200,
+        "updates": {
+          "id": "6195624",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Daisy Dawson",
+        "to": "Kondwani Chirwa",
+        "id": "6195639"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Kondwani Chirwa",
+        "status": 200,
+        "updates": {
+          "id": "6195639",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Laura Lewis",
+        "to": "Nqabile Medi",
+        "id": "6195655"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Nqabile Medi",
+        "status": 200,
+        "updates": {
+          "id": "6195655",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Jack Johnson",
+        "to": "Grace Mvula",
+        "id": "6195662"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Grace Mvula",
+        "status": 200,
+        "updates": {
+          "id": "6195662",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Alice Anderson",
+        "to": "Blessings Tembo",
+        "id": "6195800"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Blessings Tembo",
+        "status": 200,
+        "updates": {
+          "id": "6195800",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Clara Cooper",
+        "to": "Tadala Mbewe",
+        "id": "6195685"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Tadala Mbewe",
+        "status": 200,
+        "updates": {
+          "id": "6195685",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "James Jones",
+        "to": "Yamikani Phiri",
+        "id": "6195693"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Yamikani Phiri",
+        "status": 200,
+        "updates": {
+          "id": "6195693",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Felicity Ford",
+        "to": "Chimwemwe Kaunda",
+        "id": "6195702"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Chimwemwe Kaunda",
+        "status": 200,
+        "updates": {
+          "id": "6195702",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Sophie Simmons",
+        "to": "Patrick Nyirenda",
+        "id": "6196051"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Patrick Nyirenda",
+        "status": 200,
+        "updates": {
+          "id": "6196051",
+          "location_id": "719576",
+          "legal_entity_id": "449272"
+        }
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113834",
+        "name": "CDH Executive Leadership"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113835",
+        "name": "CDH Human Capital Development"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113836",
+        "name": "CDH Finance & Treasury"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113837",
+        "name": "CDH Operations & Administration"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113838",
+        "name": "CDH Commercial & Retail Banking"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2113839",
+        "name": "CDH Risk & Compliance"
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Thandiwe Phiri",
+        "team_id": "2113834",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Chisomo Banda",
+        "team_id": "2113835",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Kondwani Chirwa",
+        "team_id": "2113836",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Nqabile Medi",
+        "team_id": "2113835",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Grace Mvula",
+        "team_id": "2113838",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Blessings Tembo",
+        "team_id": "2113837",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Tadala Mbewe",
+        "team_id": "2113836",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Yamikani Phiri",
+        "team_id": "2113835",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Chimwemwe Kaunda",
+        "team_id": "2113838",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Patrick Nyirenda",
+        "team_id": "2113839",
+        "lead": true
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Thandiwe Phiri",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Chisomo Banda",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Kondwani Chirwa",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Nqabile Medi",
+        "manager_id": "6195624"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Grace Mvula",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Blessings Tembo",
+        "manager_id": "6195559"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Tadala Mbewe",
+        "manager_id": "6195639"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Yamikani Phiri",
+        "manager_id": "6195655"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Chimwemwe Kaunda",
+        "manager_id": "6195662"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Patrick Nyirenda",
+        "manager_id": "6195800"
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "q3",
+        "id": "338248"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338248",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "{'id': '338248', 'company_id': '188450', 'name': 'CDH Q3 BSC Progress Review 2026', 'description': 'CDH Q3 progress against CSI/NPI, digital blueprint, leadership training and other Q3-dated measures.', 'status': 'draft', 'target_strategy':..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "self",
+        "status": 404
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "338248",
+        "strategy": "manager",
+        "status": 404
+      }
+    },
+    {
+      "action": "created_process",
+      "detail": {
+        "key": "q4",
+        "id": "338249"
+      }
+    },
+    {
+      "action": "update_target_strategy",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_deadline",
+      "detail": {
+        "process_id": "338249",
+        "status": 200
+      }
+    },
+    {
+      "action": "update_agreements_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_competencies_assessments_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "update_employee_score_configuration",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "{'id': '338249', 'company_id': '188450', 'name': 'CDH Q4 Year-End BSC Appraisal 2026', 'description': 'CDH year-end Full BSC appraisal: close annual indexed performance, core values, appraiser + employee sign-off narrative.', 'status': 'dra..."
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "self"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "self",
+        "status": 404
+      }
+    },
+    {
+      "action": "questionnaire_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "manager"
+      }
+    },
+    {
+      "action": "rating_scale_updated",
+      "detail": {
+        "process_id": "338249",
+        "strategy": "manager",
+        "status": 404
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338248",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "bulk_initiate_agreements",
+      "detail": {
+        "process_id": "338249",
+        "status": 200,
+        "body": "[]"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "470986",
+        "name": "CDH Balanced Scorecard Essentials for Managers"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "470987",
+        "name": "CDH Core Values in Action"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "470988",
+        "name": "CDH Quarterly Appraisal & Coaching"
+      }
+    },
+    {
+      "action": "created_training",
+      "detail": {
+        "id": "470989",
+        "name": "CDH Regulatory Awareness (RBM & Licences)"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "403956",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "29804800",
+        "title": "CDH Full BSC Performance Cycle 2026 is live"
+      }
+    },
+    {
+      "action": "published_post",
+      "detail": {
+        "id": "29804800",
+        "title": "CDH Full BSC Performance Cycle 2026 is live"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "29804801",
+        "title": "CDH Core Values — part of every scorecard"
+      }
+    },
+    {
+      "action": "published_post",
+      "detail": {
+        "id": "29804801",
+        "title": "CDH Core Values — part of every scorecard"
+      }
+    },
+    {
+      "action": "wrote_goals_pack",
+      "detail": "C:\\Users\\victo\\Documents\\Projetos Random\\Ultimate_Collector_Limpo\\clients\\cdh-malawi\\run_log\\goals_pack.md"
+    }
+  ],
+  "errors": [
+    {
+      "action": "create_process_failed",
+      "detail": {
+        "status": 400,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid parameters"
+            }
+          ]
+        },
+        "payload": {
+          "author_access_id": "6657432",
+          "name": "CDH Q1 BSC Goal Setting 2026",
+          "description": "CDH Investment Bank — Q1 planning: agree Full Balanced Scorecard goals across Financial, Customer, Internal Process and Learning & Growth. Weighting: 90% objectives / 10% core values.",
+          "reviewer_strategies": [
+            "self",
+            "manager"
+          ],
+          "target_strategy": "manual_selection",
+          "arguments": [
+            "6657358",
+            "6657432",
+            "6657442",
+            "6657454",
+            "6657465",
+            "6657600",
+            "6657486",
+            "6657495",
+            "6657501",
+            "6657854"
+          ],
+          "ends_at": "2026-03-31T23:59:59Z",
+          "agreements_enabled": true,
+          "employee_score_enabled": false,
+          "employee_potential_score_enabled": false,
+          "competencies_assessments_enabled": true
+        }
+      }
+    },
+    {
+      "action": "create_process_failed",
+      "detail": {
+        "status": 400,
+        "body": {
+          "errors": [
+            {
+              "error": "Invalid parameters"
+            }
+          ]
+        },
+        "payload": {
+          "author_access_id": "6657432",
+          "name": "CDH Q2 BSC Progress Review 2026",
+          "description": "CDH mid-cycle: review quarterly KPI status (On Target / Caution / Needs Help), values behaviours, and coaching actions.",
+          "reviewer_strategies": [
+            "self",
+            "manager"
+          ],
+          "target_strategy": "manual_selection",
+          "arguments": [
+            "6657358",
+            "6657432",
+            "6657442",
+            "6657454",
+            "6657465",
+            "6657600",
+            "6657486",
+            "6657495",
+            "6657501",
+            "6657854"
+          ],
+          "ends_at": "2026-06-30T23:59:59Z",
+          "agreements_enabled": true,
+          "employee_score_enabled": true,
+          "employee_potential_score_enabled": false,
+          "competencies_assessments_enabled": true
+        }
+      }
+    }
+  ],
+  "ids": {
+    "location_id": "719576",
+    "legal_entity_id": "449272",
+    "cast": {
+      "Thandiwe Phiri": {
+        "employee_id": "6195559",
+        "access_id": "6657358",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Chisomo Banda": {
+        "employee_id": "6195624",
+        "access_id": "6657432",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Kondwani Chirwa": {
+        "employee_id": "6195639",
+        "access_id": "6657442",
+        "group": "leadership",
+        "star_scorecard": false
+      },
+      "Nqabile Medi": {
+        "employee_id": "6195655",
+        "access_id": "6657454",
+        "group": "manager",
+        "star_scorecard": true
+      },
+      "Grace Mvula": {
+        "employee_id": "6195662",
+        "access_id": "6657465",
+        "group": "manager",
+        "star_scorecard": false
+      },
+      "Blessings Tembo": {
+        "employee_id": "6195800",
+        "access_id": "6657600",
+        "group": "manager",
+        "star_scorecard": false
+      },
+      "Tadala Mbewe": {
+        "employee_id": "6195685",
+        "access_id": "6657486",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Yamikani Phiri": {
+        "employee_id": "6195693",
+        "access_id": "6657495",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Chimwemwe Kaunda": {
+        "employee_id": "6195702",
+        "access_id": "6657501",
+        "group": "staff",
+        "star_scorecard": false
+      },
+      "Patrick Nyirenda": {
+        "employee_id": "6196051",
+        "access_id": "6657854",
+        "group": "staff",
+        "star_scorecard": false
+      }
+    },
+    "teams": {
+      "executive": "2113834",
+      "hcd": "2113835",
+      "finance": "2113836",
+      "operations": "2113837",
+      "commercial": "2113838",
+      "compliance": "2113839"
+    },
+    "review_processes": {
+      "q3": {
+        "id": "338248",
+        "name": "CDH Q3 BSC Progress Review 2026",
+        "status": "draft"
+      },
+      "q4": {
+        "id": "338249",
+        "name": "CDH Q4 Year-End BSC Appraisal 2026",
+        "status": "draft"
+      }
+    },
+    "trainings": [
+      "470986",
+      "470987",
+      "470988",
+      "470989"
+    ],
+    "post_group_id": "403956",
+    "posts": [
+      "29804800",
+      "29804801"
+    ]
+  },
+  "finished_at": "2026-09-29T19:26:30.468350+00:00"
+}

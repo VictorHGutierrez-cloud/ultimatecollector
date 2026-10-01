@@ -1,0 +1,405 @@
+{
+  "company_id": "191232",
+  "api_version": "2026-07-01",
+  "prefix": "Kibanda",
+  "year": 2026,
+  "display_name": "Kibanda",
+  "scope": "front_facing",
+  "story": "Brenda Wanjiru runs Kibanda — four Nairobi restaurants — and wants her Sundays back.",
+  "source_story": "glovo-sibasiasset/Kibanda_Factorial_Brendas_Story.pdf",
+  "location": {
+    "name": "Kibanda Kilimani — Head Office",
+    "country": "ke",
+    "country_fallback": "us",
+    "timezone": "Africa/Nairobi",
+    "timezone_fallback": "Africa/Nairobi",
+    "city": "Nairobi",
+    "state": "Nairobi County",
+    "postal_code": "00100",
+    "address_line_one": "Above Kibanda Kilimani, Nairobi",
+    "phone_number": "+254700000000",
+    "main": true,
+    "latitude": -1.2921,
+    "longitude": 36.8219
+  },
+  "locations": [
+    {
+      "key": "hq",
+      "name": "Kibanda Kilimani — Head Office",
+      "country": "ke",
+      "country_fallback": "us",
+      "timezone": "Africa/Nairobi",
+      "timezone_fallback": "Africa/Nairobi",
+      "city": "Nairobi",
+      "state": "Nairobi County",
+      "postal_code": "00100",
+      "address_line_one": "Above Kibanda Kilimani, Nairobi",
+      "phone_number": "+254700000000",
+      "main": true,
+      "latitude": -1.2921,
+      "longitude": 36.8219
+    },
+    {
+      "key": "cbd",
+      "name": "Kibanda CBD",
+      "country": "ke",
+      "country_fallback": "us",
+      "timezone": "Africa/Nairobi",
+      "timezone_fallback": "Africa/Nairobi",
+      "city": "Nairobi",
+      "state": "Nairobi County",
+      "postal_code": "00100",
+      "address_line_one": "Moi Avenue, CBD, Nairobi",
+      "phone_number": "+254700000001",
+      "main": false,
+      "latitude": -1.2864,
+      "longitude": 36.8172
+    },
+    {
+      "key": "westlands",
+      "name": "Kibanda Westlands",
+      "country": "ke",
+      "country_fallback": "us",
+      "timezone": "Africa/Nairobi",
+      "timezone_fallback": "Africa/Nairobi",
+      "city": "Nairobi",
+      "state": "Nairobi County",
+      "postal_code": "00800",
+      "address_line_one": "Westlands, Nairobi",
+      "phone_number": "+254700000002",
+      "main": false,
+      "latitude": -1.2673,
+      "longitude": 36.811
+    },
+    {
+      "key": "kilimani",
+      "name": "Kibanda Kilimani Branch",
+      "country": "ke",
+      "country_fallback": "us",
+      "timezone": "Africa/Nairobi",
+      "timezone_fallback": "Africa/Nairobi",
+      "city": "Nairobi",
+      "state": "Nairobi County",
+      "postal_code": "00100",
+      "address_line_one": "Kilimani, Nairobi",
+      "phone_number": "+254700000003",
+      "main": false,
+      "latitude": -1.29,
+      "longitude": 36.785
+    },
+    {
+      "key": "karen",
+      "name": "Kibanda Karen",
+      "country": "ke",
+      "country_fallback": "us",
+      "timezone": "Africa/Nairobi",
+      "timezone_fallback": "Africa/Nairobi",
+      "city": "Nairobi",
+      "state": "Nairobi County",
+      "postal_code": "00502",
+      "address_line_one": "Karen, Nairobi",
+      "phone_number": "+254700000004",
+      "main": false,
+      "latitude": -1.3197,
+      "longitude": 36.7125
+    }
+  ],
+  "legal_entity": {
+    "legal_name": "Kibanda Limited",
+    "country": "ke",
+    "country_fallback": "us",
+    "currency": "KES",
+    "currency_fallback": "USD",
+    "city": "Nairobi",
+    "state": "Nairobi County",
+    "postal_code": "00100",
+    "address_line_1": "Moi Avenue, Nairobi",
+    "tin": "KIBANDA-KE-001"
+  },
+  "teams": [
+    {
+      "key": "hq",
+      "name": "Kibanda Head Office",
+      "lead": "Brenda Wanjiru"
+    },
+    {
+      "key": "cbd",
+      "name": "Kibanda CBD Team",
+      "lead": "Faith Rotich"
+    },
+    {
+      "key": "westlands",
+      "name": "Kibanda Westlands Team",
+      "lead": "Grace Kamau"
+    },
+    {
+      "key": "kilimani",
+      "name": "Kibanda Kilimani Team",
+      "lead": "Daniel Ochieng"
+    },
+    {
+      "key": "karen",
+      "name": "Kibanda Karen Team",
+      "lead": "Peter Musyoka"
+    }
+  ],
+  "cast": [
+    {
+      "full_name": "Brenda Wanjiru",
+      "first_name": "Brenda",
+      "last_name": "Wanjiru",
+      "email": "brenda.wanjiru@kibanda-demo.ke",
+      "gender": "female",
+      "group": "leadership",
+      "team_key": "hq",
+      "location_key": "hq",
+      "role_title": "Founder & Managing Director",
+      "rename_from": "Hellen Howard"
+    },
+    {
+      "full_name": "Esther Nyambura",
+      "first_name": "Esther",
+      "last_name": "Nyambura",
+      "email": "esther.nyambura@kibanda-demo.ke",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "hq",
+      "location_key": "hq",
+      "role_title": "HR & Admin Officer",
+      "rename_from": "Maria Lopez"
+    },
+    {
+      "full_name": "Hassan Abdi",
+      "first_name": "Hassan",
+      "last_name": "Abdi",
+      "email": "hassan.abdi@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "hq",
+      "location_key": "hq",
+      "role_title": "Procurement Officer",
+      "rename_from": "Charles Carter"
+    },
+    {
+      "full_name": "Samuel Kariuki",
+      "first_name": "Samuel",
+      "last_name": "Kariuki",
+      "email": "samuel.kariuki@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "hq",
+      "location_key": "hq",
+      "role_title": "Accountant",
+      "rename_from": "Samuel Stone"
+    },
+    {
+      "full_name": "Faith Rotich",
+      "first_name": "Faith",
+      "last_name": "Rotich",
+      "email": "faith.rotich@kibanda-demo.ke",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "cbd",
+      "location_key": "cbd",
+      "role_title": "Branch Manager — CBD",
+      "rename_from": "Nadia Backfield"
+    },
+    {
+      "full_name": "Grace Kamau",
+      "first_name": "Grace",
+      "last_name": "Kamau",
+      "email": "grace.kamau@kibanda-demo.ke",
+      "gender": "female",
+      "group": "manager",
+      "team_key": "westlands",
+      "location_key": "westlands",
+      "role_title": "Branch Manager — Westlands",
+      "rename_from": "Jessica Rivera"
+    },
+    {
+      "full_name": "Daniel Ochieng",
+      "first_name": "Daniel",
+      "last_name": "Ochieng",
+      "email": "daniel.ochieng@kibanda-demo.ke",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "kilimani",
+      "location_key": "kilimani",
+      "role_title": "Branch Manager — Kilimani",
+      "rename_from": "David Thompson"
+    },
+    {
+      "full_name": "Peter Musyoka",
+      "first_name": "Peter",
+      "last_name": "Musyoka",
+      "email": "peter.musyoka@kibanda-demo.ke",
+      "gender": "male",
+      "group": "manager",
+      "team_key": "karen",
+      "location_key": "karen",
+      "role_title": "Branch Manager — Karen",
+      "rename_from": "Michael Carter"
+    },
+    {
+      "full_name": "Paul Kipchumba",
+      "first_name": "Paul",
+      "last_name": "Kipchumba",
+      "email": "paul.kipchumba@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "cbd",
+      "location_key": "cbd",
+      "role_title": "Head Cook — CBD",
+      "rename_from": "James Jones"
+    },
+    {
+      "full_name": "Mary Odhiambo",
+      "first_name": "Mary",
+      "last_name": "Odhiambo",
+      "email": "mary.odhiambo@kibanda-demo.ke",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "cbd",
+      "location_key": "cbd",
+      "role_title": "Waiter — CBD",
+      "rename_from": "Ashley Nguyen"
+    },
+    {
+      "full_name": "Brian Wekesa",
+      "first_name": "Brian",
+      "last_name": "Wekesa",
+      "email": "brian.wekesa@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "westlands",
+      "location_key": "westlands",
+      "role_title": "Waiter — Westlands",
+      "rename_from": "Jack Johnson"
+    },
+    {
+      "full_name": "Lucy Wairimu",
+      "first_name": "Lucy",
+      "last_name": "Wairimu",
+      "email": "lucy.wairimu@kibanda-demo.ke",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "westlands",
+      "location_key": "westlands",
+      "role_title": "Cashier — Westlands",
+      "rename_from": "Sarah Smith"
+    },
+    {
+      "full_name": "Tom Sang",
+      "first_name": "Tom",
+      "last_name": "Sang",
+      "email": "tom.sang@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "westlands",
+      "location_key": "westlands",
+      "role_title": "Casual Waiter — Westlands (new hire)",
+      "rename_from": "Noah Norris"
+    },
+    {
+      "full_name": "Eric Kyalo",
+      "first_name": "Eric",
+      "last_name": "Kyalo",
+      "email": "eric.kyalo@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "kilimani",
+      "location_key": "kilimani",
+      "role_title": "Staff — Kilimani (on probation)",
+      "rename_from": "Nathan Nichols"
+    },
+    {
+      "full_name": "Cynthia Wanjiru",
+      "first_name": "Cynthia",
+      "last_name": "Wanjiru",
+      "email": "cynthia.wanjiru@kibanda-demo.ke",
+      "gender": "female",
+      "group": "staff",
+      "team_key": "karen",
+      "location_key": "karen",
+      "role_title": "Staff — Karen",
+      "rename_from": "Laura Lewis"
+    },
+    {
+      "full_name": "Samson Karisa",
+      "first_name": "Samson",
+      "last_name": "Karisa",
+      "email": "samson.karisa@kibanda-demo.ke",
+      "gender": "male",
+      "group": "staff",
+      "team_key": "westlands",
+      "location_key": "westlands",
+      "role_title": "Waiter (fixed-term) — Westlands",
+      "rename_from": "Peter Price"
+    }
+  ],
+  "manager_map": {
+    "Brenda Wanjiru": null,
+    "Esther Nyambura": "Brenda Wanjiru",
+    "Hassan Abdi": "Brenda Wanjiru",
+    "Samuel Kariuki": "Brenda Wanjiru",
+    "Faith Rotich": "Brenda Wanjiru",
+    "Grace Kamau": "Brenda Wanjiru",
+    "Daniel Ochieng": "Brenda Wanjiru",
+    "Peter Musyoka": "Brenda Wanjiru",
+    "Paul Kipchumba": "Faith Rotich",
+    "Mary Odhiambo": "Faith Rotich",
+    "Brian Wekesa": "Grace Kamau",
+    "Lucy Wairimu": "Grace Kamau",
+    "Tom Sang": "Grace Kamau",
+    "Eric Kyalo": "Daniel Ochieng",
+    "Cynthia Wanjiru": "Peter Musyoka",
+    "Samson Karisa": "Grace Kamau"
+  },
+  "posts_group": {
+    "title": "Company announcements",
+    "description": "Official announcements for Kibanda — Nairobi restaurants.",
+    "fallback_titles": [
+      "Company announcements",
+      "Kibanda Company Announcements"
+    ]
+  },
+  "posts": [
+    {
+      "title": "Welcome to Kibanda on Factorial",
+      "description": "Team, we have one home for every employee: contracts, leave, rotas and payslips. Brenda's Sundays are coming back — start in the Factorial app, not in WhatsApp.",
+      "allow_comments_and_reactions": true,
+      "cover_image": "announcements/01_welcome_kibanda.jpg"
+    },
+    {
+      "title": "Rotas live in the app — not WhatsApp",
+      "description": "Branch managers: publish next week's rota from Factorial. Staff get shifts on their phone and swap requests go to the manager for approval. One rest day in every seven — Factorial will flag a seventh straight day.",
+      "allow_comments_and_reactions": true,
+      "cover_image": "announcements/02_rotas_app.jpg"
+    },
+    {
+      "title": "Mashujaa Day — double pay for anyone who works",
+      "description": "On Mashujaa Day (20 October), anyone scheduled to work is marked for double pay automatically. Check your rota in the app and talk to your branch manager if you need a swap.",
+      "allow_comments_and_reactions": true,
+      "cover_image": "announcements/03_mashujaa_day.jpg"
+    },
+    {
+      "title": "Hiring for the December rush",
+      "description": "We are opening fixed-term waiter roles, a cook role and a barista role for December. Branch managers: score candidates in Factorial so offers and onboarding start without retyping details.",
+      "allow_comments_and_reactions": true,
+      "cover_image": "announcements/04_december_hiring.jpg"
+    },
+    {
+      "title": "Minimum wage check — May 2026 rates",
+      "description": "Kenya raised minimum wages in May 2026. Kibanda salaries are checked against the Nairobi floor (waiters/cooks from KES 19,491 basic). Esther and Samuel review pre-payroll before the 9th every month.",
+      "allow_comments_and_reactions": true,
+      "cover_image": "announcements/05_minimum_wage.jpg"
+    }
+  ],
+  "ui_checklist": {
+    "directory": "Open People — show Brenda, four branch managers and Kenyan staff names.",
+    "locations": "Open Locations — Kibanda CBD, Westlands, Kilimani, Karen + Head Office.",
+    "teams": "Open Teams — one team per branch + Head Office.",
+    "posts": "Open Company announcements — five Kibanda posts with cover images.",
+    "documents": "Open Documents — handbook, Tom onboarding checklist, sample contract PDF."
+  }
+}

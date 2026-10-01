@@ -1,0 +1,641 @@
+{
+  "started_at": "2026-09-30T17:34:05.415713+00:00",
+  "mode": "dry-run",
+  "company_id": "191232",
+  "actions": [
+    {
+      "action": "dry_upsert_location",
+      "detail": {
+        "key": "hq",
+        "reuse": true,
+        "name": "Kibanda Kilimani — Head Office",
+        "country": "ke",
+        "timezone": "Africa/Nairobi",
+        "company_id": "191232",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00100",
+        "address_line_one": "Above Kibanda Kilimani, Nairobi",
+        "phone_number": "+254700000000",
+        "main": true,
+        "latitude": -1.2921,
+        "longitude": 36.8219
+      }
+    },
+    {
+      "action": "dry_upsert_location",
+      "detail": {
+        "key": "cbd",
+        "reuse": true,
+        "name": "Kibanda CBD",
+        "country": "ke",
+        "timezone": "Africa/Nairobi",
+        "company_id": "191232",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00100",
+        "address_line_one": "Moi Avenue, CBD, Nairobi",
+        "phone_number": "+254700000001",
+        "main": false,
+        "latitude": -1.2864,
+        "longitude": 36.8172
+      }
+    },
+    {
+      "action": "dry_upsert_location",
+      "detail": {
+        "key": "westlands",
+        "reuse": true,
+        "name": "Kibanda Westlands",
+        "country": "ke",
+        "timezone": "Africa/Nairobi",
+        "company_id": "191232",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00800",
+        "address_line_one": "Westlands, Nairobi",
+        "phone_number": "+254700000002",
+        "main": false,
+        "latitude": -1.2673,
+        "longitude": 36.811
+      }
+    },
+    {
+      "action": "dry_upsert_location",
+      "detail": {
+        "key": "kilimani",
+        "reuse": true,
+        "name": "Kibanda Kilimani Branch",
+        "country": "ke",
+        "timezone": "Africa/Nairobi",
+        "company_id": "191232",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00100",
+        "address_line_one": "Kilimani, Nairobi",
+        "phone_number": "+254700000003",
+        "main": false,
+        "latitude": -1.29,
+        "longitude": 36.785
+      }
+    },
+    {
+      "action": "dry_upsert_location",
+      "detail": {
+        "key": "karen",
+        "reuse": true,
+        "name": "Kibanda Karen",
+        "country": "ke",
+        "timezone": "Africa/Nairobi",
+        "company_id": "191232",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00502",
+        "address_line_one": "Karen, Nairobi",
+        "phone_number": "+254700000004",
+        "main": false,
+        "latitude": -1.3197,
+        "longitude": 36.7125
+      }
+    },
+    {
+      "action": "dry_create_legal_entity",
+      "detail": {
+        "company_id": "191232",
+        "country": "ke",
+        "legal_name": "Kibanda Limited",
+        "currency": "KES",
+        "city": "Nairobi",
+        "state": "Nairobi County",
+        "postal_code": "00100",
+        "address_line_1": "Moi Avenue, Nairobi",
+        "tin": "KIBANDA-KE-001"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "id": "6338800",
+        "first_name": "Brenda",
+        "last_name": "Wanjiru"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Maria Lopez",
+        "id": "6338897",
+        "first_name": "Esther",
+        "last_name": "Nyambura"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Charles Carter",
+        "id": "6338801",
+        "first_name": "Hassan",
+        "last_name": "Abdi"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Samuel Stone",
+        "id": "6338835",
+        "first_name": "Samuel",
+        "last_name": "Kariuki"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Nadia Backfield",
+        "id": "6338874",
+        "first_name": "Faith",
+        "last_name": "Rotich"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Jessica Rivera",
+        "id": "6338840",
+        "first_name": "Grace",
+        "last_name": "Kamau"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "David Thompson",
+        "id": "6338839",
+        "first_name": "Daniel",
+        "last_name": "Ochieng"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Michael Carter",
+        "id": "6338837",
+        "first_name": "Peter",
+        "last_name": "Musyoka"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "James Jones",
+        "id": "6338807",
+        "first_name": "Paul",
+        "last_name": "Kipchumba"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Ashley Nguyen",
+        "id": "6338838",
+        "first_name": "Mary",
+        "last_name": "Odhiambo"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Jack Johnson",
+        "id": "6338804",
+        "first_name": "Brian",
+        "last_name": "Wekesa"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Sarah Smith",
+        "id": "6338818",
+        "first_name": "Lucy",
+        "last_name": "Wairimu"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Noah Norris",
+        "id": "6338832",
+        "first_name": "Tom",
+        "last_name": "Sang"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Nathan Nichols",
+        "id": "6338826",
+        "first_name": "Eric",
+        "last_name": "Kyalo"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Laura Lewis",
+        "id": "6338803",
+        "first_name": "Cynthia",
+        "last_name": "Wanjiru"
+      }
+    },
+    {
+      "action": "dry_rename_employee",
+      "detail": {
+        "from": "Peter Price",
+        "id": "6338816",
+        "first_name": "Samson",
+        "last_name": "Karisa"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "Kibanda Head Office",
+        "description": "Kibanda branch/ops team (hq)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "Kibanda CBD Team",
+        "description": "Kibanda branch/ops team (cbd)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "Kibanda Westlands Team",
+        "description": "Kibanda branch/ops team (westlands)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "Kibanda Kilimani Team",
+        "description": "Kibanda branch/ops team (kilimani)"
+      }
+    },
+    {
+      "action": "dry_create_team",
+      "detail": {
+        "name": "Kibanda Karen Team",
+        "description": "Kibanda branch/ops team (karen)"
+      }
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Brenda Wanjiru"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Esther Nyambura"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Hassan Abdi"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Samuel Kariuki"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Faith Chebet Rotich"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Grace Wanjiku Kamau"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Daniel Otieno Ochieng"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Peter Mutua Musyoka"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Paul Kipchumba"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Mary Achieng Odhiambo"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Brian Wafula Wekesa"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Lucy Wairimu"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Tom Kiplagat Sang"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Eric Mutua Kyalo"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Cynthia Wanjiru"
+    },
+    {
+      "action": "dry_skip_membership",
+      "detail": "Samson Karisa"
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Brenda Wanjiru",
+        "id": "6338800",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Esther Nyambura",
+        "id": "6338897",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Hassan Abdi",
+        "id": "6338801",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Samuel Kariuki",
+        "id": "6338835",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Faith Chebet Rotich",
+        "id": "6338874",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Grace Wanjiku Kamau",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Daniel Otieno Ochieng",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Peter Mutua Musyoka",
+        "id": "6338837",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Paul Kipchumba",
+        "id": "6338807",
+        "manager_id": "6338874"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Mary Achieng Odhiambo",
+        "id": "6338838",
+        "manager_id": "6338874"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Brian Wafula Wekesa",
+        "id": "6338804",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Lucy Wairimu",
+        "id": "6338818",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Tom Kiplagat Sang",
+        "id": "6338832",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Eric Mutua Kyalo",
+        "id": "6338826",
+        "manager_id": "6338839"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Cynthia Wanjiru",
+        "id": "6338803",
+        "manager_id": "6338837"
+      }
+    },
+    {
+      "action": "dry_update_manager",
+      "detail": {
+        "employee": "Samson Karisa",
+        "id": "6338816",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "411969",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "Welcome to Kibanda on Factorial",
+        "description": "Team, we have one home for every employee: contracts, leave, rotas and payslips. Brenda's Sundays are coming back — start in the Factorial app, not in WhatsApp.",
+        "post_group_id": "411969",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "Rotas live in the app — not WhatsApp",
+        "description": "Branch managers: publish next week's rota from Factorial. Staff get shifts on their phone and swap requests go to the manager for approval. One rest day in every seven — Factorial will flag a seventh straight day.",
+        "post_group_id": "411969",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "Mashujaa Day — double pay for anyone who works",
+        "description": "On Mashujaa Day (20 October), anyone scheduled to work is marked for double pay automatically. Check your rota in the app and talk to your branch manager if you need a swap.",
+        "post_group_id": "411969",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "Hiring for the December rush",
+        "description": "We are opening fixed-term waiter roles, a cook role and a barista role for December. Branch managers: score candidates in Factorial so offers and onboarding start without retyping details.",
+        "post_group_id": "411969",
+        "allow_comments_and_reactions": true
+      }
+    },
+    {
+      "action": "dry_create_post",
+      "detail": {
+        "title": "Minimum wage check — May 2026 rates",
+        "description": "Kenya raised minimum wages in May 2026. Kibanda salaries are checked against the Nairobi floor (waiters/cooks from KES 19,491 basic). Esther and Samuel review pre-payroll before the 9th every month.",
+        "post_group_id": "411969",
+        "allow_comments_and_reactions": true
+      }
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "locations": {
+      "hq": "660438",
+      "cbd": "660435",
+      "westlands": "660434",
+      "kilimani": "660433",
+      "karen": "660432"
+    },
+    "location_id": "660438",
+    "legal_entity_id": "418897",
+    "cast": {
+      "Brenda Wanjiru": {
+        "employee_id": "6338800",
+        "access_id": "6803589",
+        "group": "leadership"
+      },
+      "Esther Nyambura": {
+        "employee_id": "6338897",
+        "access_id": "6803689",
+        "group": "staff"
+      },
+      "Hassan Abdi": {
+        "employee_id": "6338801",
+        "access_id": "6803590",
+        "group": "staff"
+      },
+      "Samuel Kariuki": {
+        "employee_id": "6338835",
+        "access_id": "6803624",
+        "group": "staff"
+      },
+      "Faith Chebet Rotich": {
+        "employee_id": "6338874",
+        "access_id": "6803666",
+        "group": "manager"
+      },
+      "Grace Wanjiku Kamau": {
+        "employee_id": "6338840",
+        "access_id": "6803629",
+        "group": "manager"
+      },
+      "Daniel Otieno Ochieng": {
+        "employee_id": "6338839",
+        "access_id": "6803628",
+        "group": "manager"
+      },
+      "Peter Mutua Musyoka": {
+        "employee_id": "6338837",
+        "access_id": "6803626",
+        "group": "manager"
+      },
+      "Paul Kipchumba": {
+        "employee_id": "6338807",
+        "access_id": "6803596",
+        "group": "staff"
+      },
+      "Mary Achieng Odhiambo": {
+        "employee_id": "6338838",
+        "access_id": "6803627",
+        "group": "staff"
+      },
+      "Brian Wafula Wekesa": {
+        "employee_id": "6338804",
+        "access_id": "6803593",
+        "group": "staff"
+      },
+      "Lucy Wairimu": {
+        "employee_id": "6338818",
+        "access_id": "6803607",
+        "group": "staff"
+      },
+      "Tom Kiplagat Sang": {
+        "employee_id": "6338832",
+        "access_id": "6803621",
+        "group": "staff"
+      },
+      "Eric Mutua Kyalo": {
+        "employee_id": "6338826",
+        "access_id": "6803615",
+        "group": "staff"
+      },
+      "Cynthia Wanjiru": {
+        "employee_id": "6338803",
+        "access_id": "6803592",
+        "group": "staff"
+      },
+      "Samson Karisa": {
+        "employee_id": "6338816",
+        "access_id": "6803605",
+        "group": "staff"
+      }
+    },
+    "teams": {
+      "hq": "dry-hq",
+      "cbd": "dry-cbd",
+      "westlands": "dry-westlands",
+      "kilimani": "dry-kilimani",
+      "karen": "dry-karen"
+    },
+    "post_group_id": "411969",
+    "posts": []
+  },
+  "finished_at": "2026-09-30T17:34:06.636044+00:00"
+}

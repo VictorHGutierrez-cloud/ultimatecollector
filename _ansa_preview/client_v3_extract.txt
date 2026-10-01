@@ -1,0 +1,253 @@
+pages=5 size=38325
+
+===== PAGE 1 =====
+ANSA McAL Group · Factorial IT Implementation Package
+1
+ANSA McAL Group
+Factorial IT Implementation Package
+Client-facing implementation summary · September 2026
+~6,000 employees · 48 operating companies · Caribbean
+Systems: Factorial IT · SAP SuccessFactors · Microsoft 365
+Commercial: POC ~500 employees / ~1,000 devices · target ~10,000 devices by June 2027 · kick-off October 2026 · platform billing
+from January 2027
+This version is intentionally condensed to the information required for client alignment, implementation and commercial decisions.
+
+===== PAGE 2 =====
+ANSA McAL Group · Factorial IT Implementation Package
+2
+1. Scope
+Factorial IT will operate ANSA McAL’s IT asset lifecycle: request, approval, procurement, registration, deployment, transfer,
+recovery, retirement and disposal. SAP SuccessFactors remains the system of record for people and organisation data.
+In scope
+Out of scope
+ITAM / inventory; MDM; JML automation; procurement and catalogue;
+SaaS / licenses; asset ticketing; remote assistance; approvals; reporting;
+audit trail.
+Payroll / core HR; ITIL incident & problem management; SLA timers;
+change management; CMDB impact modelling; network redesign; non-IT
+facilities assets; Android corporate Zero-Touch; native buyback/payment
+workflow; signature / acceptable-use capture.
+Android: BYOD Work Profile is in scope. Company-owned Android uses staged provisioning. Remote lock is available on enrolled
+devices; company-owned devices can be remotely wiped from the console; BYOD is disenrolled rather than fully wiped.
+POC: mandatory before January 2027 go-live, covering macOS, Windows, iOS and Android BYOD + company-owned paths.
+2. Target Architecture
+Users / source
+Factorial IT
+Connected systems
+Employees & managers
+Requests · approvals · self-service
+ITAM · MDM · Procurement · SaaS · JML · Evidence
+SAP SuccessFactors → people / org events
+Microsoft 365 → SSO / MFA / groups
+MDM → macOS / Windows / iOS / Android
+System of record: SuccessFactors for people data. Operational system of record: Factorial IT for asset operations.
+3. Core Flows
+Joiner / Mover / Leaver
+1. SF event
+→
+2. Automation
+→
+3. Action
+→
+4. Evidence
+Hire · Transfer ·
+Termination
+Rule fires
+Onboard · reassign · recover
++ Android wipe / disenroll
+Logged · auditable
+Device lifecycle
+Request
+Approval
+Order
+Register
+Configure
+Handover
+Transfer /
+Offboard
+Retire / Dispose
+Self-service
+Policy
+thresholds
+Catalogue / PO
+Serial / model /
+cost
+MDM baseline
+Onboarding
+record
+Reassign / wipe
+/ recover
+Evidence before
+closure
+
+===== PAGE 3 =====
+ANSA McAL Group · Factorial IT Implementation Package
+3
+4. Delivery Roadmap
+Phase
+Timing
+Outcome / gate
+0 · Planning
+Early Oct 2026
+Charter and governance
+1 · Discovery
+Oct 2026
+Signed inputs and OS estate split
+2 · Design + Configure
+Oct–Nov 2026
+Solution design, RBAC, catalogue, workflows, MDM
+3 · Integration + POC
+Nov–Dec 2026
+SuccessFactors sync + four OS paths validated
+POC Gate
+Dec 2026
+Steering sign-off required
+4 · Go-live
+Jan 2027
+~500 employees / ~1,000 devices
+5 · Rollouts
+Jan–Jun 2027
+Cohorts expand to ~10,000 devices
+6 · Hypercare / BAU
+From Jun 2027
+Stabilisation and handover
+Rollout sequence
+POC
+→
+Go-live
+→
+Rollout A
+→
+Rollout B
+→
+Rollouts C–D
+~1k devices
+Oct–Dec
+Jan 2027
+Trinidad
+Jan–Feb
+Barbados + Guyana
+Feb–Mar
+Remaining
+Apr–Jun
+5. Discovery Workshops
+Workshop
+Output
+Asset Governance
+Lifecycle states, mandatory fields, evidence, disposal approach
+Procurement & Catalogue
+Equipment Policy, Purchasing Policy, country catalogues
+Joiner / Mover / Leaver
+Event-to-automation design
+Security & Compliance
+MDM baseline, RBAC, retention
+Identity & SSO
+IdP, SSO, SCIM decisions
+MDM Operations
+OS enrolment paths; Android Work Profile / staged provisioning
+SaaS & Licenses
+Register, approval and reclamation rules
+Reporting
+KPI / dashboard definitions
+SuccessFactors Integration
+Field map, event contract, error handling
+
+===== PAGE 4 =====
+ANSA McAL Group · Factorial IT Implementation Package
+4
+6. Key Capability Outcomes
+Area
+Target state
+Joiner
+Hire event opens onboarding and applies equipment entitlement
+Leaver
+Termination drives access deprovisioning, device action and recovery
+Transfer
+Company / cost centre / manager updated with configured approvals
+Procurement
+Purchasing Policy controls catalogue spend and approvers
+Disposal
+Closure requires disposal / wipe evidence
+MDM
+Unified management for macOS / Windows / iOS; Android BYOD Work Profile in Phase 1
+SaaS
+Central register, approvals and reclamation rules
+Audit
+Single evidence trail across asset events
+Boundaries: Android corporate Zero-Touch is not Phase 1. Signed handover / acceptable-use acknowledgement remains outside
+the platform. Staff buyback runs as a ticket, with valuation and Finance approval outside the platform.
+7. Operating Model
+Capability
+BAU owner
+Procurement
+Group Procurement
+Asset governance
+Central IT / ITAM Lead
+Inventory
+Regional IT
+Software licenses
+Central IT / SaaS Manager
+Approvals
+Managers + Local / Regional IT
+Security reviews
+Group CISO
+Asset audits
+Internal Audit
+Admin access uses Microsoft 365 identity with MFA and role scope by company / region. Status changes, approvals and evidence
+uploads are logged. InfoSec approval of the MDM baseline is required before POC sign-off.
+8. Commercials
+All figures in USD.
+Item
+Terms
+Platform list price
+USD 10 / managed device / month
+ANSA offer
+USD 6 / managed device / month for initial 12 billable months
+POC / ramp
+~1,000 devices initially; target ~10,000 by June 2027; quarterly true-up
+Oct–Dec 2026
+Platform complimentary
+First platform invoice
+January 2027
+Professional Services
+USD 5,000 fixed
+PS payment
+2 × USD 2,500 in October and November 2026
+Minimum subscription term
+12 billable months: Jan–Dec 2027
+Oct 2026
+Nov 2026
+Dec 2026
+Jan 2027
+Kick-off
+Platform $0
+PS $2,500
+Configure + POC
+Platform $0
+PS $2,500
+POC sign-off
+Platform $0
+First platform invoice
+$6 × enrolled devices
+Year-1 snapshot: Platform Jan–Dec 2027 ≈ USD 549,000 under the stated ramp assumption + USD 5,000 implementation = ≈ USD
+554,000 total.
+
+===== PAGE 5 =====
+ANSA McAL Group · Factorial IT Implementation Package
+5
+9. Included
+Platform
+Professional Services
+ITAM / CMDB
+MDM connectors
+Asset ticketing & remote assistance
+JML automations
+Procurement / catalogue
+SaaS visibility
+Approvals & audit trail
+Phases 0–3 POC delivery
+9 discovery workshops
+SuccessFactors integration design & build support
+POC validation and go-live readiness
+Rollout runbooks & training foundation
+Final gate: Steering Committee POC sign-off is required before January 2027 production go-live.

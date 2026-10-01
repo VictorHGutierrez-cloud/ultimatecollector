@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Inventário da conta Factorial para a demo LIAT AIR (company 191947)."""
+"""Inventário da conta Factorial para a demo LIAT AIR (company 195679)."""
 
 from __future__ import annotations
 

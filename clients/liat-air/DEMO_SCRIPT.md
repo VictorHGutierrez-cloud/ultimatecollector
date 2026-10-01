@@ -1,17 +1,18 @@
 # Roteiro de Demo LIAT AIR (10–15 minutos)
 
-Conta: demo EU2 · Company `191947` · LIAT AIR  
+Conta: demo EU2 · Company `195679` · LIAT AIR  
 Sede: VC Bird International Airport, St. John's, Antigua & Barbuda  
 Foco: **Balanced Scorecard + 9-Box Performance Management**
 
 ## Antes de começar (2 min)
 
-1. Login na demo Factorial da company **191947**.
+1. Login na demo Factorial da company **195679**.
 2. Confirme os processos:
    - **LIAT Q1 Goal Setting & BSC Planning 2026**
    - **LIAT Q2-Q3 Mid-Year Review 2026**
    - **LIAT Q4 Year-End & 9-Box Review 2026**
-3. Tenha aberto `run_log/goals_pack.md`.
+3. Tenha aberto `run_log/goals_pack.md` e o PDF **LIAT Factorial AVD Operating Guide** (Documents).
+4. Na demo de cascata, abra a meta **[Corporate BSC / Customer] Network OTP and Safety 2026 (WCTE)** (**Assign to = Whole company**). Mostre a sub-meta **Flight Ops team OTP lift** (**Assign to = Team** → LIAT Flight Operations) e, nela, a individual **Route OTP on assigned flights** (**Assign to = Employees** → Tamara Joseph).
 
 ## Minuto 0–2 — Contexto LIAT
 
@@ -69,7 +70,7 @@ Mensagem-chave:
 
 ## Minuto 14–15 — Fechamento
 
-> "Um ciclo BSC conectado: cascata corporativa → departamento → individual, 360°, IDP e 9-box — no contexto real de uma airline do Caribe."
+> "Um ciclo BSC conectado: cascata **Whole company → Team → Employee**, 360°, IDP e 9-box — no contexto real de uma airline do Caribe."
 
 ## Se perguntarem "isso veio da API?"
 

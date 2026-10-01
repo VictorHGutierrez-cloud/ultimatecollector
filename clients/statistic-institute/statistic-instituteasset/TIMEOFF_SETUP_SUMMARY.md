@@ -15,6 +15,8 @@ Cliente: **statistic-institute** · Company ID: **191864**
 | SIJ Study Leave | 2405347 |
 | SIJ Compassionate Leave | 2405348 |
 | SIJ Special Leave | 2405349 |
+| SIJ Suspension | 2602616 |
+| SIJ Extended Sick / Departmental / No Pay | (see business-case seed log) |
 
 ### Policies + allowances (Vacation)
 | Faixa | Dias/ano | Teto 3 anos | Policy ID | Allowance ID |
@@ -40,8 +42,12 @@ Cliente: **statistic-institute** · Company ID: **191864**
 - **SIJ Sick Allowance** (14 dias/ano, `all_days`) anexado às policies SIJ 15/20/21/25 (+ policy legada `366459`) para permitir pedidos de Sick
 - **Manual executivo (EN) — fechamento mensal:** `MONTHLY_CLOSE_VACATION_PAUSE_MANUAL.md`
 - **PDF no sandbox Factorial:** `STATIN Monthly Close Vacation Pause Manual.pdf` · document id `13589374` · space `company_internal` · public `false`
-- **Business Case leave demos (Ex. 3–4 + Extended Sick):** `DEMO_SCRIPT_BUSINESS_CASE_LEAVE.md`  
-  Seed: `python scripts/clients/statistic-institute/seed_business_case_leave_demos.py`
+- **Business Case leave demos (Ex. 1–4 + Extended Sick):** `DEMO_SCRIPT_BUSINESS_CASE_LEAVE.md`  
+  Seed: `python scripts/clients/statistic-institute/seed_business_case_leave_demos.py`  
+  Phase A plan: `PHASE_A_BUSINESS_CASE_EXAMPLES_PLAN.md`  
+  - Ex. 1 Bernarda Baker — Sick Jun 1–7 → Jamaica June accrual ≈ 1.2602  
+  - Ex. 2 Diana Davis — **SIJ Suspension** Aug 10–20 (11 days) → Jamaica Aug accrual ≈ 1.0958  
+  - Ex. 3–4 + ESL cascade unchanged (Charles / Clara / Steven)
 
 ## Limitações (demo honestamente)
 A Factorial **não replica 100%** o documento da Jamaica:
@@ -57,10 +63,16 @@ python scripts/clients/statistic-institute/seed_jamaica_pause_demo.py
 ```
 
 SQL da demo:
-- Detalhe (1 ausência/linha): `sqlexemplo_power.txt`
-- Resumo (1 pessoa/linha, total a ajustar): `sqlexemplo_resumo.txt`  
-Filtros: `Data_init = 2026-08-01` · `Data_end = 2026-08-31`  
-Cerca: tenure/antiquity Factorial, faixa 15/20/21/25, 365/366, teto 3 anos, pausa LOA >14, rounding ≥0,50.
+- **Elegibilidade (qualquer dia off bloqueia accrual):**  
+  - Resumo: `sqlexemplo_elegibilidade_resumo.txt`  
+  - Detalhe: `sqlexemplo_elegibilidade_detalhe.txt`  
+  - Ex. 1 Jun: `Data_init=2026-06-01` · `Data_end=2026-06-30` (Bernarda → Gap≈0.38 · Jamaica≈1.26)  
+  - Ex. 2 Ago: `Data_init=2026-08-01` · `Data_end=2026-08-31` (Diana)  
+- **Pausa >14 apenas:**  
+  - Detalhe: `sqlexemplo_power.txt`  
+  - Resumo: `sqlexemplo_resumo.txt`  
+  - Filtros exemplo: `Data_init = 2026-08-01` · `Data_end = 2026-08-31` (Felicity)  
+Cerca: tenure/antiquity Factorial, faixa 15/20/21/25, 365/366, teto 3 anos, dias off, pausa LOA >14, rounding ≥0,50.
 
 Logs:
 - `clients/statistic-institute/run_log/timeoff_seed_20260912.json`

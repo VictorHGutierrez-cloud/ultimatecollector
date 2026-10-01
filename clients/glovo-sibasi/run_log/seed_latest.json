@@ -1,0 +1,797 @@
+{
+  "started_at": "2026-09-30T17:34:10.454069+00:00",
+  "mode": "apply",
+  "company_id": "191232",
+  "actions": [
+    {
+      "action": "updated_location",
+      "detail": {
+        "key": "hq",
+        "id": "660438",
+        "name": "Kibanda Kilimani — Head Office"
+      }
+    },
+    {
+      "action": "updated_location",
+      "detail": {
+        "key": "cbd",
+        "id": "660435",
+        "name": "Kibanda CBD"
+      }
+    },
+    {
+      "action": "updated_location",
+      "detail": {
+        "key": "westlands",
+        "id": "660434",
+        "name": "Kibanda Westlands"
+      }
+    },
+    {
+      "action": "updated_location",
+      "detail": {
+        "key": "kilimani",
+        "id": "660433",
+        "name": "Kibanda Kilimani Branch"
+      }
+    },
+    {
+      "action": "updated_location",
+      "detail": {
+        "key": "karen",
+        "id": "660432",
+        "name": "Kibanda Karen"
+      }
+    },
+    {
+      "action": "created_legal_entity",
+      "detail": {
+        "id": "452216",
+        "country": "ke"
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Hellen Howard",
+        "to": "Brenda Wanjiru",
+        "id": "6338800"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Brenda Wanjiru",
+        "status": 200,
+        "updates": {
+          "id": "6338800",
+          "location_id": "660438",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Maria Lopez",
+        "to": "Esther Nyambura",
+        "id": "6338897"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Esther Nyambura",
+        "status": 200,
+        "updates": {
+          "id": "6338897",
+          "location_id": "660438",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Charles Carter",
+        "to": "Hassan Abdi",
+        "id": "6338801"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Hassan Abdi",
+        "status": 200,
+        "updates": {
+          "id": "6338801",
+          "location_id": "660438",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Samuel Stone",
+        "to": "Samuel Kariuki",
+        "id": "6338835"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Samuel Kariuki",
+        "status": 200,
+        "updates": {
+          "id": "6338835",
+          "location_id": "660438",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Nadia Backfield",
+        "to": "Faith Chebet Rotich",
+        "id": "6338874"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Faith Chebet Rotich",
+        "status": 200,
+        "updates": {
+          "id": "6338874",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Jessica Rivera",
+        "to": "Grace Wanjiku Kamau",
+        "id": "6338840"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Grace Wanjiku Kamau",
+        "status": 200,
+        "updates": {
+          "id": "6338840",
+          "location_id": "660434",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "David Thompson",
+        "to": "Daniel Otieno Ochieng",
+        "id": "6338839"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Daniel Otieno Ochieng",
+        "status": 200,
+        "updates": {
+          "id": "6338839",
+          "location_id": "660433",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Michael Carter",
+        "to": "Peter Mutua Musyoka",
+        "id": "6338837"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Peter Mutua Musyoka",
+        "status": 200,
+        "updates": {
+          "id": "6338837",
+          "location_id": "660432",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "James Jones",
+        "to": "Paul Kipchumba",
+        "id": "6338807"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Paul Kipchumba",
+        "status": 200,
+        "updates": {
+          "id": "6338807",
+          "location_id": "660435",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Ashley Nguyen",
+        "to": "Mary Achieng Odhiambo",
+        "id": "6338838"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Mary Achieng Odhiambo",
+        "status": 200,
+        "updates": {
+          "id": "6338838",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Jack Johnson",
+        "to": "Brian Wafula Wekesa",
+        "id": "6338804"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Brian Wafula Wekesa",
+        "status": 200,
+        "updates": {
+          "id": "6338804",
+          "location_id": "660434",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Sarah Smith",
+        "to": "Lucy Wairimu",
+        "id": "6338818"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Lucy Wairimu",
+        "status": 200,
+        "updates": {
+          "id": "6338818",
+          "location_id": "660434",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Noah Norris",
+        "to": "Tom Kiplagat Sang",
+        "id": "6338832"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Tom Kiplagat Sang",
+        "status": 200,
+        "updates": {
+          "id": "6338832",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Nathan Nichols",
+        "to": "Eric Mutua Kyalo",
+        "id": "6338826"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Eric Mutua Kyalo",
+        "status": 200,
+        "updates": {
+          "id": "6338826",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Laura Lewis",
+        "to": "Cynthia Wanjiru",
+        "id": "6338803"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Cynthia Wanjiru",
+        "status": 200,
+        "updates": {
+          "id": "6338803",
+          "location_id": "660432",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "renamed_employee",
+      "detail": {
+        "from": "Peter Price",
+        "to": "Samson Karisa",
+        "id": "6338816"
+      }
+    },
+    {
+      "action": "aligned_employee_fields",
+      "detail": {
+        "name": "Samson Karisa",
+        "status": 200,
+        "updates": {
+          "id": "6338816",
+          "location_id": "660434",
+          "legal_entity_id": "452216"
+        }
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2129894",
+        "name": "Kibanda Head Office"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2129895",
+        "name": "Kibanda CBD Team"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2129896",
+        "name": "Kibanda Westlands Team"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2129897",
+        "name": "Kibanda Kilimani Team"
+      }
+    },
+    {
+      "action": "created_team",
+      "detail": {
+        "id": "2129898",
+        "name": "Kibanda Karen Team"
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Brenda Wanjiru",
+        "team_id": "2129894",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Esther Nyambura",
+        "team_id": "2129894",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Hassan Abdi",
+        "team_id": "2129894",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Samuel Kariuki",
+        "team_id": "2129894",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Faith Chebet Rotich",
+        "team_id": "2129895",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Grace Wanjiku Kamau",
+        "team_id": "2129896",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Daniel Otieno Ochieng",
+        "team_id": "2129897",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Peter Mutua Musyoka",
+        "team_id": "2129898",
+        "lead": true
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Paul Kipchumba",
+        "team_id": "2129895",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Mary Achieng Odhiambo",
+        "team_id": "2129895",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Brian Wafula Wekesa",
+        "team_id": "2129896",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Lucy Wairimu",
+        "team_id": "2129896",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Tom Kiplagat Sang",
+        "team_id": "2129896",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Eric Mutua Kyalo",
+        "team_id": "2129897",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Cynthia Wanjiru",
+        "team_id": "2129898",
+        "lead": false
+      }
+    },
+    {
+      "action": "created_membership",
+      "detail": {
+        "employee": "Samson Karisa",
+        "team_id": "2129896",
+        "lead": false
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Brenda Wanjiru",
+        "manager_id": null
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Esther Nyambura",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Hassan Abdi",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Samuel Kariuki",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Faith Chebet Rotich",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Grace Wanjiku Kamau",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "manager_ok",
+      "detail": {
+        "employee": "Daniel Otieno Ochieng",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Peter Mutua Musyoka",
+        "manager_id": "6338800"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Paul Kipchumba",
+        "manager_id": "6338874"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Mary Achieng Odhiambo",
+        "manager_id": "6338874"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Brian Wafula Wekesa",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Lucy Wairimu",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Tom Kiplagat Sang",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Eric Mutua Kyalo",
+        "manager_id": "6338839"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Cynthia Wanjiru",
+        "manager_id": "6338837"
+      }
+    },
+    {
+      "action": "updated_manager",
+      "detail": {
+        "employee": "Samson Karisa",
+        "manager_id": "6338840"
+      }
+    },
+    {
+      "action": "post_group_exists",
+      "detail": {
+        "id": "411969",
+        "title": "Company announcements"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "30461522",
+        "title": "Welcome to Kibanda on Factorial"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "30461523",
+        "title": "Rotas live in the app — not WhatsApp"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "30461524",
+        "title": "Mashujaa Day — double pay for anyone who works"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "30461525",
+        "title": "Hiring for the December rush"
+      }
+    },
+    {
+      "action": "created_post",
+      "detail": {
+        "id": "30461526",
+        "title": "Minimum wage check — May 2026 rates"
+      }
+    }
+  ],
+  "errors": [],
+  "ids": {
+    "locations": {
+      "hq": "660438",
+      "cbd": "660435",
+      "westlands": "660434",
+      "kilimani": "660433",
+      "karen": "660432"
+    },
+    "location_id": "660438",
+    "legal_entity_id": "452216",
+    "cast": {
+      "Brenda Wanjiru": {
+        "employee_id": "6338800",
+        "access_id": "6803589",
+        "group": "leadership"
+      },
+      "Esther Nyambura": {
+        "employee_id": "6338897",
+        "access_id": "6803689",
+        "group": "staff"
+      },
+      "Hassan Abdi": {
+        "employee_id": "6338801",
+        "access_id": "6803590",
+        "group": "staff"
+      },
+      "Samuel Kariuki": {
+        "employee_id": "6338835",
+        "access_id": "6803624",
+        "group": "staff"
+      },
+      "Faith Chebet Rotich": {
+        "employee_id": "6338874",
+        "access_id": "6803666",
+        "group": "manager"
+      },
+      "Grace Wanjiku Kamau": {
+        "employee_id": "6338840",
+        "access_id": "6803629",
+        "group": "manager"
+      },
+      "Daniel Otieno Ochieng": {
+        "employee_id": "6338839",
+        "access_id": "6803628",
+        "group": "manager"
+      },
+      "Peter Mutua Musyoka": {
+        "employee_id": "6338837",
+        "access_id": "6803626",
+        "group": "manager"
+      },
+      "Paul Kipchumba": {
+        "employee_id": "6338807",
+        "access_id": "6803596",
+        "group": "staff"
+      },
+      "Mary Achieng Odhiambo": {
+        "employee_id": "6338838",
+        "access_id": "6803627",
+        "group": "staff"
+      },
+      "Brian Wafula Wekesa": {
+        "employee_id": "6338804",
+        "access_id": "6803593",
+        "group": "staff"
+      },
+      "Lucy Wairimu": {
+        "employee_id": "6338818",
+        "access_id": "6803607",
+        "group": "staff"
+      },
+      "Tom Kiplagat Sang": {
+        "employee_id": "6338832",
+        "access_id": "6803621",
+        "group": "staff"
+      },
+      "Eric Mutua Kyalo": {
+        "employee_id": "6338826",
+        "access_id": "6803615",
+        "group": "staff"
+      },
+      "Cynthia Wanjiru": {
+        "employee_id": "6338803",
+        "access_id": "6803592",
+        "group": "staff"
+      },
+      "Samson Karisa": {
+        "employee_id": "6338816",
+        "access_id": "6803605",
+        "group": "staff"
+      }
+    },
+    "teams": {
+      "hq": "2129894",
+      "cbd": "2129895",
+      "westlands": "2129896",
+      "kilimani": "2129897",
+      "karen": "2129898"
+    },
+    "post_group_id": "411969",
+    "posts": [
+      "30471586",
+      "30471587",
+      "30471588",
+      "30471589",
+      "30471590"
+    ]
+  },
+  "finished_at": "2026-09-30T17:34:46.751503+00:00"
+}

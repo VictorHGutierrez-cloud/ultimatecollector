@@ -1,0 +1,280 @@
+/*
+================================================================================
+SQL ELEGIBILIDADE DETALHE — 1 linha por ausência (prova / auditoria)
+Statistical Institute of Jamaica
+================================================================================
+
+Companion to: sqlexemplo_elegibilidade_resumo.txt
+
+PURPOSE:
+  Prove EACH blocking leave that removes vacation accrual days in the period.
+  Jamaica: any day on blocking leave → no vacation accrual that day
+  (including absences ≤14 calendar days — Example 1 Bernarda).
+
+  Per leave row:
+    • Days_Off_In_Period (clipped to filters)
+    • Gap_This_Leave ≈ days_off × (tier/365)
+    • Extended_Pause_This_Leave YES/NO (>14 full calendar length)
+
+Filters: {{Data_init}} / {{Data_end}}
+Demo tips:
+  • Bernarda Jun → Data_init=2026-06-01 Data_end=2026-06-30
+      SIJ Sick Leave 1–7 → Days_Off=7 Gap≈0.3836 Extended=NO
+  • Diana Aug → Data_init=2026-08-01 Data_end=2026-08-31
+      SIJ Suspension 10–20 → Days_Off=11 Gap≈0.6027 Extended=NO
+  • Charles Dec → Data_init=2026-12-01 Data_end=2026-12-31
+      SIJ Vacation 1–18 → Days_Off=18 Gap≈0.9863 Extended=YES
+
+Use RESUMO for HR totals; use this DETALHE for audit / demo walkthrough.
+================================================================================
+*/
+
+WITH params AS (
+    SELECT
+        14 AS pause_threshold_days,
+        CAST('{{Data_init}}' AS date) AS period_start,
+        CAST('{{Data_end}}'  AS date) AS period_end,
+        date_diff(
+            'day',
+            CAST('{{Data_init}}' AS date),
+            CAST('{{Data_end}}' AS date)
+        ) + 1 AS days_in_period,
+        CASE
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 400) = 0 THEN 366
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 100) = 0 THEN 365
+            WHEN MOD(year(CAST('{{Data_init}}' AS date)), 4)   = 0 THEN 366
+            ELSE 365
+        END AS days_in_year
+),
+
+sij_employee_rates AS (
+    SELECT
+        employee_id,
+        annual_vacation_days,
+        annual_vacation_days * 3.0 AS max_accumulation_days
+    FROM (
+        VALUES
+            (CAST(6376909 AS BIGINT), CAST(15 AS DOUBLE)),  -- Adan Garcia
+            (CAST(6375983 AS BIGINT), CAST(15 AS DOUBLE)),  -- Calvin Collins
+            (CAST(6375967 AS BIGINT), CAST(15 AS DOUBLE)),  -- Cristopher Clarke
+            (CAST(6376070 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hannah Harris
+            (CAST(6375925 AS BIGINT), CAST(15 AS DOUBLE)),  -- Hellen Howard
+            (CAST(6375942 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jack Johnson
+            (CAST(6376239 AS BIGINT), CAST(15 AS DOUBLE)),  -- Jessica Rivera
+            (CAST(6376091 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nathan Nichols
+            (CAST(6376125 AS BIGINT), CAST(15 AS DOUBLE)),  -- Nora Nelson
+            (CAST(6376217 AS BIGINT), CAST(15 AS DOUBLE)),  -- Samuel Stone
+            (CAST(6376003 AS BIGINT), CAST(15 AS DOUBLE)),  -- Sarah Smith
+            (CAST(6375969 AS BIGINT), CAST(20 AS DOUBLE)),  -- Bernarda Baker
+            (CAST(6375931 AS BIGINT), CAST(20 AS DOUBLE)),  -- Charles Carter
+            (CAST(6375951 AS BIGINT), CAST(20 AS DOUBLE)),  -- Clara Cooper
+            (CAST(6375987 AS BIGINT), CAST(20 AS DOUBLE)),  -- Diana Davis
+            (CAST(6376910 AS BIGINT), CAST(20 AS DOUBLE)),  -- Maria Lopez
+            (CAST(6376224 AS BIGINT), CAST(20 AS DOUBLE)),  -- Michael Carter
+            (CAST(6376133 AS BIGINT), CAST(20 AS DOUBLE)),  -- Noah Norris
+            (CAST(6376261 AS BIGINT), CAST(20 AS DOUBLE)),  -- Preston Pike
+            (CAST(6376075 AS BIGINT), CAST(20 AS DOUBLE)),  -- Simon Sanders
+            (CAST(6376096 AS BIGINT), CAST(20 AS DOUBLE)),  -- Sophie Simmons
+            (CAST(6376052 AS BIGINT), CAST(20 AS DOUBLE)),  -- Steven Scott
+            (CAST(6375972 AS BIGINT), CAST(21 AS DOUBLE)),  -- Alice Anderson
+            (CAST(6376230 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ashley Nguyen
+            (CAST(6376081 AS BIGINT), CAST(21 AS DOUBLE)),  -- Charlie Cooper
+            (CAST(6375934 AS BIGINT), CAST(21 AS DOUBLE)),  -- Daisy Dawson
+            (CAST(6376058 AS BIGINT), CAST(21 AS DOUBLE)),  -- Ian Irving
+            (CAST(6375954 AS BIGINT), CAST(21 AS DOUBLE)),  -- James Jones
+            (CAST(6376262 AS BIGINT), CAST(21 AS DOUBLE)),  -- Marla Mercer
+            (CAST(6376106 AS BIGINT), CAST(21 AS DOUBLE)),  -- Nicholas Newton
+            (CAST(6375991 AS BIGINT), CAST(21 AS DOUBLE)),  -- Peter Price
+            (CAST(6376137 AS BIGINT), CAST(21 AS DOUBLE)),  -- Susan Stanley
+            (CAST(6375978 AS BIGINT), CAST(25 AS DOUBLE)),  -- Amelia Adams
+            (CAST(6376234 AS BIGINT), CAST(25 AS DOUBLE)),  -- David Thompson
+            (CAST(6375958 AS BIGINT), CAST(25 AS DOUBLE)),  -- Felicity Ford
+            (CAST(6376063 AS BIGINT), CAST(25 AS DOUBLE)),  -- Isabel Ingram
+            (CAST(6375938 AS BIGINT), CAST(25 AS DOUBLE)),  -- Laura Lewis
+            (CAST(6375995 AS BIGINT), CAST(25 AS DOUBLE)),  -- Megan Moore
+            (CAST(6376602 AS BIGINT), CAST(25 AS DOUBLE)),  -- Nadia Backfield
+            (CAST(6376112 AS BIGINT), CAST(25 AS DOUBLE)),  -- Natalie Norton
+            (CAST(6376087 AS BIGINT), CAST(25 AS DOUBLE)),  -- Samantha Stevens
+            (CAST(6376200 AS BIGINT), CAST(25 AS DOUBLE))   -- Stephanie Sullivan
+    ) AS t(employee_id, annual_vacation_days)
+),
+
+employee_base AS (
+    SELECT
+        e.id AS employee_id,
+        e.company_identifier AS employee_code,
+        e.full_name AS employee_name,
+        CAST(e.tenure_start_date AS date) AS tenure_start_date,
+        ser.annual_vacation_days,
+        ser.max_accumulation_days,
+        p.days_in_year,
+        p.days_in_period,
+        p.period_start,
+        p.period_end,
+        p.pause_threshold_days,
+        CASE
+            WHEN ser.annual_vacation_days IS NOT NULL
+            THEN ser.annual_vacation_days / CAST(p.days_in_year AS DOUBLE)
+            ELSE NULL
+        END AS accrual_per_calendar_day
+    FROM employees e
+    CROSS JOIN params p
+    INNER JOIN sij_employee_rates ser ON ser.employee_id = e.id
+),
+
+detail AS (
+    SELECT
+        eb.employee_code,
+        eb.employee_name,
+        eb.tenure_start_date,
+        eb.annual_vacation_days,
+        eb.max_accumulation_days,
+        eb.days_in_year,
+        eb.days_in_period,
+        eb.period_start,
+        eb.period_end,
+        eb.pause_threshold_days,
+        eb.accrual_per_calendar_day,
+        l.id AS leave_id,
+        l.leave_type_name AS absence_type,
+        l.status AS status,
+        CAST(l.start_on AS date) AS start_date,
+        CAST(l.finish_on AS date) AS end_date,
+        date_diff('day', CAST(l.start_on AS date), CAST(l.finish_on AS date)) + 1
+            AS calendar_days_full,
+        date_diff(
+            'day',
+            CASE
+                WHEN CAST(l.start_on AS date) > eb.period_start
+                THEN CAST(l.start_on AS date)
+                ELSE eb.period_start
+            END,
+            CASE
+                WHEN CAST(l.finish_on AS date) < eb.period_end
+                THEN CAST(l.finish_on AS date)
+                ELSE eb.period_end
+            END
+        ) + 1 AS days_off_in_period,
+        CASE
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+            THEN 'vacation'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+            THEN 'sick'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%suspend%'
+            THEN 'suspension'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+            THEN 'maternity'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+            THEN 'study'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+            THEN 'compassionate'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+            THEN 'special'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+            THEN 'departmental'
+            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
+              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            THEN 'other_loa'
+            ELSE 'other_absence'
+        END AS leave_family,
+        l.description AS description
+    FROM leaves l
+    JOIN employee_base eb ON eb.employee_id = l.employee_id
+    WHERE LOWER(l.status) IN ('approved', 'accepted')
+      AND l.start_on IS NOT NULL
+      AND l.finish_on IS NOT NULL
+      AND CAST(l.start_on AS date) <= eb.period_end
+      AND CAST(l.finish_on AS date) >= eb.period_start
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%working from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%work from home%'
+      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%wfh%'
+      AND (
+            LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%suspend%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
+         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+      )
+)
+
+SELECT
+    employee_code                         AS "Employee_Code",
+    employee_name                         AS "Employee_Name",
+    annual_vacation_days                  AS "Annual_Entitlement_Days",
+    days_in_year                          AS "Days_In_Year_365_or_366",
+    period_start                          AS "Period_Start",
+    period_end                            AS "Period_End",
+    days_in_period                        AS "Days_In_Period",
+    ROUND(accrual_per_calendar_day, 6)    AS "Accrual_Per_Calendar_Day",
+    leave_id                              AS "Leave_ID",
+    absence_type                          AS "Absence_Type",
+    leave_family                          AS "Leave_Family",
+    status                                AS "Status",
+    start_date                            AS "Start_Date",
+    end_date                              AS "End_Date",
+    calendar_days_full                    AS "Calendar_Days_Full_Leave",
+    days_off_in_period                    AS "Days_Off_In_Period",
+    pause_threshold_days                  AS "Pause_Threshold_Days",
+    CASE
+        WHEN calendar_days_full > pause_threshold_days
+        THEN 'YES (extended pause block — full leave >14 calendar days)'
+        ELSE 'NO (short leave — still blocks daily accrual on these days)'
+    END                                   AS "Extended_Pause_This_Leave",
+    ROUND(days_off_in_period * accrual_per_calendar_day, 4)
+                                          AS "Gap_This_Leave",
+    FLOOR(ROUND(days_off_in_period * accrual_per_calendar_day, 6) + 0.5)
+                                          AS "Gap_This_Leave_Rounded_Half_Up",
+    description                           AS "Description",
+    CASE
+        WHEN calendar_days_full > pause_threshold_days THEN
+            CONCAT(
+                'Blocking leave ', CAST(days_off_in_period AS varchar),
+                ' day(s) in period. Gap ≈ ',
+                CAST(ROUND(days_off_in_period * accrual_per_calendar_day, 4) AS varchar),
+                '. Also qualifies as >14 extended pause for process/SQL Power.'
+            )
+        ELSE
+            CONCAT(
+                'Blocking leave ', CAST(days_off_in_period AS varchar),
+                ' day(s) in period — Jamaica daily rule: NO vacation accrual on these days',
+                ' even though ≤14. Gap ≈ ',
+                CAST(ROUND(days_off_in_period * accrual_per_calendar_day, 4) AS varchar),
+                '. Factorial does not auto-cut; adjust manually if aligning to Jamaica.'
+            )
+    END                                   AS "Conclusion_Eligibility"
+FROM detail
+ORDER BY employee_name, start_date, leave_id
+;

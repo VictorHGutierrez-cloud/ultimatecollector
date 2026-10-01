@@ -1,6 +1,6 @@
 # Demo LIAT AIR — Factorial (Antigua & Barbuda)
 
-Personaliza a demo Factorial da **LIAT AIR / Liat (2020) Limited** (company `191947`, API `2026-07-01`).
+Personaliza a demo Factorial da **LIAT AIR / Liat (2020) Limited** (company `195679`, API `2026-07-01`).
 
 Foco: **Performance Management** com Balanced Scorecard (BSC) + 9-Box, conforme o framework HRIS da LIAT.
 
@@ -35,7 +35,7 @@ BASE_URL=https://api.eu2.demo.factorial.dev
 API_KEY=sua_chave_aqui
 API_VERSION=2026-07-01
 AUTH_TYPE=x-api-key
-COMPANY_ID=191947
+COMPANY_ID=195679
 ```
 
 ### 2) Inventário
@@ -71,6 +71,28 @@ python scripts/clients/liat-air/liat_verify_performance.py
 5. Ativar **e-signature** nos appraisals
 6. Iniciar agreements no UI se a API retornar 403
 
-## Documento de referência
+## Documento de referência (para a LIAT usar no dia a dia)
 
-`liat-airasset/LIAT HRIS Vendor Framework.pdf` — requisitos BSC, 9-box, 70/30 weighting.
+**Guia operacional de AVDs (SOW):**  
+`liat-airasset/LIAT Factorial AVD Operating Guide.pdf`  
+(fonte Markdown: `FACTORIAL_AVD_SOW_LIAT.md`)
+
+Como gerar de novo:
+
+```bash
+python scripts/clients/liat-air/build_avd_sow_pdf.py
+python scripts/clients/liat-air/liat_upload_documents.py --apply
+```
+
+Isso sobe o PDF do **guia de uso da Factorial** (não o framework de vendor da LIAT).
+
+O PDF de requisitos do cliente continua em:  
+`liat-airasset/LIAT HRIS Vendor Framework.pdf` — BSC, 9-box, 70/30 (referência interna).
+
+## Cascata de metas (UI)
+
+A API não cria parent/sub-goals. Na demo use os **Assign to** corretos:
+
+**Whole company** → **Team (LIAT Flight Operations)** → **Employees (Tamara Joseph)**
+
+Abra **[Corporate BSC / Customer] Network OTP and Safety 2026 (WCTE)** → **Sub-goals** → meta do time → sub-meta individual.

@@ -1,7 +1,7 @@
 {
   "id": "liat-air",
   "name": "LIAT AIR",
-  "company_id": 191947,
+  "company_id": 195679,
   "api": {
     "provider": "factorial",
     "base_url": "https://api.eu2.demo.factorial.dev",

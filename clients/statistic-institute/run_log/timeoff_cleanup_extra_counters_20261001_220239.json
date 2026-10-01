@@ -1,0 +1,221 @@
+{
+  "started": "2026-10-01T22:02:39",
+  "deleted": [
+    {
+      "id": "728806",
+      "name": "SIJ Suspension Allowance",
+      "policy": "367081",
+      "status": 200
+    },
+    {
+      "id": "728802",
+      "name": "SIJ Suspension Allowance",
+      "policy": "367080",
+      "status": 200
+    },
+    {
+      "id": "728801",
+      "name": "SIJ Suspension Allowance",
+      "policy": "367079",
+      "status": 200
+    },
+    {
+      "id": "728800",
+      "name": "SIJ Suspension Allowance",
+      "policy": "367078",
+      "status": 200
+    },
+    {
+      "id": "645848",
+      "name": "SIJ No Pay Allowance",
+      "policy": "366459",
+      "status": 200
+    },
+    {
+      "id": "645847",
+      "name": "SIJ No Pay Allowance",
+      "policy": "367081",
+      "status": 200
+    },
+    {
+      "id": "645846",
+      "name": "SIJ No Pay Allowance",
+      "policy": "367080",
+      "status": 200
+    },
+    {
+      "id": "645844",
+      "name": "SIJ No Pay Allowance",
+      "policy": "367078",
+      "status": 200
+    },
+    {
+      "id": "645843",
+      "name": "SIJ Departmental Allowance",
+      "policy": "366459",
+      "status": 200
+    },
+    {
+      "id": "645842",
+      "name": "SIJ Departmental Allowance",
+      "policy": "367081",
+      "status": 200
+    },
+    {
+      "id": "645841",
+      "name": "SIJ Departmental Allowance",
+      "policy": "367080",
+      "status": 200
+    },
+    {
+      "id": "645839",
+      "name": "SIJ Departmental Allowance",
+      "policy": "367078",
+      "status": 200
+    },
+    {
+      "id": "645838",
+      "name": "SIJ Extended Sick Allowance",
+      "policy": "366459",
+      "status": 200
+    },
+    {
+      "id": "645837",
+      "name": "SIJ Extended Sick Allowance",
+      "policy": "367081",
+      "status": 200
+    },
+    {
+      "id": "645836",
+      "name": "SIJ Extended Sick Allowance",
+      "policy": "367080",
+      "status": 200
+    },
+    {
+      "id": "645834",
+      "name": "SIJ Extended Sick Allowance",
+      "policy": "367078",
+      "status": 200
+    },
+    {
+      "id": "643059",
+      "name": "SIJ Sick Allowance",
+      "policy": "366459",
+      "status": 200
+    },
+    {
+      "id": "643058",
+      "name": "SIJ Sick Allowance",
+      "policy": "367078",
+      "status": 200
+    },
+    {
+      "id": "643056",
+      "name": "SIJ Sick Allowance",
+      "policy": "367080",
+      "status": 200
+    },
+    {
+      "id": "643055",
+      "name": "SIJ Sick Allowance",
+      "policy": "367081",
+      "status": 200
+    }
+  ],
+  "failed": [
+    {
+      "id": "645845",
+      "name": "SIJ No Pay Allowance",
+      "policy": "367079",
+      "status": 409,
+      "body": {
+        "errors": {
+          "errors": [
+            "Allowance cannot be deleted because it has pending allowance incidences"
+          ]
+        }
+      }
+    },
+    {
+      "id": "645840",
+      "name": "SIJ Departmental Allowance",
+      "policy": "367079",
+      "status": 409,
+      "body": {
+        "errors": {
+          "errors": [
+            "Allowance cannot be deleted because it has pending allowance incidences"
+          ]
+        }
+      }
+    },
+    {
+      "id": "645835",
+      "name": "SIJ Extended Sick Allowance",
+      "policy": "367079",
+      "status": 409,
+      "body": {
+        "errors": {
+          "errors": [
+            "Allowance cannot be deleted because it has pending allowance incidences"
+          ]
+        }
+      }
+    },
+    {
+      "id": "643057",
+      "name": "SIJ Sick Allowance",
+      "policy": "367079",
+      "status": 409,
+      "body": {
+        "errors": {
+          "errors": [
+            "Allowance cannot be deleted because it has pending allowance incidences"
+          ]
+        }
+      }
+    }
+  ],
+  "remaining_sij": [
+    {
+      "name": "SIJ No Pay Allowance",
+      "id": "645845",
+      "policy": "367079"
+    },
+    {
+      "name": "SIJ Departmental Allowance",
+      "id": "645840",
+      "policy": "367079"
+    },
+    {
+      "name": "SIJ Extended Sick Allowance",
+      "id": "645835",
+      "policy": "367079"
+    },
+    {
+      "name": "SIJ Sick Allowance",
+      "id": "643057",
+      "policy": "367079"
+    },
+    {
+      "name": "SIJ Vacation Allowance 25d",
+      "id": "617651",
+      "policy": "367081"
+    },
+    {
+      "name": "SIJ Vacation Allowance 21d",
+      "id": "617649",
+      "policy": "367080"
+    },
+    {
+      "name": "SIJ Vacation Allowance 20d",
+      "id": "617647",
+      "policy": "367079"
+    },
+    {
+      "name": "SIJ Vacation Allowance 15d",
+      "id": "617645",
+      "policy": "367078"
+    }
+  ]
+}
