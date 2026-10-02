@@ -60,16 +60,16 @@ Daily Jamaica accrual remains **SQL / narrative** — Factorial does not pause a
 **Business Case**
 
 - Annual rate: **20 days**
-- Suspended **August 10–25** with parenthetical **(11 days)** — inconsistent (10–25 inclusive = 16 calendar days)
-- Math implies **11** skipped days in a 31-day August → **20** eligible → `20 × 0.0547 ≈ 1.0958`
+- Suspended **August 10–20** (**11** calendar days)
+- Math: **11** skipped days in a 31-day August → **20** eligible → `20 × 0.0547 ≈ 1.0958`
 
-**Sandbox seed (math-faithful)**
+**Sandbox seed**
 
 | Field | Value |
 |-------|-------|
 | Leave type | **SIJ Suspension** (new) |
 | Dates | **2026-08-10 → 2026-08-20** (**11** calendar days) |
-| Note in description | BC wrote “Aug 10–25 (11 days)”; demo uses **10–20** so days = 11 and August accrual = `20 × (20/365) ≈ 1.0958` |
+| Note | Matches BC math: 11 skipped days → 20 eligible in August → `20 × (20/365) ≈ 1.0958` |
 | SQL filters (optional) | `Data_init=2026-08-01` · `Data_end=2026-08-31` |
 
 **LIVE vs narrative**

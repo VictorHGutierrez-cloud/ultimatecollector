@@ -1,23 +1,37 @@
 /*
 ================================================================================
-SQL RESUMO — 1 linha por colaborador (totais de gap Jamaica vs Factorial)
+(V1) Jamaica Vacation Accrual — Employee Gap Totals
+File: sqlexemplo_resumo.txt
 Statistical Institute of Jamaica
+FIX: Insights leaves has NO leave_type_id / leave_types table.
+  leave_type_name is often NULL — classify using name, name_slug, OR description
+  (SIJ Suspension text in description still matches %suspend%).
 ================================================================================
+REPORT ORDER FOR CLIENT:
+  1. (V1) Jamaica Vacation Accrual — Monthly Close Summary   (primary month-end)
+  2. (V1) Jamaica Vacation Accrual — Leave Audit Detail
+  3. (V1) Jamaica Vacation Accrual — Employee Gap Totals     ← THIS FILE (optional)
+  4. (V1) Jamaica Vacation Accrual — Absence Proof (A/B/C)
 
 Use this when you want HR totals, not absence-by-absence detail.
-  • POWER  (sqlexemplo_power.txt) = 1 row per absence (proof / demo)
-  • RESUMO (this file)            = 1 row per employee (how much to adjust)
+  • Absence Proof (A/B/C) = 1 row per absence (sqlexemplo_power.txt)
+  • Employee Gap Totals   = 1 row per employee (this file)
 
-Same fences as POWER:
+Jamaica rule (Business Case):
+  • ANY blocking leave day → no vacation accrual that day (length irrelevant)
+  • C = sum of Factorial accrual during ALL blocking absences in the period
+  • >14 = process flag only (Pause_* / Above14_* columns); does NOT gate C
+
+Same fences as Absence Proof:
   Factorial: tenure_start_date, antiquity, contract_version_*, leaves
-  Jamaica:   365/366, pause >14 calendar days on LOA types, half-up rounding,
+  Jamaica:   365/366, blocking families, half-up rounding,
              SIJ tier 15/20/21/25 from sandbox assignments
 
 Filters: {{Data_init}} / {{Data_end}}
 Demo tips:
-  • Example 3 Charles (Dec vacation) → 2026-12-01 .. 2026-12-31
-  • Felicity sick pause → 2026-08-01 .. 2026-08-31
-  • Includes SIJ Extended Sick / Departmental / No Pay in pause families
+  • Ex.1 Bernarda (Jun sick 7d) → 2026-06-01 .. 2026-06-30 → Sum_C ≈ 0.3836
+  • Ex.2 Diana (Aug suspension) → 2026-08-01 .. 2026-08-31
+  • Ex.3 Charles (Dec vacation) → 2026-12-01 .. 2026-12-31 → Pause flag YES + Sum_C
 ================================================================================
 */
 
@@ -151,7 +165,7 @@ absences AS (
         eb.accrual_per_calendar_day,
         eb.pause_threshold_days,
         l.id AS leave_id,
-        l.leave_type_name AS absence_type,
+        COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), '(see description)') AS absence_type,
         CAST(l.start_on AS date) AS start_date,
         CAST(l.finish_on AS date) AS end_date,
         date_diff('day', CAST(l.start_on AS date), CAST(l.finish_on AS date)) + 1
@@ -164,36 +178,38 @@ absences AS (
             ELSE COALESCE(l.duration, 0)
         END AS duration_days_factorial,
         CASE
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%holiday%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%vacation%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%annual%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%férias%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%ferias%'
             THEN 'vacation'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%sick%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%illness%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%medical%'
             THEN 'sick'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%suspend%'
+            THEN 'suspension'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%matern%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%patern%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%parental%'
             THEN 'maternity'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%study%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%training%'
             THEN 'study'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%compassionate%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%bereavement%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%grievance%'
             THEN 'compassionate'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%special%'
             THEN 'special'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%department%'
             THEN 'departmental'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%unpaid%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%no pay%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%nopay%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%leave of absence%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%loa%'
             THEN 'other_loa'
             ELSE 'other_absence'
         END AS leave_family
@@ -205,9 +221,9 @@ absences AS (
       AND l.finish_on IS NOT NULL
       AND CAST(l.start_on AS date) <= p.period_end
       AND CAST(l.finish_on AS date) >= p.period_start
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%working from home%'
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%work from home%'
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%wfh%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%working from home%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%work from home%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%wfh%'
 ),
 
 per_absence AS (
@@ -215,7 +231,16 @@ per_absence AS (
         a.*,
         CASE
             WHEN a.leave_family IN (
-                    'vacation', 'sick', 'maternity', 'study',
+                    'vacation', 'sick', 'suspension', 'maternity', 'study',
+                    'compassionate', 'special', 'departmental', 'other_loa'
+                 )
+            THEN TRUE
+            ELSE FALSE
+        END AS jamaica_blocks_accrual,
+        -- Process flag only (>14) — does NOT gate the gap
+        CASE
+            WHEN a.leave_family IN (
+                    'vacation', 'sick', 'suspension', 'maternity', 'study',
                     'compassionate', 'special', 'departmental', 'other_loa'
                  )
              AND a.calendar_days > a.pause_threshold_days
@@ -232,10 +257,10 @@ per_absence AS (
 per_absence_gap AS (
     SELECT
         p.*,
-        -- Gap only when Jamaica says pause (Factorial would still accrue)
+        -- Gap whenever Jamaica blocks daily accrual (any length)
         CASE
             WHEN p.factorial_accrual_during_absence IS NULL THEN NULL
-            WHEN p.jamaica_pause_applies THEN p.factorial_accrual_during_absence
+            WHEN p.jamaica_blocks_accrual THEN p.factorial_accrual_during_absence
             ELSE 0.0
         END AS gap_manual_adjustment
     FROM per_absence p
@@ -256,19 +281,22 @@ employee_summary AS (
         MAX(accrual_per_calendar_day) AS accrual_per_calendar_day,
 
         COUNT(*) AS absences_in_period,
+        SUM(CASE WHEN jamaica_blocks_accrual THEN 1 ELSE 0 END) AS blocking_absences_count,
         SUM(CASE WHEN jamaica_pause_applies THEN 1 ELSE 0 END) AS pause_absences_count,
+        SUM(CASE WHEN jamaica_blocks_accrual THEN calendar_days ELSE 0 END)
+            AS total_calendar_days_on_blocking_absences,
         SUM(CASE WHEN jamaica_pause_applies THEN calendar_days ELSE 0 END)
             AS total_calendar_days_on_pause_absences,
-        SUM(CASE WHEN jamaica_pause_applies THEN duration_days_factorial ELSE 0 END)
-            AS total_factorial_working_days_on_pause_absences,
+        SUM(CASE WHEN jamaica_blocks_accrual THEN duration_days_factorial ELSE 0 END)
+            AS total_factorial_working_days_on_blocking_absences,
 
         ROUND(SUM(COALESCE(factorial_accrual_during_absence, 0)), 4)
             AS sum_factorial_accrual_all_absences,
         ROUND(SUM(
-            CASE WHEN jamaica_pause_applies
+            CASE WHEN jamaica_blocks_accrual
                  THEN COALESCE(factorial_accrual_during_absence, 0)
                  ELSE 0 END
-        ), 4) AS sum_factorial_accrual_on_pause_absences,
+        ), 4) AS sum_factorial_accrual_on_blocking_absences,
         ROUND(SUM(COALESCE(gap_manual_adjustment, 0)), 4)
             AS sum_gap_requires_manual_adjustment,
         FLOOR(SUM(COALESCE(gap_manual_adjustment, 0)) + 0.5)
@@ -292,37 +320,61 @@ SELECT
     ROUND(accrual_per_calendar_day, 6)                  AS "Accrual_Per_Calendar_Day",
 
     absences_in_period                                  AS "Absences_In_Period",
-    pause_absences_count                                AS "Pause_Absences_Count",
-    total_calendar_days_on_pause_absences               AS "Total_Calendar_Days_On_Pause",
-    total_factorial_working_days_on_pause_absences      AS "Total_Working_Days_On_Pause",
+    blocking_absences_count                             AS "Blocking_Absences_Count",
+    total_calendar_days_on_blocking_absences            AS "Total_Calendar_Days_On_Blocking",
+    total_factorial_working_days_on_blocking_absences   AS "Total_Working_Days_On_Blocking",
+    pause_absences_count                                AS "Above14_Process_Flag_Count",
+    total_calendar_days_on_pause_absences               AS "Total_Calendar_Days_Above14",
     first_absence_start                                 AS "First_Absence_Start",
     last_absence_end                                    AS "Last_Absence_End",
 
     sum_factorial_accrual_all_absences                  AS "Sum_A_Factorial_Accrual_All_Absences",
-    sum_factorial_accrual_on_pause_absences             AS "Sum_A_Factorial_Accrual_On_Pause_Only",
-    CAST(0.0 AS DOUBLE)                                 AS "Sum_B_Jamaica_Accrual_On_Pause_Absences",
+    sum_factorial_accrual_on_blocking_absences          AS "Sum_A_Factorial_Accrual_On_Blocking",
+    CAST(0.0 AS DOUBLE)                                 AS "Sum_B_Jamaica_Accrual_On_Blocking",
     sum_gap_requires_manual_adjustment                  AS "Sum_C_Total_Manual_Adjustment",
     sum_gap_rounded_jamaica_half_up                     AS "Sum_C_Rounded_Jamaica_Half_Up",
 
     CASE
         WHEN annual_vacation_days IS NULL THEN
-            'Employee has absences but no SIJ tier mapped — cannot size the gap.'
-        WHEN pause_absences_count = 0 THEN
+            'Cannot calculate. Map this employee to an SIJ vacation tier first.'
+        WHEN COALESCE(sum_gap_requires_manual_adjustment, 0) > 0 THEN
             CONCAT(
-                'No Jamaica pause cases in period (', CAST(absences_in_period AS varchar),
-                ' absence(s)). Manual pause adjustment = 0.'
+                'ACTION: Factorial accrued ~',
+                CAST(sum_gap_requires_manual_adjustment AS varchar),
+                ' vacation day(s) too much in this period while the employee was on blocking leave. ',
+                'Manually SUBTRACT ',
+                CAST(sum_gap_requires_manual_adjustment AS varchar),
+                ' day(s) from this employee''s vacation balance in Factorial ',
+                '(Time Off → manual adjustment / incidence). ',
+                'Rounded half-up for display: ',
+                CAST(sum_gap_rounded_jamaica_half_up AS varchar),
+                ' day(s). Do this whether absences are above or below 14 days.'
+            )
+        ELSE
+            'No action. No blocking-leave gap in this period — do not change the vacation balance for this reason.'
+    END                                                 AS "What_Client_Should_Do",
+
+    CASE
+        WHEN annual_vacation_days IS NULL THEN
+            'Employee has absences but no SIJ tier mapped — cannot size the gap.'
+        WHEN blocking_absences_count = 0 THEN
+            CONCAT(
+                'No blocking absences in period (', CAST(absences_in_period AS varchar),
+                ' absence(s)). Manual adjustment C = 0.'
             )
         ELSE
             CONCAT(
-                'RESUMO: ', CAST(pause_absences_count AS varchar),
-                ' pause absence(s) / ', CAST(absences_in_period AS varchar),
-                ' total. Tier ', CAST(CAST(annual_vacation_days AS integer) AS varchar),
-                ' days/yr. Factorial would still accrue ~',
+                'RESUMO: ', CAST(blocking_absences_count AS varchar),
+                ' blocking absence(s) / ', CAST(absences_in_period AS varchar),
+                ' total (', CAST(pause_absences_count AS varchar),
+                ' also >14 process flag). Tier ',
+                CAST(CAST(annual_vacation_days AS integer) AS varchar),
+                ' days/yr. Factorial still accrues ~',
                 CAST(sum_gap_requires_manual_adjustment AS varchar),
-                ' days during pause windows; Jamaica requires 0. Adjust ~',
+                ' during off days; Jamaica daily rule => 0. Adjust C ~',
                 CAST(sum_gap_requires_manual_adjustment AS varchar),
-                ' days (rounded ', CAST(sum_gap_rounded_jamaica_half_up AS varchar),
-                '). No native Factorial pause.'
+                ' (rounded ', CAST(sum_gap_rounded_jamaica_half_up AS varchar),
+                '). Length ≤14 or >14 does not change C logic.'
             )
     END                                                 AS "Conclusion_Employee_Total"
 

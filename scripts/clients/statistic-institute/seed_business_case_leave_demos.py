@@ -493,9 +493,9 @@ def main() -> int:
         finish_on="2026-08-20",
         description=(
             "Business Case Example 2 — Suspension. Tier 20 days/year. "
-            "BC wrote Aug 10–25 (11 days) — inconsistent; demo uses Aug 10–20 "
-            "(11 calendar days). Aug eligible 20 of 31. "
-            "Jamaica accrual: 20 × (20/365) ≈ 1.0958 days."
+            "Suspended Aug 10–20 (11 calendar days). August has 31 days → 20 eligible. "
+            "Jamaica accrual: 20 × (20/365) ≈ 1.0958 days. "
+            "Factorial does not auto-skip; adjust gap via SQL."
         ),
     )
     result["scenarios"]["example_2_suspension"] = {
@@ -506,7 +506,6 @@ def main() -> int:
         "calendar_days": daterange_days("2026-08-10", "2026-08-20"),
         "august_days": 31,
         "eligible_days": 20,
-        "bc_wrote_dates": "Aug 10–25 (11 days) — typo; 10–25 = 16 calendar days",
         "jamaica_august_accrual": "20 × (20/365) ≈ 1.0958",
         "leave": ex2,
         "sql_filters": {"Data_init": "2026-08-01", "Data_end": "2026-08-31"},

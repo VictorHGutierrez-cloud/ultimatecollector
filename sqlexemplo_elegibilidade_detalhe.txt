@@ -1,10 +1,18 @@
 /*
 ================================================================================
-SQL ELEGIBILIDADE DETALHE — 1 linha por ausência (prova / auditoria)
+(V1) Jamaica Vacation Accrual — Leave Audit Detail
+File: sqlexemplo_elegibilidade_detalhe.txt
 Statistical Institute of Jamaica
+FIX: Insights leaves has NO leave_type_id / leave_types table.
+  leave_type_name is often NULL — classify using name, name_slug, OR description
+  (SIJ Suspension text in description still matches %suspend%).
 ================================================================================
+Companion to: (V1) Jamaica Vacation Accrual — Monthly Close Summary
+  (sqlexemplo_elegibilidade_resumo.txt)
 
-Companion to: sqlexemplo_elegibilidade_resumo.txt
+REPORT ORDER FOR CLIENT:
+  1. Monthly Close Summary  2. Leave Audit Detail (THIS)  3. Employee Gap Totals
+  4. Absence Proof (A/B/C)
 
 PURPOSE:
   Prove EACH blocking leave that removes vacation accrual days in the period.
@@ -15,6 +23,7 @@ PURPOSE:
     • Days_Off_In_Period (clipped to filters)
     • Gap_This_Leave ≈ days_off × (tier/365)
     • Extended_Pause_This_Leave YES/NO (>14 full calendar length)
+    • What_Client_Should_Do = plain HR action for this leave
 
 Filters: {{Data_init}} / {{Data_end}}
 Demo tips:
@@ -25,7 +34,7 @@ Demo tips:
   • Charles Dec → Data_init=2026-12-01 Data_end=2026-12-31
       SIJ Vacation 1–18 → Days_Off=18 Gap≈0.9863 Extended=YES
 
-Use RESUMO for HR totals; use this DETALHE for audit / demo walkthrough.
+Use Monthly Close Summary for HR totals; use this Leave Audit Detail for proof.
 ================================================================================
 */
 
@@ -136,7 +145,7 @@ detail AS (
         eb.pause_threshold_days,
         eb.accrual_per_calendar_day,
         l.id AS leave_id,
-        l.leave_type_name AS absence_type,
+        COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), '(see description)') AS absence_type,
         l.status AS status,
         CAST(l.start_on AS date) AS start_date,
         CAST(l.finish_on AS date) AS end_date,
@@ -156,38 +165,38 @@ detail AS (
             END
         ) + 1 AS days_off_in_period,
         CASE
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%holiday%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%vacation%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%annual%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%férias%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%ferias%'
             THEN 'vacation'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%sick%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%illness%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%medical%'
             THEN 'sick'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%suspend%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%suspend%'
             THEN 'suspension'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%matern%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%patern%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%parental%'
             THEN 'maternity'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%study%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%training%'
             THEN 'study'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%compassionate%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%bereavement%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%grievance%'
             THEN 'compassionate'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%special%'
             THEN 'special'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%department%'
             THEN 'departmental'
-            WHEN LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
-              OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            WHEN LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%unpaid%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%no pay%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%nopay%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%leave of absence%'
+              OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%loa%'
             THEN 'other_loa'
             ELSE 'other_absence'
         END AS leave_family,
@@ -199,34 +208,34 @@ detail AS (
       AND l.finish_on IS NOT NULL
       AND CAST(l.start_on AS date) <= eb.period_end
       AND CAST(l.finish_on AS date) >= eb.period_start
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%working from home%'
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%work from home%'
-      AND LOWER(COALESCE(l.leave_type_name, '')) NOT LIKE '%wfh%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%working from home%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%work from home%'
+      AND LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) NOT LIKE '%wfh%'
       AND (
-            LOWER(COALESCE(l.leave_type_name, '')) LIKE '%holiday%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%vacation%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%annual%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%férias%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%ferias%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%sick%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%illness%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%medical%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%suspend%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%matern%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%patern%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%parental%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%study%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%training%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%compassionate%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%bereavement%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%grievance%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%special%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%department%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%unpaid%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%no pay%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%nopay%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%leave of absence%'
-         OR LOWER(COALESCE(l.leave_type_name, '')) LIKE '%loa%'
+            LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%holiday%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%vacation%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%annual%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%férias%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%ferias%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%sick%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%illness%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%medical%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%suspend%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%matern%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%patern%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%parental%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%study%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%training%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%compassionate%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%bereavement%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%grievance%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%special%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%department%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%unpaid%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%no pay%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%nopay%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%leave of absence%'
+         OR LOWER(COALESCE(NULLIF(TRIM(l.leave_type_name), ''), NULLIF(TRIM(l.leave_type_name_slug), ''), NULLIF(TRIM(l.description), ''), '')) LIKE '%loa%'
       )
 )
 
@@ -257,6 +266,24 @@ SELECT
                                           AS "Gap_This_Leave",
     FLOOR(ROUND(days_off_in_period * accrual_per_calendar_day, 6) + 0.5)
                                           AS "Gap_This_Leave_Rounded_Half_Up",
+    CASE
+        WHEN COALESCE(days_off_in_period, 0) > 0
+         AND accrual_per_calendar_day IS NOT NULL THEN
+            CONCAT(
+                'ACTION: Factorial accrued ~',
+                CAST(ROUND(days_off_in_period * accrual_per_calendar_day, 4) AS varchar),
+                ' vacation day(s) too much during this leave (',
+                absence_type, ', ',
+                CAST(days_off_in_period AS varchar),
+                ' day(s) in period). Manually SUBTRACT ',
+                CAST(ROUND(days_off_in_period * accrual_per_calendar_day, 4) AS varchar),
+                ' day(s) from this employee''s vacation balance in Factorial ',
+                '(Time Off → manual adjustment / incidence). ',
+                'Do this whether the leave is above or below 14 days.'
+            )
+        ELSE
+            'No action for this row.'
+    END                                   AS "What_Client_Should_Do",
     description                           AS "Description",
     CASE
         WHEN calendar_days_full > pause_threshold_days THEN

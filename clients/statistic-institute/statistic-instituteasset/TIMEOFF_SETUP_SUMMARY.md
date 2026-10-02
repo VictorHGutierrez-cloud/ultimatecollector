@@ -62,17 +62,21 @@ python scripts/clients/statistic-institute/verify_timeoff_sij.py
 python scripts/clients/statistic-institute/seed_jamaica_pause_demo.py
 ```
 
-SQL da demo:
-- **Elegibilidade (qualquer dia off bloqueia accrual):**  
-  - Resumo: `sqlexemplo_elegibilidade_resumo.txt`  
-  - Detalhe: `sqlexemplo_elegibilidade_detalhe.txt`  
+SQL reports (V1 names — client catalog order):
+
+| # | Report name (save in Factorial as) | File |
+|---|--------------------------------------|------|
+| 1 | **(V1) Jamaica Vacation Accrual — Monthly Close Summary** | `sqlexemplo_elegibilidade_resumo.txt` |
+| 2 | **(V1) Jamaica Vacation Accrual — Leave Audit Detail** | `sqlexemplo_elegibilidade_detalhe.txt` |
+| 3 | **(V1) Jamaica Vacation Accrual — Employee Gap Totals** | `sqlexemplo_resumo.txt` (optional) |
+| 4 | **(V1) Jamaica Vacation Accrual — Absence Proof (A/B/C)** | `sqlexemplo_power.txt` (demo/proof; same as `sqlexemplo.txt`) |
+
+- **#1–2 (Eligibility):** any day off blocks accrual. Month filter only (YTD is inside #1).  
   - Ex. 1 Jun: `Data_init=2026-06-01` · `Data_end=2026-06-30` (Bernarda → Gap≈0.38 · Jamaica≈1.26)  
   - Ex. 2 Ago: `Data_init=2026-08-01` · `Data_end=2026-08-31` (Diana)  
-- **Pausa >14 apenas:**  
-  - Detalhe: `sqlexemplo_power.txt`  
-  - Resumo: `sqlexemplo_resumo.txt`  
-  - Filtros exemplo: `Data_init = 2026-08-01` · `Data_end = 2026-08-31` (Felicity)  
-Cerca: tenure/antiquity Factorial, faixa 15/20/21/25, 365/366, teto 3 anos, dias off, pausa LOA >14, rounding ≥0,50.
+- **#3–4:** same daily-stop rule for gap C; >14 is a process flag only (not a gate).  
+  - Ex. 3 Dec: `Data_init=2026-12-01` · `Data_end=2026-12-31` (Charles)  
+Cerca: tenure/antiquity Factorial, faixa 15/20/21/25, 365/366, teto 3 anos, dias off, rounding ≥0,50.
 
 Logs:
 - `clients/statistic-institute/run_log/timeoff_seed_20260912.json`
